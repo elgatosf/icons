@@ -3,8 +3,24 @@
     "version": "0.1.0",
     "description": "Icons used throughout the Elgato ecosystem.",
     "type": "module",
+    "exports": {
+        ".": {
+            "default": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        },
+        "./svg": {
+            "default": "./dist/icons/index.js",
+            "types": "./dist/icons/index.d.ts"
+        }
+    },
+    "files": [
+        "dist/",
+        "svg/"
+    ],
     "scripts": {
-        "build": "node --experimental-strip-types scripts/convert-svg.ts"
+        "build": "npm run build:svg && npm run build:ts",
+        "build:svg": "node --experimental-strip-types scripts/convert-svg.ts",
+        "build:ts": "tsc"
     },
     "keywords": [
         "elgato",
@@ -24,6 +40,7 @@
     },
     "devDependencies": {
         "@tsconfig/node20": "^20.1.4",
-        "@types/node": "^22.8.6"
+        "@types/node": "^22.8.6",
+        "typescript": "^5.6.3"
     }
 }
