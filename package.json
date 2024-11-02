@@ -1,0 +1,29 @@
+{
+    "name": "@elgato/icons",
+    "version": "0.1.0",
+    "description": "Icons used throughout the Elgato ecosystem.",
+    "type": "module",
+    "scripts": {
+        "build": "node --experimental-strip-types scripts/convert-svg.ts"
+    },
+    "keywords": [
+        "elgato",
+        "icons",
+        "stream deck",
+        "wave link",
+        "camera hub"
+    ],
+    "author": {
+        "name": "Elgato",
+        "url": "https://www.elgato.com"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/elgatosf/icons.git"
+    },
+    "devDependencies": {
+        "@tsconfig/node20": "^20.1.4",
+        "@types/node": "^22.8.6"
+    }
+}
