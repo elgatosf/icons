@@ -11,7 +11,7 @@
  * @returns Export name prefixed with `svg`.
  */
 export function toExportName(name: string): string {
-	return name.split("-").reduce((prev, curr) => {
+	return `svg${name.split("-").reduce((prev, curr) => {
 		return prev + curr.charAt(0).toUpperCase() + curr.substring(1);
-	}, "");
+	}, "")}`;
 }

@@ -46,7 +46,7 @@ write(
 	"index.ts",
 	icons
 		.map(({ name }) => {
-			return `export { default as svg${toExportName(name)} } from "./svg/${name}.js"`;
+			return `export { default as ${toExportName(name)} } from "./svg/${name}.js"`;
 		})
 		.join("\n")
 );
