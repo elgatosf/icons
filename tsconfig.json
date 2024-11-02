@@ -1,10 +1,11 @@
 {
     "extends": "@tsconfig/node20/tsconfig.json",
     "compilerOptions": {
-        "customConditions": ["node"],
-        "module": "es2022",
-        "moduleResolution": "Bundler"
+        "declaration": true,
+        "module": "NodeNext",
+        "outDir": "dist",
+        "target": "ES2022"
     },
-    "include": ["build/", "src/"],
+    "include": ["src/"],
     "exclude": ["node_modules/"]
 }

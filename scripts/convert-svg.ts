@@ -27,7 +27,7 @@ function write(path: string, data: string): void {
 }
 
 // Read the SVG source files.
-const svgRoot = join(import.meta.dirname, "../svg/24");
+const svgRoot = join(import.meta.dirname, "../svg");
 const icons = readdirSync(svgRoot).map((filename) => {
 	return {
 		name: parse(filename).name,
@@ -46,7 +46,7 @@ write(
 	"index.ts",
 	icons
 		.map(({ name }) => {
-			return `export { default as svg${toExportName(name)} } from "./svg/${name}"`;
+			return `export { default as svg${toExportName(name)} } from "./svg/${name}.js"`;
 		})
 		.join("\n")
 );

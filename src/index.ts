@@ -1,6 +1,6 @@
-import { toExportName } from "./converters";
-import * as icons from "./icons";
-import type { Icon } from "./icons/icon";
+import { toExportName } from "./converters.js";
+import type { Icon } from "./icons/icon.js";
+import * as icons from "./icons/index.js";
 
 /**
  * Gets the icon, in SVG format, from the specified name.
