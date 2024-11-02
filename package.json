@@ -8,9 +8,9 @@
             "default": "./dist/index.js",
             "types": "./dist/index.d.ts"
         },
-        "./svg": {
-            "default": "./dist/icons/index.js",
-            "types": "./dist/icons/index.d.ts"
+        "./*": {
+            "default": "./dist/icons/svg/*",
+            "types": "./dist/icons/svg/*"
         }
     },
     "files": [
