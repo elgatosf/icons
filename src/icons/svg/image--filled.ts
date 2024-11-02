@@ -1,0 +1,2 @@
+const svg: string = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M15.5 11a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/><path fill-rule="evenodd" d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5Zm2-.5h14a.5.5 0 0 1 .5.5v9.44l-1.97-1.97a.75.75 0 0 0-1.06 0L14 14.94l-4.47-4.47a.75.75 0 0 0-1.06 0L4.5 14.44V5a.5.5 0 0 1 .5-.5Z" clip-rule="evenodd"/></svg>'
+export default svg
