@@ -28,14 +28,16 @@ import { icon } from "@elgato/icons";
 icon("logo-elgato"); // SVG string of the Elgato logo
 ```
 
+When referencing an icon by it's name, the medium size will be returned.
+
 ### By Icon
 
-Icons can be imported directly by referencing their JavaScript file.
+Icons can be imported directly by referencing their JavaScript file, which references their medium size. In addition to these, a limited number of icons are also available in small and large.
 
 ```ts
-import logoElgato from "@elgato/icons/logo-elgato.js";
+import logoElgato from "@elgato/icons/m/logo-elgato.js";
 
-logoElgato; // SVG string of the Elgato logo
+logoElgato; // SVG string of the Elgato logo in medium (default) size
 ```
 
 This can be benefitial when tree-shaking is preferred as not all icons are imported.
@@ -47,10 +49,13 @@ All original SVG files are distributed with this package, and can be found withi
 ```
 .
 ├── svg/
-│   ├── 0-circle--filled.svg
-│   ├── 0-circle.svg
-│   ├── ...
-│   ├── zoom-out--filled.svg
-│   └── zoom-out.svg
+│   ├── 16/
+│   ├── 24/
+│   |   ├── 0-circle--filled.svg
+|   |   ├── 0-circle.svg
+|   │   ├── ...
+|   │   ├── zoom-out--filled.svg
+|   │   └── zoom-out.svg
+|   └── 32/
 └── ...
 ```

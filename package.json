@@ -8,15 +8,15 @@
             "default": "./dist/index.js",
             "types": "./dist/index.d.ts"
         },
-        "./small/*": {
+        "./s/*": {
             "default": "./dist/svg/small/*",
             "types": "./dist/svg/small/*"
         },
-        "./medium/*": {
+        "./m/*": {
             "default": "./dist/svg/medium/*",
             "types": "./dist/svg/medium/*"
         },
-        "./large/*": {
+        "./l/*": {
             "default": "./dist/svg/large/*",
             "types": "./dist/svg/large/*"
         }
