@@ -8,18 +8,25 @@
             "default": "./dist/index.js",
             "types": "./dist/index.d.ts"
         },
-        "./*": {
-            "default": "./dist/icons/svg/*",
-            "types": "./dist/icons/svg/*"
+        "./small/*": {
+            "default": "./dist/svg/small/*",
+            "types": "./dist/svg/small/*"
+        },
+        "./medium/*": {
+            "default": "./dist/svg/medium/*",
+            "types": "./dist/svg/medium/*"
+        },
+        "./large/*": {
+            "default": "./dist/svg/large/*",
+            "types": "./dist/svg/large/*"
         }
     },
     "files": [
-        "dist/",
-        "svg/"
+        "dist/"
     ],
     "scripts": {
         "build": "npm run build:svg && npm run build:ts",
-        "build:svg": "node --experimental-strip-types scripts/convert-svg.ts",
+        "build:svg": "node --experimental-strip-types scripts/svg-to-typescript.ts",
         "build:ts": "tsc",
         "lint": "prettier . --check",
         "lint:fix": "prettier . --write"

@@ -1,6 +1,6 @@
 import { toExportName } from "./converters.js";
-import type { Icon } from "./icons/icon.js";
-import * as icons from "./icons/index.js";
+import type { Icon } from "./svg/icon.js";
+import * as icons from "./svg/index.js";
 
 /**
  * Gets the icon, in SVG format, from the specified name.
@@ -13,7 +13,7 @@ export function icon(name: Icon): string {
 		return icons[exportName as keyof typeof icons];
 	}
 
-	return icons.svgHelp;
+	return icons.iconHelp;
 }
 
 export { Icon };

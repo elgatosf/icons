@@ -1,3 +1,9 @@
+TODO:
+
+-   Support multiple sizes
+-   Rename prefix from "svg" to "icon"
+-   We don't need raw SVG files
+
 <div align="center">
 
 [![Elgato icons banner](assets/banner.png)](https://www.figma.com/community/file/1383396897451458564)
