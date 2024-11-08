@@ -22,7 +22,8 @@
         }
     },
     "files": [
-        "dist/"
+        "dist/",
+        "svg/"
     ],
     "scripts": {
         "build": "npm run build:svg && npm run build:ts",
