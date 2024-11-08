@@ -1,0 +1,5 @@
+# Generated files
+src/icons/**/*.ts
+
+# Source files
+svg/

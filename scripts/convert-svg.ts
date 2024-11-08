@@ -1,5 +1,6 @@
-import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join, parse } from "node:path";
+
 import { toExportName } from "../src/converters.ts";
 
 // Prepare the output directory.
@@ -48,7 +49,7 @@ write(
 		.map(({ name }) => {
 			return `export { default as ${toExportName(name)} } from "./svg/${name}.js"`;
 		})
-		.join("\n")
+		.join("\n"),
 );
 
 // Write the union type of icon names.
