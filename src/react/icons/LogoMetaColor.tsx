@@ -2,7 +2,7 @@
  * Auto-generated file, do not edit.
  * To update the file, run the "build:react" script.
  */ import type { SVGProps } from "react";
-import type { IconProps } from "../types";
+import type { IconProps } from "../types.js";
 const SIZE_MAP = { s: 16, m: 24, l: 32 };
 const IconLogoMetaColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	const sizeName = props.size || "m";

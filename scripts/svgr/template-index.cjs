@@ -12,7 +12,7 @@ module.exports = (filePaths) => {
 	const exportEntries = filePaths.map((entry) => {
 		const basename = path.basename(entry.path, path.extname(entry.path));
 		const exportName = /^\d/.test(basename) ? `${basename}` : basename;
-		return `export { default as Icon${exportName}${iconSize ? iconSize.toUpperCase() : ""} } from './${basename}';`;
+		return `export { default as Icon${exportName}${iconSize ? iconSize.toUpperCase() : ""} } from './${basename}.js';`;
 	});
 
 	return exportEntries.join("\n");

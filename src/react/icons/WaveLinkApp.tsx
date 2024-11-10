@@ -3,7 +3,7 @@
  * To update the file, run the "build:react" script.
  */
 import type { SVGProps } from "react";
-import type { IconProps } from "../types";
+import type { IconProps } from "../types.js";
 const SIZE_MAP = {
 	s: 16,
 	m: 24,

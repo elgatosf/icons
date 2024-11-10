@@ -19,6 +19,10 @@
         "./l/*": {
             "default": "./dist/svg/large/*",
             "types": "./dist/svg/large/*"
+        },
+        "./react": {
+            "default": "./dist/react/index.js",
+            "types": "./dist/react/index.d.ts"
         }
     },
     "files": [
@@ -55,6 +59,7 @@
         "@svgr/cli": "^8.1.0",
         "@tsconfig/node20": "^20.1.4",
         "@types/node": "^22.8.6",
+        "react": "^18.3.1",
         "typescript": "^5.6.3"
     }
 }

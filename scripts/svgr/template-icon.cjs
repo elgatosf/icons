@@ -14,7 +14,7 @@ module.exports = (variables, { tpl }) => {
  */
     
 import type { SVGProps } from 'react'
-import type { IconProps } from '../types'
+import type { IconProps } from '../types.js'
 
 const SIZE_MAP = {
 	s: 16,
