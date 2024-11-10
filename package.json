@@ -4,21 +4,25 @@
     "description": "Icons used throughout the Elgato ecosystem.",
     "type": "module",
     "exports": {
-        ".": {
-            "default": "./dist/index.js",
-            "types": "./dist/index.d.ts"
+        "./js": {
+            "default": "./dist/js/index.js",
+            "types": "./dist/js/index.d.ts"
         },
-        "./s/*": {
-            "default": "./dist/svg/small/*",
-            "types": "./dist/svg/small/*"
+        "./js/small": {
+            "default": "./dist/js/icons/small/index.js",
+            "types": "./dist/js/icons/small/index.d.ts"
         },
-        "./m/*": {
-            "default": "./dist/svg/medium/*",
-            "types": "./dist/svg/medium/*"
+        "./js/medium": {
+            "default": "./dist/js/icons/medium/index.js",
+            "types": "./dist/js/icons/medium/index.d.ts"
         },
-        "./l/*": {
-            "default": "./dist/svg/large/*",
-            "types": "./dist/svg/large/*"
+        "./js/large": {
+            "default": "./dist/js/icons/large/index.js",
+            "types": "./dist/js/icons/large/index.d.ts"
+        },
+        "./js/utils": {
+            "default": "./dist/js/utils.js",
+            "types": "./dist/js/utils.d.ts"
         }
     },
     "files": [
@@ -26,9 +30,9 @@
         "svg/"
     ],
     "scripts": {
-        "build": "npm run build:svg && npm run build:ts",
-        "build:svg": "node --experimental-strip-types scripts/svg-to-typescript.ts",
-        "build:ts": "tsc",
+        "build": "npm run build:js && npm run tsc",
+        "build:js": "node --experimental-strip-types scripts/svg-to-js.ts && prettier ./src/js/icons/ --write",
+        "tsc": "tsc",
         "lint": "prettier . --check",
         "lint:fix": "prettier . --write"
     },

@@ -18,31 +18,33 @@ Discover icons used throughout the Elgato ecosystem, commonly found in Stream De
 npm install @elgato/icons
 ```
 
-### By Name
+### JavaScript Variables
 
-Icons can be retrieved by their name, using the `icon` function.
-
-```ts
-import { icon } from "@elgato/icons";
-
-icon("logo-elgato"); // SVG string of the Elgato logo
-```
-
-When referencing an icon by it's name, the medium size will be returned.
-
-### By Icon
-
-Icons can be imported directly by referencing their JavaScript file, which references their medium size. In addition to these, a limited number of icons are also available in small and large.
+Icons can be imported directly, with each icon representing a string that contains the SVG contents of the icon, for example:
 
 ```ts
-import logoElgato from "@elgato/icons/m/logo-elgato.js";
+import { iconLogoElgato } from "@elgato/icons/js/medium";
 
 logoElgato; // SVG string of the Elgato logo in medium (default) size
 ```
 
-This can be benefitial when tree-shaking is preferred as not all icons are imported.
+All icons are available in medium, with some also available in small and large.
 
-### By File System
+-   `@elgato/icons/js/small` — optimized for 16 × 16 px.
+-   `@elgato/icons/js/medium` — optimized for 24 × 24 px.
+-   `@elgato/icons/js/large` — optimized for 32 × 32 px.
+
+Alternatively, icons can be imported dynamically using the `icon` helper function (not recommended), for example:
+
+```ts
+import { icon } from "@elgato/icons/js";
+
+icon("logo-elgato"); // SVG string of the Elgato logo
+```
+
+It is important to note that when using the `icon` helper function, **all medium-sized icons will be included in the output**, preventing tree-shaking and resulting in a larger output file size (>1 MiB). Where possible, prefer importing icons directly.
+
+### SVG Files
 
 All original SVG files are distributed with this package, and can be found within the `svg/` directory.
 
