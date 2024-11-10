@@ -27,6 +27,7 @@
     ],
     "scripts": {
         "build": "npm run build:svg && npm run build:ts",
+        "build:react": "./scripts/svg-to-react.sh",
         "build:svg": "node --experimental-strip-types scripts/svg-to-typescript.ts",
         "build:ts": "tsc",
         "lint": "prettier . --check",
@@ -51,6 +52,7 @@
     "prettier": "@elgato/prettier-config",
     "devDependencies": {
         "@elgato/prettier-config": "^0.2.4",
+        "@svgr/cli": "^8.1.0",
         "@tsconfig/node20": "^20.1.4",
         "@types/node": "^22.8.6",
         "typescript": "^5.6.3"
