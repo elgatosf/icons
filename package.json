@@ -5,20 +5,20 @@
     "type": "module",
     "exports": {
         ".": {
-            "default": "./dist/index.js",
-            "types": "./dist/index.d.ts"
+            "default": "./dist/js/index.js",
+            "types": "./dist/js/index.d.ts"
         },
-        "./s/*": {
-            "default": "./dist/svg/small/*",
-            "types": "./dist/svg/small/*"
+        "./s": {
+            "default": "./dist/js/icons/small/index.js",
+            "types": "./dist/js/icons/small/index.d.ts"
         },
-        "./m/*": {
-            "default": "./dist/svg/medium/*",
-            "types": "./dist/svg/medium/*"
+        "./m": {
+            "default": "./dist/js/icons/medium/index.js",
+            "types": "./dist/js/icons/medium/index.d.ts"
         },
-        "./l/*": {
-            "default": "./dist/svg/large/*",
-            "types": "./dist/svg/large/*"
+        "./l": {
+            "default": "./dist/js/icons/large/index.js",
+            "types": "./dist/js/icons/large/index.d.ts"
         },
         "./react": {
             "default": "./dist/react/index.js",
@@ -30,10 +30,11 @@
         "svg/"
     ],
     "scripts": {
-        "build": "npm run build:svg && npm run build:ts",
+        "build": "npm run build:js && npm run build:react && npm run tsc",
+        "build:ci": "tsc",
+        "build:js": "node --experimental-strip-types scripts/svg-to-js.ts && prettier ./src/js/icons/ --write",
         "build:react": "./scripts/svg-to-react.sh",
-        "build:svg": "node --experimental-strip-types scripts/svg-to-typescript.ts",
-        "build:ts": "tsc",
+        "tsc": "tsc",
         "lint": "prettier . --check",
         "lint:fix": "prettier . --write"
     },
