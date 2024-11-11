@@ -37,4 +37,4 @@ jobs:
         run: npm ci
 
       - name: "🏗️ Build"
-        run: npm run build:ts
+        run: npm run build:ci
