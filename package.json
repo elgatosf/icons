@@ -5,20 +5,20 @@
     "type": "module",
     "exports": {
         ".": {
-            "default": "./dist/js/index.js",
-            "types": "./dist/js/index.d.ts"
+            "default": "./dist/strings/index.js",
+            "types": "./dist/strings/index.d.ts"
         },
         "./s": {
-            "default": "./dist/js/icons/small/index.js",
-            "types": "./dist/js/icons/small/index.d.ts"
+            "default": "./dist/strings/s/index.js",
+            "types": "./dist/strings/s/index.d.ts"
         },
         "./m": {
-            "default": "./dist/js/icons/medium/index.js",
-            "types": "./dist/js/icons/medium/index.d.ts"
+            "default": "./dist/strings/m/index.js",
+            "types": "./dist/strings/m/index.d.ts"
         },
         "./l": {
-            "default": "./dist/js/icons/large/index.js",
-            "types": "./dist/js/icons/large/index.d.ts"
+            "default": "./dist/strings/l/index.js",
+            "types": "./dist/strings/l/index.d.ts"
         }
     },
     "files": [
@@ -26,9 +26,9 @@
         "svg/"
     ],
     "scripts": {
-        "build": "npm run build:js && npm run tsc",
+        "build": "npm run build:transform && npm run lint:fix && npm run tsc",
         "build:ci": "tsc",
-        "build:js": "node --experimental-strip-types scripts/svg-to-js.ts && prettier ./src/js/icons/ --write",
+        "build:transform": "node --experimental-strip-types scripts/transform.ts",
         "tsc": "tsc",
         "lint": "prettier . --check",
         "lint:fix": "prettier . --write"
@@ -54,6 +54,7 @@
         "@elgato/prettier-config": "^0.2.4",
         "@tsconfig/node20": "^20.1.4",
         "@types/node": "^22.8.6",
+        "ora": "^8.1.1",
         "typescript": "^5.6.3"
     }
 }

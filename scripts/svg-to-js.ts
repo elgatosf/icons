@@ -1,7 +1,7 @@
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, parse } from "node:path";
 
-import { getExportName } from "../src/js/utils.ts";
+import { getExportName } from "../src/utils.ts";
 
 /**
  * Gets the path of the specified {@link path} from the root of this project.
