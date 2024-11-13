@@ -1,3 +1,5 @@
+import type { Size } from "../catalogue/sizing.js";
+
 /**
  * Icon component properties.
  */
@@ -5,7 +7,7 @@ export interface IconProps {
 	/**
 	 * Size of the icon, as a shirt size.
 	 */
-	size?: "s" | "m" | "l";
+	size?: Size;
 
 	/**
 	 * Optional label.
