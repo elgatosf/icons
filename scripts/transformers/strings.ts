@@ -1,5 +1,6 @@
+import type { Size } from "../../src/catalogue/index.ts";
+import type { SvgIcon } from "../transformer.ts";
 import { Transformer, type TransformerContext } from "../transformer.ts";
-import type { Icon, Size } from "../types/icon";
 
 /**
  * Transformer that exports the SVG icons as strings.
@@ -8,7 +9,7 @@ export class StringsTransformer extends Transformer {
 	/**
 	 * @inheritdoc
 	 */
-	public override name = "string exports";
+	public override name = "String exports";
 
 	/**
 	 * Catalogue of icons for each size.
@@ -29,20 +30,14 @@ export class StringsTransformer extends Transformer {
 				continue;
 			}
 
-			const iconType = names
-				.sort((a, b) => a.localeCompare(b))
-				.map((name) => `"${name}"`)
-				.join(" | ");
-
-			ctx.write(`${this.#pathOf(size)}/icon.ts`, `export type Icon = ${iconType};`);
-			ctx.write(`${this.#pathOf(size)}/index.ts`, `export type { Icon } from "./icon.js";\n\n${indexContents}`);
+			ctx.write(`${this.#pathOf(size)}/index.ts`, indexContents);
 		}
 	}
 
 	/**
 	 * @inheritdoc
 	 */
-	public override async transform(ctx: TransformerContext, icon: Icon): Promise<void> {
+	public override async transform(ctx: TransformerContext, icon: SvgIcon): Promise<void> {
 		for (const [size, { svg }] of icon.sizes) {
 			const str = svg.replace(/\r?\n\s*/g, "");
 			await ctx.write(

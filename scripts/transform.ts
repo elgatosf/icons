@@ -2,10 +2,11 @@ import { readdir, readFile } from "node:fs/promises";
 import { basename, extname, join, parse } from "node:path";
 import ora from "ora";
 
+import type { Size } from "../src/catalogue/index.ts";
 import { getExportName } from "../src/utils.ts";
-import { TransformerContext } from "./transformer.ts";
+import { type SvgIcon, TransformerContext } from "./transformer.ts";
+import { CatalogueTransformer } from "./transformers/catalogue.ts";
 import { StringsTransformer } from "./transformers/strings.ts";
-import type { Icon, Size } from "./types/icon";
 
 const status = ora("Reading icons…").start();
 const sizes: ReadonlyMap<string, Size> = new Map([
@@ -30,7 +31,7 @@ const entries = (
 /**
  * Iterate over the SVG files, and build a map of icons and their sizes.
  */
-const icons = new Map<string, Icon>();
+const icons = new Map<string, SvgIcon>();
 for (let i = 0; i < entries.length; i++) {
 	const entry = entries[i];
 
@@ -77,9 +78,14 @@ status.succeed("Reading icons");
  * Transform all of the icons against each transformer.
  */
 
+const transformers = [
+	new StringsTransformer(),
+	new CatalogueTransformer(),
+];
+
 const ctx = new TransformerContext();
-for (const transformer of [new StringsTransformer()]) {
-	const status = ora(`Writing ${transformer.name}`).start();
+for (const transformer of transformers) {
+	const status = ora(transformer.name).start();
 
 	let i = 0;
 	for (const [, icon] of icons) {
@@ -87,9 +93,9 @@ for (const transformer of [new StringsTransformer()]) {
 		status.suffixText = `${i++} / ${icons.size}`;
 	}
 
-	status.suffixText = "";
-	status.text = `Finalizing ${transformer.name}`;
+	status.suffixText = "Finalizing...";
 	transformer.finalize?.(ctx);
+	status.suffixText = "";
 
 	status.succeed(transformer.name);
 }
