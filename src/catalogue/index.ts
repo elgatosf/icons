@@ -1,4 +1,7 @@
 import { icons } from "./icons.js";
+import type { Size } from "./sizing.js";
+
+export { Size };
 
 /**
  * Catalogue on icons, and their import options.
@@ -21,11 +24,6 @@ export type MediumIcon = IconsOfSize<"m">;
  * Icons available in size large.
  */
 export type LargeIcon = IconsOfSize<"l">;
-
-/**
- * Size of an icon, denoted as a shirt size.
- */
-export type Size = "s" | "m" | "l";
 
 /**
  * Utility type to extract icon names that have a given size, for example "s", "m", or "l", into a union.

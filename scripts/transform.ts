@@ -6,6 +6,7 @@ import type { Size } from "../src/catalogue/index.ts";
 import { getExportName } from "../src/catalogue/naming.ts";
 import { type SvgIcon, TransformerContext } from "./transformer.ts";
 import { CatalogueTransformer } from "./transformers/catalogue.ts";
+import { ReactTransformer } from "./transformers/react.ts";
 import { StringsTransformer } from "./transformers/strings.ts";
 
 const status = ora("Reading icons…").start();
@@ -79,8 +80,9 @@ status.succeed("Reading icons");
  */
 
 const transformers = [
-	new StringsTransformer(),
 	new CatalogueTransformer(),
+	new ReactTransformer(),
+	new StringsTransformer(),
 ];
 
 const ctx = new TransformerContext();
@@ -99,5 +101,3 @@ for (const transformer of transformers) {
 
 	status.succeed(transformer.name);
 }
-
-ora().succeed("Transformation complete");

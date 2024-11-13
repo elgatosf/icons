@@ -34,13 +34,12 @@
         "svg/"
     ],
     "scripts": {
-        "build": "npm run build:transform && npm run build:react && npm run lint:fix && npm run tsc",
+        "build": "npm run build:transform && npm run lint:fix && npm run tsc",
         "build:ci": "tsc",
         "build:transform": "node --experimental-strip-types scripts/transform.ts",
-        "build:react": "./scripts/svg-to-react.sh",
         "tsc": "tsc",
         "lint": "prettier . --check",
-        "lint:fix": "prettier . --write"
+        "lint:fix": "prettier . --write --log-level warn"
     },
     "keywords": [
         "elgato",
@@ -61,12 +60,14 @@
     "prettier": "@elgato/prettier-config",
     "devDependencies": {
         "@elgato/prettier-config": "^0.2.4",
-        "@svgr/cli": "^8.1.0",
+        "@svgr/core": "^8.1.0",
+        "@svgr/plugin-jsx": "^8.1.0",
+        "@svgr/plugin-svgo": "^8.1.0",
         "@tsconfig/node20": "^20.1.4",
         "@types/node": "^22.8.6",
         "@types/react": "^18.3.12",
-        "react": "^18.3.1",
         "ora": "^8.1.1",
+        "react": "^18.3.1",
         "typescript": "^5.6.3"
     }
 }

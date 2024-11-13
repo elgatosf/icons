@@ -2,39 +2,16 @@
  * Auto-generated file, do not edit.
  * To update the file, run the "build:react" script.
  */
+
 import type { SVGProps } from "react";
+import { sizeMap } from "../../catalogue/sizing.js";
 import type { IconProps } from "../types.js";
-const SIZE_MAP = {
-	s: 16,
-	m: 24,
-	l: 32,
-};
+
 const IconWarningFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const sizeName = props.size || "m";
-	const size = SIZE_MAP[sizeName];
-	const label = props.label ?? "Icon";
-	switch (sizeName) {
-		case "s":
-			return (
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="currentColor"
-					viewBox="0 0 16 16"
-					width={size}
-					height={size}
-					aria-label={label}
-					role="img"
-					{...props}
-				>
-					<path
-						fillRule="evenodd"
-						d="M8.866 1.5a1 1 0 0 0-1.732 0l-6.351 11a1 1 0 0 0 .866 1.5H14.35a1 1 0 0 0 .866-1.5l-6.351-11Zm-.366 3a.5.5 0 0 0-1 0v4a.5.5 0 0 0 1 0zm.25 6.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0"
-						clipRule="evenodd"
-					/>
-				</svg>
-			);
-		// case 'm':
-		// case 'l':
+	const size = sizeMap[props?.size ?? "m"];
+	const label = props?.label ?? "Icon";
+
+	switch (props?.size) {
 		default:
 			return (
 				<svg
@@ -56,4 +33,5 @@ const IconWarningFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 			);
 	}
 };
+
 export default IconWarningFilled;
