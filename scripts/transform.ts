@@ -94,7 +94,7 @@ for (const transformer of transformers) {
 	}
 
 	status.suffixText = "Finalizing...";
-	transformer.finalize?.(ctx);
+	await transformer.finalize?.(ctx);
 	status.suffixText = "";
 
 	status.succeed(transformer.name);

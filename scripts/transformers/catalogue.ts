@@ -31,14 +31,14 @@ export class CatalogueTransformer extends Transformer {
 	/**
 	 * @inheritdoc
 	 */
-	public override finalize(ctx: TransformerContext): void {
-		ctx.write("src/catalogue/icons.ts", format(this.#iconsContent));
+	public override finalize(ctx: TransformerContext): Promise<void> {
+		return ctx.write("src/catalogue/icons.ts", format(this.#iconsContent));
 	}
 
 	/**
 	 * @inheritdoc
 	 */
-	public override transform(ctx: TransformerContext, icon: SvgIcon): void | Promise<void> {
+	public override transform(ctx: TransformerContext, icon: SvgIcon): void {
 		this.#iconsContent += `"${icon.name}": { sizes: ${JSON.stringify(Array.from(icon.sizes.keys()))} },`;
 	}
 }

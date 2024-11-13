@@ -17,7 +17,7 @@ export abstract class Transformer {
 	 * Finalizes the transformer; this is called after all icons have been transformed.
 	 * @param ctx Transformer context.
 	 */
-	public finalize?(ctx: TransformerContext): void;
+	public finalize?(ctx: TransformerContext): Promise<void> | void;
 
 	/**
 	 * Transforms an icon.

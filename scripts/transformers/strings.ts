@@ -23,14 +23,14 @@ export class StringsTransformer extends Transformer {
 	/**
 	 * @inheritdoc
 	 */
-	public override finalize(ctx: TransformerContext): void {
+	public override async finalize(ctx: TransformerContext): Promise<void> {
 		for (const [size, { names, indexContents }] of this.#catalogues) {
 			// Ignore empty catalogues.
 			if (names.length === 0) {
 				continue;
 			}
 
-			ctx.write(`${this.#pathOf(size)}/index.ts`, indexContents);
+			await ctx.write(`${this.#pathOf(size)}/index.ts`, indexContents);
 		}
 	}
 
