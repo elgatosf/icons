@@ -3,7 +3,7 @@ import { basename, extname, join, parse } from "node:path";
 import ora from "ora";
 
 import type { Size } from "../src/catalogue/index.ts";
-import { getExportName } from "../src/utils.ts";
+import { getExportName } from "../src/catalogue/naming.ts";
 import { type SvgIcon, TransformerContext } from "./transformer.ts";
 import { CatalogueTransformer } from "./transformers/catalogue.ts";
 import { StringsTransformer } from "./transformers/strings.ts";
