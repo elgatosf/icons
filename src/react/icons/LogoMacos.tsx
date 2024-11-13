@@ -27,4 +27,6 @@ const IconLogoMacos = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoMacos.iconName = "logo-macos";
+
 export default IconLogoMacos;

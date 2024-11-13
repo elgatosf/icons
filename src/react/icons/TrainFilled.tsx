@@ -32,4 +32,6 @@ const IconTrainFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTrainFilled.iconName = "train--filled";
+
 export default IconTrainFilled;

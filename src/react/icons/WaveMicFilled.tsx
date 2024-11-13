@@ -27,4 +27,6 @@ const IconWaveMicFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconWaveMicFilled.iconName = "wave-mic--filled";
+
 export default IconWaveMicFilled;

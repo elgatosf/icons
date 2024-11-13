@@ -31,4 +31,6 @@ const IconEdit = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconEdit.iconName = "edit";
+
 export default IconEdit;

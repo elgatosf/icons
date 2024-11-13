@@ -29,4 +29,6 @@ const IconLogoOrigin = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoOrigin.iconName = "logo-origin";
+
 export default IconLogoOrigin;

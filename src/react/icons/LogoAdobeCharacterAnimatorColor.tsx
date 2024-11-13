@@ -34,4 +34,6 @@ const IconLogoAdobeCharacterAnimatorColor = (props: IconProps & SVGProps<SVGSVGE
 	);
 };
 
+IconLogoAdobeCharacterAnimatorColor.iconName = "logo-adobe-character-animator--color";
+
 export default IconLogoAdobeCharacterAnimatorColor;

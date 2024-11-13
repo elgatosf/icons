@@ -33,4 +33,6 @@ const IconFaceTracking = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFaceTracking.iconName = "face-tracking";
+
 export default IconFaceTracking;

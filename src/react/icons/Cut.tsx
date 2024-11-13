@@ -31,4 +31,6 @@ const IconCut = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCut.iconName = "cut";
+
 export default IconCut;

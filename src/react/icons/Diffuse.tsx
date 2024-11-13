@@ -32,4 +32,6 @@ const IconDiffuse = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconDiffuse.iconName = "diffuse";
+
 export default IconDiffuse;

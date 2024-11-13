@@ -27,4 +27,6 @@ const IconSettingsAdjustFocus = (props: IconProps & SVGProps<SVGSVGElement>) => 
 	);
 };
 
+IconSettingsAdjustFocus.iconName = "settings-adjust-focus";
+
 export default IconSettingsAdjustFocus;

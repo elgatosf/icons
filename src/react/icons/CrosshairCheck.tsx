@@ -32,4 +32,6 @@ const IconCrosshairCheck = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCrosshairCheck.iconName = "crosshair-check";
+
 export default IconCrosshairCheck;

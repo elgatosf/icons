@@ -32,4 +32,6 @@ const IconTextPrevious = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTextPrevious.iconName = "text-previous";
+
 export default IconTextPrevious;

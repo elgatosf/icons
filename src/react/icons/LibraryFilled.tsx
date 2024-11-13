@@ -31,4 +31,6 @@ const IconLibraryFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLibraryFilled.iconName = "library--filled";
+
 export default IconLibraryFilled;

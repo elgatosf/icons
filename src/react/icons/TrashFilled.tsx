@@ -31,4 +31,6 @@ const IconTrashFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTrashFilled.iconName = "trash--filled";
+
 export default IconTrashFilled;

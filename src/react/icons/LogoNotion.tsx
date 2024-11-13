@@ -31,4 +31,6 @@ const IconLogoNotion = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoNotion.iconName = "logo-notion";
+
 export default IconLogoNotion;

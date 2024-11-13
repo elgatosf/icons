@@ -31,4 +31,6 @@ const IconLogoTelegram = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoTelegram.iconName = "logo-telegram";
+
 export default IconLogoTelegram;

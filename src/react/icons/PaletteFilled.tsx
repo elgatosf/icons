@@ -31,4 +31,6 @@ const IconPaletteFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPaletteFilled.iconName = "palette--filled";
+
 export default IconPaletteFilled;

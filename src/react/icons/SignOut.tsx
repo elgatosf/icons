@@ -28,4 +28,6 @@ const IconSignOut = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconSignOut.iconName = "sign-out";
+
 export default IconSignOut;

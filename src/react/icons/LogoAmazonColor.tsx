@@ -40,4 +40,6 @@ const IconLogoAmazonColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoAmazonColor.iconName = "logo-amazon--color";
+
 export default IconLogoAmazonColor;

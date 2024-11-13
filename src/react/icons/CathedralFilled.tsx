@@ -31,4 +31,6 @@ const IconCathedralFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCathedralFilled.iconName = "cathedral--filled";
+
 export default IconCathedralFilled;

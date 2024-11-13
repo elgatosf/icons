@@ -27,4 +27,6 @@ const IconLogoTiktok = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoTiktok.iconName = "logo-tiktok";
+
 export default IconLogoTiktok;

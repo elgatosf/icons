@@ -36,4 +36,6 @@ const IconCompass = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCompass.iconName = "compass";
+
 export default IconCompass;

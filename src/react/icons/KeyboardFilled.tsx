@@ -31,4 +31,6 @@ const IconKeyboardFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconKeyboardFilled.iconName = "keyboard--filled";
+
 export default IconKeyboardFilled;

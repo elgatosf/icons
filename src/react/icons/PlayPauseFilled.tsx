@@ -27,4 +27,6 @@ const IconPlayPauseFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPlayPauseFilled.iconName = "play-pause--filled";
+
 export default IconPlayPauseFilled;

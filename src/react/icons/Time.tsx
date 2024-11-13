@@ -32,4 +32,6 @@ const IconTime = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTime.iconName = "time";
+
 export default IconTime;

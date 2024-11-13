@@ -27,4 +27,6 @@ const IconLogoTwitter = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoTwitter.iconName = "logo-twitter";
+
 export default IconLogoTwitter;

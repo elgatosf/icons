@@ -31,4 +31,6 @@ const IconSnorkel = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconSnorkel.iconName = "snorkel";
+
 export default IconSnorkel;

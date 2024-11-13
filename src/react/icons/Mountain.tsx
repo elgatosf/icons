@@ -27,4 +27,6 @@ const IconMountain = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMountain.iconName = "mountain";
+
 export default IconMountain;

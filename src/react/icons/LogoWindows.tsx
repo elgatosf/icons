@@ -27,4 +27,6 @@ const IconLogoWindows = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoWindows.iconName = "logo-windows";
+
 export default IconLogoWindows;

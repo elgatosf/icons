@@ -31,4 +31,6 @@ const IconInfoFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconInfoFilled.iconName = "info--filled";
+
 export default IconInfoFilled;

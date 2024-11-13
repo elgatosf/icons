@@ -28,4 +28,6 @@ const IconVolume2Filled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconVolume2Filled.iconName = "volume-2--filled";
+
 export default IconVolume2Filled;

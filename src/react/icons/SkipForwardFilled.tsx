@@ -27,4 +27,6 @@ const IconSkipForwardFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconSkipForwardFilled.iconName = "skip-forward--filled";
+
 export default IconSkipForwardFilled;

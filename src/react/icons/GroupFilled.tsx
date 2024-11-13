@@ -27,4 +27,6 @@ const IconGroupFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconGroupFilled.iconName = "group--filled";
+
 export default IconGroupFilled;

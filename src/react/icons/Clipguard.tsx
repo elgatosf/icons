@@ -27,4 +27,6 @@ const IconClipguard = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconClipguard.iconName = "clipguard";
+
 export default IconClipguard;

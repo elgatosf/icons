@@ -31,4 +31,6 @@ const IconLogoWechat = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoWechat.iconName = "logo-wechat";
+
 export default IconLogoWechat;

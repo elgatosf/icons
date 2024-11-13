@@ -37,4 +37,6 @@ const IconLogoCameraHubFilled = (props: IconProps & SVGProps<SVGSVGElement>) => 
 	);
 };
 
+IconLogoCameraHubFilled.iconName = "logo-camera-hub--filled";
+
 export default IconLogoCameraHubFilled;

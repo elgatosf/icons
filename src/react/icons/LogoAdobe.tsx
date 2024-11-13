@@ -27,4 +27,6 @@ const IconLogoAdobe = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoAdobe.iconName = "logo-adobe";
+
 export default IconLogoAdobe;

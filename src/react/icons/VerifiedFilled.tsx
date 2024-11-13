@@ -31,4 +31,6 @@ const IconVerifiedFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconVerifiedFilled.iconName = "verified--filled";
+
 export default IconVerifiedFilled;

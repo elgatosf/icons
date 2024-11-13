@@ -27,4 +27,6 @@ const IconUnderline = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconUnderline.iconName = "underline";
+
 export default IconUnderline;

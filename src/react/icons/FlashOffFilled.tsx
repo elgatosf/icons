@@ -27,4 +27,6 @@ const IconFlashOffFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFlashOffFilled.iconName = "flash-off--filled";
+
 export default IconFlashOffFilled;

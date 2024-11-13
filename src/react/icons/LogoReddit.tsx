@@ -32,4 +32,6 @@ const IconLogoReddit = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoReddit.iconName = "logo-reddit";
+
 export default IconLogoReddit;

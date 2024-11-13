@@ -31,4 +31,6 @@ const IconNdi = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconNdi.iconName = "ndi";
+
 export default IconNdi;

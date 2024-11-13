@@ -37,4 +37,6 @@ const IconLogo4Kcu = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogo4Kcu.iconName = "logo4-kcu";
+
 export default IconLogo4Kcu;

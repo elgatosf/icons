@@ -31,4 +31,6 @@ const IconCathedral = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCathedral.iconName = "cathedral";
+
 export default IconCathedral;

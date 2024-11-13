@@ -32,4 +32,6 @@ const IconWaveLinkApp = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconWaveLinkApp.iconName = "wave-link-app";
+
 export default IconWaveLinkApp;

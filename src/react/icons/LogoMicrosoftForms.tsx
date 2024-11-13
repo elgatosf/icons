@@ -27,4 +27,6 @@ const IconLogoMicrosoftForms = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoMicrosoftForms.iconName = "logo-microsoft-forms";
+
 export default IconLogoMicrosoftForms;

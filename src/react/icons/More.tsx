@@ -27,4 +27,6 @@ const IconMore = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMore.iconName = "more";
+
 export default IconMore;

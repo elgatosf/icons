@@ -36,4 +36,6 @@ const IconBadge = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconBadge.iconName = "badge";
+
 export default IconBadge;

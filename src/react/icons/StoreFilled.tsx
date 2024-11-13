@@ -31,4 +31,6 @@ const IconStoreFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconStoreFilled.iconName = "store--filled";
+
 export default IconStoreFilled;

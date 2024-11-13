@@ -32,4 +32,6 @@ const IconPowerOff = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPowerOff.iconName = "power-off";
+
 export default IconPowerOff;

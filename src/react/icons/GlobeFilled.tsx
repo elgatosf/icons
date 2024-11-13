@@ -27,4 +27,6 @@ const IconGlobeFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconGlobeFilled.iconName = "globe--filled";
+
 export default IconGlobeFilled;

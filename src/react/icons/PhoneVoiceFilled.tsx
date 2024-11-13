@@ -28,4 +28,6 @@ const IconPhoneVoiceFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPhoneVoiceFilled.iconName = "phone-voice--filled";
+
 export default IconPhoneVoiceFilled;

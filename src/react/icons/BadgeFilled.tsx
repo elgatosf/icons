@@ -31,4 +31,6 @@ const IconBadgeFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconBadgeFilled.iconName = "badge--filled";
+
 export default IconBadgeFilled;

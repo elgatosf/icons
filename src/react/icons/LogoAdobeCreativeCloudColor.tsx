@@ -46,4 +46,6 @@ const IconLogoAdobeCreativeCloudColor = (props: IconProps & SVGProps<SVGSVGEleme
 	);
 };
 
+IconLogoAdobeCreativeCloudColor.iconName = "logo-adobe-creative-cloud--color";
+
 export default IconLogoAdobeCreativeCloudColor;

@@ -27,4 +27,6 @@ const IconCartFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCartFilled.iconName = "cart--filled";
+
 export default IconCartFilled;

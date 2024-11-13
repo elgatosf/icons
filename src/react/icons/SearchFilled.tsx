@@ -32,4 +32,6 @@ const IconSearchFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconSearchFilled.iconName = "search--filled";
+
 export default IconSearchFilled;

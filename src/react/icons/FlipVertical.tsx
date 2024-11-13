@@ -38,4 +38,6 @@ const IconFlipVertical = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFlipVertical.iconName = "flip-vertical";
+
 export default IconFlipVertical;

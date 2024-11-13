@@ -27,4 +27,6 @@ const IconDrag = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconDrag.iconName = "drag";
+
 export default IconDrag;

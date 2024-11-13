@@ -27,4 +27,6 @@ const IconLogoLinkedin = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoLinkedin.iconName = "logo-linkedin";
+
 export default IconLogoLinkedin;

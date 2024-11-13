@@ -32,4 +32,6 @@ const IconCameraFlip = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCameraFlip.iconName = "camera-flip";
+
 export default IconCameraFlip;

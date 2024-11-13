@@ -32,4 +32,6 @@ const IconHeadphones = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconHeadphones.iconName = "headphones";
+
 export default IconHeadphones;

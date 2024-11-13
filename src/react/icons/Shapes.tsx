@@ -31,4 +31,6 @@ const IconShapes = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconShapes.iconName = "shapes";
+
 export default IconShapes;

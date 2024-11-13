@@ -29,4 +29,6 @@ const IconCameraInput = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCameraInput.iconName = "camera-input";
+
 export default IconCameraInput;

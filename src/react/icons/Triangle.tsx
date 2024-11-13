@@ -31,4 +31,6 @@ const IconTriangle = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTriangle.iconName = "triangle";
+
 export default IconTriangle;

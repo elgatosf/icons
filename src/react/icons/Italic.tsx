@@ -27,4 +27,6 @@ const IconItalic = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconItalic.iconName = "italic";
+
 export default IconItalic;

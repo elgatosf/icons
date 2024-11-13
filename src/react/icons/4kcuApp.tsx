@@ -37,4 +37,6 @@ const Icon4kcuApp = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+Icon4kcuApp.iconName = "4kcu-app";
+
 export default Icon4kcuApp;

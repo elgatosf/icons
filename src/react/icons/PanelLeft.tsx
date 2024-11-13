@@ -31,4 +31,6 @@ const IconPanelLeft = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPanelLeft.iconName = "panel-left";
+
 export default IconPanelLeft;

@@ -32,4 +32,6 @@ const IconImageCheck = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconImageCheck.iconName = "image-check";
+
 export default IconImageCheck;

@@ -27,4 +27,6 @@ const IconLogoMicrosoftTodo = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoMicrosoftTodo.iconName = "logo-microsoft-todo";
+
 export default IconLogoMicrosoftTodo;

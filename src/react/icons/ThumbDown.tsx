@@ -31,4 +31,6 @@ const IconThumbDown = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconThumbDown.iconName = "thumb-down";
+
 export default IconThumbDown;

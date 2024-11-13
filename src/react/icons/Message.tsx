@@ -31,4 +31,6 @@ const IconMessage = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMessage.iconName = "message";
+
 export default IconMessage;

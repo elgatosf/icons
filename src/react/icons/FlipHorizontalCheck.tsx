@@ -38,4 +38,6 @@ const IconFlipHorizontalCheck = (props: IconProps & SVGProps<SVGSVGElement>) => 
 	);
 };
 
+IconFlipHorizontalCheck.iconName = "flip-horizontal-check";
+
 export default IconFlipHorizontalCheck;

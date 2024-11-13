@@ -27,4 +27,6 @@ const IconBlurBackground = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconBlurBackground.iconName = "blur-background";
+
 export default IconBlurBackground;

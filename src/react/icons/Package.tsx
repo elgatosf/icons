@@ -31,4 +31,6 @@ const IconPackage = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPackage.iconName = "package";
+
 export default IconPackage;

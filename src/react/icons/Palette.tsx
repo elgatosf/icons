@@ -32,4 +32,6 @@ const IconPalette = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPalette.iconName = "palette";
+
 export default IconPalette;

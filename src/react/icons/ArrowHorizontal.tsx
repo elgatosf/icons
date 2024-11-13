@@ -27,4 +27,6 @@ const IconArrowHorizontal = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconArrowHorizontal.iconName = "arrow-horizontal";
+
 export default IconArrowHorizontal;

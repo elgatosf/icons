@@ -27,4 +27,6 @@ const IconLogoElgato = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoElgato.iconName = "logo-elgato";
+
 export default IconLogoElgato;

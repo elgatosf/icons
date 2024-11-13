@@ -27,4 +27,6 @@ const IconDiamondFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconDiamondFilled.iconName = "diamond--filled";
+
 export default IconDiamondFilled;

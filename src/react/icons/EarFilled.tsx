@@ -31,4 +31,6 @@ const IconEarFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconEarFilled.iconName = "ear--filled";
+
 export default IconEarFilled;

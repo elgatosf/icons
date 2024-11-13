@@ -31,4 +31,6 @@ const IconLogoYoutubeColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoYoutubeColor.iconName = "logo-youtube--color";
+
 export default IconLogoYoutubeColor;

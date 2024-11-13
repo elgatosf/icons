@@ -33,4 +33,6 @@ const IconLogoAdobeCreativeCloud = (props: IconProps & SVGProps<SVGSVGElement>) 
 	);
 };
 
+IconLogoAdobeCreativeCloud.iconName = "logo-adobe-creative-cloud";
+
 export default IconLogoAdobeCreativeCloud;

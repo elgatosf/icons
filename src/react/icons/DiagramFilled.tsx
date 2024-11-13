@@ -28,4 +28,6 @@ const IconDiagramFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconDiagramFilled.iconName = "diagram--filled";
+
 export default IconDiagramFilled;

@@ -31,4 +31,6 @@ const IconTransition = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTransition.iconName = "transition";
+
 export default IconTransition;

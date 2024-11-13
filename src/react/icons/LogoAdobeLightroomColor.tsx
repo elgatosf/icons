@@ -34,4 +34,6 @@ const IconLogoAdobeLightroomColor = (props: IconProps & SVGProps<SVGSVGElement>)
 	);
 };
 
+IconLogoAdobeLightroomColor.iconName = "logo-adobe-lightroom--color";
+
 export default IconLogoAdobeLightroomColor;

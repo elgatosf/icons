@@ -32,4 +32,6 @@ const IconWarning = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconWarning.iconName = "warning";
+
 export default IconWarning;

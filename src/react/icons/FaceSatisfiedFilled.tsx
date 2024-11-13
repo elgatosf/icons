@@ -31,4 +31,6 @@ const IconFaceSatisfiedFilled = (props: IconProps & SVGProps<SVGSVGElement>) => 
 	);
 };
 
+IconFaceSatisfiedFilled.iconName = "face-satisfied--filled";
+
 export default IconFaceSatisfiedFilled;

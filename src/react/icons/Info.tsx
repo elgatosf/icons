@@ -31,4 +31,6 @@ const IconInfo = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconInfo.iconName = "info";
+
 export default IconInfo;

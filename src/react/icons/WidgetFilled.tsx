@@ -27,4 +27,6 @@ const IconWidgetFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconWidgetFilled.iconName = "widget--filled";
+
 export default IconWidgetFilled;

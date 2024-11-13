@@ -32,4 +32,6 @@ const IconGroup = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconGroup.iconName = "group";
+
 export default IconGroup;

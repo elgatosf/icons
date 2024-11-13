@@ -32,4 +32,6 @@ const IconFocus = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFocus.iconName = "focus";
+
 export default IconFocus;

@@ -34,4 +34,6 @@ const IconWarningFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	}
 };
 
+IconWarningFilled.iconName = "warning--filled";
+
 export default IconWarningFilled;

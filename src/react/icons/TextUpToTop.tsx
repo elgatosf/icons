@@ -32,4 +32,6 @@ const IconTextUpToTop = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTextUpToTop.iconName = "text-up-to-top";
+
 export default IconTextUpToTop;

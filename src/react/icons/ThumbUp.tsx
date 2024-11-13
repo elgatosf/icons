@@ -31,4 +31,6 @@ const IconThumbUp = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconThumbUp.iconName = "thumb-up";
+
 export default IconThumbUp;

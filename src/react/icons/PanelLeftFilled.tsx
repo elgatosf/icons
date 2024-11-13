@@ -31,4 +31,6 @@ const IconPanelLeftFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPanelLeftFilled.iconName = "panel-left--filled";
+
 export default IconPanelLeftFilled;

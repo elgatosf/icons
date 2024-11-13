@@ -32,4 +32,6 @@ const IconTextSet = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTextSet.iconName = "text-set";
+
 export default IconTextSet;

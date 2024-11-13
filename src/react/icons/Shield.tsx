@@ -31,4 +31,6 @@ const IconShield = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconShield.iconName = "shield";
+
 export default IconShield;

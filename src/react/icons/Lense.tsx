@@ -37,4 +37,6 @@ const IconLense = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLense.iconName = "lense";
+
 export default IconLense;

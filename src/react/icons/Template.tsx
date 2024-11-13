@@ -31,4 +31,6 @@ const IconTemplate = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTemplate.iconName = "template";
+
 export default IconTemplate;

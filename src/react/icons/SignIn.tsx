@@ -28,4 +28,6 @@ const IconSignIn = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconSignIn.iconName = "sign-in";
+
 export default IconSignIn;

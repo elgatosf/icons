@@ -28,4 +28,6 @@ const IconCartRemove = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCartRemove.iconName = "cart-remove";
+
 export default IconCartRemove;

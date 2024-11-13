@@ -27,4 +27,6 @@ const IconTemplateFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTemplateFilled.iconName = "template--filled";
+
 export default IconTemplateFilled;

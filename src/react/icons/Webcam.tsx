@@ -36,4 +36,6 @@ const IconWebcam = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconWebcam.iconName = "webcam";
+
 export default IconWebcam;

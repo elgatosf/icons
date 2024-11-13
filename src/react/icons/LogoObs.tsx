@@ -32,4 +32,6 @@ const IconLogoObs = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoObs.iconName = "logo-obs";
+
 export default IconLogoObs;

@@ -31,4 +31,6 @@ const IconBluetooth = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconBluetooth.iconName = "bluetooth";
+
 export default IconBluetooth;

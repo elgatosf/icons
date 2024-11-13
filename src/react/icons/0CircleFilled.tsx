@@ -32,4 +32,6 @@ const Icon0CircleFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+Icon0CircleFilled.iconName = "0-circle--filled";
+
 export default Icon0CircleFilled;

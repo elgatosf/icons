@@ -28,4 +28,6 @@ const IconLearnFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLearnFilled.iconName = "learn--filled";
+
 export default IconLearnFilled;

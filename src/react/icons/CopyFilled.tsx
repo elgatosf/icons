@@ -28,4 +28,6 @@ const IconCopyFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCopyFilled.iconName = "copy--filled";
+
 export default IconCopyFilled;

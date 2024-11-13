@@ -27,4 +27,6 @@ const IconLogoMicrosoftVisio = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoMicrosoftVisio.iconName = "logo-microsoft-visio";
+
 export default IconLogoMicrosoftVisio;

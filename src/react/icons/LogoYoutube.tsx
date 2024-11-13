@@ -31,4 +31,6 @@ const IconLogoYoutube = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoYoutube.iconName = "logo-youtube";
+
 export default IconLogoYoutube;

@@ -32,4 +32,6 @@ const IconLogoAdobePhotoshop = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoAdobePhotoshop.iconName = "logo-adobe-photoshop";
+
 export default IconLogoAdobePhotoshop;

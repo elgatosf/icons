@@ -32,4 +32,6 @@ const IconPanelCollapseFilled = (props: IconProps & SVGProps<SVGSVGElement>) => 
 	);
 };
 
+IconPanelCollapseFilled.iconName = "panel-collapse--filled";
+
 export default IconPanelCollapseFilled;

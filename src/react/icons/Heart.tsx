@@ -31,4 +31,6 @@ const IconHeart = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconHeart.iconName = "heart";
+
 export default IconHeart;

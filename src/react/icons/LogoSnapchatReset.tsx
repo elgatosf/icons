@@ -32,4 +32,6 @@ const IconLogoSnapchatReset = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoSnapchatReset.iconName = "logo-snapchat-reset";
+
 export default IconLogoSnapchatReset;

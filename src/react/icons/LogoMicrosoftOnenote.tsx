@@ -27,4 +27,6 @@ const IconLogoMicrosoftOnenote = (props: IconProps & SVGProps<SVGSVGElement>) =>
 	);
 };
 
+IconLogoMicrosoftOnenote.iconName = "logo-microsoft-onenote";
+
 export default IconLogoMicrosoftOnenote;

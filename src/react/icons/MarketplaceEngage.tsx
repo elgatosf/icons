@@ -27,4 +27,6 @@ const IconMarketplaceEngage = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMarketplaceEngage.iconName = "marketplace-engage";
+
 export default IconMarketplaceEngage;

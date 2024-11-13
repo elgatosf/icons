@@ -36,4 +36,6 @@ const IconVideo = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconVideo.iconName = "video";
+
 export default IconVideo;

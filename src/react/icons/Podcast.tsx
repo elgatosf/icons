@@ -33,4 +33,6 @@ const IconPodcast = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPodcast.iconName = "podcast";
+
 export default IconPodcast;

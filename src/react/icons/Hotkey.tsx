@@ -39,4 +39,6 @@ const IconHotkey = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconHotkey.iconName = "hotkey";
+
 export default IconHotkey;

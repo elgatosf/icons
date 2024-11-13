@@ -30,4 +30,6 @@ const IconLogoTwitterColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoTwitterColor.iconName = "logo-twitter--color";
+
 export default IconLogoTwitterColor;

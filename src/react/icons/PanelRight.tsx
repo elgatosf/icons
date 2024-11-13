@@ -31,4 +31,6 @@ const IconPanelRight = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPanelRight.iconName = "panel-right";
+
 export default IconPanelRight;

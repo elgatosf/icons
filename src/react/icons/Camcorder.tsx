@@ -31,4 +31,6 @@ const IconCamcorder = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCamcorder.iconName = "camcorder";
+
 export default IconCamcorder;

@@ -28,4 +28,6 @@ const IconAutoScrollUpFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconAutoScrollUpFilled.iconName = "auto-scroll-up--filled";
+
 export default IconAutoScrollUpFilled;

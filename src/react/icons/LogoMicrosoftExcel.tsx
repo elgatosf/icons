@@ -27,4 +27,6 @@ const IconLogoMicrosoftExcel = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoMicrosoftExcel.iconName = "logo-microsoft-excel";
+
 export default IconLogoMicrosoftExcel;

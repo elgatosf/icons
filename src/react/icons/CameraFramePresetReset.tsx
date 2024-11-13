@@ -32,4 +32,6 @@ const IconCameraFramePresetReset = (props: IconProps & SVGProps<SVGSVGElement>) 
 	);
 };
 
+IconCameraFramePresetReset.iconName = "camera-frame-preset-reset";
+
 export default IconCameraFramePresetReset;

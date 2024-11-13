@@ -32,4 +32,6 @@ const IconMessageDownToBottomFilled = (props: IconProps & SVGProps<SVGSVGElement
 	);
 };
 
+IconMessageDownToBottomFilled.iconName = "message-down-to-bottom--filled";
+
 export default IconMessageDownToBottomFilled;

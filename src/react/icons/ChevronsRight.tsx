@@ -28,4 +28,6 @@ const IconChevronsRight = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconChevronsRight.iconName = "chevrons-right";
+
 export default IconChevronsRight;

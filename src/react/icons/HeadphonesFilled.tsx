@@ -28,4 +28,6 @@ const IconHeadphonesFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconHeadphonesFilled.iconName = "headphones--filled";
+
 export default IconHeadphonesFilled;

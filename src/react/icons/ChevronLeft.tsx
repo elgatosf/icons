@@ -27,4 +27,6 @@ const IconChevronLeft = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconChevronLeft.iconName = "chevron-left";
+
 export default IconChevronLeft;

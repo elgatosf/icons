@@ -42,4 +42,6 @@ const IconLogoSlackColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoSlackColor.iconName = "logo-slack--color";
+
 export default IconLogoSlackColor;

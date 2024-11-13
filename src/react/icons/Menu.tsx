@@ -27,4 +27,6 @@ const IconMenu = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMenu.iconName = "menu";
+
 export default IconMenu;

@@ -31,4 +31,6 @@ const IconLogoAdobeLightroom = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoAdobeLightroom.iconName = "logo-adobe-lightroom";
+
 export default IconLogoAdobeLightroom;

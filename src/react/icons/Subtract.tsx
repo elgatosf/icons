@@ -27,4 +27,6 @@ const IconSubtract = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconSubtract.iconName = "subtract";
+
 export default IconSubtract;

@@ -27,4 +27,6 @@ const IconAttachment = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconAttachment.iconName = "attachment";
+
 export default IconAttachment;

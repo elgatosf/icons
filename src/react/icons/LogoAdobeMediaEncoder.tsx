@@ -32,4 +32,6 @@ const IconLogoAdobeMediaEncoder = (props: IconProps & SVGProps<SVGSVGElement>) =
 	);
 };
 
+IconLogoAdobeMediaEncoder.iconName = "logo-adobe-media-encoder";
+
 export default IconLogoAdobeMediaEncoder;

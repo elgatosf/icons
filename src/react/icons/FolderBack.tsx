@@ -32,4 +32,6 @@ const IconFolderBack = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFolderBack.iconName = "folder-back";
+
 export default IconFolderBack;

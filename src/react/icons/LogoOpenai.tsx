@@ -27,4 +27,6 @@ const IconLogoOpenai = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoOpenai.iconName = "logo-openai";
+
 export default IconLogoOpenai;

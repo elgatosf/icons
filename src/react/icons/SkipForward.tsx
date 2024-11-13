@@ -32,4 +32,6 @@ const IconSkipForward = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconSkipForward.iconName = "skip-forward";
+
 export default IconSkipForward;

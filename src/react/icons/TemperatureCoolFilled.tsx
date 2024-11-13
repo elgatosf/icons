@@ -32,4 +32,6 @@ const IconTemperatureCoolFilled = (props: IconProps & SVGProps<SVGSVGElement>) =
 	);
 };
 
+IconTemperatureCoolFilled.iconName = "temperature-cool--filled";
+
 export default IconTemperatureCoolFilled;

@@ -32,4 +32,6 @@ const IconSpeakerFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconSpeakerFilled.iconName = "speaker--filled";
+
 export default IconSpeakerFilled;

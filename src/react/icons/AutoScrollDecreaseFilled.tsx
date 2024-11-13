@@ -32,4 +32,6 @@ const IconAutoScrollDecreaseFilled = (props: IconProps & SVGProps<SVGSVGElement>
 	);
 };
 
+IconAutoScrollDecreaseFilled.iconName = "auto-scroll-decrease--filled";
+
 export default IconAutoScrollDecreaseFilled;

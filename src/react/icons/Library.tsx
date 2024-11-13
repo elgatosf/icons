@@ -31,4 +31,6 @@ const IconLibrary = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLibrary.iconName = "library";
+
 export default IconLibrary;

@@ -31,4 +31,6 @@ const IconPenTool = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPenTool.iconName = "pen-tool";
+
 export default IconPenTool;

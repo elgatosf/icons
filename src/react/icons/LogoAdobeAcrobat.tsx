@@ -32,4 +32,6 @@ const IconLogoAdobeAcrobat = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoAdobeAcrobat.iconName = "logo-adobe-acrobat";
+
 export default IconLogoAdobeAcrobat;

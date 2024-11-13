@@ -27,4 +27,6 @@ const IconLogoSiri = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoSiri.iconName = "logo-siri";
+
 export default IconLogoSiri;

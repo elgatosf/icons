@@ -31,4 +31,6 @@ const IconCamcorderFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCamcorderFilled.iconName = "camcorder--filled";
+
 export default IconCamcorderFilled;

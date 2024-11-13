@@ -31,4 +31,6 @@ const IconSubtractCircleFilled = (props: IconProps & SVGProps<SVGSVGElement>) =>
 	);
 };
 
+IconSubtractCircleFilled.iconName = "subtract-circle--filled";
+
 export default IconSubtractCircleFilled;

@@ -30,4 +30,6 @@ const IconLogoDiscordColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoDiscordColor.iconName = "logo-discord--color";
+
 export default IconLogoDiscordColor;

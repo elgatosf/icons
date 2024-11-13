@@ -27,4 +27,6 @@ const IconCrossfade = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCrossfade.iconName = "crossfade";
+
 export default IconCrossfade;

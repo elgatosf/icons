@@ -36,4 +36,6 @@ const IconFacecam = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFacecam.iconName = "facecam";
+
 export default IconFacecam;

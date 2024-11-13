@@ -32,4 +32,6 @@ const IconLock = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLock.iconName = "lock";
+
 export default IconLock;

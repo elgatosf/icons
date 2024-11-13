@@ -27,4 +27,6 @@ const IconCloudFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCloudFilled.iconName = "cloud--filled";
+
 export default IconCloudFilled;

@@ -55,4 +55,6 @@ const IconLogoInstagramColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoInstagramColor.iconName = "logo-instagram--color";
+
 export default IconLogoInstagramColor;

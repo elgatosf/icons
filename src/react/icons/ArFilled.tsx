@@ -27,4 +27,6 @@ const IconArFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconArFilled.iconName = "ar--filled";
+
 export default IconArFilled;

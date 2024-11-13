@@ -32,4 +32,6 @@ const IconSubtractCircle = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconSubtractCircle.iconName = "subtract-circle";
+
 export default IconSubtractCircle;

@@ -220,4 +220,6 @@ const IconLogoRedditColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoRedditColor.iconName = "logo-reddit--color";
+
 export default IconLogoRedditColor;

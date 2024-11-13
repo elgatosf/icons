@@ -30,4 +30,6 @@ const IconLogoDropboxColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoDropboxColor.iconName = "logo-dropbox--color";
+
 export default IconLogoDropboxColor;

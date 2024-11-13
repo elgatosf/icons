@@ -28,4 +28,6 @@ const IconEar = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconEar.iconName = "ear";
+
 export default IconEar;

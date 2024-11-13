@@ -34,4 +34,6 @@ const IconLogoAdobeAcrobatColor = (props: IconProps & SVGProps<SVGSVGElement>) =
 	);
 };
 
+IconLogoAdobeAcrobatColor.iconName = "logo-adobe-acrobat--color";
+
 export default IconLogoAdobeAcrobatColor;

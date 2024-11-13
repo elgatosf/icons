@@ -31,4 +31,6 @@ const IconLocationFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLocationFilled.iconName = "location--filled";
+
 export default IconLocationFilled;

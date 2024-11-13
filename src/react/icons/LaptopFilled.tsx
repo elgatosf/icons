@@ -27,4 +27,6 @@ const IconLaptopFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLaptopFilled.iconName = "laptop--filled";
+
 export default IconLaptopFilled;

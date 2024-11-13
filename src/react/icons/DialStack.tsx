@@ -33,4 +33,6 @@ const IconDialStack = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconDialStack.iconName = "dial-stack";
+
 export default IconDialStack;

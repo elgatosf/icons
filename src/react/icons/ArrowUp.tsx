@@ -27,4 +27,6 @@ const IconArrowUp = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconArrowUp.iconName = "arrow-up";
+
 export default IconArrowUp;

@@ -31,4 +31,6 @@ const IconShieldFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconShieldFilled.iconName = "shield--filled";
+
 export default IconShieldFilled;

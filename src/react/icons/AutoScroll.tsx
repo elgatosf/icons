@@ -32,4 +32,6 @@ const IconAutoScroll = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconAutoScroll.iconName = "auto-scroll";
+
 export default IconAutoScroll;

@@ -31,4 +31,6 @@ const IconPin = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPin.iconName = "pin";
+
 export default IconPin;

@@ -31,4 +31,6 @@ const IconBook = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconBook.iconName = "book";
+
 export default IconBook;

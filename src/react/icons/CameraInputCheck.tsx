@@ -33,4 +33,6 @@ const IconCameraInputCheck = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCameraInputCheck.iconName = "camera-input-check";
+
 export default IconCameraInputCheck;

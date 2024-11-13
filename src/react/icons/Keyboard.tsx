@@ -32,4 +32,6 @@ const IconKeyboard = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconKeyboard.iconName = "keyboard";
+
 export default IconKeyboard;

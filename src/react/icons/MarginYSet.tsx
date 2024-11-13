@@ -36,4 +36,6 @@ const IconMarginYSet = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMarginYSet.iconName = "margin-y-set";
+
 export default IconMarginYSet;

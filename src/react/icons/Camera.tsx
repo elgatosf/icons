@@ -36,4 +36,6 @@ const IconCamera = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCamera.iconName = "camera";
+
 export default IconCamera;

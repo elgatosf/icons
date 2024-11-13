@@ -32,4 +32,6 @@ const IconViewFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconViewFilled.iconName = "view--filled";
+
 export default IconViewFilled;

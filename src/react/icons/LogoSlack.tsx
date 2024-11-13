@@ -27,4 +27,6 @@ const IconLogoSlack = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoSlack.iconName = "logo-slack";
+
 export default IconLogoSlack;

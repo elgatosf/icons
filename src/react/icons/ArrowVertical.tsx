@@ -27,4 +27,6 @@ const IconArrowVertical = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconArrowVertical.iconName = "arrow-vertical";
+
 export default IconArrowVertical;

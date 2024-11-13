@@ -27,4 +27,6 @@ const IconLogoGitlab = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoGitlab.iconName = "logo-gitlab";
+
 export default IconLogoGitlab;

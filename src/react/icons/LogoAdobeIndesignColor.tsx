@@ -34,4 +34,6 @@ const IconLogoAdobeIndesignColor = (props: IconProps & SVGProps<SVGSVGElement>) 
 	);
 };
 
+IconLogoAdobeIndesignColor.iconName = "logo-adobe-indesign--color";
+
 export default IconLogoAdobeIndesignColor;

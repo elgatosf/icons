@@ -28,4 +28,6 @@ const IconLogoScuf = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoScuf.iconName = "logo-scuf";
+
 export default IconLogoScuf;

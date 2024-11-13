@@ -32,4 +32,6 @@ const IconCart = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCart.iconName = "cart";
+
 export default IconCart;

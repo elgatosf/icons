@@ -27,4 +27,6 @@ const IconLogoFrameio = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoFrameio.iconName = "logo-frameio";
+
 export default IconLogoFrameio;

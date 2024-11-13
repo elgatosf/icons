@@ -27,4 +27,6 @@ const IconMarketplaceEngageFilled = (props: IconProps & SVGProps<SVGSVGElement>)
 	);
 };
 
+IconMarketplaceEngageFilled.iconName = "marketplace-engage--filled";
+
 export default IconMarketplaceEngageFilled;

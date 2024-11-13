@@ -33,4 +33,6 @@ const IconStreamDeckPedalFilled = (props: IconProps & SVGProps<SVGSVGElement>) =
 	);
 };
 
+IconStreamDeckPedalFilled.iconName = "stream-deck-pedal--filled";
+
 export default IconStreamDeckPedalFilled;

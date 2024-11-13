@@ -31,4 +31,6 @@ const IconWrench = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconWrench.iconName = "wrench";
+
 export default IconWrench;

@@ -27,4 +27,6 @@ const IconUnorderedList = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconUnorderedList.iconName = "unordered-list";
+
 export default IconUnorderedList;

@@ -32,4 +32,6 @@ const IconAutoScrollIncreaseFilled = (props: IconProps & SVGProps<SVGSVGElement>
 	);
 };
 
+IconAutoScrollIncreaseFilled.iconName = "auto-scroll-increase--filled";
+
 export default IconAutoScrollIncreaseFilled;

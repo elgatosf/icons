@@ -32,4 +32,6 @@ const IconLogoAdobeAudition = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoAdobeAudition.iconName = "logo-adobe-audition";
+
 export default IconLogoAdobeAudition;

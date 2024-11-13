@@ -31,4 +31,6 @@ const IconBug = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconBug.iconName = "bug";
+
 export default IconBug;

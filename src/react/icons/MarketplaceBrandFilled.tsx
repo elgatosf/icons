@@ -27,4 +27,6 @@ const IconMarketplaceBrandFilled = (props: IconProps & SVGProps<SVGSVGElement>) 
 	);
 };
 
+IconMarketplaceBrandFilled.iconName = "marketplace-brand--filled";
+
 export default IconMarketplaceBrandFilled;

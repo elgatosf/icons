@@ -69,7 +69,11 @@ export class ReactTransformer extends Transformer {
 		const filename = componentName.slice(4);
 		const elementOrSwitch = this.#reduceSizes(sizes);
 
-		await ctx.write(`src/react/icons/${filename}.tsx`, this.#formatComponent(componentName, elementOrSwitch));
+		await ctx.write(
+			`src/react/icons/${filename}.tsx`,
+			this.#formatComponent(componentName, icon.name, elementOrSwitch),
+		);
+
 		this.#indexContents += `export { default as ${componentName} } from "./${filename}.js";\n`;
 	}
 
@@ -109,11 +113,12 @@ export class ReactTransformer extends Transformer {
 
 	/**
 	 * Formats the icon to a React component.
-	 * @param name Name of the component.
+	 * @param componentName Name of the component.
+	 * @param iconName Name of the icon.
 	 * @param elementOrSwitch Element, or switch statement of the icon sizes.
 	 * @returns React component as a string.
 	 */
-	#formatComponent(name: string, elementOrSwitch: string): string {
+	#formatComponent(componentName: string, iconName: string, elementOrSwitch: string): string {
 		return `
 /**
  * Auto-generated file, do not edit.
@@ -124,13 +129,15 @@ import type { SVGProps } from "react"
 import { sizeMap } from "../../catalogue/sizing.js"
 import type { IconProps } from "../types.js"
 
-const ${name} = (props: IconProps & SVGProps<SVGSVGElement>) => {
+const ${componentName} = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	const size = sizeMap[props?.size ?? "m"]
 	const label = props?.label ?? "Icon"
 	
 	${elementOrSwitch}
 };
 
-export default ${name};`;
+${componentName}.iconName = "${iconName}";
+
+export default ${componentName};`;
 	}
 }

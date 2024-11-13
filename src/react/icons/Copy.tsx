@@ -36,4 +36,6 @@ const IconCopy = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCopy.iconName = "copy";
+
 export default IconCopy;

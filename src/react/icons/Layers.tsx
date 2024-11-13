@@ -41,4 +41,6 @@ const IconLayers = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLayers.iconName = "layers";
+
 export default IconLayers;

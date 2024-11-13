@@ -27,4 +27,6 @@ const IconLogoThreads = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoThreads.iconName = "logo-threads";
+
 export default IconLogoThreads;

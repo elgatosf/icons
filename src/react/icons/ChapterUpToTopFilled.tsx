@@ -32,4 +32,6 @@ const IconChapterUpToTopFilled = (props: IconProps & SVGProps<SVGSVGElement>) =>
 	);
 };
 
+IconChapterUpToTopFilled.iconName = "chapter-up-to-top--filled";
+
 export default IconChapterUpToTopFilled;

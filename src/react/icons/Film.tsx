@@ -31,4 +31,6 @@ const IconFilm = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFilm.iconName = "film";
+
 export default IconFilm;

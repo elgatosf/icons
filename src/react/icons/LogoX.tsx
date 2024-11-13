@@ -27,4 +27,6 @@ const IconLogoX = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoX.iconName = "logo-x";
+
 export default IconLogoX;

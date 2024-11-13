@@ -27,4 +27,6 @@ const IconMouseFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMouseFilled.iconName = "mouse--filled";
+
 export default IconMouseFilled;

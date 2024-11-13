@@ -27,4 +27,6 @@ const IconHeartFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconHeartFilled.iconName = "heart--filled";
+
 export default IconHeartFilled;

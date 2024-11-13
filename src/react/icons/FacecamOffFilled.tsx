@@ -31,4 +31,6 @@ const IconFacecamOffFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFacecamOffFilled.iconName = "facecam-off--filled";
+
 export default IconFacecamOffFilled;

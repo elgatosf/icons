@@ -37,4 +37,6 @@ const IconHotkeyFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconHotkeyFilled.iconName = "hotkey--filled";
+
 export default IconHotkeyFilled;

@@ -27,4 +27,6 @@ const IconStarburstsFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconStarburstsFilled.iconName = "starbursts--filled";
+
 export default IconStarburstsFilled;

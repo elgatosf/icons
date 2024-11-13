@@ -31,4 +31,6 @@ const IconPerson = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPerson.iconName = "person";
+
 export default IconPerson;

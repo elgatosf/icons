@@ -31,4 +31,6 @@ const IconFlameFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFlameFilled.iconName = "flame--filled";
+
 export default IconFlameFilled;

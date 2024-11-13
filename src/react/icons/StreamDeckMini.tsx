@@ -32,4 +32,6 @@ const IconStreamDeckMini = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconStreamDeckMini.iconName = "stream-deck-mini";
+
 export default IconStreamDeckMini;

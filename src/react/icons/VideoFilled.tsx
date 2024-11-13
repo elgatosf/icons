@@ -31,4 +31,6 @@ const IconVideoFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconVideoFilled.iconName = "video--filled";
+
 export default IconVideoFilled;

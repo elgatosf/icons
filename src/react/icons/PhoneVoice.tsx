@@ -33,4 +33,6 @@ const IconPhoneVoice = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPhoneVoice.iconName = "phone-voice";
+
 export default IconPhoneVoice;

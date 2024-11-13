@@ -28,4 +28,6 @@ const IconAutoScrollDownFilled = (props: IconProps & SVGProps<SVGSVGElement>) =>
 	);
 };
 
+IconAutoScrollDownFilled.iconName = "auto-scroll-down--filled";
+
 export default IconAutoScrollDownFilled;

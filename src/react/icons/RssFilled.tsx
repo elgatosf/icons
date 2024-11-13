@@ -31,4 +31,6 @@ const IconRssFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconRssFilled.iconName = "rss--filled";
+
 export default IconRssFilled;

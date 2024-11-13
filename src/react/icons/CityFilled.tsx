@@ -28,4 +28,6 @@ const IconCityFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCityFilled.iconName = "city--filled";
+
 export default IconCityFilled;

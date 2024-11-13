@@ -36,4 +36,6 @@ const IconSpeaker = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconSpeaker.iconName = "speaker";
+
 export default IconSpeaker;

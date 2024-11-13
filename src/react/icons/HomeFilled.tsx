@@ -27,4 +27,6 @@ const IconHomeFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconHomeFilled.iconName = "home--filled";
+
 export default IconHomeFilled;

@@ -31,4 +31,6 @@ const IconStreamDeckAppFilled = (props: IconProps & SVGProps<SVGSVGElement>) => 
 	);
 };
 
+IconStreamDeckAppFilled.iconName = "stream-deck-app--filled";
+
 export default IconStreamDeckAppFilled;

@@ -31,4 +31,6 @@ const IconPrompter = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPrompter.iconName = "prompter";
+
 export default IconPrompter;

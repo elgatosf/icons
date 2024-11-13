@@ -31,4 +31,6 @@ const IconCave = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCave.iconName = "cave";
+
 export default IconCave;

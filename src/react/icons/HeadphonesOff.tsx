@@ -38,4 +38,6 @@ const IconHeadphonesOff = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconHeadphonesOff.iconName = "headphones-off";
+
 export default IconHeadphonesOff;

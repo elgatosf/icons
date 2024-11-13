@@ -36,4 +36,6 @@ const IconLogoAfterEffectsColor = (props: IconProps & SVGProps<SVGSVGElement>) =
 	);
 };
 
+IconLogoAfterEffectsColor.iconName = "logo-after-effects--color";
+
 export default IconLogoAfterEffectsColor;

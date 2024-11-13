@@ -31,4 +31,6 @@ const IconMountainFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMountainFilled.iconName = "mountain--filled";
+
 export default IconMountainFilled;

@@ -27,4 +27,6 @@ const IconEditFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconEditFilled.iconName = "edit--filled";
+
 export default IconEditFilled;

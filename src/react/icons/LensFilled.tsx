@@ -32,4 +32,6 @@ const IconLensFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLensFilled.iconName = "lens--filled";
+
 export default IconLensFilled;

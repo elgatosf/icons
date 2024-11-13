@@ -27,4 +27,6 @@ const IconLogoMicrosoft = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoMicrosoft.iconName = "logo-microsoft";
+
 export default IconLogoMicrosoft;

@@ -27,4 +27,6 @@ const IconWave = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconWave.iconName = "wave";
+
 export default IconWave;

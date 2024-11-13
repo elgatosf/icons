@@ -32,4 +32,6 @@ const IconBriefcaseFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconBriefcaseFilled.iconName = "briefcase--filled";
+
 export default IconBriefcaseFilled;

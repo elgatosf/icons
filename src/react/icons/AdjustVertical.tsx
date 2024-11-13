@@ -31,4 +31,6 @@ const IconAdjustVertical = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconAdjustVertical.iconName = "adjust-vertical";
+
 export default IconAdjustVertical;

@@ -31,4 +31,6 @@ const IconPhotoGrid = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPhotoGrid.iconName = "photo-grid";
+
 export default IconPhotoGrid;

@@ -31,4 +31,6 @@ const IconGlobe = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconGlobe.iconName = "globe";
+
 export default IconGlobe;

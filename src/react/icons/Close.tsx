@@ -27,4 +27,6 @@ const IconClose = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconClose.iconName = "close";
+
 export default IconClose;

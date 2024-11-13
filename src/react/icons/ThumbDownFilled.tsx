@@ -27,4 +27,6 @@ const IconThumbDownFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconThumbDownFilled.iconName = "thumb-down--filled";
+
 export default IconThumbDownFilled;

@@ -36,4 +36,6 @@ const IconLogoGameCapture = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoGameCapture.iconName = "logo-game-capture";
+
 export default IconLogoGameCapture;

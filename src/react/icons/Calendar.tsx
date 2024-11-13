@@ -31,4 +31,6 @@ const IconCalendar = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCalendar.iconName = "calendar";
+
 export default IconCalendar;

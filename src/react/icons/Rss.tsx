@@ -33,4 +33,6 @@ const IconRss = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconRss.iconName = "rss";
+
 export default IconRss;

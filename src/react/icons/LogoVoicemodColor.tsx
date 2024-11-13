@@ -32,4 +32,6 @@ const IconLogoVoicemodColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoVoicemodColor.iconName = "logo-voicemod--color";
+
 export default IconLogoVoicemodColor;

@@ -36,4 +36,6 @@ const IconKey = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconKey.iconName = "key";
+
 export default IconKey;

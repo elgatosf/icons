@@ -32,4 +32,6 @@ const IconFileUpload = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFileUpload.iconName = "file-upload";
+
 export default IconFileUpload;

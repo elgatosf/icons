@@ -27,4 +27,6 @@ const IconLogoDropbox = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoDropbox.iconName = "logo-dropbox";
+
 export default IconLogoDropbox;

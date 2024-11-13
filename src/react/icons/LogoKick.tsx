@@ -27,4 +27,6 @@ const IconLogoKick = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoKick.iconName = "logo-kick";
+
 export default IconLogoKick;

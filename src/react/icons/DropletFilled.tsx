@@ -31,4 +31,6 @@ const IconDropletFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconDropletFilled.iconName = "droplet--filled";
+
 export default IconDropletFilled;

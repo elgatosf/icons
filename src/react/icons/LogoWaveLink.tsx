@@ -32,4 +32,6 @@ const IconLogoWaveLink = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoWaveLink.iconName = "logo-wave-link";
+
 export default IconLogoWaveLink;

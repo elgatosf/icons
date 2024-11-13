@@ -31,4 +31,6 @@ const IconLogoFigma = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoFigma.iconName = "logo-figma";
+
 export default IconLogoFigma;

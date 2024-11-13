@@ -31,4 +31,6 @@ const IconGrid = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconGrid.iconName = "grid";
+
 export default IconGrid;

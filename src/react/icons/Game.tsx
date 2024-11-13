@@ -32,4 +32,6 @@ const IconGame = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconGame.iconName = "game";
+
 export default IconGame;

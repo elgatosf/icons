@@ -27,4 +27,6 @@ const IconForestFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconForestFilled.iconName = "forest--filled";
+
 export default IconForestFilled;

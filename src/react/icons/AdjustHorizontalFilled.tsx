@@ -27,4 +27,6 @@ const IconAdjustHorizontalFilled = (props: IconProps & SVGProps<SVGSVGElement>) 
 	);
 };
 
+IconAdjustHorizontalFilled.iconName = "adjust-horizontal--filled";
+
 export default IconAdjustHorizontalFilled;

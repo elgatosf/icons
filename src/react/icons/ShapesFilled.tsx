@@ -32,4 +32,6 @@ const IconShapesFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconShapesFilled.iconName = "shapes--filled";
+
 export default IconShapesFilled;

@@ -27,4 +27,6 @@ const IconTriangleFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTriangleFilled.iconName = "triangle--filled";
+
 export default IconTriangleFilled;

@@ -27,4 +27,6 @@ const IconMoreAlt = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMoreAlt.iconName = "more-alt";
+
 export default IconMoreAlt;

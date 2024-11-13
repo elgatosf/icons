@@ -32,4 +32,6 @@ const IconArCheckFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconArCheckFilled.iconName = "ar-check--filled";
+
 export default IconArCheckFilled;

@@ -31,4 +31,6 @@ const IconCouch = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCouch.iconName = "couch";
+
 export default IconCouch;

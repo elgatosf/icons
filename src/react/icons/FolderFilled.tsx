@@ -27,4 +27,6 @@ const IconFolderFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFolderFilled.iconName = "folder--filled";
+
 export default IconFolderFilled;

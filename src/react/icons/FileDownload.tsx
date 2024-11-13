@@ -32,4 +32,6 @@ const IconFileDownload = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFileDownload.iconName = "file-download";
+
 export default IconFileDownload;

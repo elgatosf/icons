@@ -31,4 +31,6 @@ const IconPinFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPinFilled.iconName = "pin--filled";
+
 export default IconPinFilled;

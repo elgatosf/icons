@@ -31,4 +31,6 @@ const IconMargin = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMargin.iconName = "margin";
+
 export default IconMargin;

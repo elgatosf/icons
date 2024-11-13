@@ -27,4 +27,6 @@ const IconCubeFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCubeFilled.iconName = "cube--filled";
+
 export default IconCubeFilled;

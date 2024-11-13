@@ -27,4 +27,6 @@ const IconRotate360 = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconRotate360.iconName = "rotate360";
+
 export default IconRotate360;

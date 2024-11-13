@@ -36,4 +36,6 @@ const IconPaste = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPaste.iconName = "paste";
+
 export default IconPaste;

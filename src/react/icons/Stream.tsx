@@ -35,4 +35,6 @@ const IconStream = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconStream.iconName = "stream";
+
 export default IconStream;

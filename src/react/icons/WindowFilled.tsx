@@ -27,4 +27,6 @@ const IconWindowFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconWindowFilled.iconName = "window--filled";
+
 export default IconWindowFilled;

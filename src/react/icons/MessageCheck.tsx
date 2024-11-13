@@ -32,4 +32,6 @@ const IconMessageCheck = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMessageCheck.iconName = "message-check";
+
 export default IconMessageCheck;

@@ -32,4 +32,6 @@ const IconChapterCheckFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconChapterCheckFilled.iconName = "chapter-check--filled";
+
 export default IconChapterCheckFilled;

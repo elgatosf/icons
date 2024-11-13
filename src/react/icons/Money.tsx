@@ -38,4 +38,6 @@ const IconMoney = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMoney.iconName = "money";
+
 export default IconMoney;

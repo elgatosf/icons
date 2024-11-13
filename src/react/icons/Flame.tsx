@@ -31,4 +31,6 @@ const IconFlame = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFlame.iconName = "flame";
+
 export default IconFlame;

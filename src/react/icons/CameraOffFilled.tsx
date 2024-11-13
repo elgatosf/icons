@@ -32,4 +32,6 @@ const IconCameraOffFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCameraOffFilled.iconName = "camera-off--filled";
+
 export default IconCameraOffFilled;

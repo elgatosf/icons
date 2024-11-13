@@ -32,4 +32,6 @@ const IconTextDownToBottom = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTextDownToBottom.iconName = "text-down-to-bottom";
+
 export default IconTextDownToBottom;

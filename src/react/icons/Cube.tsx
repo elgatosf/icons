@@ -31,4 +31,6 @@ const IconCube = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCube.iconName = "cube";
+
 export default IconCube;

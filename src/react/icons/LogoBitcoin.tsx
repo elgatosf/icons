@@ -32,4 +32,6 @@ const IconLogoBitcoin = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoBitcoin.iconName = "logo-bitcoin";
+
 export default IconLogoBitcoin;

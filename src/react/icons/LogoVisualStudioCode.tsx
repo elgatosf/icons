@@ -31,4 +31,6 @@ const IconLogoVisualStudioCode = (props: IconProps & SVGProps<SVGSVGElement>) =>
 	);
 };
 
+IconLogoVisualStudioCode.iconName = "logo-visual-studio-code";
+
 export default IconLogoVisualStudioCode;

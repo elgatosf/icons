@@ -32,4 +32,6 @@ const IconCameraFramePresetCheck = (props: IconProps & SVGProps<SVGSVGElement>) 
 	);
 };
 
+IconCameraFramePresetCheck.iconName = "camera-frame-preset-check";
+
 export default IconCameraFramePresetCheck;

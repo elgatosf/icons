@@ -31,4 +31,6 @@ const IconHome = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconHome.iconName = "home";
+
 export default IconHome;

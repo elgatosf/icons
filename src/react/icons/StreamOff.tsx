@@ -33,4 +33,6 @@ const IconStreamOff = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconStreamOff.iconName = "stream-off";
+
 export default IconStreamOff;

@@ -30,4 +30,6 @@ const IconLogoSpotifyColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoSpotifyColor.iconName = "logo-spotify--color";
+
 export default IconLogoSpotifyColor;

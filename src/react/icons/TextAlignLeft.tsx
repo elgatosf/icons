@@ -27,4 +27,6 @@ const IconTextAlignLeft = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTextAlignLeft.iconName = "text-align-left";
+
 export default IconTextAlignLeft;

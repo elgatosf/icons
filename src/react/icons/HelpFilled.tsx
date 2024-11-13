@@ -31,4 +31,6 @@ const IconHelpFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconHelpFilled.iconName = "help--filled";
+
 export default IconHelpFilled;

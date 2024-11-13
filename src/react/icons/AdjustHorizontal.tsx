@@ -31,4 +31,6 @@ const IconAdjustHorizontal = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconAdjustHorizontal.iconName = "adjust-horizontal";
+
 export default IconAdjustHorizontal;

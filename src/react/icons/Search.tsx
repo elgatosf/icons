@@ -31,4 +31,6 @@ const IconSearch = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconSearch.iconName = "search";
+
 export default IconSearch;

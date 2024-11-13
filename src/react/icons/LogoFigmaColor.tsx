@@ -31,4 +31,6 @@ const IconLogoFigmaColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoFigmaColor.iconName = "logo-figma--color";
+
 export default IconLogoFigmaColor;

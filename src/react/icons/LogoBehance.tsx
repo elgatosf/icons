@@ -32,4 +32,6 @@ const IconLogoBehance = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoBehance.iconName = "logo-behance";
+
 export default IconLogoBehance;

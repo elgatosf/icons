@@ -27,4 +27,6 @@ const IconHdr = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconHdr.iconName = "hdr";
+
 export default IconHdr;

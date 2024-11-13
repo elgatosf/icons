@@ -31,4 +31,6 @@ const IconCameraFlipFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCameraFlipFilled.iconName = "camera-flip--filled";
+
 export default IconCameraFlipFilled;

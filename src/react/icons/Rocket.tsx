@@ -28,4 +28,6 @@ const IconRocket = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconRocket.iconName = "rocket";
+
 export default IconRocket;

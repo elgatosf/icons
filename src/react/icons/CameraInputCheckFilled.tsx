@@ -32,4 +32,6 @@ const IconCameraInputCheckFilled = (props: IconProps & SVGProps<SVGSVGElement>) 
 	);
 };
 
+IconCameraInputCheckFilled.iconName = "camera-input-check--filled";
+
 export default IconCameraInputCheckFilled;

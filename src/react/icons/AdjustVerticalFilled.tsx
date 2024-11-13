@@ -27,4 +27,6 @@ const IconAdjustVerticalFilled = (props: IconProps & SVGProps<SVGSVGElement>) =>
 	);
 };
 
+IconAdjustVerticalFilled.iconName = "adjust-vertical--filled";
+
 export default IconAdjustVerticalFilled;

@@ -28,4 +28,6 @@ const IconTimeDelay = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTimeDelay.iconName = "time-delay";
+
 export default IconTimeDelay;

@@ -27,4 +27,6 @@ const IconCrownFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCrownFilled.iconName = "crown--filled";
+
 export default IconCrownFilled;

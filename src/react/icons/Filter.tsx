@@ -27,4 +27,6 @@ const IconFilter = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFilter.iconName = "filter";
+
 export default IconFilter;

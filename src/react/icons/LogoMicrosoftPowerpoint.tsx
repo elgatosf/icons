@@ -27,4 +27,6 @@ const IconLogoMicrosoftPowerpoint = (props: IconProps & SVGProps<SVGSVGElement>)
 	);
 };
 
+IconLogoMicrosoftPowerpoint.iconName = "logo-microsoft-powerpoint";
+
 export default IconLogoMicrosoftPowerpoint;

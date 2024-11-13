@@ -32,4 +32,6 @@ const IconCloseCircle = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCloseCircle.iconName = "close-circle";
+
 export default IconCloseCircle;

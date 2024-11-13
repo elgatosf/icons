@@ -32,4 +32,6 @@ const IconCheckmarkCircle = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCheckmarkCircle.iconName = "checkmark-circle";
+
 export default IconCheckmarkCircle;

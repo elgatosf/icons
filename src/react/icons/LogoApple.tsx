@@ -27,4 +27,6 @@ const IconLogoApple = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoApple.iconName = "logo-apple";
+
 export default IconLogoApple;

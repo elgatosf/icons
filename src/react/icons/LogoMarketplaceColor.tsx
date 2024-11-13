@@ -56,4 +56,6 @@ const IconLogoMarketplaceColor = (props: IconProps & SVGProps<SVGSVGElement>) =>
 	);
 };
 
+IconLogoMarketplaceColor.iconName = "logo-marketplace--color";
+
 export default IconLogoMarketplaceColor;

@@ -28,4 +28,6 @@ const IconDatabaseFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconDatabaseFilled.iconName = "database--filled";
+
 export default IconDatabaseFilled;

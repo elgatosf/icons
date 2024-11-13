@@ -31,4 +31,6 @@ const IconLogoDribbble = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoDribbble.iconName = "logo-dribbble";
+
 export default IconLogoDribbble;

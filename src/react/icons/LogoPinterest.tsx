@@ -31,4 +31,6 @@ const IconLogoPinterest = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoPinterest.iconName = "logo-pinterest";
+
 export default IconLogoPinterest;

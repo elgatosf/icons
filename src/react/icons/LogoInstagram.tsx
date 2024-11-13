@@ -27,4 +27,6 @@ const IconLogoInstagram = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoInstagram.iconName = "logo-instagram";
+
 export default IconLogoInstagram;

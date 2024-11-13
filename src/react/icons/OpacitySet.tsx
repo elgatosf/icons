@@ -32,4 +32,6 @@ const IconOpacitySet = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconOpacitySet.iconName = "opacity-set";
+
 export default IconOpacitySet;

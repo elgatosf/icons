@@ -38,4 +38,6 @@ const IconLogoOriginColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoOriginColor.iconName = "logo-origin--color";
+
 export default IconLogoOriginColor;

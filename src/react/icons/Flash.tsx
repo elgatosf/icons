@@ -31,4 +31,6 @@ const IconFlash = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFlash.iconName = "flash";
+
 export default IconFlash;

@@ -27,4 +27,6 @@ const IconBugFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconBugFilled.iconName = "bug--filled";
+
 export default IconBugFilled;

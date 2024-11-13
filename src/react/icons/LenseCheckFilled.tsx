@@ -33,4 +33,6 @@ const IconLenseCheckFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLenseCheckFilled.iconName = "lense-check--filled";
+
 export default IconLenseCheckFilled;

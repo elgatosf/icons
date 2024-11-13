@@ -36,4 +36,6 @@ const IconView = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconView.iconName = "view";
+
 export default IconView;

@@ -31,4 +31,6 @@ const IconSheetFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconSheetFilled.iconName = "sheet--filled";
+
 export default IconSheetFilled;

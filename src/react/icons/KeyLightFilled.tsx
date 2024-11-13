@@ -27,4 +27,6 @@ const IconKeyLightFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconKeyLightFilled.iconName = "key-light--filled";
+
 export default IconKeyLightFilled;

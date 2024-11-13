@@ -27,4 +27,6 @@ const IconLogoMicrosoftOutlook = (props: IconProps & SVGProps<SVGSVGElement>) =>
 	);
 };
 
+IconLogoMicrosoftOutlook.iconName = "logo-microsoft-outlook";
+
 export default IconLogoMicrosoftOutlook;

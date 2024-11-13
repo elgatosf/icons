@@ -31,4 +31,6 @@ const IconHexagonFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconHexagonFilled.iconName = "hexagon--filled";
+
 export default IconHexagonFilled;

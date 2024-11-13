@@ -46,4 +46,6 @@ const IconLogoAdobeExpressColor = (props: IconProps & SVGProps<SVGSVGElement>) =
 	);
 };
 
+IconLogoAdobeExpressColor.iconName = "logo-adobe-express--color";
+
 export default IconLogoAdobeExpressColor;

@@ -30,4 +30,6 @@ const IconLogoWindowsColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoWindowsColor.iconName = "logo-windows--color";
+
 export default IconLogoWindowsColor;

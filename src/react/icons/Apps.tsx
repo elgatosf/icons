@@ -31,4 +31,6 @@ const IconApps = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconApps.iconName = "apps";
+
 export default IconApps;

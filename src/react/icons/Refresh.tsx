@@ -27,4 +27,6 @@ const IconRefresh = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconRefresh.iconName = "refresh";
+
 export default IconRefresh;

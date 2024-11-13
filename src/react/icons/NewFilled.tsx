@@ -31,4 +31,6 @@ const IconNewFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconNewFilled.iconName = "new--filled";
+
 export default IconNewFilled;

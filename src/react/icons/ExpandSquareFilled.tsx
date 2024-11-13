@@ -31,4 +31,6 @@ const IconExpandSquareFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconExpandSquareFilled.iconName = "expand-square--filled";
+
 export default IconExpandSquareFilled;

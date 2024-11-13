@@ -31,4 +31,6 @@ const IconBold = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconBold.iconName = "bold";
+
 export default IconBold;

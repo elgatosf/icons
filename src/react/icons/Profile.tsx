@@ -36,4 +36,6 @@ const IconProfile = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconProfile.iconName = "profile";
+
 export default IconProfile;

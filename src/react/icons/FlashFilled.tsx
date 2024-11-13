@@ -27,4 +27,6 @@ const IconFlashFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFlashFilled.iconName = "flash--filled";
+
 export default IconFlashFilled;

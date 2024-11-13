@@ -31,4 +31,6 @@ const IconLogoStreamDeckFilled = (props: IconProps & SVGProps<SVGSVGElement>) =>
 	);
 };
 
+IconLogoStreamDeckFilled.iconName = "logo-stream-deck--filled";
+
 export default IconLogoStreamDeckFilled;

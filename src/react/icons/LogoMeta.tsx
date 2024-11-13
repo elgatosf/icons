@@ -31,4 +31,6 @@ const IconLogoMeta = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoMeta.iconName = "logo-meta";
+
 export default IconLogoMeta;

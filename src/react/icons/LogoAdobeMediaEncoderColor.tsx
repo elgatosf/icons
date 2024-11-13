@@ -34,4 +34,6 @@ const IconLogoAdobeMediaEncoderColor = (props: IconProps & SVGProps<SVGSVGElemen
 	);
 };
 
+IconLogoAdobeMediaEncoderColor.iconName = "logo-adobe-media-encoder--color";
+
 export default IconLogoAdobeMediaEncoderColor;

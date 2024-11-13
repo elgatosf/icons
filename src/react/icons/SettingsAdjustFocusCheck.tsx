@@ -32,4 +32,6 @@ const IconSettingsAdjustFocusCheck = (props: IconProps & SVGProps<SVGSVGElement>
 	);
 };
 
+IconSettingsAdjustFocusCheck.iconName = "settings-adjust-focus-check";
+
 export default IconSettingsAdjustFocusCheck;

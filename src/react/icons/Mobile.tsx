@@ -32,4 +32,6 @@ const IconMobile = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMobile.iconName = "mobile";
+
 export default IconMobile;

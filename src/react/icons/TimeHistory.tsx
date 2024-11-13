@@ -28,4 +28,6 @@ const IconTimeHistory = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTimeHistory.iconName = "time-history";
+
 export default IconTimeHistory;

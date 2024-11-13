@@ -31,4 +31,6 @@ const IconKeyLightAir = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconKeyLightAir.iconName = "key-light-air";
+
 export default IconKeyLightAir;

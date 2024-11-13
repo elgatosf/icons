@@ -27,4 +27,6 @@ const IconMusicFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMusicFilled.iconName = "music--filled";
+
 export default IconMusicFilled;

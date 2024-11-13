@@ -31,4 +31,6 @@ const IconWindow = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconWindow.iconName = "window";
+
 export default IconWindow;

@@ -33,4 +33,6 @@ const IconDisplayProjectCheckFilled = (props: IconProps & SVGProps<SVGSVGElement
 	);
 };
 
+IconDisplayProjectCheckFilled.iconName = "display-project-check--filled";
+
 export default IconDisplayProjectCheckFilled;

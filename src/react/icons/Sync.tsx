@@ -27,4 +27,6 @@ const IconSync = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconSync.iconName = "sync";
+
 export default IconSync;

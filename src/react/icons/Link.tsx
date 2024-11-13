@@ -28,4 +28,6 @@ const IconLink = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLink.iconName = "link";
+
 export default IconLink;

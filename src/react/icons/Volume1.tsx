@@ -32,4 +32,6 @@ const IconVolume1 = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconVolume1.iconName = "volume-1";
+
 export default IconVolume1;

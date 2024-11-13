@@ -31,4 +31,6 @@ const IconLogoVoicemod = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoVoicemod.iconName = "logo-voicemod";
+
 export default IconLogoVoicemod;

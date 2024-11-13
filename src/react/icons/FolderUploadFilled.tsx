@@ -31,4 +31,6 @@ const IconFolderUploadFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFolderUploadFilled.iconName = "folder-upload--filled";
+
 export default IconFolderUploadFilled;

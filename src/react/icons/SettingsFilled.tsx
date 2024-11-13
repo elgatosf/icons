@@ -31,4 +31,6 @@ const IconSettingsFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconSettingsFilled.iconName = "settings--filled";
+
 export default IconSettingsFilled;

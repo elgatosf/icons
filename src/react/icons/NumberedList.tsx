@@ -27,4 +27,6 @@ const IconNumberedList = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconNumberedList.iconName = "numbered-list";
+
 export default IconNumberedList;

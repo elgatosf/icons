@@ -32,4 +32,6 @@ const IconChapterSet = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconChapterSet.iconName = "chapter-set";
+
 export default IconChapterSet;

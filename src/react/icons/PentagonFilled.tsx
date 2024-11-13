@@ -27,4 +27,6 @@ const IconPentagonFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPentagonFilled.iconName = "pentagon--filled";
+
 export default IconPentagonFilled;

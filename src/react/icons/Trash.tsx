@@ -32,4 +32,6 @@ const IconTrash = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTrash.iconName = "trash";
+
 export default IconTrash;

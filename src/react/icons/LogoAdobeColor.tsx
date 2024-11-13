@@ -30,4 +30,6 @@ const IconLogoAdobeColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoAdobeColor.iconName = "logo-adobe--color";
+
 export default IconLogoAdobeColor;

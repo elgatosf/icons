@@ -33,4 +33,6 @@ const IconTimer = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTimer.iconName = "timer";
+
 export default IconTimer;

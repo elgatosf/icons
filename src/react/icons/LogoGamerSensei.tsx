@@ -27,4 +27,6 @@ const IconLogoGamerSensei = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoGamerSensei.iconName = "logo-gamer-sensei";
+
 export default IconLogoGamerSensei;

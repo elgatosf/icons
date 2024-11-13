@@ -32,4 +32,6 @@ const IconTouch = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTouch.iconName = "touch";
+
 export default IconTouch;

@@ -36,4 +36,6 @@ const IconLogoQtColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoQtColor.iconName = "logo-qt--color";
+
 export default IconLogoQtColor;

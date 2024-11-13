@@ -32,4 +32,6 @@ const IconScreenshot = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconScreenshot.iconName = "screenshot";
+
 export default IconScreenshot;

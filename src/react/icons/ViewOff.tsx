@@ -33,4 +33,6 @@ const IconViewOff = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconViewOff.iconName = "view-off";
+
 export default IconViewOff;

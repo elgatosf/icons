@@ -31,4 +31,6 @@ const IconNight = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconNight.iconName = "night";
+
 export default IconNight;

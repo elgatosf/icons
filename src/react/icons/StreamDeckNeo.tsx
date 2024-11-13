@@ -32,4 +32,6 @@ const IconStreamDeckNeo = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconStreamDeckNeo.iconName = "stream-deck-neo";
+
 export default IconStreamDeckNeo;

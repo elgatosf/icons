@@ -33,4 +33,6 @@ const IconDisplayProjectSetFilled = (props: IconProps & SVGProps<SVGSVGElement>)
 	);
 };
 
+IconDisplayProjectSetFilled.iconName = "display-project-set--filled";
+
 export default IconDisplayProjectSetFilled;

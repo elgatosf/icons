@@ -28,4 +28,6 @@ const IconLogoCorsair = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoCorsair.iconName = "logo-corsair";
+
 export default IconLogoCorsair;

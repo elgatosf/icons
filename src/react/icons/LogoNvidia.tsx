@@ -27,4 +27,6 @@ const IconLogoNvidia = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoNvidia.iconName = "logo-nvidia";
+
 export default IconLogoNvidia;

@@ -34,4 +34,6 @@ const IconLogoScufColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoScufColor.iconName = "logo-scuf--color";
+
 export default IconLogoScufColor;

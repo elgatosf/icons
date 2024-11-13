@@ -37,4 +37,6 @@ const IconCapture = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCapture.iconName = "capture";
+
 export default IconCapture;

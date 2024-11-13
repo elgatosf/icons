@@ -27,4 +27,6 @@ const IconFilterAltFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFilterAltFilled.iconName = "filter-alt--filled";
+
 export default IconFilterAltFilled;

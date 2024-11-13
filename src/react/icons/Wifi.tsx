@@ -29,4 +29,6 @@ const IconWifi = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconWifi.iconName = "wifi";
+
 export default IconWifi;

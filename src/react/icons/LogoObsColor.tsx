@@ -43,4 +43,6 @@ const IconLogoObsColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoObsColor.iconName = "logo-obs--color";
+
 export default IconLogoObsColor;

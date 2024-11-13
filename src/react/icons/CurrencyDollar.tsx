@@ -31,4 +31,6 @@ const IconCurrencyDollar = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCurrencyDollar.iconName = "currency-dollar";
+
 export default IconCurrencyDollar;

@@ -31,4 +31,6 @@ const IconLogoAndroid = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoAndroid.iconName = "logo-android";
+
 export default IconLogoAndroid;

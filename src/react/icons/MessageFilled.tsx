@@ -27,4 +27,6 @@ const IconMessageFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMessageFilled.iconName = "message--filled";
+
 export default IconMessageFilled;

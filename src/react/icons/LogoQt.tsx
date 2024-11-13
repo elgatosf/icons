@@ -32,4 +32,6 @@ const IconLogoQt = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoQt.iconName = "logo-qt";
+
 export default IconLogoQt;

@@ -27,4 +27,6 @@ const IconShieldOffFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconShieldOffFilled.iconName = "shield-off--filled";
+
 export default IconShieldOffFilled;

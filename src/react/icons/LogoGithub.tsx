@@ -31,4 +31,6 @@ const IconLogoGithub = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoGithub.iconName = "logo-github";
+
 export default IconLogoGithub;

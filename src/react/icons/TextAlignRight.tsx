@@ -27,4 +27,6 @@ const IconTextAlignRight = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTextAlignRight.iconName = "text-align-right";
+
 export default IconTextAlignRight;

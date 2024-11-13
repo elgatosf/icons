@@ -36,4 +36,6 @@ const IconMarginIncrease = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMarginIncrease.iconName = "margin-increase";
+
 export default IconMarginIncrease;

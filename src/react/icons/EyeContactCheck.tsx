@@ -33,4 +33,6 @@ const IconEyeContactCheck = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconEyeContactCheck.iconName = "eye-contact-check";
+
 export default IconEyeContactCheck;

@@ -36,4 +36,6 @@ const IconDiagram = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconDiagram.iconName = "diagram";
+
 export default IconDiagram;

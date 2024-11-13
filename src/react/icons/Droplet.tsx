@@ -32,4 +32,6 @@ const IconDroplet = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconDroplet.iconName = "droplet";
+
 export default IconDroplet;

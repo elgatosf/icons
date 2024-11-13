@@ -33,4 +33,6 @@ const IconMagicWandFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMagicWandFilled.iconName = "magic-wand--filled";
+
 export default IconMagicWandFilled;

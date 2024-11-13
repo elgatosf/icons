@@ -27,4 +27,6 @@ const IconCrosshair = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCrosshair.iconName = "crosshair";
+
 export default IconCrosshair;

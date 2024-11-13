@@ -27,4 +27,6 @@ const IconTextAlignCenter = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTextAlignCenter.iconName = "text-align-center";
+
 export default IconTextAlignCenter;

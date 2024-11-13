@@ -32,4 +32,6 @@ const IconPasteFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPasteFilled.iconName = "paste--filled";
+
 export default IconPasteFilled;

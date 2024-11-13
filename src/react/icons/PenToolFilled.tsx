@@ -27,4 +27,6 @@ const IconPenToolFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPenToolFilled.iconName = "pen-tool--filled";
+
 export default IconPenToolFilled;

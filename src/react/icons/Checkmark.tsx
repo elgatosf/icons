@@ -27,4 +27,6 @@ const IconCheckmark = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCheckmark.iconName = "checkmark";
+
 export default IconCheckmark;

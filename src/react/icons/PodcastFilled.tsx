@@ -29,4 +29,6 @@ const IconPodcastFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPodcastFilled.iconName = "podcast--filled";
+
 export default IconPodcastFilled;

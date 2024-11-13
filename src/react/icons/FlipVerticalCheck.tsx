@@ -37,4 +37,6 @@ const IconFlipVerticalCheck = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFlipVerticalCheck.iconName = "flip-vertical-check";
+
 export default IconFlipVerticalCheck;

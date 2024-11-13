@@ -32,4 +32,6 @@ const IconSkipBack = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconSkipBack.iconName = "skip-back";
+
 export default IconSkipBack;

@@ -29,4 +29,6 @@ const IconStreamFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconStreamFilled.iconName = "stream--filled";
+
 export default IconStreamFilled;

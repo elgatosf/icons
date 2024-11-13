@@ -27,4 +27,6 @@ const IconLogoMicrosoftSharepoint = (props: IconProps & SVGProps<SVGSVGElement>)
 	);
 };
 
+IconLogoMicrosoftSharepoint.iconName = "logo-microsoft-sharepoint";
+
 export default IconLogoMicrosoftSharepoint;

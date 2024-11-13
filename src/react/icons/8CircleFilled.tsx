@@ -32,4 +32,6 @@ const Icon8CircleFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+Icon8CircleFilled.iconName = "8-circle--filled";
+
 export default Icon8CircleFilled;

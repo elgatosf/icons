@@ -28,4 +28,6 @@ const IconCouchFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCouchFilled.iconName = "couch--filled";
+
 export default IconCouchFilled;

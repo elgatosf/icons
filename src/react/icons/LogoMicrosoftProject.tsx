@@ -27,4 +27,6 @@ const IconLogoMicrosoftProject = (props: IconProps & SVGProps<SVGSVGElement>) =>
 	);
 };
 
+IconLogoMicrosoftProject.iconName = "logo-microsoft-project";
+
 export default IconLogoMicrosoftProject;

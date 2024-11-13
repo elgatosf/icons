@@ -39,4 +39,6 @@ const IconFlipHorizontal = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFlipHorizontal.iconName = "flip-horizontal";
+
 export default IconFlipHorizontal;

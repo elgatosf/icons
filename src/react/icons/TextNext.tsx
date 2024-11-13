@@ -32,4 +32,6 @@ const IconTextNext = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTextNext.iconName = "text-next";
+
 export default IconTextNext;

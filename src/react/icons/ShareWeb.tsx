@@ -31,4 +31,6 @@ const IconShareWeb = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconShareWeb.iconName = "share-web";
+
 export default IconShareWeb;

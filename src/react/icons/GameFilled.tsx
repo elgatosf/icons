@@ -31,4 +31,6 @@ const IconGameFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconGameFilled.iconName = "game--filled";
+
 export default IconGameFilled;

@@ -28,4 +28,6 @@ const IconDeliveryFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconDeliveryFilled.iconName = "delivery--filled";
+
 export default IconDeliveryFilled;

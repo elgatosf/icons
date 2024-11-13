@@ -27,4 +27,6 @@ const IconLogoSkype = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoSkype.iconName = "logo-skype";
+
 export default IconLogoSkype;

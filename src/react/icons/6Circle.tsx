@@ -36,4 +36,6 @@ const Icon6Circle = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+Icon6Circle.iconName = "6-circle";
+
 export default Icon6Circle;

@@ -32,4 +32,6 @@ const IconLogoAfterEffects = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoAfterEffects.iconName = "logo-after-effects";
+
 export default IconLogoAfterEffects;

@@ -31,4 +31,6 @@ const IconAccessibilityFilled = (props: IconProps & SVGProps<SVGSVGElement>) => 
 	);
 };
 
+IconAccessibilityFilled.iconName = "accessibility--filled";
+
 export default IconAccessibilityFilled;

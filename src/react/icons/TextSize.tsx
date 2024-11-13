@@ -31,4 +31,6 @@ const IconTextSize = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTextSize.iconName = "text-size";
+
 export default IconTextSize;

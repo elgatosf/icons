@@ -29,4 +29,6 @@ const IconCurrencyYen = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCurrencyYen.iconName = "currency-yen";
+
 export default IconCurrencyYen;

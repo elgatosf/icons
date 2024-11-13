@@ -32,4 +32,6 @@ const IconLaptop = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLaptop.iconName = "laptop";
+
 export default IconLaptop;

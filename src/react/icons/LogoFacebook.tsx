@@ -27,4 +27,6 @@ const IconLogoFacebook = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoFacebook.iconName = "logo-facebook";
+
 export default IconLogoFacebook;

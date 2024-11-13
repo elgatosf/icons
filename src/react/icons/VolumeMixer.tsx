@@ -38,4 +38,6 @@ const IconVolumeMixer = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconVolumeMixer.iconName = "volume-mixer";
+
 export default IconVolumeMixer;

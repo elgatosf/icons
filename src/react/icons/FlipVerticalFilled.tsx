@@ -27,4 +27,6 @@ const IconFlipVerticalFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFlipVerticalFilled.iconName = "flip-vertical--filled";
+
 export default IconFlipVerticalFilled;

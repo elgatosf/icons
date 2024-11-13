@@ -32,4 +32,6 @@ const IconLogoAdobeIllustrator = (props: IconProps & SVGProps<SVGSVGElement>) =>
 	);
 };
 
+IconLogoAdobeIllustrator.iconName = "logo-adobe-illustrator";
+
 export default IconLogoAdobeIllustrator;

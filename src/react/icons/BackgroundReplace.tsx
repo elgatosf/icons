@@ -31,4 +31,6 @@ const IconBackgroundReplace = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconBackgroundReplace.iconName = "background-replace";
+
 export default IconBackgroundReplace;

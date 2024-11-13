@@ -31,4 +31,6 @@ const IconCloseSquareFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCloseSquareFilled.iconName = "close-square--filled";
+
 export default IconCloseSquareFilled;

@@ -31,4 +31,6 @@ const IconMusic = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMusic.iconName = "music";
+
 export default IconMusic;

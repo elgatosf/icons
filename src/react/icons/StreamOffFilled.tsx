@@ -28,4 +28,6 @@ const IconStreamOffFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconStreamOffFilled.iconName = "stream-off--filled";
+
 export default IconStreamOffFilled;

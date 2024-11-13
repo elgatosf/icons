@@ -27,4 +27,6 @@ const IconLogoSpotify = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoSpotify.iconName = "logo-spotify";
+
 export default IconLogoSpotify;

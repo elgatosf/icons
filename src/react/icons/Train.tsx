@@ -32,4 +32,6 @@ const IconTrain = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTrain.iconName = "train";
+
 export default IconTrain;

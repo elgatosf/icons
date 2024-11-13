@@ -45,4 +45,6 @@ const IconSquareFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	}
 };
 
+IconSquareFilled.iconName = "square--filled";
+
 export default IconSquareFilled;

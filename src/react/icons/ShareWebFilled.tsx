@@ -27,4 +27,6 @@ const IconShareWebFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconShareWebFilled.iconName = "share-web--filled";
+
 export default IconShareWebFilled;

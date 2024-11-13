@@ -36,4 +36,6 @@ const IconAvatar = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconAvatar.iconName = "avatar";
+
 export default IconAvatar;

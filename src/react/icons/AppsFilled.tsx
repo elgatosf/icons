@@ -27,4 +27,6 @@ const IconAppsFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconAppsFilled.iconName = "apps--filled";
+
 export default IconAppsFilled;

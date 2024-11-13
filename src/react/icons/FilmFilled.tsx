@@ -31,4 +31,6 @@ const IconFilmFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFilmFilled.iconName = "film--filled";
+
 export default IconFilmFilled;

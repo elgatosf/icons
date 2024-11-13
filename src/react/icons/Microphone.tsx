@@ -32,4 +32,6 @@ const IconMicrophone = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMicrophone.iconName = "microphone";
+
 export default IconMicrophone;

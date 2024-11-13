@@ -41,4 +41,6 @@ const IconLayersFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLayersFilled.iconName = "layers--filled";
+
 export default IconLayersFilled;

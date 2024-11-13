@@ -34,4 +34,6 @@ const IconLenseCheck = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLenseCheck.iconName = "lense-check";
+
 export default IconLenseCheck;

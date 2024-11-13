@@ -31,4 +31,6 @@ const IconStore = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconStore.iconName = "store";
+
 export default IconStore;

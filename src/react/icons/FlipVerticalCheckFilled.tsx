@@ -32,4 +32,6 @@ const IconFlipVerticalCheckFilled = (props: IconProps & SVGProps<SVGSVGElement>)
 	);
 };
 
+IconFlipVerticalCheckFilled.iconName = "flip-vertical-check--filled";
+
 export default IconFlipVerticalCheckFilled;

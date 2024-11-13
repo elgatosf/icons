@@ -30,4 +30,6 @@ const IconLogoNvidiaColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoNvidiaColor.iconName = "logo-nvidia--color";
+
 export default IconLogoNvidiaColor;

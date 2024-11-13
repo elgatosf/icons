@@ -27,4 +27,6 @@ const IconUsb = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconUsb.iconName = "usb";
+
 export default IconUsb;

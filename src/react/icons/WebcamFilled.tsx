@@ -32,4 +32,6 @@ const IconWebcamFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconWebcamFilled.iconName = "webcam--filled";
+
 export default IconWebcamFilled;

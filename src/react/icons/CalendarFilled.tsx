@@ -31,4 +31,6 @@ const IconCalendarFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCalendarFilled.iconName = "calendar--filled";
+
 export default IconCalendarFilled;

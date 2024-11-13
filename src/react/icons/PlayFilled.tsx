@@ -27,4 +27,6 @@ const IconPlayFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPlayFilled.iconName = "play--filled";
+
 export default IconPlayFilled;

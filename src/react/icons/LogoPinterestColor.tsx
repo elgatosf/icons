@@ -36,4 +36,6 @@ const IconLogoPinterestColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoPinterestColor.iconName = "logo-pinterest--color";
+
 export default IconLogoPinterestColor;

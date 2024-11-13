@@ -27,4 +27,6 @@ const IconLogoTumblr = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoTumblr.iconName = "logo-tumblr";
+
 export default IconLogoTumblr;

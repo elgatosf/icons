@@ -32,4 +32,6 @@ const IconEyeContactFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconEyeContactFilled.iconName = "eye-contact--filled";
+
 export default IconEyeContactFilled;

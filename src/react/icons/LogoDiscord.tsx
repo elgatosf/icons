@@ -27,4 +27,6 @@ const IconLogoDiscord = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoDiscord.iconName = "logo-discord";
+
 export default IconLogoDiscord;

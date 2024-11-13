@@ -28,4 +28,6 @@ const IconBrightnessOffFilled = (props: IconProps & SVGProps<SVGSVGElement>) => 
 	);
 };
 
+IconBrightnessOffFilled.iconName = "brightness-off--filled";
+
 export default IconBrightnessOffFilled;

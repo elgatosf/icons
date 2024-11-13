@@ -32,4 +32,6 @@ const IconCaptureFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCaptureFilled.iconName = "capture--filled";
+
 export default IconCaptureFilled;

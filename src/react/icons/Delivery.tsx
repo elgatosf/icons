@@ -31,4 +31,6 @@ const IconDelivery = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconDelivery.iconName = "delivery";
+
 export default IconDelivery;

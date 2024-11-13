@@ -32,4 +32,6 @@ const IconPaymentFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPaymentFilled.iconName = "payment--filled";
+
 export default IconPaymentFilled;

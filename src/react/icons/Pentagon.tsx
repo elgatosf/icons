@@ -31,4 +31,6 @@ const IconPentagon = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPentagon.iconName = "pentagon";
+
 export default IconPentagon;

@@ -31,4 +31,6 @@ const IconFolderBackFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFolderBackFilled.iconName = "folder-back--filled";
+
 export default IconFolderBackFilled;

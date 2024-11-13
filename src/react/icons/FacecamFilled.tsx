@@ -32,4 +32,6 @@ const IconFacecamFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFacecamFilled.iconName = "facecam--filled";
+
 export default IconFacecamFilled;

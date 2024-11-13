@@ -27,4 +27,6 @@ const IconList = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconList.iconName = "list";
+
 export default IconList;

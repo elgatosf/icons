@@ -37,4 +37,6 @@ const IconAccessibility = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconAccessibility.iconName = "accessibility";
+
 export default IconAccessibility;

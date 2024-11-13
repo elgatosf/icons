@@ -31,4 +31,6 @@ const IconDatabase = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconDatabase.iconName = "database";
+
 export default IconDatabase;

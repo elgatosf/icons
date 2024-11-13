@@ -29,4 +29,6 @@ const IconMicrophoneOff = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMicrophoneOff.iconName = "microphone-off";
+
 export default IconMicrophoneOff;

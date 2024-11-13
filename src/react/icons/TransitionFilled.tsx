@@ -27,4 +27,6 @@ const IconTransitionFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTransitionFilled.iconName = "transition--filled";
+
 export default IconTransitionFilled;

@@ -32,4 +32,6 @@ const IconTag = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTag.iconName = "tag";
+
 export default IconTag;

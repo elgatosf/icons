@@ -32,4 +32,6 @@ const IconMessageUpToTop = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMessageUpToTop.iconName = "message-up-to-top";
+
 export default IconMessageUpToTop;

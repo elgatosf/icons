@@ -32,4 +32,6 @@ const IconSecurity = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconSecurity.iconName = "security";
+
 export default IconSecurity;

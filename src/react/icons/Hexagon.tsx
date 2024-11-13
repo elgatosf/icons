@@ -31,4 +31,6 @@ const IconHexagon = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconHexagon.iconName = "hexagon";
+
 export default IconHexagon;

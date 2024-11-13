@@ -31,4 +31,6 @@ const IconLogoAdobeCharacterAnimator = (props: IconProps & SVGProps<SVGSVGElemen
 	);
 };
 
+IconLogoAdobeCharacterAnimator.iconName = "logo-adobe-character-animator";
+
 export default IconLogoAdobeCharacterAnimator;

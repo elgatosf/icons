@@ -34,4 +34,6 @@ const IconLogoAdobeIllustratorColor = (props: IconProps & SVGProps<SVGSVGElement
 	);
 };
 
+IconLogoAdobeIllustratorColor.iconName = "logo-adobe-illustrator--color";
+
 export default IconLogoAdobeIllustratorColor;

@@ -32,4 +32,6 @@ const IconMessageUpToTopFilled = (props: IconProps & SVGProps<SVGSVGElement>) =>
 	);
 };
 
+IconMessageUpToTopFilled.iconName = "message-up-to-top--filled";
+
 export default IconMessageUpToTopFilled;

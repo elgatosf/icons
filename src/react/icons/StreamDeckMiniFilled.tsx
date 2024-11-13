@@ -31,4 +31,6 @@ const IconStreamDeckMiniFilled = (props: IconProps & SVGProps<SVGSVGElement>) =>
 	);
 };
 
+IconStreamDeckMiniFilled.iconName = "stream-deck-mini--filled";
+
 export default IconStreamDeckMiniFilled;

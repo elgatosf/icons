@@ -32,4 +32,6 @@ const IconProfileFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconProfileFilled.iconName = "profile--filled";
+
 export default IconProfileFilled;

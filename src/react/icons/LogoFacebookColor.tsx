@@ -34,4 +34,6 @@ const IconLogoFacebookColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoFacebookColor.iconName = "logo-facebook--color";
+
 export default IconLogoFacebookColor;

@@ -33,4 +33,6 @@ const IconImageCheckFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconImageCheckFilled.iconName = "image-check--filled";
+
 export default IconImageCheckFilled;

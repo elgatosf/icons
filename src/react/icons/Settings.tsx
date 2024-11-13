@@ -36,4 +36,6 @@ const IconSettings = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconSettings.iconName = "settings";
+
 export default IconSettings;

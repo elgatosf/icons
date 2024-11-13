@@ -27,4 +27,6 @@ const IconVolumeMixerFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconVolumeMixerFilled.iconName = "volume-mixer--filled";
+
 export default IconVolumeMixerFilled;

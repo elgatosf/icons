@@ -28,4 +28,6 @@ const IconTouchFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTouchFilled.iconName = "touch--filled";
+
 export default IconTouchFilled;

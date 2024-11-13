@@ -30,4 +30,6 @@ const IconLogoChrome = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoChrome.iconName = "logo-chrome";
+
 export default IconLogoChrome;

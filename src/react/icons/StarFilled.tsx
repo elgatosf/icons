@@ -27,4 +27,6 @@ const IconStarFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconStarFilled.iconName = "star--filled";
+
 export default IconStarFilled;

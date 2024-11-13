@@ -32,4 +32,6 @@ const IconChapterCheck = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconChapterCheck.iconName = "chapter-check";
+
 export default IconChapterCheck;

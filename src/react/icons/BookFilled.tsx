@@ -27,4 +27,6 @@ const IconBookFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconBookFilled.iconName = "book--filled";
+
 export default IconBookFilled;

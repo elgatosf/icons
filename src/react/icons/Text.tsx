@@ -27,4 +27,6 @@ const IconText = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconText.iconName = "text";
+
 export default IconText;

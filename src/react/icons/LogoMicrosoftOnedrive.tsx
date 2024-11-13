@@ -27,4 +27,6 @@ const IconLogoMicrosoftOnedrive = (props: IconProps & SVGProps<SVGSVGElement>) =
 	);
 };
 
+IconLogoMicrosoftOnedrive.iconName = "logo-microsoft-onedrive";
+
 export default IconLogoMicrosoftOnedrive;

@@ -27,4 +27,6 @@ const IconArrowDown = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconArrowDown.iconName = "arrow-down";
+
 export default IconArrowDown;

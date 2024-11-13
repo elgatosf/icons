@@ -31,4 +31,6 @@ const IconCrown = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCrown.iconName = "crown";
+
 export default IconCrown;

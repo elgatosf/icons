@@ -32,4 +32,6 @@ const IconChapterDownToBottomFilled = (props: IconProps & SVGProps<SVGSVGElement
 	);
 };
 
+IconChapterDownToBottomFilled.iconName = "chapter-down-to-bottom--filled";
+
 export default IconChapterDownToBottomFilled;

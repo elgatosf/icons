@@ -30,4 +30,6 @@ const IconLogoMicrosoftColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoMicrosoftColor.iconName = "logo-microsoft--color";
+
 export default IconLogoMicrosoftColor;

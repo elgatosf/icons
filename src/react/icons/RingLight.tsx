@@ -31,4 +31,6 @@ const IconRingLight = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconRingLight.iconName = "ring-light";
+
 export default IconRingLight;

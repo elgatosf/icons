@@ -32,4 +32,6 @@ const IconLogoKickColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoKickColor.iconName = "logo-kick--color";
+
 export default IconLogoKickColor;

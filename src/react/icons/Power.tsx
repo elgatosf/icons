@@ -28,4 +28,6 @@ const IconPower = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPower.iconName = "power";
+
 export default IconPower;

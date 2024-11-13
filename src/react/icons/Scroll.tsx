@@ -27,4 +27,6 @@ const IconScroll = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconScroll.iconName = "scroll";
+
 export default IconScroll;

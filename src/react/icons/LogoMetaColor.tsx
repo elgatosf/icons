@@ -50,4 +50,6 @@ const IconLogoMetaColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoMetaColor.iconName = "logo-meta--color";
+
 export default IconLogoMetaColor;

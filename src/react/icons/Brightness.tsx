@@ -32,4 +32,6 @@ const IconBrightness = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconBrightness.iconName = "brightness";
+
 export default IconBrightness;

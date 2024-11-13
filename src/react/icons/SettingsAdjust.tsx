@@ -27,4 +27,6 @@ const IconSettingsAdjust = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconSettingsAdjust.iconName = "settings-adjust";
+
 export default IconSettingsAdjust;

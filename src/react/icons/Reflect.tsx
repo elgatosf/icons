@@ -27,4 +27,6 @@ const IconReflect = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconReflect.iconName = "reflect";
+
 export default IconReflect;

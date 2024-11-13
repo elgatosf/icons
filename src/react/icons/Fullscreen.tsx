@@ -27,4 +27,6 @@ const IconFullscreen = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFullscreen.iconName = "fullscreen";
+
 export default IconFullscreen;

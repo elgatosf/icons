@@ -31,4 +31,6 @@ const IconClipboard = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconClipboard.iconName = "clipboard";
+
 export default IconClipboard;

@@ -33,4 +33,6 @@ const IconFacecamOff = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFacecamOff.iconName = "facecam-off";
+
 export default IconFacecamOff;

@@ -32,4 +32,6 @@ const IconLogoAdobeIndesign = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoAdobeIndesign.iconName = "logo-adobe-indesign";
+
 export default IconLogoAdobeIndesign;

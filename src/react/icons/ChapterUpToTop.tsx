@@ -32,4 +32,6 @@ const IconChapterUpToTop = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconChapterUpToTop.iconName = "chapter-up-to-top";
+
 export default IconChapterUpToTop;

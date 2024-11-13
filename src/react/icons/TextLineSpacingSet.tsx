@@ -32,4 +32,6 @@ const IconTextLineSpacingSet = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTextLineSpacingSet.iconName = "text-line-spacing-set";
+
 export default IconTextLineSpacingSet;

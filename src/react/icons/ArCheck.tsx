@@ -37,4 +37,6 @@ const IconArCheck = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconArCheck.iconName = "ar-check";
+
 export default IconArCheck;

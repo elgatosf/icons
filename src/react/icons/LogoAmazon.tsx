@@ -33,4 +33,6 @@ const IconLogoAmazon = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoAmazon.iconName = "logo-amazon";
+
 export default IconLogoAmazon;

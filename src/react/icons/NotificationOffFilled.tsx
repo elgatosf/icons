@@ -32,4 +32,6 @@ const IconNotificationOffFilled = (props: IconProps & SVGProps<SVGSVGElement>) =
 	);
 };
 
+IconNotificationOffFilled.iconName = "notification-off--filled";
+
 export default IconNotificationOffFilled;

@@ -32,4 +32,6 @@ const IconPayment = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPayment.iconName = "payment";
+
 export default IconPayment;

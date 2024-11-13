@@ -27,4 +27,6 @@ const IconMicrophoneOffFilled = (props: IconProps & SVGProps<SVGSVGElement>) => 
 	);
 };
 
+IconMicrophoneOffFilled.iconName = "microphone-off--filled";
+
 export default IconMicrophoneOffFilled;

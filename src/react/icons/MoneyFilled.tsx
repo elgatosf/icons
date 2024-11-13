@@ -32,4 +32,6 @@ const IconMoneyFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMoneyFilled.iconName = "money--filled";
+
 export default IconMoneyFilled;

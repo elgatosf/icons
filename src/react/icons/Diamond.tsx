@@ -31,4 +31,6 @@ const IconDiamond = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconDiamond.iconName = "diamond";
+
 export default IconDiamond;

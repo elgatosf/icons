@@ -31,4 +31,6 @@ const IconStop = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconStop.iconName = "stop";
+
 export default IconStop;

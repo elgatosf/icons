@@ -31,4 +31,6 @@ const IconPlay = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPlay.iconName = "play";
+
 export default IconPlay;

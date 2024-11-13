@@ -39,4 +39,6 @@ const IconLogoAndroidColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoAndroidColor.iconName = "logo-android--color";
+
 export default IconLogoAndroidColor;

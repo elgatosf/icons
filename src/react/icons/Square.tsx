@@ -54,4 +54,6 @@ const IconSquare = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	}
 };
 
+IconSquare.iconName = "square";
+
 export default IconSquare;

@@ -27,4 +27,6 @@ const IconSkipBackFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconSkipBackFilled.iconName = "skip-back--filled";
+
 export default IconSkipBackFilled;

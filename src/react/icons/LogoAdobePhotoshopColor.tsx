@@ -34,4 +34,6 @@ const IconLogoAdobePhotoshopColor = (props: IconProps & SVGProps<SVGSVGElement>)
 	);
 };
 
+IconLogoAdobePhotoshopColor.iconName = "logo-adobe-photoshop--color";
+
 export default IconLogoAdobePhotoshopColor;

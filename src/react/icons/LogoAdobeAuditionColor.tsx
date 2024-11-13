@@ -34,4 +34,6 @@ const IconLogoAdobeAuditionColor = (props: IconProps & SVGProps<SVGSVGElement>) 
 	);
 };
 
+IconLogoAdobeAuditionColor.iconName = "logo-adobe-audition--color";
+
 export default IconLogoAdobeAuditionColor;

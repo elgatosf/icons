@@ -28,4 +28,6 @@ const IconExternalLink = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconExternalLink.iconName = "external-link";
+
 export default IconExternalLink;

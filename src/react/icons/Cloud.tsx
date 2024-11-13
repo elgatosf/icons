@@ -31,4 +31,6 @@ const IconCloud = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCloud.iconName = "cloud";
+
 export default IconCloud;

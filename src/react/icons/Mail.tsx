@@ -32,4 +32,6 @@ const IconMail = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMail.iconName = "mail";
+
 export default IconMail;

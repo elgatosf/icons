@@ -32,4 +32,6 @@ const IconLogoAdobePremierePro = (props: IconProps & SVGProps<SVGSVGElement>) =>
 	);
 };
 
+IconLogoAdobePremierePro.iconName = "logo-adobe-premiere-pro";
+
 export default IconLogoAdobePremierePro;

@@ -27,4 +27,6 @@ const IconArrowRight = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconArrowRight.iconName = "arrow-right";
+
 export default IconArrowRight;

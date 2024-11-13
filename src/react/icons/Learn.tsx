@@ -31,4 +31,6 @@ const IconLearn = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLearn.iconName = "learn";
+
 export default IconLearn;

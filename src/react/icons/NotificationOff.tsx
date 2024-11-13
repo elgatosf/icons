@@ -32,4 +32,6 @@ const IconNotificationOff = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconNotificationOff.iconName = "notification-off";
+
 export default IconNotificationOff;

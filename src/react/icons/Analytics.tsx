@@ -28,4 +28,6 @@ const IconAnalytics = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconAnalytics.iconName = "analytics";
+
 export default IconAnalytics;

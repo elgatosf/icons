@@ -31,4 +31,6 @@ const IconKeyFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconKeyFilled.iconName = "key--filled";
+
 export default IconKeyFilled;

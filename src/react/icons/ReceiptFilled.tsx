@@ -31,4 +31,6 @@ const IconReceiptFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconReceiptFilled.iconName = "receipt--filled";
+
 export default IconReceiptFilled;

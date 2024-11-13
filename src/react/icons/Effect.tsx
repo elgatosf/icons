@@ -27,4 +27,6 @@ const IconEffect = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconEffect.iconName = "effect";
+
 export default IconEffect;

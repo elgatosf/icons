@@ -28,4 +28,6 @@ const IconShare = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconShare.iconName = "share";
+
 export default IconShare;

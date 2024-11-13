@@ -31,4 +31,6 @@ const IconStarbursts = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconStarbursts.iconName = "starbursts";
+
 export default IconStarbursts;

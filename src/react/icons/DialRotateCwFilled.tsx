@@ -32,4 +32,6 @@ const IconDialRotateCwFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconDialRotateCwFilled.iconName = "dial-rotate-cw--filled";
+
 export default IconDialRotateCwFilled;

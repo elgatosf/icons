@@ -31,4 +31,6 @@ const IconSecurityFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconSecurityFilled.iconName = "security--filled";
+
 export default IconSecurityFilled;

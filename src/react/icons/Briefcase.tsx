@@ -31,4 +31,6 @@ const IconBriefcase = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconBriefcase.iconName = "briefcase";
+
 export default IconBriefcase;

@@ -36,4 +36,6 @@ const IconPresentation = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPresentation.iconName = "presentation";
+
 export default IconPresentation;

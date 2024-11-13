@@ -27,4 +27,6 @@ const IconSoundEffect = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconSoundEffect.iconName = "sound-effect";
+
 export default IconSoundEffect;

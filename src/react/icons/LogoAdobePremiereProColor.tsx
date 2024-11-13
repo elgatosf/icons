@@ -34,4 +34,6 @@ const IconLogoAdobePremiereProColor = (props: IconProps & SVGProps<SVGSVGElement
 	);
 };
 
+IconLogoAdobePremiereProColor.iconName = "logo-adobe-premiere-pro--color";
+
 export default IconLogoAdobePremiereProColor;

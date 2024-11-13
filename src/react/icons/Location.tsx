@@ -36,4 +36,6 @@ const IconLocation = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLocation.iconName = "location";
+
 export default IconLocation;

@@ -32,4 +32,6 @@ const IconArticle = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconArticle.iconName = "article";
+
 export default IconArticle;

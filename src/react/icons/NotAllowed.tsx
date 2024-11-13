@@ -31,4 +31,6 @@ const IconNotAllowed = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconNotAllowed.iconName = "not-allowed";
+
 export default IconNotAllowed;

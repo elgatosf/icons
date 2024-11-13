@@ -31,4 +31,6 @@ const IconNotificationFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconNotificationFilled.iconName = "notification--filled";
+
 export default IconNotificationFilled;

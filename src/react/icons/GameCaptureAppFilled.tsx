@@ -32,4 +32,6 @@ const IconGameCaptureAppFilled = (props: IconProps & SVGProps<SVGSVGElement>) =>
 	);
 };
 
+IconGameCaptureAppFilled.iconName = "game-capture-app--filled";
+
 export default IconGameCaptureAppFilled;

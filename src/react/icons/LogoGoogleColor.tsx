@@ -42,4 +42,6 @@ const IconLogoGoogleColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoGoogleColor.iconName = "logo-google--color";
+
 export default IconLogoGoogleColor;

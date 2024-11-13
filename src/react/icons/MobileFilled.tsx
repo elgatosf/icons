@@ -31,4 +31,6 @@ const IconMobileFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMobileFilled.iconName = "mobile--filled";
+
 export default IconMobileFilled;

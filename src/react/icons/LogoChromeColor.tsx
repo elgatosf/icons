@@ -59,4 +59,6 @@ const IconLogoChromeColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoChromeColor.iconName = "logo-chrome--color";
+
 export default IconLogoChromeColor;

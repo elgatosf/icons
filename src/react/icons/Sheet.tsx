@@ -32,4 +32,6 @@ const IconSheet = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconSheet.iconName = "sheet";
+
 export default IconSheet;

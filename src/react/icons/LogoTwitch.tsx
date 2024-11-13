@@ -32,4 +32,6 @@ const IconLogoTwitch = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoTwitch.iconName = "logo-twitch";
+
 export default IconLogoTwitch;

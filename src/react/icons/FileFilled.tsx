@@ -28,4 +28,6 @@ const IconFileFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFileFilled.iconName = "file--filled";
+
 export default IconFileFilled;

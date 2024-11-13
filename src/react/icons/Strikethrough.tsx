@@ -27,4 +27,6 @@ const IconStrikethrough = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconStrikethrough.iconName = "strikethrough";
+
 export default IconStrikethrough;

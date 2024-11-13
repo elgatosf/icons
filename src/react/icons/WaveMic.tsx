@@ -32,4 +32,6 @@ const IconWaveMic = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconWaveMic.iconName = "wave-mic";
+
 export default IconWaveMic;

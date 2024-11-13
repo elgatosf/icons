@@ -27,4 +27,6 @@ const IconLogoMicrosoftTeams = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoMicrosoftTeams.iconName = "logo-microsoft-teams";
+
 export default IconLogoMicrosoftTeams;

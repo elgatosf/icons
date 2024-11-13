@@ -37,4 +37,6 @@ const IconLogoBitcoinColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoBitcoinColor.iconName = "logo-bitcoin--color";
+
 export default IconLogoBitcoinColor;

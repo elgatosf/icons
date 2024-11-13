@@ -32,4 +32,6 @@ const IconAr = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconAr.iconName = "ar";
+
 export default IconAr;

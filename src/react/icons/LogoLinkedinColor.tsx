@@ -30,4 +30,6 @@ const IconLogoLinkedinColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoLinkedinColor.iconName = "logo-linkedin--color";
+
 export default IconLogoLinkedinColor;

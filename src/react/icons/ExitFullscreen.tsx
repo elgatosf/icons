@@ -27,4 +27,6 @@ const IconExitFullscreen = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconExitFullscreen.iconName = "exit-fullscreen";
+
 export default IconExitFullscreen;

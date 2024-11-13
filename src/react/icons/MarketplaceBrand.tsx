@@ -31,4 +31,6 @@ const IconMarketplaceBrand = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMarketplaceBrand.iconName = "marketplace-brand";
+
 export default IconMarketplaceBrand;

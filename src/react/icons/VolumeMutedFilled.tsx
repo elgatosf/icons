@@ -27,4 +27,6 @@ const IconVolumeMutedFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconVolumeMutedFilled.iconName = "volume-muted--filled";
+
 export default IconVolumeMutedFilled;

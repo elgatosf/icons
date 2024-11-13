@@ -31,4 +31,6 @@ const IconCity = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCity.iconName = "city";
+
 export default IconCity;

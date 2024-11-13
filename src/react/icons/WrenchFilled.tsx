@@ -27,4 +27,6 @@ const IconWrenchFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconWrenchFilled.iconName = "wrench--filled";
+
 export default IconWrenchFilled;

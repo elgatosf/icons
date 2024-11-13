@@ -32,4 +32,6 @@ const IconStreamDeckKey = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconStreamDeckKey.iconName = "stream-deck-key";
+
 export default IconStreamDeckKey;

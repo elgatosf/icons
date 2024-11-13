@@ -31,4 +31,6 @@ const IconLogoAdobeExpress = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoAdobeExpress.iconName = "logo-adobe-express";
+
 export default IconLogoAdobeExpress;

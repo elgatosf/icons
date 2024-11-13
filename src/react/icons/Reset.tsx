@@ -27,4 +27,6 @@ const IconReset = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconReset.iconName = "reset";
+
 export default IconReset;

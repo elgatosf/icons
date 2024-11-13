@@ -32,4 +32,6 @@ const IconTemperatureWarm = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconTemperatureWarm.iconName = "temperature-warm";
+
 export default IconTemperatureWarm;

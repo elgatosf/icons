@@ -28,4 +28,6 @@ const IconShieldOff = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconShieldOff.iconName = "shield-off";
+
 export default IconShieldOff;

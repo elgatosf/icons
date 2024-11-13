@@ -27,4 +27,6 @@ const IconAdd = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconAdd.iconName = "add";
+
 export default IconAdd;

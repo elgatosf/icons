@@ -32,4 +32,6 @@ const IconViewOffFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconViewOffFilled.iconName = "view-off--filled";
+
 export default IconViewOffFilled;

@@ -32,4 +32,6 @@ const IconZoomIn = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconZoomIn.iconName = "zoom-in";
+
 export default IconZoomIn;

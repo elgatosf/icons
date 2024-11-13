@@ -36,4 +36,6 @@ const IconZoomOutFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconZoomOutFilled.iconName = "zoom-out--filled";
+
 export default IconZoomOutFilled;

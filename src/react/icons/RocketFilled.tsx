@@ -28,4 +28,6 @@ const IconRocketFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconRocketFilled.iconName = "rocket--filled";
+
 export default IconRocketFilled;

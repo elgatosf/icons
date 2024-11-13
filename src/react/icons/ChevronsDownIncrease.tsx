@@ -32,4 +32,6 @@ const IconChevronsDownIncrease = (props: IconProps & SVGProps<SVGSVGElement>) =>
 	);
 };
 
+IconChevronsDownIncrease.iconName = "chevrons-down-increase";
+
 export default IconChevronsDownIncrease;

@@ -27,4 +27,6 @@ const IconLinkBroken = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLinkBroken.iconName = "link-broken";
+
 export default IconLinkBroken;

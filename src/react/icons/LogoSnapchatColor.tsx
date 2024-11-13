@@ -34,4 +34,6 @@ const IconLogoSnapchatColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoSnapchatColor.iconName = "logo-snapchat--color";
+
 export default IconLogoSnapchatColor;

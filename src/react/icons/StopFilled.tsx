@@ -27,4 +27,6 @@ const IconStopFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconStopFilled.iconName = "stop--filled";
+
 export default IconStopFilled;

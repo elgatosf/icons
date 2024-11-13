@@ -27,4 +27,6 @@ const IconLogoGoogle = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoGoogle.iconName = "logo-google";
+
 export default IconLogoGoogle;

@@ -27,4 +27,6 @@ const IconLogoMicrosoftWord = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoMicrosoftWord.iconName = "logo-microsoft-word";
+
 export default IconLogoMicrosoftWord;

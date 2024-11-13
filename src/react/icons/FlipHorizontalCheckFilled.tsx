@@ -32,4 +32,6 @@ const IconFlipHorizontalCheckFilled = (props: IconProps & SVGProps<SVGSVGElement
 	);
 };
 
+IconFlipHorizontalCheckFilled.iconName = "flip-horizontal-check--filled";
+
 export default IconFlipHorizontalCheckFilled;

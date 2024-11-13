@@ -32,4 +32,6 @@ const IconBackgroundReplaceFilled = (props: IconProps & SVGProps<SVGSVGElement>)
 	);
 };
 
+IconBackgroundReplaceFilled.iconName = "background-replace--filled";
+
 export default IconBackgroundReplaceFilled;

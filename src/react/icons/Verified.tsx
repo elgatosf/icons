@@ -32,4 +32,6 @@ const IconVerified = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconVerified.iconName = "verified";
+
 export default IconVerified;

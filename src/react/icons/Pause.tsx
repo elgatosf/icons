@@ -31,4 +31,6 @@ const IconPause = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPause.iconName = "pause";
+
 export default IconPause;

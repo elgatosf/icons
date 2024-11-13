@@ -27,4 +27,6 @@ const IconChapterFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconChapterFilled.iconName = "chapter--filled";
+
 export default IconChapterFilled;

@@ -33,4 +33,6 @@ const IconDisplayProject = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconDisplayProject.iconName = "display-project";
+
 export default IconDisplayProject;

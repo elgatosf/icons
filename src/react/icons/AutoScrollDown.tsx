@@ -32,4 +32,6 @@ const IconAutoScrollDown = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconAutoScrollDown.iconName = "auto-scroll-down";
+
 export default IconAutoScrollDown;

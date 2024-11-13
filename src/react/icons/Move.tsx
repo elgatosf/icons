@@ -27,4 +27,6 @@ const IconMove = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMove.iconName = "move";
+
 export default IconMove;

@@ -27,4 +27,6 @@ const IconCaveFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCaveFilled.iconName = "cave--filled";
+
 export default IconCaveFilled;

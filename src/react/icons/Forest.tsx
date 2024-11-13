@@ -31,4 +31,6 @@ const IconForest = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconForest.iconName = "forest";
+
 export default IconForest;

@@ -28,4 +28,6 @@ const IconCartAdd = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCartAdd.iconName = "cart-add";
+
 export default IconCartAdd;

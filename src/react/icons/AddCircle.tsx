@@ -32,4 +32,6 @@ const IconAddCircle = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconAddCircle.iconName = "add-circle";
+
 export default IconAddCircle;

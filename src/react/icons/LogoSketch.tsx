@@ -31,4 +31,6 @@ const IconLogoSketch = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoSketch.iconName = "logo-sketch";
+
 export default IconLogoSketch;

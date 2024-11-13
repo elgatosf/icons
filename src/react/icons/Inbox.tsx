@@ -31,4 +31,6 @@ const IconInbox = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconInbox.iconName = "inbox";
+
 export default IconInbox;

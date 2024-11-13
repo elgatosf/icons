@@ -28,4 +28,6 @@ const IconShuffle = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconShuffle.iconName = "shuffle";
+
 export default IconShuffle;

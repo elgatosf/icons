@@ -31,4 +31,6 @@ const IconFolder = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFolder.iconName = "folder";
+
 export default IconFolder;

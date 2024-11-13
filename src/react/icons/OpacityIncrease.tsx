@@ -32,4 +32,6 @@ const IconOpacityIncrease = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconOpacityIncrease.iconName = "opacity-increase";
+
 export default IconOpacityIncrease;

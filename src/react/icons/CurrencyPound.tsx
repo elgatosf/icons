@@ -27,4 +27,6 @@ const IconCurrencyPound = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconCurrencyPound.iconName = "currency-pound";
+
 export default IconCurrencyPound;

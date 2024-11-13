@@ -27,4 +27,6 @@ const IconMarketplaceCreate = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMarketplaceCreate.iconName = "marketplace-create";
+
 export default IconMarketplaceCreate;

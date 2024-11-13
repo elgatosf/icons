@@ -32,4 +32,6 @@ const IconVolumeMuted = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconVolumeMuted.iconName = "volume-muted";
+
 export default IconVolumeMuted;

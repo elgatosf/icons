@@ -31,4 +31,6 @@ const IconOctagon = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconOctagon.iconName = "octagon";
+
 export default IconOctagon;

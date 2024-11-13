@@ -32,4 +32,6 @@ const IconHelp = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconHelp.iconName = "help";
+
 export default IconHelp;

@@ -32,4 +32,6 @@ const IconPanelExpand = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconPanelExpand.iconName = "panel-expand";
+
 export default IconPanelExpand;

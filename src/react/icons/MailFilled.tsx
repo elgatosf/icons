@@ -31,4 +31,6 @@ const IconMailFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMailFilled.iconName = "mail--filled";
+
 export default IconMailFilled;

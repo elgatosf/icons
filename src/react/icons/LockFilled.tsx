@@ -31,4 +31,6 @@ const IconLockFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLockFilled.iconName = "lock--filled";
+
 export default IconLockFilled;

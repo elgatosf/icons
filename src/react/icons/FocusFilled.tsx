@@ -28,4 +28,6 @@ const IconFocusFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconFocusFilled.iconName = "focus--filled";
+
 export default IconFocusFilled;

@@ -34,4 +34,6 @@ const IconLogoTwitchColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconLogoTwitchColor.iconName = "logo-twitch--color";
+
 export default IconLogoTwitchColor;

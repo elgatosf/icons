@@ -31,4 +31,6 @@ const IconDial = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconDial.iconName = "dial";
+
 export default IconDial;

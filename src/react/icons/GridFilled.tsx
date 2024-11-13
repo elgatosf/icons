@@ -27,4 +27,6 @@ const IconGridFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconGridFilled.iconName = "grid--filled";
+
 export default IconGridFilled;

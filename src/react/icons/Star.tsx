@@ -31,4 +31,6 @@ const IconStar = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconStar.iconName = "star";
+
 export default IconStar;

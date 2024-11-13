@@ -31,4 +31,6 @@ const IconMouse = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
+IconMouse.iconName = "mouse";
+
 export default IconMouse;
