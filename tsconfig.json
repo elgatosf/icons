@@ -4,6 +4,7 @@
         "declaration": true,
         "esModuleInterop": true,
         "jsx": "react-jsx",
+        "noImplicitOverride": true,
         "module": "NodeNext",
         "outDir": "dist",
         "skipLibCheck": true,
