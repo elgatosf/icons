@@ -87,6 +87,9 @@ const ctx = new TransformerContext();
 for (const transformer of transformers) {
 	const status = ora(transformer.name).start();
 
+	status.suffixText = "Initializing...";
+	await transformer.initialize?.(ctx);
+
 	let i = 0;
 	for (const [, icon] of icons) {
 		await transformer.transform(ctx, icon);
@@ -94,7 +97,7 @@ for (const transformer of transformers) {
 	}
 
 	status.suffixText = "Finalizing...";
-	transformer.finalize?.(ctx);
+	await transformer.finalize?.(ctx);
 	status.suffixText = "";
 
 	status.succeed(transformer.name);
