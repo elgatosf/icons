@@ -1,3 +1,6 @@
+import { existsSync } from "fs";
+import { rm } from "fs/promises";
+
 import type { Size } from "../../src/catalogue/index.ts";
 import type { SvgIcon } from "../transformer.ts";
 import { Transformer, type TransformerContext } from "../transformer.ts";
@@ -23,14 +26,27 @@ export class StringsTransformer extends Transformer {
 	/**
 	 * @inheritdoc
 	 */
-	public override finalize(ctx: TransformerContext): void {
+	public override async finalize(ctx: TransformerContext): Promise<void> {
 		for (const [size, { names, indexContents }] of this.#catalogues) {
 			// Ignore empty catalogues.
 			if (names.length === 0) {
 				continue;
 			}
 
-			ctx.write(`${this.#pathOf(size)}/index.ts`, indexContents);
+			await ctx.write(`${this.#pathOf(size)}/index.ts`, indexContents);
+		}
+	}
+
+	/**
+	 * @inheritdoc
+	 */
+	public override async initialize(ctx: TransformerContext): Promise<void> {
+		// Clean up the old icons.
+		for (const [size] of this.#catalogues) {
+			const dir = ctx.resolve("src/strings", size);
+			if (existsSync(dir)) {
+				await rm(dir, { recursive: true });
+			}
 		}
 	}
 
@@ -47,7 +63,7 @@ export class StringsTransformer extends Transformer {
 
 			const catalogue = this.#catalogues.get(size)!;
 			catalogue.names.push(icon.name);
-			catalogue.indexContents += `export { default as ${icon.exportName} } from "./icons/${icon.name}.js";\n`;
+			catalogue.indexContents += `export { default as ${icon.exportName} } from "./icons/${icon.name}.g.js";\n`;
 		}
 	}
 

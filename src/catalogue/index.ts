@@ -1,4 +1,4 @@
-import { icons } from "./icons.js";
+import { icons } from "./icons.g.js";
 
 /**
  * Catalogue on icons, and their import options.

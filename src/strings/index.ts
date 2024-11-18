@@ -1,8 +1,8 @@
 import type { MediumIcon } from "../catalogue/index.js";
 import { getExportName } from "../catalogue/naming.js";
-import * as icons from "./m/index.js";
+import * as icons from "./m/index.g.js";
 
-export * from "./m/index.js";
+export * from "./m/index.g.js";
 
 export { MediumIcon };
 
