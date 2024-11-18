@@ -1,6 +1,9 @@
 import { type Config, transform } from "@svgr/core";
+import { existsSync } from "node:fs";
+import { rm } from "node:fs/promises";
 
-import type { Size } from "../../src/catalogue/index.ts";
+import { getReactComponentName } from "../../src/catalogue/naming.ts";
+import { type Size } from "../../src/catalogue/sizing.ts";
 import { type SvgIcon, Transformer, type TransformerContext } from "../transformer.ts";
 
 const svgrConfig: Config = {
@@ -51,6 +54,17 @@ export class ReactTransformer extends Transformer {
 	/**
 	 * @inheritdoc
 	 */
+	public override async initialize(ctx: TransformerContext): Promise<void> {
+		// Clean up the old icons.
+		const dir = ctx.resolve("src/react/icons");
+		if (existsSync(dir)) {
+			await rm(dir, { recursive: true });
+		}
+	}
+
+	/**
+	 * @inheritdoc
+	 */
 	public override async transform(ctx: TransformerContext, icon: SvgIcon): Promise<void> {
 		// Convert each size to a JSX element.
 		const sizes = new Map<Size, string>();
@@ -65,7 +79,7 @@ export class ReactTransformer extends Transformer {
 		}
 
 		// Write all sizes of the icon as a single component.
-		const componentName = icon.exportName.charAt(0).toUpperCase() + icon.exportName.slice(1);
+		const componentName = getReactComponentName(icon.name);
 		const filename = componentName.slice(4);
 		const elementOrSwitch = this.#reduceSizes(sizes);
 
@@ -74,7 +88,7 @@ export class ReactTransformer extends Transformer {
 			this.#formatComponent(componentName, icon.name, elementOrSwitch),
 		);
 
-		this.#indexContents += `export { default as ${componentName} } from "./${filename}.js";\n`;
+		this.#indexContents += `export { default as ${componentName} } from "./${filename}.g.js";\n`;
 	}
 
 	/**
@@ -119,12 +133,7 @@ export class ReactTransformer extends Transformer {
 	 * @returns React component as a string.
 	 */
 	#formatComponent(componentName: string, iconName: string, elementOrSwitch: string): string {
-		return `
-/**
- * Auto-generated file, do not edit.
- * To update the file, run the "build:react" script.
- */
-    
+		return ` 
 import type { SVGProps } from "react"
 import { sizeMap } from "../../catalogue/sizing.js"
 import type { IconProps } from "../types.js"

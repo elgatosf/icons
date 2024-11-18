@@ -1,14 +1,8 @@
-import { icons } from "./icons.js";
+import { icons } from "./icons.g.js";
 import type { Size } from "./sizing.js";
 
-export { Size };
-
-/**
- * Catalogue on icons, and their import options.
- */
-export const catalogue = {
-	icons,
-};
+export { getReactComponentName, getSvgStringName } from "./naming.js";
+export { Size, icons };
 
 /**
  * Icons available in size small.

@@ -34,12 +34,12 @@
         "svg/"
     ],
     "scripts": {
-        "build": "npm run build:transform && npm run lint:fix && npm run tsc",
+        "build": "npm run transform && npm run lint:fix && npm run tsc",
         "build:ci": "tsc",
-        "build:transform": "node --experimental-strip-types scripts/transform.ts",
-        "tsc": "tsc",
         "lint": "prettier . --check",
-        "lint:fix": "prettier . --write --log-level warn"
+        "lint:fix": "prettier . --write --log-level warn",
+        "transform": "node --experimental-strip-types scripts/transform.ts",
+        "tsc": "tsc"
     },
     "keywords": [
         "elgato",
