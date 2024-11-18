@@ -1,6 +1,6 @@
 import { existsSync } from "node:fs";
 import { mkdir, writeFile } from "node:fs/promises";
-import { dirname, join } from "node:path";
+import { dirname, join, parse } from "node:path";
 
 import type { Size } from "../src/catalogue/index.ts";
 
@@ -20,6 +20,12 @@ export abstract class Transformer {
 	public finalize?(ctx: TransformerContext): Promise<void> | void;
 
 	/**
+	 * Initializes the transformer.
+	 * @param ctx Transformer context.
+	 */
+	public initialize?(ctx: TransformerContext): Promise<void> | void;
+
+	/**
 	 * Transforms an icon.
 	 * @param ctx Transformer context.
 	 * @param icon Icon to transform.
@@ -32,12 +38,22 @@ export abstract class Transformer {
  */
 export class TransformerContext {
 	/**
+	 * Resolves the path name, relative to the project root.
+	 * @param path Path, relative to the project root.
+	 * @returns The resolved path.
+	 */
+	resolve(...path: string[]): string {
+		return join(import.meta.dirname, "..", ...path);
+	}
+
+	/**
 	 * Writes the specified data to the path, relative to the project root.
 	 * @param path Path, relative to the project root, where the file should be written.
 	 * @param data Data to write to the file.
 	 */
 	async write(path: string, data: string): Promise<void> {
-		const file = join(import.meta.dirname, "..", path);
+		const { dir, ext, name } = parse(path);
+		const file = this.resolve(dir, `${name}.g${ext}`);
 
 		// Create the parent directory if it does not exist.
 		const parent = dirname(file);
