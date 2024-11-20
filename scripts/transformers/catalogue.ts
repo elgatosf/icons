@@ -1,3 +1,4 @@
+import type { Size } from "../../src/catalogue/sizing.ts";
 import { type SvgIcon, Transformer, type TransformerContext } from "../transformer.ts";
 
 /**
@@ -39,6 +40,16 @@ export class CatalogueTransformer extends Transformer {
 	 * @inheritdoc
 	 */
 	public override transform(ctx: TransformerContext, icon: SvgIcon): void {
-		this.#iconsContent += `"${icon.name}": { sizes: ${JSON.stringify(Array.from(icon.sizes.keys()))} },`;
+		this.#iconsContent += `"${icon.name}": { sizes: ${JSON.stringify(this.#getOrderedSizes(icon))} },`;
+	}
+
+	/**
+	 * Gets the available sizes of an icon, as an ordered array, for example `["s", "m", "l"]`.
+	 * @param icon Icon.
+	 * @returns Array of sizes.
+	 */
+	#getOrderedSizes(icon: SvgIcon): Size[] {
+		const weights: Size[] = ["s", "m", "l"];
+		return Array.from(icon.sizes.keys()).sort((a, b) => weights.indexOf(a) - weights.indexOf(b));
 	}
 }
