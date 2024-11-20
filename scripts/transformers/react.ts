@@ -2,7 +2,7 @@ import { type Config, transform } from "@svgr/core";
 import { existsSync } from "node:fs";
 import { rm } from "node:fs/promises";
 
-import { getReactComponentName } from "../../src/catalogue/naming.ts";
+import { getReactMetadata } from "../../src/catalogue/metadata.ts";
 import { type Size } from "../../src/catalogue/sizing.ts";
 import { type SvgIcon, Transformer, type TransformerContext } from "../transformer.ts";
 
@@ -79,8 +79,7 @@ export class ReactTransformer extends Transformer {
 		}
 
 		// Write all sizes of the icon as a single component.
-		const componentName = getReactComponentName(icon.name);
-		const filename = componentName.slice(4);
+		const { componentName, filename } = getReactMetadata(icon.name);
 		const elementOrSwitch = this.#reduceSizes(sizes);
 
 		await ctx.write(

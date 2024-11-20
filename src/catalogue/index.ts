@@ -1,7 +1,8 @@
 import { icons } from "./icons.g.js";
-import type { Size } from "./sizing.js";
+import type { Size } from "./sizing.ts";
 
-export { getReactComponentName, getSvgStringName } from "./naming.js";
+export { getReactMetadata, getSvgStringMetadata } from "./metadata.js";
+
 export { Size, icons };
 
 /**
