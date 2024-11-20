@@ -44,6 +44,22 @@ icon("logo-elgato"); // SVG string of the Elgato logo, medium (m) size.
 
 It is important to note that when using the `icon` helper function, **all medium-sized icons will be included in the output**, preventing tree-shaking and resulting in a larger output file size (>1 MiB). Where possible, prefer importing icons directly.
 
+### React Components
+
+Icons can be imported as React components using the `/react` path, for example
+
+```tsx
+import { IconLogoElgato } from "@elgato/icons/react";
+
+export default function MyComponent() {
+    return (
+        <div className="icon-wrapper">
+            <IconLogoElgato />
+        </div>
+    );
+};
+```
+
 ### SVG Files
 
 All original SVG files are distributed with this package, and can be found within the `svg/` directory.

@@ -1,5 +1,5 @@
 import type { MediumIcon } from "../catalogue/index.js";
-import { getExportName } from "../catalogue/naming.js";
+import { getSvgStringName } from "../catalogue/naming.js";
 import * as icons from "./m/index.g.js";
 
 export * from "./m/index.g.js";
@@ -12,7 +12,7 @@ export { MediumIcon };
  * @returns Icon as an SVG string.
  */
 export function icon(name: MediumIcon): string {
-	const exportName = getExportName(name);
+	const exportName = getSvgStringName(name);
 	if (exportName in icons) {
 		return icons[exportName as keyof typeof icons];
 	}

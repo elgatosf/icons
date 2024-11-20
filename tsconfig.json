@@ -2,10 +2,13 @@
     "extends": "@tsconfig/node20/tsconfig.json",
     "compilerOptions": {
         "declaration": true,
+        "esModuleInterop": true,
+        "jsx": "react-jsx",
         "noImplicitOverride": true,
         "module": "NodeNext",
         "outDir": "dist",
-        "target": "ES2022"
+        "skipLibCheck": true,
+        "target": "eS2022"
     },
     "include": ["src/"],
     "exclude": ["node_modules/"]

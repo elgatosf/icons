@@ -1,11 +1,8 @@
 import { icons } from "./icons.g.js";
+import type { Size } from "./sizing.js";
 
-/**
- * Catalogue on icons, and their import options.
- */
-export const catalogue = {
-	icons,
-};
+export { getReactComponentName, getSvgStringName } from "./naming.js";
+export { Size, icons };
 
 /**
  * Icons available in size small.
@@ -21,11 +18,6 @@ export type MediumIcon = IconsOfSize<"m">;
  * Icons available in size large.
  */
 export type LargeIcon = IconsOfSize<"l">;
-
-/**
- * Size of an icon, denoted as a shirt size.
- */
-export type Size = "s" | "m" | "l";
 
 /**
  * Utility type to extract icon names that have a given size, for example "s", "m", or "l", into a union.

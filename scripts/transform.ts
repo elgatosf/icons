@@ -3,9 +3,10 @@ import { basename, extname, join, parse } from "node:path";
 import ora from "ora";
 
 import type { Size } from "../src/catalogue/index.ts";
-import { getExportName } from "../src/catalogue/naming.ts";
+import { getSvgStringName } from "../src/catalogue/naming.ts";
 import { type SvgIcon, TransformerContext } from "./transformer.ts";
 import { CatalogueTransformer } from "./transformers/catalogue.ts";
+import { ReactTransformer } from "./transformers/react.ts";
 import { StringsTransformer } from "./transformers/strings.ts";
 
 const status = ora("Reading icons…").start();
@@ -37,14 +38,13 @@ for (let i = 0; i < entries.length; i++) {
 
 	// Read / create the icon.
 	const name = parse(entry.name).name;
-	const exportName = getExportName(name);
+	const exportName = getSvgStringName(name); // This ensures a unique name for all icons.
 	let icon = icons.get(exportName);
 	if (icon && icon.name !== name) {
 		throw new Error(`Duplicate icons found:\n\n${name}\n${icon.name}\n\nBoth resolve to: ${exportName}`);
 	}
 
 	icon = icon || {
-		exportName,
 		name,
 		sizes: new Map(),
 	};
@@ -79,8 +79,9 @@ status.succeed("Reading icons");
  */
 
 const transformers = [
-	new StringsTransformer(),
 	new CatalogueTransformer(),
+	new ReactTransformer(),
+	new StringsTransformer(),
 ];
 
 const ctx = new TransformerContext();
@@ -102,5 +103,3 @@ for (const transformer of transformers) {
 
 	status.succeed(transformer.name);
 }
-
-ora().succeed("Transformation complete");

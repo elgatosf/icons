@@ -70,11 +70,6 @@ export class TransformerContext {
  */
 export type SvgIcon = {
 	/**
-	 * Name the icon should be exported as.
-	 */
-	exportName: string;
-
-	/**
 	 * Name of the icon, derived from the name of the source file with the extension omitted.
 	 */
 	name: string;
