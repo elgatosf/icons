@@ -4,10 +4,6 @@
     "description": "Icons used throughout the Elgato ecosystem.",
     "type": "module",
     "exports": {
-        ".": {
-            "default": "./dist/strings/index.js",
-            "types": "./dist/strings/index.d.ts"
-        },
         "./s": {
             "default": "./dist/strings/s/index.js",
             "types": "./dist/strings/s/index.d.ts"

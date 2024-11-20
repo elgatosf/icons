@@ -20,7 +20,7 @@ npm install @elgato/icons
 
 ### JavaScript Variables
 
-Icons can be imported directly, with each icon representing a string that contains the SVG contents of the icon, for example:
+Icons can be imported as SVG strings from `@elgato/icons/{s,m,l}`, for example:
 
 ```ts
 import { iconLogoElgato } from "@elgato/icons/m";
@@ -34,19 +34,9 @@ All icons are available in medium (m), with some also available in small (s) and
 -   `@elgato/icons/m` — optimized for 24 × 24 px.
 -   `@elgato/icons/l` — optimized for 32 × 32 px.
 
-Alternatively, medium-sized icons can be imported dynamically using the `icon` helper function (not recommended), for example:
-
-```ts
-import { icon } from "@elgato/icons";
-
-icon("logo-elgato"); // SVG string of the Elgato logo, medium (m) size.
-```
-
-It is important to note that when using the `icon` helper function, **all medium-sized icons will be included in the output**, preventing tree-shaking and resulting in a larger output file size (>1 MiB). Where possible, prefer importing icons directly.
-
 ### React Components
 
-Icons can be imported as React components using the `/react` path, for example
+Icons can be imported as React components from `@elgato/icons/react`, for example
 
 ```tsx
 import { IconLogoElgato } from "@elgato/icons/react";
@@ -54,11 +44,13 @@ import { IconLogoElgato } from "@elgato/icons/react";
 export default function MyComponent() {
     return (
         <div className="icon-wrapper">
-            <IconLogoElgato />
+            <IconLogoElgato size="m" />
         </div>
     );
 };
 ```
+
+All icons are available in medium (m), with some also available in small (s) and large (l), and the preferred size can be specified using the `size` property. If the preferred size does not exist, the default size will be used.
 
 ### SVG Files
 

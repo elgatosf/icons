@@ -1,5 +1,5 @@
 import { icons } from "./icons.g.js";
-import type { Size } from "./sizing.ts";
+import type { Size } from "./sizing.js";
 
 export { getReactMetadata, getSvgStringMetadata } from "./metadata.js";
 
