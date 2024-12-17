@@ -1,10 +1,10 @@
-import type { Size } from "../../src/catalogue/sizing.ts";
+import type { Size } from "../../src/metadata/sizing.ts";
 import { type SvgIcon, Transformer, type TransformerContext } from "../transformer.ts";
 
 /**
- * Formats the specified icons (as a partial JSON object) to the catalogue's contents.
+ * Formats the specified icons (as a partial JSON object) to the metadata's contents.
  * @param icons The icons.
- * @returns Output contents of the catalogue.
+ * @returns Output contents of the metadata.
  */
 const format = (icons: string) => `
 /**
@@ -16,24 +16,24 @@ export const icons = {
 `;
 
 /**
- * Transformer that generates the catalogue of icons.
+ * Transformer that generates the metadata of icons.
  */
-export class CatalogueTransformer extends Transformer {
+export class MetadataTransformer extends Transformer {
 	/**
-	 * String builder used to collate the icons within the catalogue.
+	 * String builder used to collate the icons within the metadata.
 	 */
 	#iconsContent: string = "";
 
 	/**
 	 * @inheritdoc
 	 */
-	public name = "Catalogue";
+	public name = "Metadata";
 
 	/**
 	 * @inheritdoc
 	 */
 	public override finalize(ctx: TransformerContext): Promise<void> {
-		return ctx.write("src/catalogue/icons.ts", format(this.#iconsContent));
+		return ctx.write("src/metadata/icons.ts", format(this.#iconsContent));
 	}
 
 	/**

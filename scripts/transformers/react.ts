@@ -2,8 +2,8 @@ import { type Config, transform } from "@svgr/core";
 import { existsSync } from "node:fs";
 import { rm } from "node:fs/promises";
 
-import { getReactMetadata } from "../../src/catalogue/metadata.ts";
-import { type Size } from "../../src/catalogue/sizing.ts";
+import { getReactMetadata } from "../../src/metadata/providers.ts";
+import { type Size } from "../../src/metadata/sizing.ts";
 import { type SvgIcon, Transformer, type TransformerContext } from "../transformer.ts";
 
 const svgrConfig: Config = {
@@ -134,7 +134,7 @@ export class ReactTransformer extends Transformer {
 	#formatComponent(componentName: string, iconName: string, elementOrSwitch: string): string {
 		return ` 
 import type { SVGProps } from "react"
-import { sizeMap } from "../../catalogue/sizing.js"
+import { sizeMap } from "../../metadata/sizing.js"
 import type { IconProps } from "../types.js"
 
 const ${componentName} = (props: IconProps & SVGProps<SVGSVGElement>) => {

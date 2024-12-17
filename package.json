@@ -16,9 +16,9 @@
             "default": "./dist/strings/l/index.js",
             "types": "./dist/strings/l/index.d.ts"
         },
-        "./catalogue": {
-            "default": "./dist/catalogue/index.js",
-            "types": "./dist/catalogue/index.d.ts"
+        "./metadata": {
+            "default": "./dist/metadata/index.js",
+            "types": "./dist/metadata/index.d.ts"
         },
         "./react": {
             "default": "./dist/react/index.js",
