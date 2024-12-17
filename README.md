@@ -1,6 +1,6 @@
 <div align="center">
 
-[![Elgato icons banner](assets/banner.png)](https://www.figma.com/community/file/1383396897451458564)
+[![Elgato icons banner](assets/banner.png)](https://docs.elgato.com/icons)
 
 # Elgato Icons
 
