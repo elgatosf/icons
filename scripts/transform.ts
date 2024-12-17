@@ -2,10 +2,10 @@ import { readdir, readFile } from "node:fs/promises";
 import { basename, extname, join, parse } from "node:path";
 import ora from "ora";
 
-import type { Size } from "../src/catalogue/index.ts";
-import { getSvgStringMetadata } from "../src/catalogue/metadata.ts";
+import type { Size } from "../src/metadata/index.ts";
+import { getSvgStringMetadata } from "../src/metadata/providers.ts";
 import { type SvgIcon, TransformerContext } from "./transformer.ts";
-import { CatalogueTransformer } from "./transformers/catalogue.ts";
+import { MetadataTransformer } from "./transformers/metadata.ts";
 import { ReactTransformer } from "./transformers/react.ts";
 import { StringsTransformer } from "./transformers/strings.ts";
 
@@ -79,7 +79,7 @@ status.succeed("Reading icons");
  */
 
 const transformers = [
-	new CatalogueTransformer(),
+	new MetadataTransformer(),
 	new ReactTransformer(),
 	new StringsTransformer(),
 ];

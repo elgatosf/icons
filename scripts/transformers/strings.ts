@@ -1,8 +1,8 @@
 import { existsSync } from "fs";
 import { rm } from "fs/promises";
 
-import { getSvgStringMetadata } from "../../src/catalogue/metadata.ts";
-import { type Size } from "../../src/catalogue/sizing.ts";
+import { getSvgStringMetadata } from "../../src/metadata/providers.ts";
+import { type Size } from "../../src/metadata/sizing.ts";
 import type { SvgIcon } from "../transformer.ts";
 import { Transformer, type TransformerContext } from "../transformer.ts";
 

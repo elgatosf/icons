@@ -1,5 +1,5 @@
 import type { SVGProps } from "react";
-import { sizeMap } from "../../catalogue/sizing.js";
+import { sizeMap } from "../../metadata/sizing.js";
 import type { IconProps } from "../types.js";
 
 const IconLogoOpenai = (props: IconProps & SVGProps<SVGSVGElement>) => {

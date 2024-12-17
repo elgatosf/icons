@@ -1,5 +1,5 @@
 import type { SVGProps } from "react";
-import { sizeMap } from "../../catalogue/sizing.js";
+import { sizeMap } from "../../metadata/sizing.js";
 import type { IconProps } from "../types.js";
 
 const IconFlipHorizontalCheck = (props: IconProps & SVGProps<SVGSVGElement>) => {

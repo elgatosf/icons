@@ -1,4 +1,4 @@
-import type { Size } from "../catalogue/sizing.js";
+import type { Size } from "../metadata/sizing.js";
 
 /**
  * Icon component properties.
