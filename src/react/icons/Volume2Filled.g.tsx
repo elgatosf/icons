@@ -25,6 +25,6 @@ const Volume2Filled = ({ size = "m", label = "Icon", ...props }: IconProps) => {
 	);
 };
 
-Volume2Filled.iconName = "volume2--filled";
+Volume2Filled.iconName = "volume-2--filled";
 
 export default Volume2Filled;

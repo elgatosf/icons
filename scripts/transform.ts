@@ -9,19 +9,41 @@ import { MetadataTransformer } from "./transformers/metadata.js";
 import { ReactTransformer } from "./transformers/react.js";
 import { StringsTransformer } from "./transformers/strings.js";
 
+async function retryDelete(path: string, maxAttempts = 3, delayMs = 100): Promise<void> {
+	for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+		try {
+			await rm(path, { recursive: true, force: true, maxRetries: 3 });
+			return;
+		} catch (error) {
+			if (attempt === maxAttempts) throw error;
+			await new Promise(resolve => setTimeout(resolve, delayMs));
+		}
+	}
+}
+
 async function cleanup() {
 	const status = ora("Cleaning up old generated files...").start();
 	try {
-		// Clean up React components
-		await rm(join(import.meta.dirname, "../src/react/icons"), { recursive: true, force: true });
-		// Clean up string exports
-		await rm(join(import.meta.dirname, "../src/strings"), { recursive: true, force: true });
-		// Clean up metadata
-		await rm(join(import.meta.dirname, "../src/metadata/generated"), { recursive: true, force: true });
+		const cleanupTasks = [
+			// Clean up React components
+			retryDelete(join(import.meta.dirname, "../src/react")),
+
+			// Clean up string exports
+			retryDelete(join(import.meta.dirname, "../src/strings")),
+
+			// Clean up metadata
+			retryDelete(join(import.meta.dirname, "../src/metadata/generated"))
+		];
+
+		await Promise.all(cleanupTasks.map(task => task.catch(error => {
+			console.warn('Warning: Cleanup error:', error.message);
+		})));
+
 		status.succeed("Cleaned up old generated files");
 	} catch (error) {
 		status.fail(`Failed to clean up: ${error.message}`);
-		throw error;
+		// Don't throw here, allow the process to continue even if cleanup partially fails
+		console.warn('Warning: Some files could not be cleaned up. Continuing with build...');
 	}
 }
 

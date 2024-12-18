@@ -1,3 +1,3 @@
-export * as s from "./s/index.js";
-export * as m from "./m/index.js";
-export * as l from "./l/index.js";
+export * as s from "./s/index";
+export * as m from "./m/index";
+export * as l from "./l/index";

@@ -25,6 +25,6 @@ const Wifi2 = ({ size = "m", label = "Icon", ...props }: IconProps) => {
 	);
 };
 
-Wifi2.iconName = "wifi2";
+Wifi2.iconName = "wifi-2";
 
 export default Wifi2;

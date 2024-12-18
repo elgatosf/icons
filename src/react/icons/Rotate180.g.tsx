@@ -25,6 +25,6 @@ const Rotate180 = ({ size = "m", label = "Icon", ...props }: IconProps) => {
 	);
 };
 
-Rotate180.iconName = "rotate180";
+Rotate180.iconName = "rotate-180";
 
 export default Rotate180;

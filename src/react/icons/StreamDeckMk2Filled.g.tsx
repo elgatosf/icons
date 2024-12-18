@@ -25,6 +25,6 @@ const StreamDeckMk2Filled = ({ size = "m", label = "Icon", ...props }: IconProps
 	);
 };
 
-StreamDeckMk2Filled.iconName = "stream-deck-mk2--filled";
+StreamDeckMk2Filled.iconName = "stream-deck-mk-2--filled";
 
 export default StreamDeckMk2Filled;

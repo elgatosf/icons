@@ -1,5 +1,5 @@
 import { transform } from "@svgr/core";
-import { writeFile, mkdir } from "node:fs/promises";
+import { writeFile, mkdir, readdir, unlink } from "node:fs/promises";
 import { join } from "node:path";
 import { type SvgIcon, type Transformer } from "../transformer.js";
 import { getReactComponentMetadata } from "../../src/metadata/providers.js";
@@ -20,11 +20,6 @@ function cleanSvg(svg: string): string {
 }
 
 function formatComponentName(name: string): string {
-	// Add 'Icon' prefix to names that start with numbers
-	if (/^\d/.test(name)) {
-		name = `Icon${name}`;
-	}
-	
 	// Convert kebab-case to camelCase while preserving numbers
 	return name
 		.split(/[-_]/)
@@ -99,8 +94,17 @@ export class ReactTransformer implements Transformer {
 	readonly name = "React components";
 
 	async initialize(ctx: TransformerContext) {
-		// Ensure the react/icons directory exists
-		await mkdir(join(ctx.srcDir, "react", "icons"), { recursive: true });
+		// Clean up src directory
+		const srcIconsDir = join(ctx.srcDir, "react", "icons");
+		await mkdir(srcIconsDir, { recursive: true });
+		try {
+			const srcFiles = await readdir(srcIconsDir);
+			await Promise.all(
+				srcFiles.map(file => unlink(join(srcIconsDir, file)))
+			);
+		} catch (error) {
+			console.warn('Warning: Could not clean up src React exports:', error);
+		}
 	}
 
 	async transform(ctx: TransformerContext, icon: SvgIcon): Promise<void> {
@@ -189,7 +193,7 @@ export default ${componentName};`;
 		const contents = ctx.icons
 			.map((icon) => {
 				const componentName = formatComponentName(icon.name);
-				return `export { default as ${componentName} } from "./${componentName}.g.js";`;
+				return `export { default as ${componentName} } from "./${componentName}.g";`;
 			})
 			.join("\n");
 

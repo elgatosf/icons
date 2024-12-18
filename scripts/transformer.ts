@@ -15,12 +15,10 @@ export interface Transformer {
 }
 
 export class TransformerContext {
-	readonly outDir: string;
 	readonly srcDir: string;
 	readonly icons: SvgIcon[] = [];
 
 	constructor() {
-		this.outDir = join(process.cwd(), "dist");
 		this.srcDir = join(process.cwd(), "src");
 	}
 
@@ -33,16 +31,6 @@ export class TransformerContext {
 			mkdir(join(this.srcDir, "strings/s"), { recursive: true }),
 			mkdir(join(this.srcDir, "strings/m"), { recursive: true }),
 			mkdir(join(this.srcDir, "strings/l"), { recursive: true })
-		]);
-
-		// Create output directories
-		await Promise.all([
-			mkdir(join(this.outDir, "react"), { recursive: true }),
-			mkdir(join(this.outDir, "strings"), { recursive: true }),
-			mkdir(join(this.outDir, "metadata"), { recursive: true }),
-			mkdir(join(this.outDir, "strings/s"), { recursive: true }),
-			mkdir(join(this.outDir, "strings/m"), { recursive: true }),
-			mkdir(join(this.outDir, "strings/l"), { recursive: true })
 		]);
 	}
 

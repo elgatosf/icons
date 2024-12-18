@@ -25,6 +25,6 @@ const Logo4kcu = ({ size = "m", label = "Icon", ...props }: IconProps) => {
 	);
 };
 
-Logo4kcu.iconName = "logo4kcu";
+Logo4kcu.iconName = "logo-4kcu";
 
 export default Logo4kcu;

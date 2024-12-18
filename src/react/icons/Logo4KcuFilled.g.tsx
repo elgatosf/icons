@@ -25,6 +25,6 @@ const Logo4kcuFilled = ({ size = "m", label = "Icon", ...props }: IconProps) => 
 	);
 };
 
-Logo4kcuFilled.iconName = "logo4kcu--filled";
+Logo4kcuFilled.iconName = "logo-4kcu--filled";
 
 export default Logo4kcuFilled;

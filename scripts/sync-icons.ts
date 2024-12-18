@@ -25,13 +25,31 @@ const figma = new Api({
   personalAccessToken: FIGMA_ACCESS_TOKEN!
 });
 
+async function cleanupSvgFolders() {
+  console.log('Cleaning up existing SVG folders...');
+  for (const folder of Object.values(SIZE_FOLDERS)) {
+    try {
+      // Delete the entire folder and its contents
+      await fs.rm(folder, { recursive: true, force: true });
+      console.log(`Cleaned up ${folder}`);
+    } catch (error) {
+      // Ignore errors if folder doesn't exist
+      console.log(`No existing folder to clean up at ${folder}`);
+    }
+  }
+}
+
 function formatIconName(name: string): string {
-  // Remove "Icon" prefix and any variant info
+  // Remove variant info and Icon prefix
   name = name.split(',')[0].replace(/^Icon\s*/, '');
   
-  // Handle numbers in names (e.g., Icon10Square -> 10-square)
+  // Add hyphen between letters and numbers
+  name = name
+    .replace(/([a-zA-Z])(\d)/g, '$1-$2')  // Add hyphen between letters and numbers
+    .replace(/(\d)([A-Z][a-z])/g, '$1-$2'); // Add hyphen between numbers and camelCase words
+  
+  // Convert camelCase to kebab-case
   return name
-    .replace(/(\d+)([A-Z][a-z]*)/g, '$1-$2')
     .replace(/([a-z])([A-Z])/g, '$1-$2')
     .toLowerCase();
 }
@@ -186,6 +204,9 @@ interface GetFileResult {
 
 async function syncIcons(): Promise<void> {
   try {
+    // First, clean up all existing SVG files
+    await cleanupSvgFolders();
+
     console.log('Creating output directories...');
     await Promise.all(
       Object.values(SIZE_FOLDERS).map(folder => 

@@ -25,6 +25,6 @@ const Volume2 = ({ size = "m", label = "Icon", ...props }: IconProps) => {
 	);
 };
 
-Volume2.iconName = "volume2";
+Volume2.iconName = "volume-2";
 
 export default Volume2;

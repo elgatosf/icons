@@ -1,7 +1,22 @@
-import { mkdir, writeFile, readdir, unlink } from "node:fs/promises";
+import { mkdir, writeFile, readdir, unlink, access } from "node:fs/promises";
 import { join } from "node:path";
 import { type SvgIcon, type Transformer } from "../transformer.js";
 import { getSvgStringMetadata } from "../../src/metadata/providers.js";
+
+async function fileExists(path: string): Promise<boolean> {
+	try {
+		await access(path);
+		return true;
+	} catch {
+		return false;
+	}
+}
+
+async function safeDelete(path: string) {
+	if (await fileExists(path)) {
+		await unlink(path);
+	}
+}
 
 function formatComponentName(name: string): string {
 	// Convert kebab-case to camelCase while preserving numbers
@@ -22,6 +37,33 @@ function formatComponentName(name: string): string {
 export class StringsTransformer implements Transformer {
 	readonly name = "String exports";
 
+	async initialize(ctx: TransformerContext) {
+		const sizes = ['s', 'm', 'l'];
+		
+		// Clean up src directory
+		const srcStringsDir = join(ctx.srcDir, "strings");
+		await mkdir(srcStringsDir, { recursive: true });
+		
+		// Clean up src size directories
+		await Promise.all(
+			sizes.map(async (size) => {
+				const sizeDir = join(srcStringsDir, size);
+				await mkdir(sizeDir, { recursive: true });
+				try {
+					const files = await readdir(sizeDir);
+					await Promise.all(
+						files.map(file => safeDelete(join(sizeDir, file)))
+					);
+				} catch (error) {
+					// Directory might not exist yet, which is fine
+				}
+			})
+		);
+
+		// Clean up src root index
+		await safeDelete(join(srcStringsDir, "index.ts"));
+	}
+
 	async transform(ctx: TransformerContext, icon: SvgIcon): Promise<void> {
 		const exportName = formatComponentName(icon.name);
 
@@ -39,18 +81,6 @@ export class StringsTransformer implements Transformer {
 				for (const oldFile of oldFiles) {
 					await unlink(join(ctx.srcDir, "strings", size, oldFile));
 				}
-
-				// Also clean up dist directory
-				const distFiles = await readdir(join(ctx.outDir, "strings", size));
-				const oldDistFiles = distFiles.filter(file => 
-					file.toLowerCase().startsWith(icon.name.toLowerCase()) && 
-					file.endsWith('.js') &&
-					file !== `${exportName}.js`
-				);
-				
-				for (const oldFile of oldDistFiles) {
-					await unlink(join(ctx.outDir, "strings", size, oldFile));
-				}
 			} catch (error) {
 				console.warn(`Warning: Could not clean up old files for ${icon.name} (size ${size}):`, error);
 			}
@@ -59,9 +89,6 @@ export class StringsTransformer implements Transformer {
 			
 			// Write to src
 			await writeFile(join(ctx.srcDir, "strings", size, `${exportName}.ts`), contents);
-			
-			// Write to dist
-			await writeFile(join(ctx.outDir, "strings", size, `${exportName}.js`), contents);
 		}
 	}
 
@@ -75,27 +102,21 @@ export class StringsTransformer implements Transformer {
 			const contents = icons
 				.map(icon => {
 					const exportName = formatComponentName(icon.name);
-					return `export { ${exportName} } from "./${exportName}.js";`;
+					return `export { ${exportName} } from "./${exportName}";`;
 				})
 				.join("\n");
 
 			// Write to src
 			await writeFile(join(ctx.srcDir, "strings", size, "index.ts"), contents);
-			
-			// Write to dist
-			await writeFile(join(ctx.outDir, "strings", size, "index.js"), contents);
 		}
 
 		// Generate root index file that exports size-specific indices
 		const rootContents = sizes
 			.filter(size => ctx.icons.some(icon => icon.sizes.has(size)))
-			.map(size => `export * as ${size} from "./${size}/index.js";`)
+			.map(size => `export * as ${size} from "./${size}/index";`)
 			.join("\n");
 
 		// Write to src
 		await writeFile(join(ctx.srcDir, "strings", "index.ts"), rootContents);
-		
-		// Write to dist
-		await writeFile(join(ctx.outDir, "strings", "index.js"), rootContents);
 	}
 }

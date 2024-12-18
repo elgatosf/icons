@@ -5,34 +5,33 @@
     "type": "module",
     "exports": {
         "./s": {
-            "default": "./dist/strings/s/index.js",
-            "types": "./dist/strings/s/index.d.ts"
+            "default": "./src/strings/s/index.js",
+            "types": "./src/strings/s/index.d.ts"
         },
         "./m": {
-            "default": "./dist/strings/m/index.js",
-            "types": "./dist/strings/m/index.d.ts"
+            "default": "./src/strings/m/index.js",
+            "types": "./src/strings/m/index.d.ts"
         },
         "./l": {
-            "default": "./dist/strings/l/index.js",
-            "types": "./dist/strings/l/index.d.ts"
+            "default": "./src/strings/l/index.js",
+            "types": "./src/strings/l/index.d.ts"
         },
         "./metadata": {
-            "default": "./dist/metadata/index.js",
-            "types": "./dist/metadata/index.d.ts"
+            "default": "./src/metadata/index.js",
+            "types": "./src/metadata/index.d.ts"
         },
         "./react": {
-            "default": "./dist/react/index.js",
-            "types": "./dist/react/index.d.ts"
+            "default": "./src/react/index.js",
+            "types": "./src/react/index.d.ts"
         }
     },
     "files": [
-        "dist/",
+        "src/",
         "svg/"
     ],
     "scripts": {
-        "build": "npm run build:icons && npm run transform && tsc",
-        "build:icons": "tsx scripts/sync-icons.ts",
-        "transform": "tsx scripts/transform.ts"
+        "build": "npm run sync && tsx scripts/transform.ts",
+        "sync": "tsx scripts/sync-icons.ts"
     },
     "keywords": [
         "elgato",
@@ -68,14 +67,14 @@
         "@svgr/plugin-jsx": "^8.1.0",
         "@svgr/plugin-svgo": "^8.1.0",
         "@tsconfig/node20": "^20.1.4",
-        "@types/node": "^20.17.10",
+        "@types/node": "^20.8.7",
         "@types/react": "^18.3.12",
         "@vercel/node": "^3.0.0",
-        "ora": "^8.1.1",
+        "ora": "^7.0.1",
         "react": "^18.3.1",
         "ts-node": "^10.9.2",
         "tsconfig-paths": "^4.2.0",
-        "tsx": "^4.19.2",
-        "typescript": "^5.7.2"
+        "tsx": "^3.14.0",
+        "typescript": "^5.2.2"
     }
 }

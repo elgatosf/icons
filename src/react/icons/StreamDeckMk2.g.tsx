@@ -25,6 +25,6 @@ const StreamDeckMk2 = ({ size = "m", label = "Icon", ...props }: IconProps) => {
 	);
 };
 
-StreamDeckMk2.iconName = "stream-deck-mk2";
+StreamDeckMk2.iconName = "stream-deck-mk-2";
 
 export default StreamDeckMk2;
