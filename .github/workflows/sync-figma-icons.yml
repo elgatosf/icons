@@ -13,8 +13,19 @@ jobs:
   sync-icons:
     runs-on: ubuntu-latest
     steps:
+      - name: Verify Webhook Secret
+        if: github.event_name == 'repository_dispatch'
+        env:
+          WEBHOOK_SECRET: ${{ secrets.WEBHOOK_SECRET }}
+          EVENT_PASSCODE: ${{ github.event.client_payload.passcode }}
+        run: |
+          if [[ "$WEBHOOK_SECRET" != "$EVENT_PASSCODE" ]]; then
+            echo "Invalid webhook secret"
+            exit 1
+          fi
+
       - name: Check Event Type
-        id: check_event
+        if: github.event_name == 'repository_dispatch'
         run: |
           if [[ "${{ github.event.client_payload.event_type }}" != "LIBRARY_PUBLISH" ]]; then
             echo "Skipping workflow as this is not a library publish event"
@@ -22,23 +33,19 @@ jobs:
           fi
 
       - uses: actions/checkout@v4
-        if: success()
         with:
           fetch-depth: 0
       
       - name: Setup Node.js
-        if: success()
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
           
       - name: Install dependencies
-        if: success()
         run: npm ci
         
       - name: Sync Icons
-        if: success()
         id: sync
         run: |
           npm run build:icons
@@ -55,7 +62,6 @@ jobs:
       - name: Transform SVGs
         if: steps.sync.outputs.changes > 0
         run: |
-          # Run the transform script to generate React components and strings
           npm run transform
           git add src/
           

@@ -20,6 +20,28 @@ This repository automatically syncs with our Figma library. When icons are publi
 3. React components and string exports are generated
 4. A pull request is created with the changes
 
+### Initial Setup
+
+1. **GitHub Repository Setup**
+   - Fork/clone this repository
+   - Go to Settings → Secrets and variables → Actions
+   - Add the following secrets:
+     - `FIGMA_ACCESS_TOKEN`: Your Figma personal access token
+     - `FIGMA_FILE_ID`: The ID of your Figma file containing the icons
+     - `WEBHOOK_SECRET`: A secure random string (generate with `openssl rand -hex 32`)
+
+2. **Figma Webhook Setup**
+   - Go to your Figma file
+   - Click "Share" → "File settings" → "Webhooks"
+   - Add a new webhook:
+     - Event type: `LIBRARY_PUBLISH`
+     - URL: `https://api.github.com/repos/{owner}/{repo}/dispatches`
+     - Passcode: Use the same secret you added as `WEBHOOK_SECRET` in GitHub
+
+3. **Test the Integration**
+   - Publish changes in your Figma library
+   - A new PR will be created automatically with the updates
+
 ## Usage
 
 ```bash
