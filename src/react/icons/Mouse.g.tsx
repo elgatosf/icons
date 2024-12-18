@@ -1,31 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconMouse = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const Mouse = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path
-				fillRule="evenodd"
-				d="M6.51 3.994a2.32 2.32 0 0 1 1.34-1.377l.973-.379a8.75 8.75 0 0 1 6.354 0l.973.379a2.32 2.32 0 0 1 1.34 1.377l.565 1.577a20.1 20.1 0 0 1 .715 11.064C18.087 19.767 15.26 22 12.055 22c-3.27 0-6.158-2.306-6.855-5.5a19.6 19.6 0 0 1 .699-10.8zm9.567.506.565 1.577a18.5 18.5 0 0 1 .998 4.423h-4.89V3.18c.64.066 1.273.218 1.883.456l.972.379a.81.81 0 0 1 .472.485M11.25 3.18v7.32H6.34c.148-1.458.472-2.9.971-4.293L7.923 4.5c.08-.223.251-.4.471-.485l.973-.38a7.3 7.3 0 0 1 1.883-.455M6.252 12a18 18 0 0 0 .413 4.18c.546 2.499 2.82 4.32 5.39 4.32 2.514 0 4.72-1.756 5.25-4.185.31-1.424.451-2.872.424-4.315z"
-				clipRule="evenodd"
-			/>
+			<path fillRule="evenodd" d="M6.51059 3.99355C6.73673 3.36244 7.22528 2.8603 7.84994 2.61693L8.82261 2.23797C10.866 1.44184 13.1338 1.44184 15.1772 2.23797L16.1499 2.61693C16.7746 2.8603 17.2631 3.36244 17.4893 3.99355L18.0545 5.57088C19.3258 9.11874 19.5739 12.9526 18.7705 16.6347C18.0872 19.7669 15.2605 22.0001 12.0547 22.0001C8.7855 22.0001 5.8968 19.6941 5.19992 16.5001C4.41575 12.9059 4.65795 9.1637 5.89888 5.70062L6.51059 3.99355ZM16.0772 4.49954L16.6424 6.07688C17.1566 7.51198 17.49 8.99765 17.6402 10.5001H12.7499V3.17974C13.39 3.24629 14.0234 3.39825 14.6327 3.63563L15.6054 4.01459C15.8254 4.10033 15.9975 4.27722 16.0772 4.49954ZM11.2499 3.17974L11.2499 10.5001H6.34049C6.48757 9.04173 6.81177 7.59972 7.31096 6.20662L7.92267 4.49954C8.00233 4.27722 8.17443 4.10033 8.39449 4.01459L9.36715 3.63563C9.97644 3.39825 10.6098 3.24629 11.2499 3.17974ZM6.25182 12.0001C6.22726 13.3982 6.36452 14.8011 6.66545 16.1803C7.2106 18.6789 9.48416 20.5001 12.0547 20.5001C14.5695 20.5001 16.775 18.7443 17.305 16.315C17.6156 14.8913 17.7564 13.4432 17.7292 12.0001H6.25182Z" clipRule="evenodd" />
 		</svg>
 	);
 };
 
-IconMouse.iconName = "mouse";
+Mouse.iconName = "mouse";
 
-export default IconMouse;
+export default Mouse;

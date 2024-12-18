@@ -1,7 +1,6 @@
 import { Api } from 'figma-api';
 import { promises as fs } from 'fs';
 import path from 'path';
-import { type Config, optimize } from 'svgo';
 import * as dotenv from 'dotenv';
 import { setTimeout } from 'timers/promises';
 
@@ -14,12 +13,6 @@ interface IconInfo {
   name: string;
   folder: string;
   preserveColors: boolean;
-}
-
-interface ComponentProps {
-  size?: 's' | 'm' | 'l';
-  style?: 'outline' | 'filled';
-  color?: boolean;
 }
 
 const SIZE_FOLDERS = {
@@ -43,36 +36,54 @@ function formatIconName(name: string): string {
     .toLowerCase();
 }
 
-async function optimizeSvg(svgContent: string, preserveColors: boolean): Promise<string> {
-  const viewBoxMatch = svgContent.match(/viewBox="([^"]+)"/);
-  const [, , , width, height] = viewBoxMatch?.[1].split(' ').map(Number) || [];
+function optimizeSvg(svgContent: string, preserveColors: boolean): string {
+  let svg = svgContent
+    // Remove comments
+    .replace(/<!--.*?-->/g, '')
+    // Remove empty groups
+    .replace(/<g[^>]*?>\s*<\/g>/g, '')
+    // Remove unnecessary whitespace between tags
+    .replace(/>\s+</g, '><')
+    // Remove empty lines and trim
+    .replace(/^\s+|\s+$/gm, '')
+    // Remove unnecessary spaces in attributes
+    .replace(/\s*=\s*"/g, '="')
+    // Remove data-name attributes
+    .replace(/\s*data-name="[^"]*"/g, '')
+    // Remove empty newlines
+    .replace(/\n\s*\n/g, '\n')
+    // Ensure single quotes are converted to double quotes for consistency
+    .replace(/'/g, '"')
+    // Preserve xlink namespace
+    .replace(/xmlns:xlink="[^"]*"/, 'xmlns:xlink="http://www.w3.org/1999/xlink"')
+    // Remove any empty style attributes
+    .replace(/\s*style=""/g, '')
+    // Remove any empty class attributes
+    .replace(/\s*class=""/g, '')
+    .trim();
 
-  const result = optimize(svgContent, {
-    multipass: true,
-    plugins: [
-      {
-        name: 'preset-default',
-        params: {
-          overrides: {
-            removeViewBox: false,
-            removeTitle: false,
-            removeDesc: false,
-            convertColors: {
-              currentColor: preserveColors ? false : true
-            }
-          }
-        }
-      },
-      {
-        name: 'removeDimensions'
-      },
-      {
-        name: 'sortAttrs'
-      }
-    ]
-  });
+  if (!preserveColors) {
+    // Extract the root SVG element's opening tag
+    const svgTagMatch = svg.match(/<svg[^>]*>/);
+    if (svgTagMatch) {
+      const svgTag = svgTagMatch[0];
+      // Add fill="currentColor" to the root SVG if it doesn't have a fill
+      const newSvgTag = svgTag.includes('fill="') 
+        ? svgTag.replace(/fill="[^"]*"/, 'fill="currentColor"')
+        : svgTag.replace(/>$/, ' fill="currentColor">');
+      
+      // Replace the original SVG tag
+      svg = svg.replace(svgTag, newSvgTag);
+      
+      // Remove all fill attributes from child elements
+      svg = svg.replace(/\s+fill="[^"]*"/g, '');
+      
+      // Re-add the fill attribute to the root SVG element
+      svg = svg.replace(/<svg[^>]*>/, newSvgTag);
+    }
+  }
 
-  return result.data;
+  return svg;
 }
 
 interface FigmaNode {
@@ -82,23 +93,6 @@ interface FigmaNode {
   children?: FigmaNode[];
   componentId?: string;
   componentSetId?: string;
-  componentPropertyDefinitions?: {
-    Size?: {
-      type: string;
-      defaultValue: string;
-      variantOptions: string[];
-    };
-    Style?: {
-      type: string;
-      defaultValue: string;
-      variantOptions: string[];
-    };
-    Color?: {
-      type: string;
-      defaultValue: string;
-      variantOptions: string[];
-    };
-  };
 }
 
 function findIconComponents(node: FigmaNode): { set: FigmaNode, variants: FigmaNode[] }[] {
@@ -120,50 +114,28 @@ function findIconComponents(node: FigmaNode): { set: FigmaNode, variants: FigmaN
 }
 
 async function processComponent(component: FigmaNode, componentSet: FigmaNode): Promise<IconInfo | null> {
-  // Parse variant properties from component name
   const variantProps = component.name.split(', ').reduce((acc: Record<string, string>, part) => {
     const [key, value] = part.split('=').map(s => s.trim());
     if (key && value) acc[key] = value;
     return acc;
   }, {});
 
-  // Get size, style, and color from variants
   const size = (variantProps.Size || 'm').toLowerCase() as 's' | 'm' | 'l';
   const style = (variantProps.Style || 'outlined').toLowerCase();
-  const color = variantProps.Color === 'true';
+  const preserveColors = variantProps.Color?.toLowerCase() === 'true';
 
-  // Format the base name from the component set name
   const baseName = formatIconName(componentSet.name);
   
-  // Build the file name with appropriate suffixes
   let fileName = baseName;
   if (style === 'filled') fileName += '--filled';
-  if (color) fileName += '--color';
+  if (preserveColors) fileName += '--color';
   fileName += '.svg';
 
   return {
     name: fileName,
     folder: SIZE_FOLDERS[size],
-    preserveColors: color
+    preserveColors
   };
-}
-
-interface FigmaComponent {
-  id: string;
-  name: string;
-  componentSetId?: string;
-  props?: ComponentProps;
-}
-
-interface FigmaComponentSet {
-  id: string;
-  name: string;
-  components: string[];
-}
-
-interface FigmaFile {
-  components: { [key: string]: FigmaComponent };
-  componentSets: { [key: string]: FigmaComponentSet };
 }
 
 // Add exponential backoff retry
@@ -208,44 +180,8 @@ async function processBatch<T>(items: T[], batchSize: number, processor: (batch:
   }
 }
 
-interface FigmaNode {
-  id: string;
-  name: string;
-  type: string;
-  children?: FigmaNode[];
-  componentId?: string;
-  componentSetId?: string;
-  componentPropertyDefinitions?: {
-    Size?: {
-      type: string;
-      defaultValue: string;
-      variantOptions: string[];
-    };
-    Style?: {
-      type: string;
-      defaultValue: string;
-      variantOptions: string[];
-    };
-    Color?: {
-      type: string;
-      defaultValue: string;
-      variantOptions: string[];
-    };
-  };
-}
-
 interface GetFileResult {
-  name: string;
-  lastModified: string;
-  thumbnailUrl: string;
-  version: string;
   document: FigmaNode;
-  components: { [key: string]: FigmaComponent };
-  componentSets: { [key: string]: FigmaComponentSet };
-  schemaVersion: number;
-  styles: { [key: string]: any };
-  mainFileKey: string;
-  branches: any[];
 }
 
 async function syncIcons(): Promise<void> {
@@ -260,7 +196,7 @@ async function syncIcons(): Promise<void> {
     console.log('Fetching Figma file...');
     const file = await retryWithBackoff(() => 
       figma.getFile(FIGMA_FILE_ID!)
-    ) as unknown as GetFileResult;
+    ) as GetFileResult;
     
     console.log('Finding icon components in document...');
     const componentSets = findIconComponents(file.document);
@@ -321,13 +257,23 @@ async function syncIcons(): Promise<void> {
               Promise.resolve(path.join(iconInfo.folder, iconInfo.name))
             ]);
 
+            if (!response.ok) {
+              throw new Error(`Failed to fetch SVG: ${response.status} ${response.statusText}`);
+            }
+
             const svgContent = await response.text();
-            const optimizedSvg = await optimizeSvg(svgContent, iconInfo.preserveColors);
-            
+            if (!svgContent.includes('<svg')) {
+              throw new Error('Invalid SVG content received');
+            }
+
+            const optimizedSvg = optimizeSvg(svgContent, iconInfo.preserveColors);
             await fs.writeFile(outputPath, optimizedSvg);
             console.log(`Successfully processed ${component.name} -> ${iconInfo.name}`);
           } catch (error) {
             console.error(`Error processing component ${component.name}:`, error);
+            if (error instanceof Error) {
+              console.error('Error details:', error.message);
+            }
           }
         })
       );

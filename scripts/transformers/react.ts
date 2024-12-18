@@ -1,151 +1,198 @@
-import { type Config, transform } from "@svgr/core";
-import { existsSync } from "node:fs";
-import { rm } from "node:fs/promises";
+import { transform } from "@svgr/core";
+import { writeFile, mkdir } from "node:fs/promises";
+import { join } from "node:path";
+import { type SvgIcon, type Transformer } from "../transformer.js";
+import { getReactComponentMetadata } from "../../src/metadata/providers.js";
 
-import { getReactMetadata } from "../../src/metadata/providers.ts";
-import { type Size } from "../../src/metadata/sizing.ts";
-import { type SvgIcon, Transformer, type TransformerContext } from "../transformer.ts";
+function cleanSvg(svg: string): string {
+	// Remove any XML declaration
+	svg = svg.replace(/<\?xml[^>]*\?>\s*/, '');
+	
+	// Remove any DOCTYPE declaration
+	svg = svg.replace(/<!DOCTYPE[^>]*>\s*/, '');
+	
+	// Find the SVG element and its content
+	const match = svg.match(/<svg[^>]*>[\s\S]*?<\/svg>/);
+	if (!match) {
+		throw new Error('Invalid SVG: No root SVG element found');
+	}
+	return match[0];
+}
 
-const svgrConfig: Config = {
-	dimensions: false,
-	expandProps: true,
-	icon: true,
-	jsx: {
-		babelConfig: {
-			compact: false,
-		},
-	},
-	prettier: false,
-	plugins: ["@svgr/plugin-svgo", "@svgr/plugin-jsx"],
-	replaceAttrValues: {
-		"#151515": "currentColor",
-	},
-	svgo: true,
-	svgProps: {
-		width: "{size}",
-		height: "{size}",
-		"aria-label": "{label}",
-		role: "img",
+function formatComponentName(name: string): string {
+	// Add 'Icon' prefix to names that start with numbers
+	if (/^\d/.test(name)) {
+		name = `Icon${name}`;
+	}
+	
+	// Convert kebab-case to camelCase while preserving numbers
+	return name
+		.split(/[-_]/)
+		.map((part, index) => {
+			// Skip empty parts (from double hyphens)
+			if (!part) return '';
+			// Capitalize the first letter of each part
+			return part.charAt(0).toUpperCase() + part.slice(1);
+		})
+		.join('');
+}
+
+const svgrConfig = {
+	plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx'],
+	svgoConfig: {
+		multipass: true,
+		plugins: [
+			{
+				name: 'preset-default',
+				params: {
+					overrides: {
+						removeViewBox: false,
+						removeUnknownsAndDefaults: false,
+						cleanupIds: false,
+						mergePaths: false,
+						removeUselessDefs: false,
+						collapseGroups: false,
+						convertColors: false,
+						convertPathData: false,
+						removeComments: false,
+						removeDesc: false,
+						removeTitle: false,
+						removeEmptyAttrs: false,
+						removeEmptyContainers: false,
+						removeEmptyText: false,
+						removeHiddenElems: false,
+						removeMetadata: false,
+						removeUnusedNS: false,
+						removeXMLProcInst: false
+					}
+				}
+			},
+			'removeDimensions',
+			{
+				name: 'removeAttrs',
+				params: {
+					attrs: ['xmlns']
+				}
+			},
+			{
+				name: 'prefixIds',
+				params: {
+					prefixIds: false,
+					prefixClassNames: false
+				}
+			}
+		]
 	},
 	typescript: true,
+	jsxRuntime: "automatic",
+	exportType: "default",
+	dimensions: false,
+	prettierConfig: {
+		parser: "typescript",
+		singleQuote: true,
+		useTabs: true,
+		printWidth: 100,
+	}
 };
 
-/**
- * Transformer that generates aggregated React components of icons and their supported sizes.
- */
-export class ReactTransformer extends Transformer {
-	/**
-	 * @inheritdoc
-	 */
-	public name = "React components";
+export class ReactTransformer implements Transformer {
+	readonly name = "React components";
 
-	/**
-	 * Contents of the components index file.
-	 */
-	#indexContents = "";
-
-	/**
-	 * @inheritdoc
-	 */
-	public override finalize(ctx: TransformerContext): Promise<void> {
-		return ctx.write("src/react/icons/index.ts", this.#indexContents);
+	async initialize(ctx: TransformerContext) {
+		// Ensure the react/icons directory exists
+		await mkdir(join(ctx.srcDir, "react", "icons"), { recursive: true });
 	}
 
-	/**
-	 * @inheritdoc
-	 */
-	public override async initialize(ctx: TransformerContext): Promise<void> {
-		// Clean up the old icons.
-		const dir = ctx.resolve("src/react/icons");
-		if (existsSync(dir)) {
-			await rm(dir, { recursive: true });
-		}
-	}
+	async transform(ctx: TransformerContext, icon: SvgIcon): Promise<void> {
+		const componentName = formatComponentName(icon.name);
+		const components = await Promise.all(
+			Array.from(icon.sizes.entries()).map(async ([size, { svg }]) => {
+				try {
+					// Clean the SVG before transformation
+					let cleanedSvg;
+					try {
+						cleanedSvg = cleanSvg(svg);
+					} catch (error) {
+						console.error(`Error cleaning SVG for ${icon.name} (size ${size}):`, error);
+						console.error('Original SVG:', svg);
+						throw error;
+					}
+					
+					let paths;
+					try {
+						const result = await transform(
+							cleanedSvg,
+							{
+								...svgrConfig,
+								plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx'],
+								template: ({ jsx }) => jsx
+							}
+						);
+						paths = result.match(/<svg[^>]*>(.*?)<\/svg>/s)?.[1] ?? '';
+					} catch (error) {
+						console.error(`Error transforming SVG for ${icon.name} (size ${size}):`, error);
+						console.error('Cleaned SVG:', cleanedSvg);
+						throw error;
+					}
 
-	/**
-	 * @inheritdoc
-	 */
-	public override async transform(ctx: TransformerContext, icon: SvgIcon): Promise<void> {
-		// Convert each size to a JSX element.
-		const sizes = new Map<Size, string>();
-		for (const [size, { svg }] of icon.sizes) {
-			const component = await transform(svg, svgrConfig);
-			const [, tsx] = component.match(/(<svg(.*)<\/svg>);/) ?? [];
-			if (!tsx) {
-				throw new Error(`Failed to parse element from SVGR conversion: ${icon.name}`);
-			}
-
-			sizes.set(size, tsx);
-		}
-
-		// Write all sizes of the icon as a single component.
-		const { componentName, filename } = getReactMetadata(icon.name);
-		const elementOrSwitch = this.#reduceSizes(sizes);
-
-		await ctx.write(
-			`src/react/icons/${filename}.tsx`,
-			this.#formatComponent(componentName, icon.name, elementOrSwitch),
+					return {
+						size,
+						paths,
+					};
+				} catch (error) {
+					console.error(`Failed to process icon ${icon.name} (size ${size}):`, error);
+					throw error;
+				}
+			})
 		);
 
-		this.#indexContents += `export { default as ${componentName} } from "./${filename}.g.js";\n`;
-	}
+		// Write the component file
+		const component = `import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
+import { sizeMap } from "../../metadata/sizing.js";
 
-	/**
-	 * Reduces the specified sizes to code that represents either a single element, or switch statement.
-	 * @param sizes Sizes of the icons.
-	 * @returns Code that represents the icon sizes.
-	 */
-	#reduceSizes(sizes: Map<Size, string>): string {
-		if (sizes.size > 3 || sizes.size === 0) {
-			throw new Error(`Unable to aggregate sizes; expected "s", "m", and/or "l" only.`);
-		}
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
-		// Order the icon sizes.
-		const order = ["m", "s", "l"];
-		const orderedSizes = Array.from(sizes.entries())
-			.sort(([a], [b]) => order.indexOf(a) - order.indexOf(b))
-			.map(([size, tsx]) => ({ size, tsx }));
-
-		// When there is only one size, simply return the element.
-		if (orderedSizes.length === 1) {
-			return `return ${orderedSizes[0].tsx};`;
-		}
-
-		// With multiple sizes, build a switch statement.
-		let switchStatement = "switch (props?.size) {\n";
-		for (let i = orderedSizes.length - 1; i--; i >= 0) {
-			if (i > 0) {
-				switchStatement += `case "${orderedSizes[i].size}": return ${orderedSizes[i].tsx};\n`;
-			} else {
-				switchStatement += `default: return ${orderedSizes[i].tsx};\n`;
-			}
-		}
-
-		return switchStatement + "};\n";
-	}
-
-	/**
-	 * Formats the icon to a React component.
-	 * @param componentName Name of the component.
-	 * @param iconName Name of the icon.
-	 * @param elementOrSwitch Element, or switch statement of the icon sizes.
-	 * @returns React component as a string.
-	 */
-	#formatComponent(componentName: string, iconName: string, elementOrSwitch: string): string {
-		return ` 
-import type { SVGProps } from "react"
-import { sizeMap } from "../../metadata/sizing.js"
-import type { IconProps } from "../types.js"
-
-const ${componentName} = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"]
-	const label = props?.label ?? "Icon"
-	
-	${elementOrSwitch}
+const ${componentName} = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			fill="currentColor"
+			viewBox="0 0 24 24"
+			width={iconSize}
+			height={iconSize}
+			aria-label={label}
+			role="img"
+			{...props}
+		>
+			${components[0].paths}
+		</svg>
+	);
 };
 
-${componentName}.iconName = "${iconName}";
+${componentName}.iconName = "${icon.name}";
 
 export default ${componentName};`;
+
+		await writeFile(
+			join(ctx.srcDir, "react", "icons", `${componentName}.g.tsx`), 
+			component
+		);
+	}
+
+	async finalize(ctx: TransformerContext): Promise<void> {
+		// Write the index file to src/react/icons
+		const contents = ctx.icons
+			.map((icon) => {
+				const componentName = formatComponentName(icon.name);
+				return `export { default as ${componentName} } from "./${componentName}.g.js";`;
+			})
+			.join("\n");
+
+		await writeFile(join(ctx.srcDir, "react", "icons", "index.ts"), contents);
 	}
 }

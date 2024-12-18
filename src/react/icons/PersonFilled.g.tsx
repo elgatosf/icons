@@ -1,27 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconPersonFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const PersonFilled = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10m-8 8a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6 2 2 0 0 1-2 2H6a2 2 0 0 1-2-2" />
+			<path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" /><path d="M4 20C4 16.6863 6.68629 14 10 14H14C17.3137 14 20 16.6863 20 20C20 21.1046 19.1046 22 18 22H6C4.89543 22 4 21.1046 4 20Z" />
 		</svg>
 	);
 };
 
-IconPersonFilled.iconName = "person--filled";
+PersonFilled.iconName = "person--filled";
 
-export default IconPersonFilled;
+export default PersonFilled;

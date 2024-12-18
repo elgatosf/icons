@@ -1,33 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconLensCheckFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const LensCheckFilled = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="M12 22q.395 0 .78-.03A6.48 6.48 0 0 1 11 17.41 5.502 5.502 0 0 1 12 6.5c2.696 0 4.94 1.94 5.41 4.5h.09a6.48 6.48 0 0 1 4.47 1.78q.03-.385.03-.78c0-5.523-4.477-10-10-10S2 6.477 2 12s4.477 10 10 10" />
-			<path d="M11.426 10.614A1.5 1.5 0 0 1 12 10.5.75.75 0 0 0 12 9a3 3 0 0 0-3 3 .75.75 0 0 0 1.5 0 1.5 1.5 0 0 1 .926-1.386" />
-			<path
-				fillRule="evenodd"
-				d="M17.5 23a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11m2.854-6.646a.5.5 0 0 0-.708-.708L16.5 18.793l-1.646-1.647a.5.5 0 0 0-.708.708l2 2a.5.5 0 0 0 .708 0z"
-				clipRule="evenodd"
-			/>
+			<path d="M12 22C12.2628 22 12.5232 21.9899 12.7809 21.97C11.6771 20.805 11 19.2316 11 17.5C11 17.4698 11.0002 17.4396 11.0006 17.4094C8.4402 16.9394 6.5 14.6963 6.5 12C6.5 8.96243 8.96243 6.5 12 6.5C14.6963 6.5 16.9394 8.4402 17.4094 11.0006C17.4396 11.0002 17.4698 11 17.5 11C19.2316 11 20.805 11.6771 21.97 12.7809C21.9899 12.5232 22 12.2628 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" /><path d="M11.426 10.6142C11.608 10.5388 11.803 10.5 12 10.5C12.4142 10.5 12.75 10.1642 12.75 9.75C12.75 9.33579 12.4142 9 12 9C11.606 9 11.2159 9.0776 10.8519 9.22836C10.488 9.37913 10.1573 9.6001 9.87868 9.87868C9.6001 10.1573 9.37913 10.488 9.22836 10.8519C9.0776 11.2159 9 11.606 9 12C9 12.4142 9.33579 12.75 9.75 12.75C10.1642 12.75 10.5 12.4142 10.5 12C10.5 11.803 10.5388 11.608 10.6142 11.426C10.6896 11.244 10.8001 11.0786 10.9393 10.9393C11.0786 10.8001 11.244 10.6896 11.426 10.6142Z" /><path fillRule="evenodd" d="M17.5 23C20.5376 23 23 20.5376 23 17.5C23 14.4624 20.5376 12 17.5 12C14.4624 12 12 14.4624 12 17.5C12 20.5376 14.4624 23 17.5 23ZM20.3536 16.3536C20.5488 16.1583 20.5488 15.8417 20.3536 15.6464C20.1583 15.4512 19.8417 15.4512 19.6464 15.6464L16.5 18.7929L14.8536 17.1464C14.6583 16.9512 14.3417 16.9512 14.1464 17.1464C13.9512 17.3417 13.9512 17.6583 14.1464 17.8536L16.1464 19.8536C16.2402 19.9473 16.3674 20 16.5 20C16.6326 20 16.7598 19.9473 16.8536 19.8536L20.3536 16.3536Z" clipRule="evenodd" />
 		</svg>
 	);
 };
 
-IconLensCheckFilled.iconName = "lens-check--filled";
+LensCheckFilled.iconName = "lens-check--filled";
 
-export default IconLensCheckFilled;
+export default LensCheckFilled;

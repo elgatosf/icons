@@ -1,31 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconTagFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const TagFilled = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path
-				fillRule="evenodd"
-				d="M5 3h6.172a2 2 0 0 1 1.414.586l9 9a2 2 0 0 1 0 2.828l-6.172 6.172a2 2 0 0 1-2.828 0l-9-9A2 2 0 0 1 3 11.172V5a2 2 0 0 1 2-2m1 4.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0"
-				clipRule="evenodd"
-			/>
+			<path fillRule="evenodd" d="M19 3H12.8284C12.298 3 11.7893 3.21071 11.4142 3.58579L3.41421 11.5858C2.63316 12.3668 2.63317 13.6332 3.41421 14.4142L9.58579 20.5858C10.3668 21.3668 11.6332 21.3668 12.4142 20.5858L20.4142 12.5858C20.7893 12.2107 21 11.702 21 11.1716V5C21 3.89543 20.1046 3 19 3ZM16.5 9C17.3284 9 18 8.32843 18 7.5C18 6.67157 17.3284 6 16.5 6C15.6716 6 15 6.67157 15 7.5C15 8.32843 15.6716 9 16.5 9Z" clipRule="evenodd" />
 		</svg>
 	);
 };
 
-IconTagFilled.iconName = "tag--filled";
+TagFilled.iconName = "tag--filled";
 
-export default IconTagFilled;
+export default TagFilled;

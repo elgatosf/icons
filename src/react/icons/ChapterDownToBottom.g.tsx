@@ -1,32 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconChapterDownToBottom = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const ChapterDownToBottom = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="M14.75 3a.75.75 0 0 0 0 1.5h5.5a.75.75 0 0 0 0-1.5zm0 5.5a.75.75 0 0 0 0 1.5h5.5a.75.75 0 0 0 0-1.5zM3 14.75a.75.75 0 0 1 .75-.75h8.272a6.5 6.5 0 0 0-.709 1.5H3.75a.75.75 0 0 1-.75-.75m8.845 5.957a6.5 6.5 0 0 1-.53-1.204l-.065-.003h-7.5a.75.75 0 0 0 0 1.5h7.5a.75.75 0 0 0 .595-.293" />
-			<path
-				fillRule="evenodd"
-				d="M3 5a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm2-.5h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 1 .5-.5m18 13a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0m-5.854.354-2-2a.5.5 0 0 1 .708-.708l1.646 1.647 1.646-1.647a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0M15 19.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4a.5.5 0 0 0-.5.5"
-				clipRule="evenodd"
-			/>
+			<path d="M14.75 3C14.3358 3 14 3.33579 14 3.75C14 4.16421 14.3358 4.5 14.75 4.5H20.25C20.6642 4.5 21 4.16421 21 3.75C21 3.33579 20.6642 3 20.25 3H14.75Z" /><path d="M14.75 8.5C14.3358 8.5 14 8.83579 14 9.25C14 9.66421 14.3358 10 14.75 10H20.25C20.6642 10 21 9.66421 21 9.25C21 8.83579 20.6642 8.5 20.25 8.5H14.75Z" /><path d="M3 14.75C3 14.3358 3.33579 14 3.75 14H12.0218C11.7253 14.4632 11.4858 14.9665 11.3135 15.5H3.75C3.33579 15.5 3 15.1642 3 14.75Z" /><path d="M11.8448 20.7069C11.6293 20.3276 11.4509 19.9246 11.3144 19.5027C11.2932 19.5009 11.2717 19.5 11.25 19.5H3.75C3.33579 19.5 3 19.8358 3 20.25C3 20.6642 3.33579 21 3.75 21H11.25C11.4923 21 11.7077 20.8851 11.8448 20.7069Z" /><path fillRule="evenodd" d="M3 5C3 3.89543 3.89543 3 5 3H8C9.10457 3 10 3.89543 10 5V8C10 9.10457 9.10457 10 8 10H5C3.89543 10 3 9.10457 3 8V5ZM5 4.5H8C8.27614 4.5 8.5 4.72386 8.5 5V8C8.5 8.27614 8.27614 8.5 8 8.5H5C4.72386 8.5 4.5 8.27614 4.5 8V5C4.5 4.72386 4.72386 4.5 5 4.5Z" clipRule="evenodd" /><path fillRule="evenodd" d="M23 17.5C23 20.5376 20.5376 23 17.5 23C14.4624 23 12 20.5376 12 17.5C12 14.4624 14.4624 12 17.5 12C20.5376 12 23 14.4624 23 17.5ZM17.1464 17.8536L15.1464 15.8536C14.9512 15.6583 14.9512 15.3417 15.1464 15.1464C15.3417 14.9512 15.6583 14.9512 15.8536 15.1464L17.5 16.7929L19.1464 15.1464C19.3417 14.9512 19.6583 14.9512 19.8536 15.1464C20.0488 15.3417 20.0488 15.6583 19.8536 15.8536L17.8536 17.8536C17.6583 18.0488 17.3417 18.0488 17.1464 17.8536ZM15 19.5C15 19.7761 15.2239 20 15.5 20H19.5C19.7761 20 20 19.7761 20 19.5C20 19.2239 19.7761 19 19.5 19H15.5C15.2239 19 15 19.2239 15 19.5Z" clipRule="evenodd" />
 		</svg>
 	);
 };
 
-IconChapterDownToBottom.iconName = "chapter-down-to-bottom";
+ChapterDownToBottom.iconName = "chapter-down-to-bottom";
 
-export default IconChapterDownToBottom;
+export default ChapterDownToBottom;

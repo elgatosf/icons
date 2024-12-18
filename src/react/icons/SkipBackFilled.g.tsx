@@ -1,27 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconSkipBackFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const SkipBackFilled = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="M2 3.75a.75.75 0 0 1 1.5 0v16.5a.75.75 0 0 1-1.5 0zm5 6.518c-1.333.77-1.333 2.694 0 3.464l12 6.928c1.333.77 3-.192 3-1.732V5.072c0-1.54-1.667-2.502-3-1.732z" />
+			<path d="M2 3.75C2 3.33579 2.33579 3 2.75 3C3.16422 3 3.5 3.33579 3.5 3.75V20.25C3.5 20.6642 3.16422 21 2.75 21C2.33579 21 2 20.6642 2 20.25V3.75Z" /><path d="M7 10.268C5.66667 11.0378 5.66667 12.9623 7 13.7321L19 20.6603C20.3333 21.4301 22 20.4678 22 18.9282V5.0718C22 3.5322 20.3333 2.56995 19 3.33975L7 10.268Z" />
 		</svg>
 	);
 };
 
-IconSkipBackFilled.iconName = "skip-back--filled";
+SkipBackFilled.iconName = "skip-back--filled";
 
-export default IconSkipBackFilled;
+export default SkipBackFilled;

@@ -42,6 +42,51 @@ This repository automatically syncs with our Figma library. When icons are publi
    - Publish changes in your Figma library
    - A new PR will be created automatically with the updates
 
+## Figma Webhook Setup
+
+To enable automatic updates when icons are published in Figma:
+
+1. **Generate a Webhook Secret**
+   ```bash
+   openssl rand -hex 32
+   ```
+   Save this value - you'll need it for both GitHub and Figma.
+
+2. **Configure GitHub Repository**
+   - Go to Settings → Secrets and variables → Actions
+   - Add these secrets:
+     - `FIGMA_ACCESS_TOKEN`: Your Figma personal access token
+     - `FIGMA_FILE_ID`: The ID of your Figma file containing the icons
+     - `WEBHOOK_SECRET`: The secret you generated in step 1
+     - `NPM_TOKEN`: Your npm token (only needed for publishing)
+
+3. **Configure Figma Webhook**
+   - In Figma, go to your file containing the icons
+   - Click Menu (three dots) → File settings → Webhooks
+   - Click "Add webhook"
+   - Configure the webhook:
+     - Event: `LIBRARY_PUBLISH`
+     - Endpoint URL: `https://api.github.com/repos/{owner}/{repo}/dispatches`
+     - Passcode: Use the same secret from step 1
+     - Headers:
+       ```
+       Accept: application/vnd.github.v3+json
+       Authorization: Bearer {your-github-token}
+       ```
+
+4. **Test the Webhook**
+   - In Figma, publish any change to your library
+   - Check the Actions tab in your GitHub repository
+   - A new workflow run should start automatically
+   - A pull request will be created with the changes
+
+The workflow will:
+1. Verify the webhook secret
+2. Check that it's a library publish event
+3. Sync icons from Figma
+4. Transform SVGs to React components
+5. Create a pull request with the changes
+
 ## Usage
 
 ```bash
@@ -90,7 +135,7 @@ All original SVG files are distributed with this package, and can be found withi
 .
 ├── svg/
 │   ├── 16/
-│   ├── 20/
+│   |── 20/
 │   |   ├── 0-circle--filled.svg
 |   |   ├── 0-circle.svg
 |   │   ├── ...
@@ -119,14 +164,100 @@ All original SVG files are distributed with this package, and can be found withi
 3. Add these secrets to your GitHub repository (Settings → Secrets and variables → Actions):
    - `FIGMA_ACCESS_TOKEN`: Your Figma personal access token
    - `FIGMA_FILE_ID`: The ID of your Figma file containing the icons
-
-   Note: `GITHUB_TOKEN` is automatically provided by GitHub.
+   - `WEBHOOK_SECRET`: A secure random string (generate with `openssl rand -hex 32`)
+   - `NPM_TOKEN`: Your npm token (only needed for publishing)
 
 ### Commands
 
-- `npm run build` - Build the package
-- `npm run build:icons` - Sync icons from Figma
-- `npm run transform` - Generate React components and string exports
+- `npm run build` - Complete build process:
+  1. Sync icons from Figma (`build:icons`)
+  2. Transform SVGs to React components (`transform`)
+  3. Build TypeScript files (`tsc`)
+
+- `npm run build:icons` - Sync icons from Figma:
+  - Fetches icon components from Figma API
+  - Downloads SVGs for each component
+  - Processes variants (size, style, color)
+  - Optimizes SVGs using SVGO
+  - Saves to `svg/` directory structure:
+    - `16/` - Small icons (16×16)
+    - `20/` - Medium icons (20×20)
+    - `24/` - Large icons (24×24)
+
+- `npm run transform` - Transform SVGs to React components:
+  - Generates React components from SVGs
+  - Creates string exports for each size
+  - Updates TypeScript definitions
+  - Outputs to `dist/` directory
+
+### Icon Processing
+
+The sync process (`build:icons`) handles icons in the following way:
+
+1. **Component Detection**:
+   - Looks for component sets prefixed with "Icon"
+   - Processes all variants within each set
+
+2. **Variant Handling**:
+   - Size: `s` (16px), `m` (20px), `l` (24px)
+   - Style: `outlined` (default), `filled`
+   - Color: `false` (default), `true`
+
+3. **Naming Convention**:
+   - Base name derived from component name
+   - Style suffix: `--filled` for filled variants
+   - Color suffix: `--color` for color variants
+   - Example: `arrow-right--filled.svg`
+
+4. **SVG Optimization**:
+   - Removes unnecessary attributes
+   - Preserves viewBox
+   - Handles color variants appropriately
+   - Ensures consistent formatting
+
+### GitHub Workflows
+
+The repository includes two GitHub Actions workflows:
+
+1. **Build and Publish** (`build.yml`):
+   - Triggers: Push to main, Pull Requests to main
+   - Actions:
+     - Syncs icons from Figma
+     - Transforms SVGs to React components
+     - Builds the package
+     - Runs tests
+     - On main: Publishes to npm with version bump
+
+2. **Sync Figma Icons** (`sync-figma-icons.yml`):
+   - Triggers: 
+     - Figma library publish (via webhook)
+     - Manual workflow dispatch
+     - Push to any branch (svg/** or scripts/** changes)
+   - Actions:
+     - Syncs icons from Figma
+     - Creates a PR with the changes
+
+### Testing Workflows
+
+To test the workflows on a non-main branch:
+
+1. Create and push a test branch:
+   ```bash
+   git checkout -b test-workflow
+   git push origin test-workflow
+   ```
+
+2. The build workflow will run automatically on push
+
+3. To test the Figma sync:
+   - Go to Actions → Sync Figma Icons
+   - Click "Run workflow"
+   - Select your branch
+   - Click "Run workflow"
+
+4. To test the Figma webhook:
+   - Publish changes in your Figma library
+   - The workflow will create a PR to your current branch
 
 ### Figma Structure
 
@@ -137,15 +268,6 @@ Icons in the Figma file should follow these conventions:
    - Size: s (16px), m (20px), l (24px)
    - Style: outlined (default), filled
    - Color: false (default), true
-
-### GitHub Actions
-
-The repository includes a GitHub Actions workflow that:
-
-1. Automatically syncs icons when the library is published in Figma
-2. Generates React components and string exports
-3. Creates a pull request with the changes
-4. Can be manually triggered using the workflow_dispatch event
 
 ## License
 

@@ -1,31 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconSettingsFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const SettingsFilled = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path
-				fillRule="evenodd"
-				d="M13.884 3.332c-.63-1.773-3.138-1.773-3.769 0l-.045.129a2 2 0 0 1-2.743 1.136l-.124-.059c-1.7-.808-3.473.966-2.665 2.665l.059.124A2 2 0 0 1 3.46 10.07l-.129.045c-1.773.63-1.773 3.139 0 3.77l.129.045a2 2 0 0 1 1.136 2.743l-.059.123c-.808 1.7.966 3.473 2.665 2.665l.124-.058a2 2 0 0 1 2.743 1.136l.045.128c.63 1.774 3.139 1.774 3.77 0l.045-.128a2 2 0 0 1 2.743-1.136l.123.058c1.7.808 3.473-.965 2.665-2.665l-.058-.123a2 2 0 0 1 1.136-2.743l.128-.046c1.774-.63 1.774-3.138 0-3.769l-.128-.045a2 2 0 0 1-1.136-2.743l.058-.124c.808-1.7-.965-3.473-2.665-2.665l-.123.059A2 2 0 0 1 13.93 3.46zM12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8"
-				clipRule="evenodd"
-			/>
+			<path fillRule="evenodd" d="M13.8843 3.33208C13.2537 1.5589 10.746 1.5589 10.1155 3.33208L10.0697 3.46075C9.67263 4.5774 8.39709 5.10574 7.32671 4.59694L7.20337 4.53832C5.50367 3.73037 3.73049 5.50355 4.53844 7.20325L4.59706 7.32659C5.10587 8.39697 4.57752 9.67251 3.46087 10.0696L3.3322 10.1154C1.55903 10.7459 1.55903 13.2536 3.3322 13.8842L3.46087 13.9299C4.57752 14.327 5.10587 15.6025 4.59706 16.6729L4.53844 16.7963C3.73049 18.496 5.50367 20.2691 7.20337 19.4612L7.32671 19.4026C8.39709 18.8938 9.67263 19.4221 10.0697 20.5388L10.1155 20.6674C10.746 22.4406 13.2537 22.4406 13.8843 20.6674L13.93 20.5388C14.3271 19.4221 15.6027 18.8938 16.673 19.4026L16.7964 19.4612C18.4961 20.2691 20.2693 18.496 19.4613 16.7963L19.4027 16.6729C18.8939 15.6025 19.4222 14.327 20.5389 13.9299L20.6676 13.8842C22.4407 13.2536 22.4407 10.7459 20.6676 10.1154L20.5389 10.0696C19.4222 9.67251 18.8939 8.39697 19.4027 7.32659L19.4613 7.20325C20.2693 5.50355 18.4961 3.73037 16.7964 4.53832L16.673 4.59694C15.6027 5.10574 14.3271 4.5774 13.93 3.46075L13.8843 3.33208ZM12 15.9999C14.2091 15.9999 16 14.209 16 11.9999C16 9.79074 14.2091 7.99988 12 7.99988C9.79086 7.99988 8 9.79074 8 11.9999C8 14.209 9.79086 15.9999 12 15.9999Z" clipRule="evenodd" />
 		</svg>
 	);
 };
 
-IconSettingsFilled.iconName = "settings--filled";
+SettingsFilled.iconName = "settings--filled";
 
-export default IconSettingsFilled;
+export default SettingsFilled;

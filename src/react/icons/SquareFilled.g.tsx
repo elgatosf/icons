@@ -1,45 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconSquareFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
-	switch (props?.size) {
-		case "s":
-			return (
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 16 16"
-					width={size}
-					height={size}
-					aria-label={label}
-					role="img"
-					{...props}
-				>
-					<path fill="currentColor" d="M2 4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z" />
-				</svg>
-			);
-		default:
-			return (
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="currentColor"
-					viewBox="0 0 24 24"
-					width={size}
-					height={size}
-					aria-label={label}
-					role="img"
-					{...props}
-				>
-					<path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-				</svg>
-			);
-	}
+const SquareFilled = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			fill="currentColor"
+			viewBox="0 0 24 24"
+			width={iconSize}
+			height={iconSize}
+			aria-label={label}
+			role="img"
+			{...props}
+		>
+			<path d="M4 7C4 5.34315 5.34315 4 7 4H25C26.6569 4 28 5.34315 28 7V25C28 26.6569 26.6569 28 25 28H7C5.34315 28 4 26.6569 4 25V7Z" />
+		</svg>
+	);
 };
 
-IconSquareFilled.iconName = "square--filled";
+SquareFilled.iconName = "square--filled";
 
-export default IconSquareFilled;
+export default SquareFilled;

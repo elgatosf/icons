@@ -1,27 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconFlipHorizontalFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const FlipHorizontalFilled = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="M12 2.75a.75.75 0 0 0-.75.75v1a.75.75 0 0 0 1.5 0v-1a.75.75 0 0 0-.75-.75M3.463 17.943A.75.75 0 0 1 3 17.25V6.75a.75.75 0 0 1 1.28-.53l5.25 5.25a.75.75 0 0 1 0 1.06l-5.25 5.25a.75.75 0 0 1-.817.163M11.25 7.5a.75.75 0 0 1 1.5 0v1a.75.75 0 0 1-1.5 0zm1.5 9a.75.75 0 0 1-1.5 0v-1a.75.75 0 0 1 1.5 0zM12 21.25a.75.75 0 0 0 .75-.75v-1a.75.75 0 0 0-1.5 0v1c0 .414.336.75.75.75m8.537-3.307A.75.75 0 0 0 21 17.25V6.75a.75.75 0 0 0-1.28-.53l-5.25 5.25a.75.75 0 0 0 0 1.06l5.25 5.25a.75.75 0 0 0 .817.163M12 10.75a.75.75 0 0 0-.75.75v1a.75.75 0 0 0 1.5 0v-1a.75.75 0 0 0-.75-.75" />
+			<path d="M12.75 3.75C12.75 3.33579 12.4142 3 12 3C11.5858 3 11.25 3.33579 11.25 3.75V20.25C11.25 20.6642 11.5858 21 12 21C12.4142 21 12.75 20.6642 12.75 20.25V3.75Z" /><path d="M3 17.25C3 17.5533 3.18273 17.8268 3.46299 17.9429C3.74324 18.059 4.06583 17.9948 4.28033 17.7803L9.53033 12.5303C9.82322 12.2374 9.82322 11.7626 9.53033 11.4697L4.28033 6.21966C4.06583 6.00516 3.74324 5.941 3.46299 6.05708C3.18273 6.17317 3 6.44664 3 6.74999V17.25Z" /><path d="M21 17.25C21 17.5533 20.8173 17.8268 20.537 17.9429C20.2568 18.059 19.9342 17.9948 19.7197 17.7803L14.4697 12.5303C14.1768 12.2374 14.1768 11.7626 14.4697 11.4697L19.7197 6.21966C19.9342 6.00516 20.2568 5.941 20.537 6.05708C20.8173 6.17317 21 6.44664 21 6.74999V17.25Z" />
 		</svg>
 	);
 };
 
-IconFlipHorizontalFilled.iconName = "flip-horizontal--filled";
+FlipHorizontalFilled.iconName = "flip-horizontal--filled";
 
-export default IconFlipHorizontalFilled;
+export default FlipHorizontalFilled;

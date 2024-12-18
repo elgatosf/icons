@@ -1,31 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconLogoYoutubeColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const LogoYoutubeColor = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
+			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path
-				fill="red"
-				d="M22.538 6.705a2.76 2.76 0 0 0-1.945-1.945c-1.715-.46-8.595-.46-8.595-.46s-6.88 0-8.595.46a2.76 2.76 0 0 0-1.945 1.945C1 8.42 1 12 1 12s0 3.58.46 5.296a2.76 2.76 0 0 0 1.945 1.945C5.12 19.7 12 19.7 12 19.7s6.88 0 8.595-.46a2.76 2.76 0 0 0 1.945-1.945C23 15.58 23 12 23 12s-.002-3.58-.462-5.295"
-			/>
-			<path fill="#fff" d="m9.799 15.3 5.714-3.3-5.714-3.299z" />
+			<path fill="#FF0033" d="M22.5382 6.70493C22.2846 5.75778 21.5403 5.01346 20.5932 4.75992C18.8782 4.29993 11.9982 4.29993 11.9982 4.29993C11.9982 4.29993 5.11821 4.29993 3.40319 4.75992C2.45785 5.01346 1.71172 5.75778 1.45818 6.70493C1 8.41993 1 12.0003 1 12.0003C1 12.0003 0.999999 15.5806 1.45999 17.2956C1.71353 18.2428 2.45785 18.9871 3.40501 19.2406C5.12002 19.7006 12 19.7006 12 19.7006C12 19.7006 18.88 19.7006 20.5949 19.2406C21.5422 18.9871 22.2865 18.2428 22.54 17.2956C23 15.5806 23 12.0003 23 12.0003C23 12.0003 22.9982 8.41993 22.5382 6.70493Z" /><path fill="white" d="M9.79883 15.3002L15.5125 12.0006L9.79883 8.70093V15.3002Z" />
 		</svg>
 	);
 };
 
-IconLogoYoutubeColor.iconName = "logo-youtube--color";
+LogoYoutubeColor.iconName = "logo-youtube--color";
 
-export default IconLogoYoutubeColor;
+export default LogoYoutubeColor;

@@ -1,31 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconCamcorder = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const Camcorder = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path
-				fillRule="evenodd"
-				d="m16.5 13.443 5 2.887V7.67l-5 2.887V6a.5.5 0 0 0-.5-.5H4a.5.5 0 0 0-.5.5v12a.5.5 0 0 0 .5.5h12a.5.5 0 0 0 .5-.5zM18 6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1.959l2.75 1.588A1.5 1.5 0 0 0 23 16.33V7.67a1.5 1.5 0 0 0-2.25-1.3L18 7.96z"
-				clipRule="evenodd"
-			/>
+			<path fillRule="evenodd" d="M16.5 13.4434L21.5 16.3301V7.66987L16.5 10.5566V6C16.5 5.72386 16.2761 5.5 16 5.5H4C3.72386 5.5 3.5 5.72386 3.5 6V18C3.5 18.2761 3.72386 18.5 4 18.5H16C16.2761 18.5 16.5 18.2761 16.5 18V13.4434ZM18 6C18 4.89543 17.1046 4 16 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H16C17.1046 20 18 19.1046 18 18V16.0415L20.75 17.6292C21.75 18.2065 23 17.4848 23 16.3301V7.66987C23 6.51517 21.75 5.79348 20.75 6.37084L18 7.95855V6Z" clipRule="evenodd" />
 		</svg>
 	);
 };
 
-IconCamcorder.iconName = "camcorder";
+Camcorder.iconName = "camcorder";
 
-export default IconCamcorder;
+export default Camcorder;

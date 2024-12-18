@@ -1,31 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconLearn = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const Learn = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path
-				fillRule="evenodd"
-				d="M2.326 10.494 6 12.832v3.81a2 2 0 0 0 .97 1.715l4.001 2.4a2 2 0 0 0 2.058 0l4-2.4A2 2 0 0 0 18 16.642v-3.81l1.5-.955v4.373a.75.75 0 0 0 1.5 0v-5.327l.674-.43a1 1 0 0 0 0-1.687l-8.6-5.473a2 2 0 0 0-2.148 0l-8.6 5.473a1 1 0 0 0 0 1.688m1.468-.844 7.938 5.051a.5.5 0 0 0 .536 0l7.938-5.05-7.938-5.052a.5.5 0 0 0-.537 0zM7.5 16.642v-2.855l3.426 2.18a2 2 0 0 0 2.148 0l3.426-2.18v2.855a.5.5 0 0 1-.243.43l-4 2.4a.5.5 0 0 1-.514 0l-4-2.4a.5.5 0 0 1-.243-.43"
-				clipRule="evenodd"
-			/>
+			<path fillRule="evenodd" d="M2.32575 10.4937L6.00004 12.8319L6 16.6422C6 17.3448 6.3686 17.9958 6.97102 18.3572L10.971 20.7572C11.6044 21.1373 12.3956 21.1373 13.029 20.7572L17.029 18.3573C17.6314 17.9959 18 17.3448 18 16.6423V12.8318L19.5 11.8773V16.25C19.5 16.6642 19.8358 17 20.25 17C20.6642 17 21 16.6642 21 16.25V10.9228L21.6742 10.4937C22.2917 10.1007 22.2917 9.19933 21.6742 8.80637L13.0738 3.33331C12.4186 2.9164 11.5814 2.9164 10.9262 3.33331L2.32575 8.80637C1.70825 9.19933 1.70825 10.1007 2.32575 10.4937ZM3.79394 9.65003L11.7316 14.7012C11.8953 14.8055 12.1047 14.8055 12.2684 14.7012L20.2061 9.65003L12.2684 4.5988C12.1047 4.49457 11.8953 4.49457 11.7316 4.5988L3.79394 9.65003ZM7.5 16.6422L7.50003 13.7864L10.9262 15.9667C11.5814 16.3836 12.4186 16.3836 13.0737 15.9667L16.5 13.7864V16.6423C16.5 16.8179 16.4079 16.9807 16.2573 17.0711L12.2573 19.471C12.0989 19.566 11.9011 19.566 11.7428 19.471L7.74276 17.071C7.59215 16.9806 7.5 16.8179 7.5 16.6422Z" clipRule="evenodd" />
 		</svg>
 	);
 };
 
-IconLearn.iconName = "learn";
+Learn.iconName = "learn";
 
-export default IconLearn;
+export default Learn;

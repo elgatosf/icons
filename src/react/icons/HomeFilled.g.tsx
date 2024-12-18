@@ -1,27 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconHomeFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const HomeFilled = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="M3 8.978A2 2 0 0 1 3.772 7.4l7-5.444a2 2 0 0 1 2.456 0l7 5.444A2 2 0 0 1 21 8.98V19a2 2 0 0 1-2 2h-3.5a2 2 0 0 1-2-2v-6h-3v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+			<path d="M3 8.9782C3 8.36102 3.28495 7.77841 3.77212 7.39949L10.7721 1.95505C11.4943 1.39332 12.5057 1.39332 13.2279 1.95505L20.2279 7.39949C20.7151 7.77841 21 8.36102 21 8.9782V19C21 20.1046 20.1046 21 19 21H15.5C14.3954 21 13.5 20.1046 13.5 19V13H10.5V19C10.5 20.1046 9.60457 21 8.5 21H5C3.89543 21 3 20.1046 3 19V8.9782Z" />
 		</svg>
 	);
 };
 
-IconHomeFilled.iconName = "home--filled";
+HomeFilled.iconName = "home--filled";
 
-export default IconHomeFilled;
+export default HomeFilled;

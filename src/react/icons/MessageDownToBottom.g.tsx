@@ -1,32 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconMessageDownToBottom = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const MessageDownToBottom = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="m4.713 16.419-1.075 3.943 3.943-1.075.52.268a8.4 8.4 0 0 0 3.629.94 6.5 6.5 0 0 0 1.05 1.475 9.96 9.96 0 0 1-5.369-1.082L3.189 22.04a1 1 0 0 1-1.228-1.228l1.152-4.224A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10q0 .394-.03.781a6.5 6.5 0 0 0-1.474-1.051A8.5 8.5 0 0 0 3.5 12c0 1.409.341 2.733.945 3.899z" />
-			<path
-				fillRule="evenodd"
-				d="M17.5 23a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11m-2.354-7.146 2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L17.5 16.793l-1.646-1.647a.5.5 0 0 0-.708.708M15.5 20a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1z"
-				clipRule="evenodd"
-			/>
+			<path d="M4.71334 16.4185L3.63779 20.3622L7.58147 19.2866L8.101 19.5554C9.19236 20.1199 10.4222 20.4551 11.7299 20.4958C12.011 21.0361 12.3658 21.5319 12.7808 21.97C12.5232 21.9899 12.2627 22 12 22C10.3461 22 8.786 21.5985 7.41182 20.8877L3.18829 22.0395C2.44179 22.2431 1.75682 21.5582 1.96041 20.8117L3.11228 16.5881C2.40145 15.214 1.99996 13.6539 1.99996 12C1.99996 6.47715 6.47711 2 12 2C17.5228 2 22 6.47715 22 12C22 12.2628 21.9898 12.5233 21.9699 12.781C21.5318 12.3659 21.036 12.0111 20.4958 11.73C20.3532 7.16055 16.6041 3.5 12 3.5C7.30554 3.5 3.49996 7.30558 3.49996 12C3.49996 13.4085 3.84135 14.7328 4.44459 15.899L4.71334 16.4185Z" /><path fillRule="evenodd" d="M17.5 23C20.5376 23 23 20.5376 23 17.5C23 14.4624 20.5376 12 17.5 12C14.4624 12 12 14.4624 12 17.5C12 20.5376 14.4624 23 17.5 23ZM15.1464 15.8536L17.1464 17.8536C17.3417 18.0488 17.6583 18.0488 17.8536 17.8536L19.8536 15.8536C20.0488 15.6583 20.0488 15.3417 19.8536 15.1464C19.6583 14.9512 19.3417 14.9512 19.1464 15.1464L17.5 16.7929L15.8536 15.1464C15.6583 14.9512 15.3417 14.9512 15.1464 15.1464C14.9512 15.3417 14.9512 15.6583 15.1464 15.8536ZM15.5 20C15.2239 20 15 19.7761 15 19.5C15 19.2239 15.2239 19 15.5 19H19.5C19.7761 19 20 19.2239 20 19.5C20 19.7761 19.7761 20 19.5 20H15.5Z" clipRule="evenodd" />
 		</svg>
 	);
 };
 
-IconMessageDownToBottom.iconName = "message-down-to-bottom";
+MessageDownToBottom.iconName = "message-down-to-bottom";
 
-export default IconMessageDownToBottom;
+export default MessageDownToBottom;

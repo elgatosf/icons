@@ -1,27 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconCrosshair = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const Crosshair = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="M2.75 2a.75.75 0 0 0-.75.75v2.5a.75.75 0 0 0 1.5 0V3.5h1.75a.75.75 0 0 0 0-1.5zM2 18.75v2.5a.75.75 0 0 0 .75.75h2.5a.75.75 0 0 0 0-1.5H3.5v-1.75a.75.75 0 0 0-1.5 0M21.25 22h-2.5a.75.75 0 0 1 0-1.5h1.75v-1.75a.75.75 0 0 1 1.5 0v2.5a.75.75 0 0 1-.75.75M22 5.25v-2.5a.75.75 0 0 0-.75-.75h-2.5a.75.75 0 0 0 0 1.5h1.75v1.75a.75.75 0 0 0 1.5 0M12 7a.75.75 0 0 1 .75.75v3.5h3.5a.75.75 0 0 1 0 1.5h-3.5v3.5a.75.75 0 0 1-1.5 0v-3.5h-3.5a.75.75 0 0 1 0-1.5h3.5v-3.5A.75.75 0 0 1 12 7" />
+			<path d="M2.75 2C2.33579 2 2 2.33579 2 2.75V5.25C2 5.66421 2.33579 6 2.75 6C3.16421 6 3.5 5.66421 3.5 5.25V3.5H5.25C5.66421 3.5 6 3.16421 6 2.75C6 2.33579 5.66421 2 5.25 2H2.75Z" /><path d="M2 18.75V21.25C2 21.4489 2.07902 21.6397 2.21967 21.7803C2.36032 21.921 2.55109 22 2.75 22H5.25C5.66421 22 6 21.6642 6 21.25C6 20.8358 5.66421 20.5 5.25 20.5H3.5L3.5 18.75C3.5 18.3358 3.16421 18 2.75 18C2.33579 18 2 18.3358 2 18.75Z" /><path d="M21.25 22H18.75C18.3358 22 18 21.6642 18 21.25C18 20.8358 18.3358 20.5 18.75 20.5H20.5V18.75C20.5 18.3358 20.8358 18 21.25 18C21.6642 18 22 18.3358 22 18.75V21.25C22 21.4489 21.921 21.6397 21.7803 21.7803C21.6397 21.921 21.4489 22 21.25 22Z" /><path d="M22 5.25V2.75C22 2.33579 21.6642 2 21.25 2H18.75C18.3358 2 18 2.33579 18 2.75C18 3.16421 18.3358 3.5 18.75 3.5L20.5 3.5V5.25C20.5 5.66421 20.8358 6 21.25 6C21.6642 6 22 5.66421 22 5.25Z" /><path d="M12 7C12.4142 7 12.75 7.33579 12.75 7.75V11.25H16.25C16.6642 11.25 17 11.5858 17 12C17 12.4142 16.6642 12.75 16.25 12.75H12.75V16.25C12.75 16.6642 12.4142 17 12 17C11.5858 17 11.25 16.6642 11.25 16.25V12.75H7.75C7.33579 12.75 7 12.4142 7 12C7 11.5858 7.33579 11.25 7.75 11.25H11.25V7.75C11.25 7.33579 11.5858 7 12 7Z" />
 		</svg>
 	);
 };
 
-IconCrosshair.iconName = "crosshair";
+Crosshair.iconName = "crosshair";
 
-export default IconCrosshair;
+export default Crosshair;

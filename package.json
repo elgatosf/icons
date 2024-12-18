@@ -30,8 +30,7 @@
         "svg/"
     ],
     "scripts": {
-        "build": "npm run sync-icons && tsc",
-        "sync-icons": "npm run build && node dist/scripts/sync-icons.js",
+        "build": "npm run build:icons && npm run transform && tsc",
         "build:icons": "tsx scripts/sync-icons.ts",
         "transform": "tsx scripts/transform.ts"
     },
@@ -56,8 +55,10 @@
     },
     "prettier": "@elgato/prettier-config",
     "dependencies": {
+        "@types/express": "^5.0.0",
         "axios": "^1.6.5",
         "dotenv": "^16.3.1",
+        "express": "^4.21.2",
         "figma-api": "^1.11.0",
         "svgo": "^3.0.0"
     },

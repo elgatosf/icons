@@ -1,31 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconHome = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const Home = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path
-				fillRule="evenodd"
-				d="M10.5 19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8.978A2 2 0 0 1 3.772 7.4l7-5.444a2 2 0 0 1 2.456 0l7 5.444A2 2 0 0 1 21 8.98V19a2 2 0 0 1-2 2h-3.5a2 2 0 0 1-2-2v-6h-3zM9 13a1.5 1.5 0 0 1 1.5-1.5h3A1.5 1.5 0 0 1 15 13v6a.5.5 0 0 0 .5.5H19a.5.5 0 0 0 .5-.5V8.978a.5.5 0 0 0-.193-.395l-7-5.444a.5.5 0 0 0-.614 0l-7 5.444a.5.5 0 0 0-.193.395V19a.5.5 0 0 0 .5.5h3.5A.5.5 0 0 0 9 19z"
-				clipRule="evenodd"
-			/>
+			<path fillRule="evenodd" d="M10.5 19C10.5 20.1046 9.60457 21 8.5 21H5C3.89543 21 3 20.1046 3 19V8.9782C3 8.36102 3.28495 7.77841 3.77212 7.39949L10.7721 1.95505C11.4943 1.39332 12.5057 1.39332 13.2279 1.95505L20.2279 7.39949C20.7151 7.77841 21 8.36102 21 8.9782V19C21 20.1046 20.1046 21 19 21H15.5C14.3954 21 13.5 20.1046 13.5 19V13H10.5V19ZM9 13C9 12.1716 9.67157 11.5 10.5 11.5H13.5C14.3284 11.5 15 12.1716 15 13V19C15 19.2762 15.2239 19.5 15.5 19.5H19C19.2761 19.5 19.5 19.2762 19.5 19V8.9782C19.5 8.8239 19.4288 8.67825 19.307 8.58352L12.307 3.13908C12.1264 2.99864 11.8736 2.99864 11.693 3.13908L4.69303 8.58352C4.57124 8.67825 4.5 8.8239 4.5 8.9782V19C4.5 19.2762 4.72386 19.5 5 19.5H8.5C8.77614 19.5 9 19.2762 9 19V13Z" clipRule="evenodd" />
 		</svg>
 	);
 };
 
-IconHome.iconName = "home";
+Home.iconName = "home";
 
-export default IconHome;
+export default Home;

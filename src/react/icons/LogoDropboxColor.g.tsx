@@ -1,30 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconLogoDropboxColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const LogoDropboxColor = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
+			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path
-				fill="#0061FF"
-				d="M12.013 6.382 7.006 9.765l5.007 3.382-5.007 3.383L2 13.129l5.006-3.382L2 6.382 7.006 3zM6.98 17.618l5.006-3.383 5.007 3.383L11.987 21zm5.032-4.489 5.006-3.382-5.006-3.365L16.993 3 22 6.382l-5.006 3.383L22 13.147l-5.006 3.383z"
-			/>
+			<path fill="#0061FF" d="M12.0129 6.38243L7.00647 9.76486L12.0129 13.1473L7.00647 16.5297L2 13.129L7.00647 9.74657L2 6.38243L7.00647 3L12.0129 6.38243ZM6.98058 17.6176L11.9871 14.2351L16.9935 17.6176L11.9871 21L6.98058 17.6176ZM12.0129 13.129L17.0194 9.74657L12.0129 6.38243L16.9935 3L22 6.38243L16.9935 9.76486L22 13.1473L16.9935 16.5297L12.0129 13.129Z" />
 		</svg>
 	);
 };
 
-IconLogoDropboxColor.iconName = "logo-dropbox--color";
+LogoDropboxColor.iconName = "logo-dropbox--color";
 
-export default IconLogoDropboxColor;
+export default LogoDropboxColor;

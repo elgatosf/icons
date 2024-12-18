@@ -1,27 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconChevronLeft = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const ChevronLeft = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="M14.78 6.22a.75.75 0 0 1 0 1.06L10.06 12l4.72 4.72a.75.75 0 1 1-1.06 1.06l-5.25-5.25a.75.75 0 0 1 0-1.06l5.25-5.25a.75.75 0 0 1 1.06 0" />
+			<path d="M13.7803 7.21967C14.0732 7.51256 14.0732 7.98744 13.7803 8.28033L10.0607 12L13.7803 15.7197C14.0732 16.0126 14.0732 16.4874 13.7803 16.7803C13.4874 17.0732 13.0126 17.0732 12.7197 16.7803L8.46967 12.5303C8.17678 12.2374 8.17678 11.7626 8.46967 11.4697L12.7197 7.21967C13.0126 6.92678 13.4874 6.92678 13.7803 7.21967Z" />
 		</svg>
 	);
 };
 
-IconChevronLeft.iconName = "chevron-left";
+ChevronLeft.iconName = "chevron-left";
 
-export default IconChevronLeft;
+export default ChevronLeft;

@@ -1,32 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconExpandSquare = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const ExpandSquare = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="M11.75 7a.75.75 0 0 0 0 1.5h2.69L8.5 14.44v-2.69a.75.75 0 0 0-1.5 0v4.5c0 .414.336.75.75.75h4.5a.75.75 0 0 0 0-1.5H9.56l5.94-5.94v2.69a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75z" />
-			<path
-				fillRule="evenodd"
-				d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm2-.5h14a.5.5 0 0 1 .5.5v14a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 1 .5-.5"
-				clipRule="evenodd"
-			/>
+			<path d="M11.75 7C11.3358 7 11 7.33579 11 7.75C11 8.16421 11.3358 8.5 11.75 8.5H14.4393L8.5 14.4393L8.5 11.75C8.5 11.3358 8.16421 11 7.75 11C7.33579 11 7 11.3358 7 11.75L7 16.25C7 16.6642 7.33579 17 7.75 17H12.25C12.6642 17 13 16.6642 13 16.25C13 15.8358 12.6642 15.5 12.25 15.5H9.56066L15.5 9.56066V12.25C15.5 12.6642 15.8358 13 16.25 13C16.6642 13 17 12.6642 17 12.25V7.75C17 7.33579 16.6642 7 16.25 7H11.75Z" /><path fillRule="evenodd" d="M3 5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5ZM5 4.5H19C19.2761 4.5 19.5 4.72386 19.5 5V19C19.5 19.2761 19.2761 19.5 19 19.5H5C4.72386 19.5 4.5 19.2761 4.5 19V5C4.5 4.72386 4.72386 4.5 5 4.5Z" clipRule="evenodd" />
 		</svg>
 	);
 };
 
-IconExpandSquare.iconName = "expand-square";
+ExpandSquare.iconName = "expand-square";
 
-export default IconExpandSquare;
+export default ExpandSquare;

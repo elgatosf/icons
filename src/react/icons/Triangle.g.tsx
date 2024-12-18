@@ -1,31 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconTriangle = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const Triangle = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path
-				fillRule="evenodd"
-				d="m20.516 18.75-8.083-14a.5.5 0 0 0-.866 0l-8.083 14a.5.5 0 0 0 .433.75h16.166a.5.5 0 0 0 .433-.75M13.732 4c-.77-1.333-2.694-1.333-3.464 0L2.185 18c-.77 1.333.192 3 1.732 3h16.166c1.54 0 2.502-1.667 1.732-3z"
-				clipRule="evenodd"
-			/>
+			<path fillRule="evenodd" d="M20.5159 18.75L12.433 4.75C12.2405 4.41667 11.7594 4.41667 11.5669 4.75L3.48403 18.75C3.29158 19.0833 3.53215 19.5 3.91705 19.5H20.0829C20.4678 19.5 20.7083 19.0833 20.5159 18.75ZM13.732 4C12.9622 2.66667 11.0377 2.66667 10.2679 4L2.185 18C1.41519 19.3333 2.37745 21 3.91705 21H20.0829C21.6225 21 22.5847 19.3333 21.8149 18L13.732 4Z" clipRule="evenodd" />
 		</svg>
 	);
 };
 
-IconTriangle.iconName = "triangle";
+Triangle.iconName = "triangle";
 
-export default IconTriangle;
+export default Triangle;

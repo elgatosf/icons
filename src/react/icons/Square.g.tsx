@@ -1,54 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconSquare = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
-	switch (props?.size) {
-		case "s":
-			return (
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 16 16"
-					width={size}
-					height={size}
-					aria-label={label}
-					role="img"
-					{...props}
-				>
-					<path
-						fill="currentColor"
-						fillRule="evenodd"
-						d="M4 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm8 1H4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1"
-						clipRule="evenodd"
-					/>
-				</svg>
-			);
-		default:
-			return (
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="currentColor"
-					viewBox="0 0 24 24"
-					width={size}
-					height={size}
-					aria-label={label}
-					role="img"
-					{...props}
-				>
-					<path
-						fillRule="evenodd"
-						d="M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm14 1.5H5a.5.5 0 0 0-.5.5v14a.5.5 0 0 0 .5.5h14a.5.5 0 0 0 .5-.5V5a.5.5 0 0 0-.5-.5"
-						clipRule="evenodd"
-					/>
-				</svg>
-			);
-	}
+const Square = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			fill="currentColor"
+			viewBox="0 0 24 24"
+			width={iconSize}
+			height={iconSize}
+			aria-label={label}
+			role="img"
+			{...props}
+		>
+			<path fillRule="evenodd" d="M7 4C5.34315 4 4 5.34315 4 7V25C4 26.6569 5.34315 28 7 28H25C26.6569 28 28 26.6569 28 25V7C28 5.34315 26.6569 4 25 4H7ZM25 6H7C6.44772 6 6 6.44772 6 7V25C6 25.5523 6.44772 26 7 26H25C25.5523 26 26 25.5523 26 25V7C26 6.44772 25.5523 6 25 6Z" clipRule="evenodd" />
+		</svg>
+	);
 };
 
-IconSquare.iconName = "square";
+Square.iconName = "square";
 
-export default IconSquare;
+export default Square;

@@ -1,66 +1,30 @@
 /**
- * Gets the SVG string metadata for the specified icon.
- * @param name Name of the icon.
- * @returns The metadata.
+ * Get metadata from an SVG string.
  */
-export function getSvgStringMetadata(name: string): SvgStringMetadata {
-	const exportName = `icon${name.split("-").reduce((prev, curr) => {
-		return prev + curr.charAt(0).toUpperCase() + curr.substring(1);
-	}, "")}`;
-
-	return { exportName };
-}
-
-/**
- * Metadata associated with an icon.
- */
-export type SvgStringMetadata = {
-	/**
-	 * Name the icon SVG string.
-	 *
-	 * For example, the icon named `volume-1` is exported as:
-	 * ```ts
-	 * export { default as iconVolume1 } from "./m/icon-1.g.js";
-	 * //                  └────┬────┘
-	 * //                   exportName
-	 * ```
-	 * And can be imported with:
-	 *
-	 * ```ts
-	 * import { iconVolume1 } from "@elgato/icons/m";
-	 * //       └────┬────┘
-	 * //        exportName
-	 * ```
-	 */
-	exportName: string;
-};
-
-/**
- * Gets the React metadata for the specified icon.
- * @param name Name of the icon.
- * @returns The metadata.
- */
-export function getReactMetadata(name: string): ReactMetadata {
-	const { exportName } = getSvgStringMetadata(name);
-	const componentName = `${exportName.charAt(0).toUpperCase()}${exportName.slice(1)}`;
+export function getSvgStringMetadata(name: string) {
+	// Convert to camelCase for export name
+	const exportName = name
+		.split(/[-_\s]+/)
+		.map((part, index) => 
+			index === 0 
+				? part.toLowerCase() 
+				: part.charAt(0).toUpperCase() + part.slice(1).toLowerCase()
+		)
+		.join('');
 
 	return {
-		componentName,
-		filename: componentName.slice(4),
+		name,
+		exportName: `icon${exportName.charAt(0).toUpperCase()}${exportName.slice(1)}`
 	};
 }
 
 /**
- * Metadata associated with an icon.
+ * Get metadata from a React component.
  */
-export type ReactMetadata = {
-	/**
-	 * Name of the component.
-	 */
-	componentName: string;
-
-	/**
-	 * Filename of the component.
-	 */
-	filename: string;
-};
+export function getReactComponentMetadata(name: string) {
+	const { exportName } = getSvgStringMetadata(name);
+	return {
+		name,
+		exportName: exportName.replace(/^icon/, 'Icon')
+	};
+} 

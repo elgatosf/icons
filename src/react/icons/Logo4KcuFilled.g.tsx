@@ -1,32 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconLogo4KcuFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const Logo4kcuFilled = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="M8.735 9.104v4.05H7.264z" />
-			<path
-				fillRule="evenodd"
-				d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10m-1.815-7.815h.828v-1.042h-.828V8.045H8.01l-1.9 4.877v1.263h2.55V16h1.525zM15.643 16h1.906l-2.191-4.42 2.057-3.535h-1.88l-1.826 3.62zM12 16h1.665V8.045H12z"
-				clipRule="evenodd"
-			/>
+			<path d="M8.73535 9.10352V13.1533H7.26367L8.73535 9.10352Z" /><path fillRule="evenodd" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM10.1855 14.1846H11.0127V13.1426H10.1855V8.04541H8.01025L6.10889 12.9224V14.1846H8.66016V16H10.1855V14.1846ZM15.6426 16H17.5493L15.3579 11.5796L17.415 8.04541H15.5352L13.709 11.6655L15.6426 16ZM12.001 16H13.666V8.04541H12.001V16Z" clipRule="evenodd" />
 		</svg>
 	);
 };
 
-IconLogo4KcuFilled.iconName = "logo4-kcu--filled";
+Logo4kcuFilled.iconName = "logo4kcu--filled";
 
-export default IconLogo4KcuFilled;
+export default Logo4kcuFilled;

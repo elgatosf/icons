@@ -1,31 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconPrompterFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const PrompterFilled = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path
-				fillRule="evenodd"
-				d="M4.331 2a2 2 0 0 0-1.977 2.304l1.385 9A2 2 0 0 0 5.716 15H7v2H5.132a2 2 0 0 0-1.715.971l-.6 1c-.8 1.333.16 3.029 1.715 3.029h14.936c1.554 0 2.515-1.696 1.715-3.029l-.6-1A2 2 0 0 0 18.868 17H17v-2h1.284a2 2 0 0 0 1.977-1.696l1.384-9A2 2 0 0 0 19.67 2H4.33ZM17 13.5H7a.5.5 0 0 1-.5-.5V7a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-.5.5"
-				clipRule="evenodd"
-			/>
+			<path fillRule="evenodd" d="M4.33124 2C3.10547 2 2.16811 3.0926 2.3545 4.30411L3.73911 13.3041C3.88921 14.2798 4.72871 15 5.71586 15H7.00002V17H5.1324C4.42987 17 3.77886 17.3686 3.41741 17.971L2.81741 18.971C2.01758 20.3041 2.97781 22 4.5324 22H19.4676C21.0222 22 21.9825 20.3041 21.1826 18.971L20.5826 17.971C20.2212 17.3686 19.5702 17 18.8676 17H17V15H18.2842C19.2713 15 20.1108 14.2798 20.2609 13.3041L21.6455 4.30411C21.8319 3.0926 20.8946 2 19.6688 2H4.33124ZM17 13.5H7.00002C6.72388 13.5 6.50002 13.2761 6.50002 13V7C6.50002 6.72386 6.72388 6.5 7.00002 6.5H17C17.2762 6.5 17.5 6.72386 17.5 7V13C17.5 13.2761 17.2762 13.5 17 13.5Z" clipRule="evenodd" />
 		</svg>
 	);
 };
 
-IconPrompterFilled.iconName = "prompter--filled";
+PrompterFilled.iconName = "prompter--filled";
 
-export default IconPrompterFilled;
+export default PrompterFilled;

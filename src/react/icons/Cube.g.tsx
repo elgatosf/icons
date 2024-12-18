@@ -1,31 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconCube = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const Cube = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path
-				fillRule="evenodd"
-				d="M4 6.226a2 2 0 0 0-1 1.732v8.083a2 2 0 0 0 1 1.732l7 4.042a2 2 0 0 0 2 0l7-4.042a2 2 0 0 0 1-1.732V7.958a2 2 0 0 0-1-1.732l-7-4.041a2 2 0 0 0-2 0zm1.25 1.01L12 11.135l6.75-3.897-6.5-3.753a.5.5 0 0 0-.5 0l-6.5 3.753Zm14.25 1.3-6.75 3.897v7.794l6.5-3.753a.5.5 0 0 0 .25-.433zm-8.25 11.691v-7.794L4.5 8.536v7.505a.5.5 0 0 0 .25.433z"
-				clipRule="evenodd"
-			/>
+			<path fillRule="evenodd" d="M4 6.22651C3.3812 6.58378 3 7.24403 3 7.95856V16.0415C3 16.756 3.3812 17.4163 4 17.7735L11 21.815C11.6188 22.1722 12.3812 22.1722 13 21.815L20 17.7735C20.6188 17.4163 21 16.756 21 16.0415V7.95857C21 7.24403 20.6188 6.58378 20 6.22652L13 2.18506C12.3812 1.8278 11.6188 1.8278 11 2.18506L4 6.22651ZM5.25 7.23688L12 11.134L18.75 7.23688L12.25 3.4841C12.0953 3.39479 11.9047 3.39479 11.75 3.4841L5.25 7.23688ZM19.5 8.53592L12.75 12.433V20.2273L19.25 16.4745C19.4047 16.3852 19.5 16.2201 19.5 16.0415V8.53592ZM11.25 20.2273V12.433L4.5 8.53592V16.0415C4.5 16.2201 4.5953 16.3852 4.75 16.4745L11.25 20.2273Z" clipRule="evenodd" />
 		</svg>
 	);
 };
 
-IconCube.iconName = "cube";
+Cube.iconName = "cube";
 
-export default IconCube;
+export default Cube;

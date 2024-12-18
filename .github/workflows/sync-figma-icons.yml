@@ -4,6 +4,12 @@ on:
   repository_dispatch:
     types: [figma_publish]
   workflow_dispatch:
+  push:
+    branches:
+      - '**'  # Allow any branch
+    paths:
+      - 'svg/**'  # Only trigger on SVG changes
+      - 'scripts/**'  # Or script changes
 
 env:
   FIGMA_ACCESS_TOKEN: ${{ secrets.FIGMA_ACCESS_TOKEN }}

@@ -1,32 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconChevronsDownSet = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const ChevronsDownSet = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="M7.28 6.22a.75.75 0 0 0-1.06 1.06l5.25 5.25a.75.75 0 0 0 1.06 0l5.25-5.25a.75.75 0 0 0-1.06-1.06L12 10.94zm0 5a.75.75 0 0 0-1.06 1.06l4.794 4.794c.04-.613.164-1.203.362-1.759z" />
-			<path
-				fillRule="evenodd"
-				d="M23 17.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0M19.5 15a.5.5 0 0 1 .5.5v2.828a.5.5 0 0 1-1 0v-1.621l-3.146 3.147a.5.5 0 1 1-.708-.707L18.293 16h-1.621a.5.5 0 1 1 0-1z"
-				clipRule="evenodd"
-			/>
+			<path d="M7.28033 6.21967C6.98744 5.92678 6.51256 5.92678 6.21967 6.21967C5.92678 6.51256 5.92678 6.98744 6.21967 7.28033L11.4697 12.5303C11.7626 12.8232 12.2374 12.8232 12.5303 12.5303L17.7803 7.28033C18.0732 6.98744 18.0732 6.51256 17.7803 6.21967C17.4874 5.92678 17.0126 5.92678 16.7197 6.21967L12 10.9393L7.28033 6.21967Z" /><path d="M7.28033 11.2197C6.98744 10.9268 6.51256 10.9268 6.21967 11.2197C5.92678 11.5126 5.92678 11.9874 6.21967 12.2803L11.0137 17.0744C11.0534 16.461 11.1781 15.8708 11.3762 15.3155L7.28033 11.2197Z" /><path fillRule="evenodd" d="M23 17.5C23 20.5376 20.5376 23 17.5 23C14.4624 23 12 20.5376 12 17.5C12 14.4624 14.4624 12 17.5 12C20.5376 12 23 14.4624 23 17.5ZM19.5001 14.9999C19.7762 14.9999 20.0001 15.2238 20.0001 15.4999V18.3284C20.0001 18.6045 19.7762 18.8284 19.5001 18.8284C19.2239 18.8284 19.0001 18.6045 19.0001 18.3284V16.707L15.8535 19.8536C15.6582 20.0489 15.3416 20.0489 15.1464 19.8536C14.9511 19.6584 14.9511 19.3418 15.1464 19.1465L18.293 15.9999H16.6716C16.3955 15.9999 16.1716 15.7761 16.1716 15.4999C16.1716 15.2238 16.3955 14.9999 16.6716 14.9999H19.5001Z" clipRule="evenodd" />
 		</svg>
 	);
 };
 
-IconChevronsDownSet.iconName = "chevrons-down-set";
+ChevronsDownSet.iconName = "chevrons-down-set";
 
-export default IconChevronsDownSet;
+export default ChevronsDownSet;

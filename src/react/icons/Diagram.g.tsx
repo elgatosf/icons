@@ -1,36 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconDiagram = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const Diagram = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path
-				fillRule="evenodd"
-				d="M21 11h-8V3c0-.552.45-1.006.998-.944a9 9 0 0 1 7.947 7.946c.06.549-.393.998-.945.998m-1.07-2.87q.275.666.419 1.37H14.5V3.652a7.5 7.5 0 0 1 5.43 4.478"
-				clipRule="evenodd"
-			/>
-			<path
-				fillRule="evenodd"
-				d="M11 5c0-.552-.45-1.006-.998-.944a9 9 0 1 0 9.943 9.942c.06-.549-.393-.998-.945-.998h-8zm-1.5 9.5h8.849A7.5 7.5 0 1 1 9.5 5.652z"
-				clipRule="evenodd"
-			/>
+			<path fillRule="evenodd" d="M21 11H13V3C13 2.44771 13.4491 1.99426 13.998 2.0555C14.8373 2.14914 15.6609 2.36064 16.4442 2.68508C17.5361 3.13738 18.5282 3.80031 19.364 4.63604C20.1997 5.47177 20.8626 6.46392 21.3149 7.55585C21.6394 8.33913 21.8509 9.16275 21.9445 10.002C22.0057 10.5509 21.5523 11 21 11ZM19.9291 8.12987C20.1127 8.57322 20.253 9.03207 20.3485 9.5H14.5V3.65153C14.9679 3.74704 15.4268 3.88726 15.8701 4.0709C16.7801 4.44781 17.6069 5.00026 18.3033 5.6967C18.9997 6.39314 19.5522 7.21993 19.9291 8.12987Z" clipRule="evenodd" /><path fillRule="evenodd" d="M11 5C11 4.44772 10.5509 3.99425 10.002 4.05549C8.57508 4.2147 7.20175 4.71371 5.99987 5.51677C4.51983 6.5057 3.36628 7.91131 2.68509 9.55585C2.0039 11.2004 1.82567 13.01 2.17294 14.7558C2.5202 16.5016 3.37737 18.1053 4.63604 19.364C5.89472 20.6226 7.49836 21.4798 9.24419 21.8271C10.99 22.1743 12.7996 21.9961 14.4442 21.3149C16.0887 20.6337 17.4943 19.4802 18.4832 18.0001C19.2863 16.7983 19.7853 15.4249 19.9445 13.998C20.0057 13.4491 19.5523 13 19 13L11 13L11 5ZM9.5 14.5L18.3485 14.5C18.155 15.448 17.7788 16.3544 17.236 17.1668C16.4119 18.4001 15.2406 19.3614 13.8701 19.9291C12.4997 20.4968 10.9917 20.6453 9.53683 20.3559C8.08197 20.0665 6.7456 19.3522 5.6967 18.3033C4.64781 17.2544 3.9335 15.918 3.64411 14.4632C3.35473 13.0083 3.50325 11.5003 4.07091 10.1299C4.63857 8.75943 5.59986 7.58809 6.83323 6.76398C7.64561 6.22116 8.552 5.84504 9.50001 5.65153L9.5 14.5Z" clipRule="evenodd" />
 		</svg>
 	);
 };
 
-IconDiagram.iconName = "diagram";
+Diagram.iconName = "diagram";
 
-export default IconDiagram;
+export default Diagram;

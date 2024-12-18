@@ -1,4 +1,4 @@
-import { readdir, readFile } from "node:fs/promises";
+import { readdir, readFile, rm, mkdir } from "node:fs/promises";
 import { basename, extname, join, parse } from "node:path";
 import ora from "ora";
 
@@ -9,12 +9,35 @@ import { MetadataTransformer } from "./transformers/metadata.js";
 import { ReactTransformer } from "./transformers/react.js";
 import { StringsTransformer } from "./transformers/strings.js";
 
+async function cleanup() {
+	const status = ora("Cleaning up old generated files...").start();
+	try {
+		// Clean up React components
+		await rm(join(import.meta.dirname, "../src/react/icons"), { recursive: true, force: true });
+		// Clean up string exports
+		await rm(join(import.meta.dirname, "../src/strings"), { recursive: true, force: true });
+		// Clean up metadata
+		await rm(join(import.meta.dirname, "../src/metadata/generated"), { recursive: true, force: true });
+		status.succeed("Cleaned up old generated files");
+	} catch (error) {
+		status.fail(`Failed to clean up: ${error.message}`);
+		throw error;
+	}
+}
+
+// Clean up before starting
+await cleanup();
+
 const status = ora("Reading icons…").start();
 const sizes: ReadonlyMap<string, Size> = new Map([
 	["16", "s"],
-	["24", "m"],
-	["32", "l"],
+	["20", "m"],
+	["24", "l"],
 ]);
+
+// Create and initialize the transformer context
+const ctx = new TransformerContext();
+await ctx.initialize();
 
 /**
  * Get all icon SVG files.
@@ -46,6 +69,7 @@ for (let i = 0; i < entries.length; i++) {
 
 	icon = icon || {
 		name,
+		exportName,
 		sizes: new Map(),
 	};
 
@@ -66,8 +90,9 @@ for (let i = 0; i < entries.length; i++) {
 		}),
 	});
 
-	// Save the icon to the map.
+	// Save the icon to the map and context
 	icons.set(exportName, icon);
+	ctx.addIcon(icon);
 	status.suffixText = `${i} / ${entries.length}`;
 }
 
@@ -77,14 +102,12 @@ status.succeed("Reading icons");
 /**
  * Transform all of the icons against each transformer.
  */
-
 const transformers = [
 	new MetadataTransformer(),
 	new ReactTransformer(),
 	new StringsTransformer(),
 ];
 
-const ctx = new TransformerContext();
 for (const transformer of transformers) {
 	const status = ora(transformer.name).start();
 

@@ -1,32 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconNotificationOff = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const NotificationOff = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path
-				fillRule="evenodd"
-				d="M2.22 21.78a.75.75 0 0 1 0-1.06l18.5-18.5a.75.75 0 1 1 1.06 1.06l-4.023 4.024C17.915 7.842 18 8.41 18 9v3l1.414 1.414A2 2 0 0 1 20 14.828V16a2 2 0 0 1-2 2h-2.127a4 4 0 0 1-7.746 0H7.061l-3.78 3.78a.75.75 0 0 1-1.061 0m6.34-5.28H18a.5.5 0 0 0 .5-.5v-1.172a.5.5 0 0 0-.146-.353l-1.415-1.414A1.5 1.5 0 0 1 16.5 12V9a4 4 0 0 0-.02-.42zM9.71 18a2.5 2.5 0 0 0 4.582 0z"
-				clipRule="evenodd"
-			/>
-			<path d="M4.125 16.696 5.5 15.321v-.493a.5.5 0 0 1 .146-.353l1.415-1.414A1.5 1.5 0 0 0 7.5 12V9a4.5 4.5 0 0 1 7.591-3.27l1.061-1.061A6 6 0 0 0 6 9v3l-1.414 1.414A2 2 0 0 0 4 14.828V16c0 .245.044.48.125.696" />
+			<path fillRule="evenodd" d="M2.21967 21.7803C1.92678 21.4874 1.92678 21.0126 2.21967 20.7197L20.7197 2.21967C21.0126 1.92678 21.4874 1.92678 21.7803 2.21967C22.0732 2.51256 22.0732 2.98744 21.7803 3.28033L17.7569 7.30378C17.9151 7.84165 18 8.41091 18 9V12L19.4142 13.4142C19.7893 13.7893 20 14.298 20 14.8284V16C20 17.1046 19.1046 18 18 18H15.873C15.6958 18.686 15.338 19.3189 14.8284 19.8284C14.0783 20.5786 13.0609 21 12 21C10.9391 21 9.92172 20.5786 9.17157 19.8284C8.66203 19.3189 8.30416 18.686 8.12701 18H7.06066L3.28033 21.7803C2.98744 22.0732 2.51256 22.0732 2.21967 21.7803ZM8.56066 16.5H18C18.2761 16.5 18.5 16.2761 18.5 16V14.8284C18.5 14.6958 18.4473 14.5686 18.3536 14.4749L16.9393 13.0607C16.658 12.7794 16.5 12.3978 16.5 12V9C16.5 8.85838 16.4935 8.71828 16.4807 8.58L8.56066 16.5ZM9.70871 18C9.83253 18.2837 10.0091 18.5447 10.2322 18.7678C10.7011 19.2366 11.337 19.5 12 19.5C12.663 19.5 13.2989 19.2366 13.7678 18.7678C13.9909 18.5447 14.1675 18.2837 14.2913 18H9.70871Z" clipRule="evenodd" /><path d="M4.12457 16.6964L5.5 15.3209V14.8284C5.5 14.6958 5.55268 14.5686 5.64645 14.4749L7.06066 13.0607C7.34196 12.7794 7.5 12.3978 7.5 12V9C7.5 6.51472 9.51472 4.5 12 4.5C13.1971 4.5 14.285 4.96743 15.0912 5.72974L16.1522 4.66876C15.0743 3.63516 13.6113 3 12 3C8.68629 3 6 5.68629 6 9V12L4.58579 13.4142C4.21071 13.7893 4 14.298 4 14.8284V16C4 16.2449 4.04402 16.4795 4.12457 16.6964Z" />
 		</svg>
 	);
 };
 
-IconNotificationOff.iconName = "notification-off";
+NotificationOff.iconName = "notification-off";
 
-export default IconNotificationOff;
+export default NotificationOff;

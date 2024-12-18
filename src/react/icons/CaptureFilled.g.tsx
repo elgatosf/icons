@@ -1,32 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconCaptureFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const CaptureFilled = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="M2 2.75A.75.75 0 0 1 2.75 2h2.5a.75.75 0 0 1 0 1.5H3.5v1.75a.75.75 0 0 1-1.5 0zm0 18.5v-2.5a.75.75 0 0 1 1.5 0v1.75h1.75a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75m16 0c0 .414.336.75.75.75h2.5a.75.75 0 0 0 .75-.75v-2.5a.75.75 0 0 0-1.5 0v1.75h-1.75a.75.75 0 0 0-.75.75m4-18.5v2.5a.75.75 0 0 1-1.5 0V3.5h-1.75a.75.75 0 0 1 0-1.5h2.5a.75.75 0 0 1 .75.75M13.5 12a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0" />
-			<path
-				fillRule="evenodd"
-				d="m8 6.5.703-1.055A1 1 0 0 1 9.535 5h4.93a1 1 0 0 1 .832.445L16 6.5h2a2 2 0 0 1 2 2V16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8.5a2 2 0 0 1 2-2zm7 5.5a3 3 0 1 0-6 0 3 3 0 0 0 6 0"
-				clipRule="evenodd"
-			/>
+			<path d="M2 2.75C2 2.33579 2.33579 2 2.75 2H5.25C5.66421 2 6 2.33579 6 2.75C6 3.16421 5.66421 3.5 5.25 3.5H3.5V5.25C3.5 5.66421 3.16421 6 2.75 6C2.33579 6 2 5.66421 2 5.25V2.75Z" /><path d="M2 21.25V18.75C2 18.3358 2.33579 18 2.75 18C3.16421 18 3.5 18.3358 3.5 18.75L3.5 20.5H5.25C5.66421 20.5 6 20.8358 6 21.25C6 21.6642 5.66421 22 5.25 22H2.75C2.55109 22 2.36032 21.921 2.21967 21.7803C2.07902 21.6397 2 21.4489 2 21.25Z" /><path d="M18 21.25C18 21.6642 18.3358 22 18.75 22H21.25C21.4489 22 21.6397 21.921 21.7803 21.7803C21.921 21.6397 22 21.4489 22 21.25V18.75C22 18.3358 21.6642 18 21.25 18C20.8358 18 20.5 18.3358 20.5 18.75V20.5H18.75C18.3358 20.5 18 20.8358 18 21.25Z" /><path d="M22 2.75V5.25C22 5.66421 21.6642 6 21.25 6C20.8358 6 20.5 5.66421 20.5 5.25V3.5L18.75 3.5C18.3358 3.5 18 3.16421 18 2.75C18 2.33579 18.3358 2 18.75 2H21.25C21.6642 2 22 2.33579 22 2.75Z" /><path d="M13.5 12C13.5 11.1716 12.8284 10.5 12 10.5C11.1716 10.5 10.5 11.1716 10.5 12C10.5 12.8284 11.1716 13.5 12 13.5C12.8284 13.5 13.5 12.8284 13.5 12Z" /><path fillRule="evenodd" d="M8 6.5L8.70313 5.4453C8.8886 5.1671 9.20083 5 9.53518 5H14.4648C14.7992 5 15.1114 5.1671 15.2969 5.4453L16 6.5H18C19.1046 6.5 20 7.39543 20 8.5V16C20 17.1046 19.1046 18 18 18H6C4.89543 18 4 17.1046 4 16V8.5C4 7.39543 4.89543 6.5 6 6.5H8ZM15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12Z" clipRule="evenodd" />
 		</svg>
 	);
 };
 
-IconCaptureFilled.iconName = "capture--filled";
+CaptureFilled.iconName = "capture--filled";
 
-export default IconCaptureFilled;
+export default CaptureFilled;

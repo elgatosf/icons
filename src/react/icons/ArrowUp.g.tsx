@@ -1,27 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconArrowUp = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const ArrowUp = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="M16.72 9.78a.75.75 0 1 0 1.06-1.06l-5.25-5.25a.75.75 0 0 0-1.06 0L6.22 8.72a.75.75 0 0 0 1.06 1.06l3.97-3.97v14.444a.75.75 0 0 0 1.5 0V5.811l3.97 3.97Z" />
+			<path d="M12 21C12.4142 21 12.75 20.6642 12.75 20.25V5.81066L17.7197 10.7803C18.0126 11.0732 18.4874 11.0732 18.7803 10.7803C19.0732 10.4874 19.0732 10.0126 18.7803 9.71967L12.5303 3.46967C12.2374 3.17678 11.7626 3.17678 11.4697 3.46967L5.21967 9.71967C4.92678 10.0126 4.92678 10.4874 5.21967 10.7803C5.51256 11.0732 5.98744 11.0732 6.28033 10.7803L11.25 5.81066V20.25C11.25 20.6642 11.5858 21 12 21Z" />
 		</svg>
 	);
 };
 
-IconArrowUp.iconName = "arrow-up";
+ArrowUp.iconName = "arrow-up";
 
-export default IconArrowUp;
+export default ArrowUp;

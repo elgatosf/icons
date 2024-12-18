@@ -1,37 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconLogo4Kcu = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const Logo4kcu = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path
-				fillRule="evenodd"
-				d="M10.185 14.185h.828v-1.042h-.828V8.045H8.01l-1.9 4.877v1.263h2.55V16h1.525zm-1.45-5.081v4.05H7.264z"
-				clipRule="evenodd"
-			/>
-			<path d="M15.643 16h1.906l-2.191-4.42 2.057-3.535h-1.88l-1.826 3.62zm-3.642 0h1.665V8.045h-1.665z" />
-			<path
-				fillRule="evenodd"
-				d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10m-1.5 0a8.5 8.5 0 1 1-17 0 8.5 8.5 0 0 1 17 0"
-				clipRule="evenodd"
-			/>
+			<path fillRule="evenodd" d="M10.1855 14.1846H11.0127V13.1426H10.1855V8.04541H8.01025L6.10889 12.9224V14.1846H8.66016V16H10.1855V14.1846ZM8.73535 9.10352V13.1533H7.26367L8.73535 9.10352Z" clipRule="evenodd" /><path d="M15.6426 16H17.5493L15.3579 11.5796L17.415 8.04541H15.5352L13.709 11.6655L15.6426 16Z" /><path d="M12.001 16H13.666V8.04541H12.001V16Z" /><path fillRule="evenodd" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20.5 12C20.5 16.6944 16.6944 20.5 12 20.5C7.30558 20.5 3.5 16.6944 3.5 12C3.5 7.30558 7.30558 3.5 12 3.5C16.6944 3.5 20.5 7.30558 20.5 12Z" clipRule="evenodd" />
 		</svg>
 	);
 };
 
-IconLogo4Kcu.iconName = "logo4-kcu";
+Logo4kcu.iconName = "logo4kcu";
 
-export default IconLogo4Kcu;
+export default Logo4kcu;

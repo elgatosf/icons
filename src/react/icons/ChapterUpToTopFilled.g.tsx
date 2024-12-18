@@ -1,32 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconChapterUpToTopFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const ChapterUpToTopFilled = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="M14 3.75a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 0 1.5h-5.5a.75.75 0 0 1-.75-.75m0 5.5a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 0 1.5h-5.5a.75.75 0 0 1-.75-.75m-11 5.5a.75.75 0 0 1 .75-.75h8.272a6.5 6.5 0 0 0-.709 1.5H3.75a.75.75 0 0 1-.75-.75m8.845 5.957a6.5 6.5 0 0 1-.53-1.204l-.065-.003h-7.5a.75.75 0 0 0 0 1.5h7.5a.75.75 0 0 0 .595-.293M3 5a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-			<path
-				fillRule="evenodd"
-				d="M23 17.5a5.5 5.5 0 1 0-11 0 5.5 5.5 0 0 0 11 0m-5.854-.354-2 2a.5.5 0 0 0 .708.708l1.646-1.647 1.646 1.647a.5.5 0 0 0 .708-.708l-2-2a.5.5 0 0 0-.708 0M15 15.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5"
-				clipRule="evenodd"
-			/>
+			<path d="M14 3.75C14 3.33579 14.3358 3 14.75 3H20.25C20.6642 3 21 3.33579 21 3.75C21 4.16421 20.6642 4.5 20.25 4.5H14.75C14.3358 4.5 14 4.16421 14 3.75Z" /><path d="M14 9.25C14 8.83579 14.3358 8.5 14.75 8.5H20.25C20.6642 8.5 21 8.83579 21 9.25C21 9.66421 20.6642 10 20.25 10H14.75C14.3358 10 14 9.66421 14 9.25Z" /><path d="M3 14.75C3 14.3358 3.33579 14 3.75 14H12.0218C11.7253 14.4632 11.4858 14.9665 11.3135 15.5H3.75C3.33579 15.5 3 15.1642 3 14.75Z" /><path d="M11.8448 20.7069C11.6293 20.3276 11.4509 19.9246 11.3144 19.5027C11.2932 19.5009 11.2717 19.5 11.25 19.5H3.75C3.33579 19.5 3 19.8358 3 20.25C3 20.6642 3.33579 21 3.75 21H11.25C11.4923 21 11.7077 20.8851 11.8448 20.7069Z" /><path d="M3 5C3 3.89543 3.89543 3 5 3H8C9.10457 3 10 3.89543 10 5V8C10 9.10457 9.10457 10 8 10H5C3.89543 10 3 9.10457 3 8V5Z" /><path fillRule="evenodd" d="M23 17.5C23 14.4624 20.5376 12 17.5 12C14.4624 12 12 14.4624 12 17.5C12 20.5376 14.4624 23 17.5 23C20.5376 23 23 20.5376 23 17.5ZM17.1464 17.1464L15.1464 19.1464C14.9512 19.3417 14.9512 19.6583 15.1464 19.8536C15.3417 20.0488 15.6583 20.0488 15.8536 19.8536L17.5 18.2071L19.1464 19.8536C19.3417 20.0488 19.6583 20.0488 19.8536 19.8536C20.0488 19.6583 20.0488 19.3417 19.8536 19.1464L17.8536 17.1464C17.6583 16.9512 17.3417 16.9512 17.1464 17.1464ZM15 15.5C15 15.2239 15.2239 15 15.5 15H19.5C19.7761 15 20 15.2239 20 15.5C20 15.7761 19.7761 16 19.5 16H15.5C15.2239 16 15 15.7761 15 15.5Z" clipRule="evenodd" />
 		</svg>
 	);
 };
 
-IconChapterUpToTopFilled.iconName = "chapter-up-to-top--filled";
+ChapterUpToTopFilled.iconName = "chapter-up-to-top--filled";
 
-export default IconChapterUpToTopFilled;
+export default ChapterUpToTopFilled;

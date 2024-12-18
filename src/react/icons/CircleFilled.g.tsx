@@ -1,45 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconCircleFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
-	switch (props?.size) {
-		case "s":
-			return (
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 16 16"
-					width={size}
-					height={size}
-					aria-label={label}
-					role="img"
-					{...props}
-				>
-					<path fill="currentColor" d="M15 8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
-				</svg>
-			);
-		default:
-			return (
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="currentColor"
-					viewBox="0 0 24 24"
-					width={size}
-					height={size}
-					aria-label={label}
-					role="img"
-					{...props}
-				>
-					<path d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10" />
-				</svg>
-			);
-	}
+const CircleFilled = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			fill="currentColor"
+			viewBox="0 0 24 24"
+			width={iconSize}
+			height={iconSize}
+			aria-label={label}
+			role="img"
+			{...props}
+		>
+			<path d="M30 16C30 23.732 23.732 30 16 30C8.26801 30 2 23.732 2 16C2 8.26801 8.26801 2 16 2C23.732 2 30 8.26801 30 16Z" />
+		</svg>
+	);
 };
 
-IconCircleFilled.iconName = "circle--filled";
+CircleFilled.iconName = "circle--filled";
 
-export default IconCircleFilled;
+export default CircleFilled;

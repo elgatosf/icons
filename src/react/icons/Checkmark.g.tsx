@@ -1,27 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconCheckmark = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const Checkmark = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="M19.78 7.22a.75.75 0 0 1 0 1.06l-9.5 9.5a.75.75 0 0 1-1.06 0l-5-5a.75.75 0 1 1 1.06-1.06l4.47 4.47 8.97-8.97a.75.75 0 0 1 1.06 0" />
+			<path d="M19.7803 7.21967C20.0732 7.51256 20.0732 7.98744 19.7803 8.28033L10.2803 17.7803C9.98744 18.0732 9.51256 18.0732 9.21967 17.7803L4.21967 12.7803C3.92678 12.4874 3.92678 12.0126 4.21967 11.7197C4.51256 11.4268 4.98744 11.4268 5.28033 11.7197L9.75 16.1893L18.7197 7.21967C19.0126 6.92678 19.4874 6.92678 19.7803 7.21967Z" />
 		</svg>
 	);
 };
 
-IconCheckmark.iconName = "checkmark";
+Checkmark.iconName = "checkmark";
 
-export default IconCheckmark;
+export default Checkmark;

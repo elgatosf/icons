@@ -1,27 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconMicrophoneOffFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const MicrophoneOffFilled = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="M2.22 21.78a.75.75 0 0 1 0-1.06l18.5-18.5a.75.75 0 1 1 1.06 1.06L15 10.06V12a3 3 0 0 1-4.524 2.585l-1.083 1.083A4.5 4.5 0 0 0 16.5 12a.75.75 0 0 1 1.5 0 6 6 0 0 1-5.25 5.953V20.5h1.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5h1.5v-2.547a6 6 0 0 1-2.929-1.213l-5.04 5.04a.75.75 0 0 1-1.061 0m4.257-7.436 1.177-1.177A4.5 4.5 0 0 1 7.5 12 .75.75 0 0 0 6 12a6 6 0 0 0 .477 2.344M9 5v6.82l6-6V5a3 3 0 1 0-6 0" />
+			<path d="M2.21967 21.7803C1.92678 21.4874 1.92678 21.0126 2.21967 20.7197L20.7197 2.21967C21.0126 1.92678 21.4874 1.92678 21.7803 2.21967C22.0732 2.51256 22.0732 2.98744 21.7803 3.28033L16 9.06066V12C16 14.2091 14.2091 16 12 16C11.1665 16 10.3925 15.745 9.75178 15.3089L8.67756 16.3831C9.62812 17.1037 10.7936 17.5 12 17.5C13.4587 17.5 14.8576 16.9205 15.8891 15.8891C16.9205 14.8576 17.5 13.4587 17.5 12C17.5 11.5858 17.8358 11.25 18.25 11.25C18.6642 11.25 19 11.5858 19 12C19 13.8565 18.2625 15.637 16.9497 16.9497C15.815 18.0845 14.3307 18.7894 12.75 18.9597V20.5H15.25C15.6642 20.5 16 20.8358 16 21.25C16 21.6642 15.6642 22 15.25 22H8.75C8.33579 22 8 21.6642 8 21.25C8 20.8358 8.33579 20.5 8.75 20.5H11.25V18.9597C9.91721 18.8161 8.65302 18.2925 7.60906 17.4516L3.28033 21.7803C2.98744 22.0732 2.51256 22.0732 2.21967 21.7803Z" /><path d="M5.72288 15.098L6.86104 13.9599C6.62458 13.3399 6.5 12.6764 6.5 12C6.5 11.5858 6.16421 11.25 5.75 11.25C5.33579 11.25 5 11.5858 5 12C5 13.0847 5.25175 14.1434 5.72288 15.098Z" /><path d="M8.07031 12.7506L15.8629 4.958C15.4044 3.25412 13.8487 2 12 2C9.79086 2 8 3.79086 8 6V12C8 12.2566 8.02415 12.5075 8.07031 12.7506Z" />
 		</svg>
 	);
 };
 
-IconMicrophoneOffFilled.iconName = "microphone-off--filled";
+MicrophoneOffFilled.iconName = "microphone-off--filled";
 
-export default IconMicrophoneOffFilled;
+export default MicrophoneOffFilled;

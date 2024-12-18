@@ -3,11 +3,11 @@
  */
 export const sizeMap = {
 	s: 16,
-	m: 24,
-	l: 32,
+	m: 20,
+	l: 24,
 } as const;
 
 /**
  * Size of an icon, denoted as a shirt size.
  */
-export type Size = "s" | "m" | "l";
+export type Size = keyof typeof sizeMap;

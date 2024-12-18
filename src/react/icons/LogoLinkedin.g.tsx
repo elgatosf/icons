@@ -1,27 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconLogoLinkedin = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const LogoLinkedin = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="M19.635 3H4.365C3.682 3 3.085 3.6 3 4.286v15.428C3 20.4 3.597 21 4.365 21h15.27c.683 0 1.28-.6 1.365-1.286V4.286C21 3.6 20.403 3 19.635 3M8.375 18.343H5.73V9.77h2.645v8.572ZM7.01 8.57a1.533 1.533 0 0 1-1.536-1.54c0-.858.682-1.543 1.536-1.543.853 0 1.535.685 1.535 1.543S7.863 8.572 7.01 8.572Zm11.346 9.772H15.71v-4.2c0-1.029 0-2.314-1.365-2.314s-1.62 1.114-1.62 2.228v4.286H10.08V9.77h2.559v1.2c.512-.857 1.45-1.457 2.474-1.371 2.73 0 3.156 1.8 3.156 4.114l.086 4.629Z" />
+			<path d="M19.6354 3H4.36496C3.68248 3 3.08531 3.6 3 4.28571V19.7143C3 20.4 3.59717 21 4.36496 21H19.6354C20.3179 21 20.9151 20.4 21.0004 19.7143V4.28571C21.0004 3.6 20.4032 3 19.6354 3ZM8.37452 18.3429H5.72992V9.77143H8.37452V18.3429ZM7.00957 8.57143C6.15647 8.57143 5.47399 7.88571 5.47399 7.02857C5.47399 6.17143 6.15647 5.48571 7.00957 5.48571C7.86267 5.48571 8.54515 6.17143 8.54515 7.02857C8.54515 7.88571 7.86267 8.57143 7.00957 8.57143ZM18.3558 18.3429H15.7112V14.1429C15.7112 13.1143 15.7112 11.8286 14.3462 11.8286C12.9813 11.8286 12.7253 12.9429 12.7253 14.0571V18.3429H10.0807V9.77143H12.64V10.9714C13.1519 10.1143 14.0903 9.51429 15.114 9.6C17.8439 9.6 18.2705 11.4 18.2705 13.7143L18.3558 18.3429Z" />
 		</svg>
 	);
 };
 
-IconLogoLinkedin.iconName = "logo-linkedin";
+LogoLinkedin.iconName = "logo-linkedin";
 
-export default IconLogoLinkedin;
+export default LogoLinkedin;

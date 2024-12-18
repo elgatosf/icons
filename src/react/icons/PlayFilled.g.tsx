@@ -1,27 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconPlayFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const PlayFilled = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="M20 10.268c1.333.77 1.333 2.694 0 3.464L8 20.66c-1.333.77-3-.192-3-1.732V5.072C5 3.532 6.667 2.57 8 3.34z" />
+			<path d="M20 10.268C21.3333 11.0378 21.3333 12.9623 20 13.7321L8 20.6603C6.66667 21.4301 5 20.4678 5 18.9282L5 5.07183C5 3.53223 6.66667 2.56998 8 3.33978L20 10.268Z" />
 		</svg>
 	);
 };
 
-IconPlayFilled.iconName = "play--filled";
+PlayFilled.iconName = "play--filled";
 
-export default IconPlayFilled;
+export default PlayFilled;

@@ -1,39 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconHotkey = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const Hotkey = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="M6 7.25a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5A.75.75 0 0 1 6 7.25" />
-			<path
-				fillRule="evenodd"
-				d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm2-.5h14a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 1 .5-.5"
-				clipRule="evenodd"
-			/>
-			<path d="M15.75 16.5a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 0-1.5z" />
-			<path
-				fillRule="evenodd"
-				d="M12 15a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2zm2-.5h5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5"
-				clipRule="evenodd"
-			/>
-			<path d="M3.75 16a.75.75 0 0 0 0 1.5h2v2a.75.75 0 0 0 1.5 0v-2h2a.75.75 0 0 0 0-1.5h-2v-2a.75.75 0 0 0-1.5 0v2z" />
+			<path d="M6 6.75C6 6.33579 6.33579 6 6.75 6H11.25C11.6642 6 12 6.33579 12 6.75C12 7.16421 11.6642 7.5 11.25 7.5H6.75C6.33579 7.5 6 7.16421 6 6.75Z" /><path fillRule="evenodd" d="M3 5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V9C21 10.1046 20.1046 11 19 11H5C3.89543 11 3 10.1046 3 9V5ZM5 4.5H19C19.2761 4.5 19.5 4.72386 19.5 5V9C19.5 9.27614 19.2761 9.5 19 9.5H5C4.72386 9.5 4.5 9.27614 4.5 9V5C4.5 4.72386 4.72386 4.5 5 4.5Z" clipRule="evenodd" /><path d="M15.75 16C15.3358 16 15 16.3358 15 16.75C15 17.1642 15.3358 17.5 15.75 17.5H17.25C17.6642 17.5 18 17.1642 18 16.75C18 16.3358 17.6642 16 17.25 16H15.75Z" /><path fillRule="evenodd" d="M12 15C12 13.8954 12.8954 13 14 13H19C20.1046 13 21 13.8954 21 15V19C21 20.1046 20.1046 21 19 21H14C12.8954 21 12 20.1046 12 19V15ZM14 14.5H19C19.2761 14.5 19.5 14.7239 19.5 15V19C19.5 19.2761 19.2761 19.5 19 19.5H14C13.7239 19.5 13.5 19.2761 13.5 19V15C13.5 14.7239 13.7239 14.5 14 14.5Z" clipRule="evenodd" /><path d="M3.75 16C3.33579 16 3 16.3358 3 16.75C3 17.1642 3.33579 17.5 3.75 17.5H5.75V19.5C5.75 19.9142 6.08579 20.25 6.5 20.25C6.91421 20.25 7.25 19.9142 7.25 19.5V17.5H9.25C9.66421 17.5 10 17.1642 10 16.75C10 16.3358 9.66421 16 9.25 16H7.25V14C7.25 13.5858 6.91421 13.25 6.5 13.25C6.08579 13.25 5.75 13.5858 5.75 14V16H3.75Z" />
 		</svg>
 	);
 };
 
-IconHotkey.iconName = "hotkey";
+Hotkey.iconName = "hotkey";
 
-export default IconHotkey;
+export default Hotkey;

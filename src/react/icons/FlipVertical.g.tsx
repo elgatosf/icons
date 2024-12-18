@@ -1,38 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconFlipVertical = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const FlipVertical = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path
-				fillRule="evenodd"
-				d="M6.057 3.463A.75.75 0 0 1 6.75 3h10.5a.75.75 0 0 1 .53 1.28l-5.25 5.25a.75.75 0 0 1-1.06 0L6.22 4.28a.75.75 0 0 1-.163-.817M8.561 4.5 12 7.94l3.44-3.44z"
-				clipRule="evenodd"
-			/>
-			<path d="M16.5 11.25a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1 0-1.5zm4.75.75a.75.75 0 0 0-.75-.75h-1a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 .75-.75m-13.75.75a.75.75 0 0 1 0-1.5h1a.75.75 0 0 1 0 1.5zM2.75 12c0 .414.336.75.75.75h1a.75.75 0 0 0 0-1.5h-1a.75.75 0 0 0-.75.75" />
-			<path
-				fillRule="evenodd"
-				d="M6.057 20.537A.75.75 0 0 0 6.75 21h10.5a.75.75 0 0 0 .53-1.28l-5.25-5.25a.75.75 0 0 0-1.06 0l-5.25 5.25a.75.75 0 0 0-.163.817M8.561 19.5 12 16.06l3.44 3.44z"
-				clipRule="evenodd"
-			/>
-			<path d="M13.25 12a.75.75 0 0 0-.75-.75h-1a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 .75-.75" />
+			<path d="M20.25 12.75C20.6642 12.75 21 12.4142 21 12C21 11.5858 20.6642 11.25 20.25 11.25L3.75 11.25C3.33579 11.25 3 11.5858 3 12C3 12.4142 3.33579 12.75 3.75 12.75L20.25 12.75Z" /><path fillRule="evenodd" d="M6.75001 3C6.44666 3 6.17318 3.18273 6.0571 3.46299C5.94101 3.74324 6.00518 4.06583 6.21968 4.28033L11.4697 9.53033C11.7626 9.82322 12.2374 9.82322 12.5303 9.53033L17.7803 4.28033C17.9948 4.06583 18.059 3.74324 17.9429 3.46299C17.8268 3.18273 17.5534 3 17.25 3L6.75001 3ZM12 7.93934L8.56067 4.5L15.4393 4.5L12 7.93934Z" clipRule="evenodd" /><path fillRule="evenodd" d="M6.75001 21C6.44666 21 6.17318 20.8173 6.0571 20.537C5.94101 20.2568 6.00518 19.9342 6.21968 19.7197L11.4697 14.4697C11.7626 14.1768 12.2374 14.1768 12.5303 14.4697L17.7803 19.7197C17.9948 19.9342 18.059 20.2568 17.9429 20.537C17.8268 20.8173 17.5534 21 17.25 21L6.75001 21ZM12 16.0607L8.56067 19.5L15.4393 19.5L12 16.0607Z" clipRule="evenodd" />
 		</svg>
 	);
 };
 
-IconFlipVertical.iconName = "flip-vertical";
+FlipVertical.iconName = "flip-vertical";
 
-export default IconFlipVertical;
+export default FlipVertical;

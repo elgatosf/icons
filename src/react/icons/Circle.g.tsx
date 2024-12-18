@@ -1,54 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconCircle = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
-	switch (props?.size) {
-		case "s":
-			return (
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 16 16"
-					width={size}
-					height={size}
-					aria-label={label}
-					role="img"
-					{...props}
-				>
-					<path
-						fill="currentColor"
-						fillRule="evenodd"
-						d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14m0-1A6 6 0 1 0 8 2a6 6 0 0 0 0 12"
-						clipRule="evenodd"
-					/>
-				</svg>
-			);
-		default:
-			return (
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="currentColor"
-					viewBox="0 0 24 24"
-					width={size}
-					height={size}
-					aria-label={label}
-					role="img"
-					{...props}
-				>
-					<path
-						fillRule="evenodd"
-						d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10m0-1.5a8.5 8.5 0 1 0 0-17 8.5 8.5 0 0 0 0 17"
-						clipRule="evenodd"
-					/>
-				</svg>
-			);
-	}
+const Circle = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			fill="currentColor"
+			viewBox="0 0 24 24"
+			width={iconSize}
+			height={iconSize}
+			aria-label={label}
+			role="img"
+			{...props}
+		>
+			<path fillRule="evenodd" d="M16 30C23.732 30 30 23.732 30 16C30 8.26801 23.732 2 16 2C8.26801 2 2 8.26801 2 16C2 23.732 8.26801 30 16 30ZM16 28C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28Z" clipRule="evenodd" />
+		</svg>
+	);
 };
 
-IconCircle.iconName = "circle";
+Circle.iconName = "circle";
 
-export default IconCircle;
+export default Circle;

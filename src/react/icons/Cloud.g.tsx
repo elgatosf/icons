@@ -1,31 +1,30 @@
-import type { SVGProps } from "react";
+import { type SVGProps } from "react";
+import { type Size } from "../../metadata/index.js";
 import { sizeMap } from "../../metadata/sizing.js";
-import type { IconProps } from "../types.js";
 
-const IconCloud = (props: IconProps & SVGProps<SVGSVGElement>) => {
-	const size = sizeMap[props?.size ?? "m"];
-	const label = props?.label ?? "Icon";
+type IconProps = {
+	size?: Size;
+	label?: string;
+} & SVGProps<SVGSVGElement>;
 
+const Cloud = ({ size = "m", label = "Icon", ...props }: IconProps) => {
+	const iconSize = sizeMap[size];
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 24 24"
-			width={size}
-			height={size}
+			width={iconSize}
+			height={iconSize}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path
-				fillRule="evenodd"
-				d="m17.04 11.344-.044-1.055a5 5 0 0 0-9.992 0l-.043 1.055-1.008.315A3.502 3.502 0 0 0 7 18.5h10a3.5 3.5 0 0 0 1.047-6.841zM5.505 10.227A5.002 5.002 0 0 0 7 20h10a5 5 0 0 0 1.494-9.773 6.5 6.5 0 0 0-12.988 0Z"
-				clipRule="evenodd"
-			/>
+			<path fillRule="evenodd" d="M17.0392 11.3437L16.9957 10.289C16.8857 7.62605 14.6907 5.5 12 5.5C9.30926 5.5 7.11431 7.62605 7.00435 10.289L6.9608 11.3437L5.9534 11.6587C4.53004 12.1039 3.5 13.4336 3.5 15C3.5 16.933 5.067 18.5 7 18.5H17C18.933 18.5 20.5 16.933 20.5 15C20.5 13.4336 19.47 12.1039 18.0466 11.6587L17.0392 11.3437ZM5.50562 10.2271C3.47417 10.8625 2 12.7591 2 15C2 17.7614 4.23858 20 7 20H17C19.7614 20 22 17.7614 22 15C22 12.7591 20.5258 10.8625 18.4944 10.2271C18.3514 6.76384 15.4984 4 12 4C8.50156 4 5.64864 6.76384 5.50562 10.2271Z" clipRule="evenodd" />
 		</svg>
 	);
 };
 
-IconCloud.iconName = "cloud";
+Cloud.iconName = "cloud";
 
-export default IconCloud;
+export default Cloud;
