@@ -1,0 +1,117 @@
+name: Sync Figma Icons
+
+on:
+  repository_dispatch:
+    types: [figma_publish]
+  workflow_dispatch:
+
+env:
+  FIGMA_ACCESS_TOKEN: ${{ secrets.FIGMA_ACCESS_TOKEN }}
+  FIGMA_FILE_ID: ${{ secrets.FIGMA_FILE_ID }}
+
+jobs:
+  sync-icons:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Event Type
+        id: check_event
+        run: |
+          if [[ "${{ github.event.client_payload.event_type }}" != "LIBRARY_PUBLISH" ]]; then
+            echo "Skipping workflow as this is not a library publish event"
+            exit 78  # Neutral exit to not mark as failed
+          fi
+
+      - uses: actions/checkout@v4
+        if: success()
+        with:
+          fetch-depth: 0
+      
+      - name: Setup Node.js
+        if: success()
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        if: success()
+        run: npm ci
+        
+      - name: Sync Icons
+        if: success()
+        id: sync
+        run: |
+          npm run build:icons
+          if [ $? -eq 0 ]; then
+            echo "changes=$(git status --porcelain | wc -l)" >> $GITHUB_OUTPUT
+          else
+            echo "Failed to sync icons"
+            exit 1
+          fi
+        env:
+          FIGMA_ACCESS_TOKEN: ${{ secrets.FIGMA_ACCESS_TOKEN }}
+          FIGMA_FILE_ID: ${{ secrets.FIGMA_FILE_ID }}
+
+      - name: Transform SVGs
+        if: steps.sync.outputs.changes > 0
+        run: |
+          # Run the transform script to generate React components and strings
+          npm run transform
+          git add src/
+          
+      - name: Build Package
+        if: steps.sync.outputs.changes > 0
+        run: |
+          npm run build
+          git add dist/
+          
+      - name: Create Pull Request
+        if: steps.sync.outputs.changes > 0
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: |
+            chore: sync icons from Figma library publish
+            
+            Updates icons from Figma library changes:
+            - Syncs new and modified icons
+            - Updates SVG optimizations
+            - Updates React components and strings in src/
+            - Regenerates package files
+          title: "🔄 Sync: Update icons from Figma library publish"
+          body: |
+            ## Icon Updates from Figma Library
+            
+            This PR was automatically created by the Figma sync workflow in response to a library publish event.
+            
+            ### Figma Changes
+            **Version:** ${{ github.event.client_payload.label || 'No label provided' }}
+            **Description:** ${{ github.event.client_payload.description || 'No description provided' }}
+            **Changed by:** ${{ github.event.client_payload.triggered_by.handle || 'Unknown' }}
+            **File:** ${{ github.event.client_payload.file_name }}
+            
+            ### Changes
+            - Syncs new and modified icons from Figma library
+            - Updates SVG files with optimizations
+            - Regenerates React components and strings in src/
+            - Updates TypeScript definitions
+            - Rebuilds package files
+            
+            ### Verification
+            - [ ] Icons are correctly exported from Figma library
+            - [ ] SVG files are properly optimized
+            - [ ] React components and strings in src/ are up to date
+            - [ ] Package builds successfully
+            - [ ] All exports are working
+            
+            ### Preview
+            You can preview the changes by checking the modified files in this PR.
+            
+            Triggered by Figma library publish event at ${{ github.event.client_payload.timestamp }}.
+          branch: figma-icon-sync
+          base: main
+          labels: |
+            figma-sync
+            automated-pr
+            library-update
+          delete-branch: true

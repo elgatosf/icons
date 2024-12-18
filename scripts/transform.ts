@@ -2,12 +2,12 @@ import { readdir, readFile } from "node:fs/promises";
 import { basename, extname, join, parse } from "node:path";
 import ora from "ora";
 
-import type { Size } from "../src/metadata/index.ts";
-import { getSvgStringMetadata } from "../src/metadata/providers.ts";
-import { type SvgIcon, TransformerContext } from "./transformer.ts";
-import { MetadataTransformer } from "./transformers/metadata.ts";
-import { ReactTransformer } from "./transformers/react.ts";
-import { StringsTransformer } from "./transformers/strings.ts";
+import type { Size } from "../src/metadata/index.js";
+import { getSvgStringMetadata } from "../src/metadata/providers.js";
+import { type SvgIcon, TransformerContext } from "./transformer.js";
+import { MetadataTransformer } from "./transformers/metadata.js";
+import { ReactTransformer } from "./transformers/react.js";
+import { StringsTransformer } from "./transformers/strings.js";
 
 const status = ora("Reading icons…").start();
 const sizes: ReadonlyMap<string, Size> = new Map([
