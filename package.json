@@ -34,6 +34,7 @@
         "build:ci": "tsc",
         "lint": "prettier . --check",
         "lint:fix": "prettier . --write --log-level warn",
+        "sync": "node --experimental-strip-types scripts/sync.ts",
         "transform": "node --experimental-strip-types scripts/transform.ts",
         "tsc": "tsc"
     },
@@ -59,12 +60,15 @@
     "prettier": "@elgato/prettier-config",
     "devDependencies": {
         "@elgato/prettier-config": "^0.2.4",
+        "@figma/rest-api-spec": "^0.22.0",
         "@svgr/core": "^8.1.0",
         "@svgr/plugin-jsx": "^8.1.0",
         "@svgr/plugin-svgo": "^8.1.0",
         "@tsconfig/node20": "^20.1.4",
         "@types/node": "^22.8.6",
         "@types/react": "^18.3.12",
+        "dotenv": "^16.4.7",
+        "figma-api": "^2.0.1-beta",
         "ora": "^8.1.1",
         "react": "^18.3.1",
         "typescript": "^5.6.3"
