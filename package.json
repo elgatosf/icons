@@ -70,11 +70,11 @@
         "@types/node": "^20.8.7",
         "@types/react": "^18.3.12",
         "@vercel/node": "^3.0.0",
-        "ora": "^7.0.1",
+        "ora": "^8.1.1",
         "react": "^18.3.1",
         "ts-node": "^10.9.2",
         "tsconfig-paths": "^4.2.0",
-        "tsx": "^3.14.0",
+        "tsx": "^4.19.2",
         "typescript": "^5.2.2"
     }
 }
