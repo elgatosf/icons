@@ -58,9 +58,9 @@ We use GitHub issues to track public bugs. Report a bug by [opening a new issue]
 
 1. Icons should follow the Elgato design system
 2. Use consistent stroke weights:
-   - 16px icons: 1.5px stroke
-   - 20px icons: 1.75px stroke
-   - 24px icons: 2px stroke
+   - 16px icons: 1px stroke
+   - 20px icons: 1px stroke
+   - 24px icons: 1.5px stroke
 3. Maintain consistent padding and alignment
 4. Use boolean operations to create clean shapes
 5. Ensure icons are pixel-perfect at their target sizes
