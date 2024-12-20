@@ -3,146 +3,103 @@ import type * as Figma from "@figma/rest-api-spec";
 import type { Size } from "../../src/metadata/sizing.ts";
 
 /**
- * Gets the metadata for all icons within a Figma document.
- * @param document The Figma document.
- * @returns The metadata of the icons, indexed by their node identifier.
+ * Metadata for an icon within a Figma file.
  */
-export function getIconMetadata(document: Figma.DocumentNode): Map<string, IconMetadata> {
-	const icons = new Map<string, IconMetadata>();
-	for (const icon of findIcons(document)) {
-		for (const variant of icon.variants) {
-			icons.set(variant.id, parseMetadata(variant, icon.parent));
-		}
-	}
-
-	return icons;
-}
-
-/**
- * Gets the icons from the Figma node.
- * @param node Node being searched.
- * @returns The icon, and its variants.
- */
-function findIcons(node: Figma.Node): IconNode[] {
-	const results: IconNode[] = [];
-
-	if (node.type === "COMPONENT_SET" && node.name.startsWith("Icon")) {
-		results.push({
-			parent: node,
-			variants: node.children.filter((child): child is Figma.ComponentNode => child.type === "COMPONENT"),
-		});
-	}
-
-	if ("children" in node && node.children) {
-		for (const child of node.children) {
-			results.push(...findIcons(child));
-		}
-	}
-
-	return results;
-}
-
-/**
- * Parses the icon metadata from a variant node.
- * @param variant Icon variant node.
- * @param parent Parent node of the icon.
- * @returns The metadata for the icon variant.
- */
-function parseMetadata(variant: Figma.ComponentNode, parent: Figma.ComponentSetNode): IconMetadata {
-	const metadata = variant.name.split(", ").reduce(
-		(data: IconMetadata, prop: string) => {
-			const [key, value] = prop.split("=").map((s) => s.trim());
-			if (key && value) {
-				data[key.toLowerCase()] = value;
-			}
-
-			return data;
-		},
-		{
-			color: false,
-			name: "",
-			size: "m",
-			style: "outlined",
-		},
-	);
-
-	metadata.size = metadata.size.toLowerCase() as IconMetadata["size"];
-	metadata.style = metadata.style.toLowerCase() as IconMetadata["style"];
-
-	if (metadata.size !== "s" && metadata.size !== "m" && metadata.size !== "l") {
-		throw new Error(`Unknown size "${metadata.size}"`);
-	}
-
-	if (metadata.style !== "filled" && metadata.style !== "outlined") {
-		throw new Error(`Unknown style "${metadata.style}"`);
-	}
-
-	metadata.name = getName(metadata, parent);
-	return metadata;
-}
-
-/**
- * Gets the filename for an icon variant.
- * @param metadata Icon metadata.
- * @param parent Parent node.
- * @returns The name.
- */
-function getName(metadata: IconMetadata, parent: Figma.ComponentSetNode): string {
-	let name = parent.name
-		.split(",")
-		.at(0)!
-		.replace(/^Icon\s*/, "") // remove "Icon" prefix
-		.replace(/(\d+)([A-Z][a-z]*)/g, "$1-$2") // handle numbers, e.g. 10Square -> 10-Square
-		.replace(/([a-z])([A-Z])/g, "$1-$2") // split words, e.g. ZoomIn -> Zoom-In
-		.toLowerCase();
-
-	if (metadata.style === "filled") {
-		name += "--filled";
-	}
-
-	if (metadata.color) {
-		name += "--color";
-	}
-
-	return name;
-}
-
-/**
- * An icon node within Figma.
- */
-type IconNode = {
-	/**
-	 * Parent node.
-	 */
-	parent: Figma.ComponentSetNode;
-
-	/**
-	 * Variants of the icon.
-	 */
-	variants: Figma.ComponentNode[];
-};
-
-/**
- * Metadata associated with the icon.
- */
-export type IconMetadata = {
+export class IconMetadata {
 	/**
 	 * Determines whether the color should be preserved.
 	 */
-	color: boolean;
+	public readonly color: boolean = false;
 
 	/**
 	 * Name of the icon.
 	 */
-	name: string;
+	public readonly name: string;
 
 	/**
 	 * Size of the icon.
 	 */
-	size: Size;
+	public readonly size: Size = "m";
 
 	/**
 	 * Style of the icon.
 	 */
-	style: "outlined" | "filled";
-};
+	public readonly style: "outlined" | "filled" = "outlined";
+
+	/**
+	 * Original node of the icon.
+	 */
+	public readonly node: Figma.ComponentNode;
+
+	/**
+	 * Initializes a new instance of the {@link IconMetadata} class.
+	 * @param node Node of the icon.
+	 * @param parentNode Parent node of the icon.
+	 */
+	constructor(node: Figma.ComponentNode, parentNode: Figma.ComponentSetNode) {
+		this.node = node;
+
+		// Parse and validate the properties from name of the node.
+		for (const prop of node.name.split(", ")) {
+			const [key, value] = prop.split("=");
+
+			switch (key.trim()) {
+				case "Color":
+					this.color = value?.trim()?.toLowerCase() === "true";
+					break;
+
+				case "Size":
+					const size = value?.trim()?.toLowerCase() || "m";
+					if (size !== "s" && size !== "m" && size !== "l") {
+						throw new Error(
+							`Failed to parse "${parentNode.name} (${node.name})": Expected size to be "S", "M", or  "L", but was "${size}"`,
+						);
+					}
+
+					this.size = value as Size;
+					break;
+
+				case "Style":
+					const style = value?.trim()?.toLowerCase() || "outlined";
+					if (style !== "outlined" && style !== "filled") {
+						throw new Error(
+							`Failed to parse "${parentNode.name} (${node.name})": Expected style to be "Outlined" or "Filled", but was "${style}"`,
+						);
+					}
+
+					this.style = style;
+					break;
+
+				default:
+					console.warn(`Unknown property "${key}=${value}" (${parentNode.name}, "${node.name}")`);
+			}
+		}
+
+		this.name = this.#parseName(parentNode);
+	}
+
+	/**
+	 * Parses the name of the icon.
+	 * @param parentNode Parent node of the icon.
+	 * @returns The icon name.
+	 */
+	#parseName(parentNode: Figma.ComponentSetNode): string {
+		let name = parentNode.name
+			.split(",")
+			.at(0)!
+			.replace(/^Icon\s*/, "") // remove "Icon" prefix
+			.replace(/(\d+)([A-Z][a-z]*)/g, "$1-$2") // handle numbers, e.g. 10Square -> 10-Square
+			.replace(/([a-z])([A-Z])/g, "$1-$2") // split words, e.g. ZoomIn -> Zoom-In
+			.toLowerCase();
+
+		if (this.style === "filled") {
+			name += "--filled";
+		}
+
+		if (this.color) {
+			name += "--color";
+		}
+
+		return name;
+	}
+}
