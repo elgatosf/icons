@@ -4,7 +4,11 @@ import { setTimeout } from "timers/promises";
 
 dotenv.config();
 
-const DEBUG_MAX_DOWNLOAD_COUNT = parseInt(process.env.DEBUG_MAX_DOWNLOAD_COUNT ?? "0");
+const DEBUG_MAX_DOWNLOAD_COUNT = (function () {
+	const value = parseInt(process.env.DEBUG_MAX_DOWNLOAD_COUNT ?? "");
+	return isNaN(value) ? undefined : value;
+})();
+
 const BATCH_SIZE = 5;
 const RETRY_MAX_COUNT = 5;
 const RETRY_THROTTLE = 1000;
