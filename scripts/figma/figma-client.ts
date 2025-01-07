@@ -9,7 +9,7 @@ const DEBUG_MAX_DOWNLOAD_COUNT = (function () {
 	return isNaN(value) ? undefined : value;
 })();
 
-const BATCH_SIZE = 5;
+const BATCH_SIZE = 25;
 const RETRY_MAX_COUNT = 5;
 const RETRY_THROTTLE = 1000;
 
