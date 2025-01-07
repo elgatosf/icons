@@ -56,7 +56,7 @@ export class IconMetadata {
 						);
 					}
 
-					this.size = value as Size;
+					this.size = value.toLowerCase() as Size;
 					break;
 
 				case "Style":
@@ -87,9 +87,12 @@ export class IconMetadata {
 		let name = parentNode.name
 			.split(",")
 			.at(0)!
-			.replace(/^Icon\s*/, "") // remove "Icon" prefix
-			.replace(/(\d+)([A-Z][a-z]*)/g, "$1-$2") // handle numbers, e.g. 10Square -> 10-Square
-			.replace(/([a-z])([A-Z])/g, "$1-$2") // split words, e.g. ZoomIn -> Zoom-In
+			// Remove "Icon" prefix.
+			.replace(/^Icon\s*/, "")
+			// Handle numbers, e.g. 10Square -> 10-Square
+			.replace(/(\d+)([A-Z][a-z]*)/g, "$1-$2")
+			// Split words, e.g. ZoomIn -> Zoom-In
+			.replace(/([a-z])([A-Z])/g, "$1-$2")
 			.toLowerCase();
 
 		if (this.style === "filled") {

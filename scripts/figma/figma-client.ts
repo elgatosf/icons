@@ -1,7 +1,7 @@
-import * as dotenv from "dotenv";
 import { Api } from "figma-api";
 import { setTimeout } from "timers/promises";
 
+const DEBUG_MAX_DOWNLOAD_COUNT: number | undefined = undefined;
 const BATCH_SIZE = 5;
 const RETRY_MAX_COUNT = 5;
 const RETRY_THROTTLE = 1000;
@@ -44,6 +44,7 @@ export class FigmaFileClient {
 	 * @returns The SVG images.
 	 */
 	public async *getSvgImages(nodeIds: string[]): AsyncGenerator<SvgImage> {
+		let count = 0;
 		let batch: RenderedImage[] = [];
 
 		// Iterate over each rendered image, and download them in batches.
@@ -55,6 +56,10 @@ export class FigmaFileClient {
 				}
 
 				batch.length = 0;
+			}
+
+			if (DEBUG_MAX_DOWNLOAD_COUNT !== undefined && ++count > DEBUG_MAX_DOWNLOAD_COUNT) {
+				break;
 			}
 		}
 
@@ -166,20 +171,3 @@ export type SvgImage = {
 	 */
 	nodeId: string;
 };
-
-// Configure the default Figma file client.
-dotenv.config();
-const { FIGMA_ACCESS_TOKEN, FIGMA_FILE_KEY } = process.env;
-
-if (FIGMA_ACCESS_TOKEN === undefined) {
-	throw new Error("Missing environment variable: FIGMA_ACCESS_TOKEN");
-}
-
-if (FIGMA_FILE_KEY === undefined) {
-	throw new Error("Missing environment variable: FIGMA_FILE_KEY");
-}
-
-/**
- * Default file client associated with the process' environment.
- */
-export const fileClient = new FigmaFileClient(FIGMA_ACCESS_TOKEN, FIGMA_FILE_KEY);
