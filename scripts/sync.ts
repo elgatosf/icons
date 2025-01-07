@@ -20,6 +20,7 @@ if (FIGMA_FILE_KEY === undefined) {
 const figmaClient = new FigmaFileClient(FIGMA_ACCESS_TOKEN, FIGMA_FILE_KEY);
 
 // Get the Figma file and icons.
+performance.mark("start");
 const file = await figmaClient.getFile();
 const icons = findIcons(file.document);
 
@@ -38,5 +39,8 @@ for await (const { nodeId, contents } of figmaClient.getSvgImages(Array.from(ico
 	status.text = `Downloading... ${++count} / ${icons.size}`;
 }
 
+performance.mark("stop");
+const { duration } = performance.measure("timing", "start", "stop");
+
 status.suffixText = "";
-status.succeed(`${icons.size} icons downloaded`);
+status.succeed(`${icons.size} icons downloaded (${new Date(duration).toISOString().slice(11, -5)})`);

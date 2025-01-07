@@ -1,7 +1,10 @@
+import * as dotenv from "dotenv";
 import { Api } from "figma-api";
 import { setTimeout } from "timers/promises";
 
-const DEBUG_MAX_DOWNLOAD_COUNT: number | undefined = undefined;
+dotenv.config();
+
+const DEBUG_MAX_DOWNLOAD_COUNT = parseInt(process.env.DEBUG_MAX_DOWNLOAD_COUNT ?? "0");
 const BATCH_SIZE = 5;
 const RETRY_MAX_COUNT = 5;
 const RETRY_THROTTLE = 1000;
