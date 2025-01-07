@@ -32,9 +32,10 @@
     "scripts": {
         "build": "npm run transform && npm run lint:fix && npm run tsc",
         "build:ci": "tsc",
+        "download": "node --experimental-strip-types scripts/download.ts",
         "lint": "prettier . --check",
         "lint:fix": "prettier . --write --log-level warn",
-        "sync": "node --experimental-strip-types scripts/sync.ts",
+        "sync": "npm run download && npm run build",
         "transform": "node --experimental-strip-types scripts/transform.ts",
         "tsc": "tsc"
     },
