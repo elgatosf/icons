@@ -2,18 +2,18 @@ import { existsSync } from "fs";
 import { rm } from "fs/promises";
 
 import { getSvgStringMetadata } from "../../src/metadata/providers.ts";
-import { type Size } from "../../src/metadata/sizing.ts";
-import type { SvgIcon } from "../transformer.ts";
-import { Transformer, type TransformerContext } from "../transformer.ts";
+import type { Size } from "../../src/metadata/sizing.ts";
+import type { SvgIcon, Transformer } from "../transformer.ts";
+import * as utils from "../utils.ts";
 
 /**
  * Transformer that exports the SVG icons as strings.
  */
-export class StringsTransformer extends Transformer {
+export class StringsTransformer implements Transformer {
 	/**
 	 * @inheritdoc
 	 */
-	public override name = "String exports";
+	public readonly name = "String exports";
 
 	/**
 	 * Catalogue of icons for each size.
@@ -27,24 +27,24 @@ export class StringsTransformer extends Transformer {
 	/**
 	 * @inheritdoc
 	 */
-	public override async finalize(ctx: TransformerContext): Promise<void> {
+	public async finalize(): Promise<void> {
 		for (const [size, { names, indexContents }] of this.#catalogues) {
 			// Ignore empty catalogues.
 			if (names.length === 0) {
 				continue;
 			}
 
-			await ctx.write(`${this.#pathOf(size)}/index.ts`, indexContents);
+			await utils.writeGeneratedFile(`${this.#pathOf(size)}/index.ts`, indexContents);
 		}
 	}
 
 	/**
 	 * @inheritdoc
 	 */
-	public override async initialize(ctx: TransformerContext): Promise<void> {
+	public async initialize(): Promise<void> {
 		// Clean up the old icons.
 		for (const [size] of this.#catalogues) {
-			const dir = ctx.resolve("src/strings", size);
+			const dir = utils.resolve("src/strings", size);
 			if (existsSync(dir)) {
 				await rm(dir, { recursive: true });
 			}
@@ -54,10 +54,10 @@ export class StringsTransformer extends Transformer {
 	/**
 	 * @inheritdoc
 	 */
-	public override async transform(ctx: TransformerContext, icon: SvgIcon): Promise<void> {
+	public async transform(icon: SvgIcon): Promise<void> {
 		for (const [size, { svg }] of icon.sizes) {
 			const str = svg.replace(/\r?\n\s*/g, "");
-			await ctx.write(
+			await utils.writeGeneratedFile(
 				`${this.#pathOf(size)}/icons/${icon.name}.ts`,
 				`const icon: string = '${str}'\nexport default icon`,
 			);

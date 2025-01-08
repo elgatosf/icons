@@ -1,5 +1,6 @@
 import type { Size } from "../../src/metadata/sizing.ts";
-import { type SvgIcon, Transformer, type TransformerContext } from "../transformer.ts";
+import type { SvgIcon, Transformer } from "../transformer.ts";
+import * as utils from "../utils.ts";
 
 /**
  * Formats the specified icons (as a partial JSON object) to the metadata's contents.
@@ -18,7 +19,7 @@ export const icons = {
 /**
  * Transformer that generates the metadata of icons.
  */
-export class MetadataTransformer extends Transformer {
+export class MetadataTransformer implements Transformer {
 	/**
 	 * String builder used to collate the icons within the metadata.
 	 */
@@ -27,19 +28,19 @@ export class MetadataTransformer extends Transformer {
 	/**
 	 * @inheritdoc
 	 */
-	public name = "Metadata";
+	public readonly name = "Metadata";
 
 	/**
 	 * @inheritdoc
 	 */
-	public override finalize(ctx: TransformerContext): Promise<void> {
-		return ctx.write("src/metadata/icons.ts", format(this.#iconsContent));
+	public finalize(): Promise<void> {
+		return utils.writeGeneratedFile("src/metadata/icons.ts", format(this.#iconsContent));
 	}
 
 	/**
 	 * @inheritdoc
 	 */
-	public override transform(ctx: TransformerContext, icon: SvgIcon): void {
+	public transform(icon: SvgIcon): void {
 		this.#iconsContent += `"${icon.name}": { sizes: ${JSON.stringify(this.#getOrderedSizes(icon))} },`;
 	}
 

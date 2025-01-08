@@ -1,6 +1,6 @@
-import { writeFile } from "fs/promises";
 import { join } from "path";
 
+import * as utils from "../utils.ts";
 import type { IconMetadata } from "./metadata";
 
 /**
@@ -12,7 +12,7 @@ export async function writeSvgFile(metadata: IconMetadata, svg: string): Promise
 	const data = optimizeSvg(svg, metadata.color);
 	const outputPath = getOutputPath(metadata);
 
-	return writeFile(outputPath, data, { encoding: "utf-8" });
+	return utils.writeFile(outputPath, data);
 }
 
 /**
@@ -34,7 +34,7 @@ function getOutputPath(metadata: IconMetadata): string {
 		}
 	};
 
-	return join(import.meta.dirname, "../../svg", getSizeDir(), `${metadata.name}.svg`);
+	return join("svg", getSizeDir(), `${metadata.name}.svg`);
 }
 
 /**

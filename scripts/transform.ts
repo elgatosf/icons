@@ -4,7 +4,7 @@ import ora from "ora";
 
 import type { Size } from "../src/metadata/index.ts";
 import { getSvgStringMetadata } from "../src/metadata/providers.ts";
-import { type SvgIcon, TransformerContext } from "./transformer.ts";
+import type { SvgIcon, Transformer } from "./transformer.ts";
 import { MetadataTransformer } from "./transformers/metadata.ts";
 import { ReactTransformer } from "./transformers/react.ts";
 import { StringsTransformer } from "./transformers/strings.ts";
@@ -78,27 +78,26 @@ status.succeed("Reading icons");
  * Transform all of the icons against each transformer.
  */
 
-const transformers = [
+const transformers: Transformer[] = [
 	new MetadataTransformer(),
 	new ReactTransformer(),
 	new StringsTransformer(),
 ];
 
-const ctx = new TransformerContext();
 for (const transformer of transformers) {
 	const status = ora(transformer.name).start();
 
 	status.suffixText = "Initializing...";
-	await transformer.initialize?.(ctx);
+	await transformer.initialize?.();
 
 	let i = 0;
 	for (const [, icon] of icons) {
-		await transformer.transform(ctx, icon);
+		await transformer.transform(icon);
 		status.suffixText = `${i++} / ${icons.size}`;
 	}
 
 	status.suffixText = "Finalizing...";
-	await transformer.finalize?.(ctx);
+	await transformer.finalize?.();
 	status.suffixText = "";
 
 	status.succeed(transformer.name);
