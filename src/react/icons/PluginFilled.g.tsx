@@ -17,11 +17,7 @@ const IconPluginFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 			role="img"
 			{...props}
 		>
-			<path
-				fillRule="evenodd"
-				d="M5 5a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1 2 2 0 1 1 0 4 1 1 0 0 0-1 1v3a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1 2 2 0 1 1 4 0 1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-3a1 1 0 0 1 1-1 2 2 0 1 0 0-4 1 1 0 0 1-1-1V7a2 2 0 0 0-2-2h-3a1 1 0 0 1-1-1 2 2 0 1 0-4 0 1 1 0 0 1-1 1z"
-				clipRule="evenodd"
-			/>
+			<path d="M4 8a2 2 0 0 1 2-2h2.5a.5.5 0 0 0 .5-.5V5a3 3 0 1 1 6 0v.5a.5.5 0 0 0 .5.5H18a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-1.5a2 2 0 0 1 2-2h.5a2 2 0 1 0 0-4H6a2 2 0 0 1-2-2z" />
 		</svg>
 	);
 };

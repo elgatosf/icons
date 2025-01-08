@@ -17,7 +17,7 @@ const IconThumbDownFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 			role="img"
 			{...props}
 		>
-			<path d="M16 4H8.055a4 4 0 0 0-3.859 2.948L2.69 12.474A2 2 0 0 0 4.619 15H10v3.695a2.305 2.305 0 0 0 4.505.687L16 14.6zm1.5 0v9H19a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" />
+			<path d="M16 4H8.055a4 4 0 0 0-3.859 2.948L2.69 12.474A2 2 0 0 0 4.619 15H10v3.695a2.305 2.305 0 0 0 4.506.687L16 14.6zM17.5 4v9H19a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" />
 		</svg>
 	);
 };

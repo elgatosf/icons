@@ -6,20 +6,23 @@ const IconHomeFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	const size = sizeMap[props?.size ?? "m"];
 	const label = props?.label ?? "Icon";
 
-	return (
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
-			viewBox="0 0 24 24"
-			width={size}
-			height={size}
-			aria-label={label}
-			role="img"
-			{...props}
-		>
-			<path d="M3 8.978A2 2 0 0 1 3.772 7.4l7-5.444a2 2 0 0 1 2.456 0l7 5.444A2 2 0 0 1 21 8.98V19a2 2 0 0 1-2 2h-3.5a2 2 0 0 1-2-2v-6h-3v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-		</svg>
-	);
+	switch (props?.size) {
+		default:
+			return (
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path d="M3 7.73c0-.461.211-.896.573-1.18l5.5-4.322a1.5 1.5 0 0 1 1.854 0l5.5 4.322A1.5 1.5 0 0 1 17 7.73v7.77a1.5 1.5 0 0 1-1.5 1.5h-3a1.5 1.5 0 0 1-1.5-1.5v-4a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v4A1.5 1.5 0 0 1 7.5 17h-3A1.5 1.5 0 0 1 3 15.5z" />
+				</svg>
+			);
+	}
 };
 
 IconHomeFilled.iconName = "home--filled";

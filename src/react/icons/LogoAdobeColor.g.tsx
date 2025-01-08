@@ -19,7 +19,7 @@ const IconLogoAdobeColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 		>
 			<path
 				fill="#FA0C00"
-				d="M9.401 3H2v17.7zM14.608 3H22v17.7zM16.715 20.7l-4.71-11.176-3.236 7.618h3.448l1.408 3.558z"
+				d="M9.4 3H2v17.7zM14.608 3H22v17.7zM16.715 20.7l-4.71-11.176-3.236 7.618h3.448l1.407 3.558z"
 			/>
 		</svg>
 	);

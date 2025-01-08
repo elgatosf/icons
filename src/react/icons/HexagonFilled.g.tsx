@@ -19,7 +19,7 @@ const IconHexagonFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 		>
 			<path
 				fillRule="evenodd"
-				d="M13 2.185a2 2 0 0 0-2 0L4 6.226a2 2 0 0 0-1 1.732v8.083a2 2 0 0 0 1 1.732l7 4.042a2 2 0 0 0 2 0l7-4.042a2 2 0 0 0 1-1.732V7.958a2 2 0 0 0-1-1.732z"
+				d="M13 2.185a2 2 0 0 0-2 0L4 6.227a2 2 0 0 0-1 1.732v8.083a2 2 0 0 0 1 1.731l7 4.042a2 2 0 0 0 2 0l7-4.042a2 2 0 0 0 1-1.732V7.96a2 2 0 0 0-1-1.732z"
 				clipRule="evenodd"
 			/>
 		</svg>

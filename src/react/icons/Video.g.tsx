@@ -6,29 +6,32 @@ const IconVideo = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	const size = sizeMap[props?.size ?? "m"];
 	const label = props?.label ?? "Icon";
 
-	return (
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
-			viewBox="0 0 24 24"
-			width={size}
-			height={size}
-			aria-label={label}
-			role="img"
-			{...props}
-		>
-			<path
-				fillRule="evenodd"
-				d="M19 4.5H5a.5.5 0 0 0-.5.5v14a.5.5 0 0 0 .5.5h14a.5.5 0 0 0 .5-.5V5a.5.5 0 0 0-.5-.5M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"
-				clipRule="evenodd"
-			/>
-			<path
-				fillRule="evenodd"
-				d="m9.5 15.464 6-3.464-6-3.464zm6.75-2.165c1-.577 1-2.02 0-2.598l-6-3.464A1.5 1.5 0 0 0 8 8.536v6.928a1.5 1.5 0 0 0 2.25 1.3z"
-				clipRule="evenodd"
-			/>
-		</svg>
-	);
+	switch (props?.size) {
+		default:
+			return (
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path
+						fillRule="evenodd"
+						d="M13.294 9.134a1 1 0 0 1 0 1.732L8.5 13.634a1 1 0 0 1-1.5-.866V7.232a1 1 0 0 1 1.5-.866zm-.5.866L8 12.768V7.232z"
+						clipRule="evenodd"
+					/>
+					<path
+						fillRule="evenodd"
+						d="M3 4.5A1.5 1.5 0 0 1 4.5 3h11A1.5 1.5 0 0 1 17 4.5v11a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 3 15.5zM4.5 4h11a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5"
+						clipRule="evenodd"
+					/>
+				</svg>
+			);
+	}
 };
 
 IconVideo.iconName = "video";

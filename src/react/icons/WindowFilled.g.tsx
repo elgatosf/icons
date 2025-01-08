@@ -17,7 +17,7 @@ const IconWindowFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 			role="img"
 			{...props}
 		>
-			<path d="M4 4a2 2 0 0 0-2 2v1.5h20V6a2 2 0 0 0-2-2zm18 5H2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2z" />
+			<path d="M4 4a2 2 0 0 0-2 2v1.5h20V6a2 2 0 0 0-2-2zM22 9H2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2z" />
 		</svg>
 	);
 };

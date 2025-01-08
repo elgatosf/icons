@@ -6,24 +6,27 @@ const IconHome = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	const size = sizeMap[props?.size ?? "m"];
 	const label = props?.label ?? "Icon";
 
-	return (
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
-			viewBox="0 0 24 24"
-			width={size}
-			height={size}
-			aria-label={label}
-			role="img"
-			{...props}
-		>
-			<path
-				fillRule="evenodd"
-				d="M10.5 19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8.978A2 2 0 0 1 3.772 7.4l7-5.444a2 2 0 0 1 2.456 0l7 5.444A2 2 0 0 1 21 8.98V19a2 2 0 0 1-2 2h-3.5a2 2 0 0 1-2-2v-6h-3zM9 13a1.5 1.5 0 0 1 1.5-1.5h3A1.5 1.5 0 0 1 15 13v6a.5.5 0 0 0 .5.5H19a.5.5 0 0 0 .5-.5V8.978a.5.5 0 0 0-.193-.395l-7-5.444a.5.5 0 0 0-.614 0l-7 5.444a.5.5 0 0 0-.193.395V19a.5.5 0 0 0 .5.5h3.5A.5.5 0 0 0 9 19z"
-				clipRule="evenodd"
-			/>
-		</svg>
-	);
+	switch (props?.size) {
+		default:
+			return (
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path
+						fillRule="evenodd"
+						d="M16 15.5V7.73a.5.5 0 0 0-.191-.394l-5.5-4.322a.5.5 0 0 0-.618 0l-5.5 4.322A.5.5 0 0 0 4 7.729V15.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-4A1.5 1.5 0 0 1 9.5 10h1a1.5 1.5 0 0 1 1.5 1.5v4a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5M3.573 6.55A1.5 1.5 0 0 0 3 7.73v7.77A1.5 1.5 0 0 0 4.5 17h3A1.5 1.5 0 0 0 9 15.5v-4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5V7.73a1.5 1.5 0 0 0-.573-1.18l-5.5-4.322a1.5 1.5 0 0 0-1.854 0z"
+						clipRule="evenodd"
+					/>
+				</svg>
+			);
+	}
 };
 
 IconHome.iconName = "home";
