@@ -12,9 +12,9 @@ export class IconMetadata {
 	public readonly color: boolean = false;
 
 	/**
-	 * Name of the icon.
+	 * Names of the icon.
 	 */
-	public readonly name: string;
+	public readonly name: IconName;
 
 	/**
 	 * Size of the icon.
@@ -75,15 +75,41 @@ export class IconMetadata {
 			}
 		}
 
-		this.name = this.#parseName(parentNode);
+		this.name = {
+			lowerCase: this.#parseLowerCaseName(parentNode),
+			original: this.#parseOriginalName(parentNode),
+		};
 	}
 
 	/**
-	 * Parses the name of the icon.
+	 * Parses the "original" name from the parent node.
 	 * @param parentNode Parent node of the icon.
 	 * @returns The icon name.
 	 */
-	#parseName(parentNode: Figma.ComponentSetNode): string {
+	#parseOriginalName(parentNode: Figma.ComponentSetNode): string {
+		let name = parentNode.name
+			.split(",")
+			.at(0)!
+			// Remove "Icon" prefix.
+			.replace(/^Icon\s*/, "");
+
+		if (this.style === "filled") {
+			name += "Filled";
+		}
+
+		if (this.color) {
+			name += "Color";
+		}
+
+		return name;
+	}
+
+	/**
+	 * Parses the lower-case name variant of the icon.
+	 * @param parentNode Parent node of the icon.
+	 * @returns The icon name.
+	 */
+	#parseLowerCaseName(parentNode: Figma.ComponentSetNode): string {
 		let name = parentNode.name
 			.split(",")
 			.at(0)!
@@ -91,6 +117,8 @@ export class IconMetadata {
 			.replace(/^Icon\s*/, "")
 			// Handle numbers, e.g. 10Square -> 10-Square
 			.replace(/(\d+)([A-Z][a-z]*)/g, "$1-$2")
+			// Split words, e.g. MarginXIncrease -> Margin-X-Increase
+			.replace(/([a-z])([A-Z]{1,})([A-Z])/g, "$1-$2-$3")
 			// Split words, e.g. ZoomIn -> Zoom-In
 			.replace(/([a-z])([A-Z])/g, "$1-$2")
 			.toLowerCase();
@@ -106,3 +134,18 @@ export class IconMetadata {
 		return name;
 	}
 }
+
+/**
+ * Names of an icon, in different formats.
+ */
+type IconName = {
+	/**
+	 * Lower-case format, with each word separated by hyphens.
+	 */
+	lowerCase: string;
+
+	/**
+	 * Original name from Figma, with the "Icon" prefix removed.
+	 */
+	original: string;
+};

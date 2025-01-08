@@ -16,6 +16,25 @@ export async function writeSvgFile(metadata: IconMetadata, svg: string): Promise
 }
 
 /**
+ * Writes the SVG names, indexed by their SVG file name, to the `names.g.json` JSON file.
+ * @param icons Icons that were generated.
+ */
+export async function writeNamesDbFile(icons: Map<string, IconMetadata>): Promise<void> {
+	const db = Array.from(icons.entries())
+		// Create an array of names.
+		.map(([, metadata]) => metadata.name)
+		// Sort by filename (minus .svg).
+		.sort((a, b) => a.lowerCase.localeCompare(b.lowerCase))
+		// Convert to an object.
+		.reduce((db, icon) => {
+			db[icon.lowerCase] = icon.original;
+			return db;
+		}, {});
+
+	return utils.writeGeneratedFile("svg/names.json", JSON.stringify(db));
+}
+
+/**
  * Gets the output path of the SVG based on its metadata.
  * @param metadata SVG metadata.
  * @returns Output path.
@@ -34,7 +53,7 @@ function getOutputPath(metadata: IconMetadata): string {
 		}
 	};
 
-	return join("svg", getSizeDir(), `${metadata.name}.svg`);
+	return join("svg", getSizeDir(), `${metadata.name.lowerCase}.svg`);
 }
 
 /**

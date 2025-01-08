@@ -1,9 +1,12 @@
 import * as dotenv from "dotenv";
+import { existsSync } from "fs";
+import { rm } from "fs/promises";
 import ora from "ora";
 
 import { FigmaFileClient } from "./figma/figma-client.ts";
-import { writeSvgFile } from "./figma/file-writer.ts";
+import { writeNamesDbFile, writeSvgFile } from "./figma/file-writer.ts";
 import { findIcons } from "./figma/find.ts";
+import * as utils from "./utils.ts";
 
 // Configure the environment.
 dotenv.config();
@@ -15,6 +18,12 @@ if (FIGMA_ACCESS_TOKEN === undefined) {
 
 if (FIGMA_FILE_KEY === undefined) {
 	throw new Error("Missing environment variable: FIGMA_FILE_KEY");
+}
+
+// Clean-up the old SVG directory.
+const svgDir = utils.resolve("svg");
+if (existsSync(svgDir)) {
+	await rm(svgDir, { recursive: true });
 }
 
 const figmaClient = new FigmaFileClient(FIGMA_ACCESS_TOKEN, FIGMA_FILE_KEY);
@@ -38,6 +47,8 @@ for await (const { nodeId, contents } of figmaClient.getSvgImages(Array.from(ico
 	await writeSvgFile(metadata, contents);
 	status.text = `Downloading... ${++count} / ${icons.size}`;
 }
+
+await writeNamesDbFile(icons);
 
 performance.mark("stop");
 const { duration } = performance.measure("timing", "start", "stop");
