@@ -71,9 +71,9 @@ export class ReactTransformer implements Transformer {
 		const sizes = new Map<Size, string>();
 		for (const [size, { svg }] of icon.sizes) {
 			const component = await transform(svg, svgrConfig);
-			const [, tsx] = component.match(/(<svg(.*)<\/svg>);/) ?? [];
+			const [, tsx] = component.match(/(<svg(.*)<\/svg>);/s) ?? []; // "s" flag updates "." to match newlines.
 			if (!tsx) {
-				throw new Error(`Failed to parse element from SVGR conversion: ${icon.name}`);
+				throw new Error(`Failed to parse SVG element for ${icon.name} (${size}) from SVGR component: \n\n${component}`);
 			}
 
 			sizes.set(size, tsx);
