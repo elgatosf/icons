@@ -2,7 +2,7 @@ import type { SVGProps } from "react";
 import { sizeMap } from "../../metadata/sizing.js";
 import type { IconProps } from "../types.js";
 
-const IconMarginXdecrease = (props: IconProps & SVGProps<SVGSVGElement>) => {
+const IconMarginXDecrease = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	const size = sizeMap[props?.size ?? "m"];
 	const label = props?.label ?? "Icon";
 
@@ -31,6 +31,6 @@ const IconMarginXdecrease = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
-IconMarginXdecrease.iconName = "margin-xdecrease";
+IconMarginXDecrease.iconName = "margin-x-decrease";
 
-export default IconMarginXdecrease;
+export default IconMarginXDecrease;

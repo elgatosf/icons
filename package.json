@@ -32,11 +32,11 @@
     "scripts": {
         "build": "npm run transform && npm run lint:fix && npm run tsc",
         "build:ci": "tsc",
-        "download": "node --experimental-strip-types scripts/download.ts && prettier svg/names.g.json --write --log-level warn",
+        "download": "node --experimental-strip-types scripts/download.ts && prettier src/metadata/icons.g.ts --write --log-level warn",
         "lint": "prettier . --check",
         "lint:fix": "prettier . --write --log-level warn",
         "sync": "npm run download && npm run build",
-        "transform": "node --experimental-strip-types scripts/transform.ts",
+        "transform": "tsc --project tsconfig.metadata.json && node --experimental-strip-types scripts/transform.ts",
         "tsc": "tsc"
     },
     "keywords": [

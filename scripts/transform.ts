@@ -2,10 +2,8 @@ import { readdir, readFile } from "node:fs/promises";
 import { basename, extname, join, parse } from "node:path";
 import ora from "ora";
 
-import type { Size } from "../src/metadata/index.ts";
-import { getSvgStringMetadata } from "../src/metadata/providers.ts";
+import { getSvgStringMetadata, type icons as iconsMetadata, type Size } from "./metadata.ts";
 import type { SvgIcon, Transformer } from "./transformer.ts";
-import { MetadataTransformer } from "./transformers/metadata.ts";
 import { ReactTransformer } from "./transformers/react.ts";
 import { StringsTransformer } from "./transformers/strings.ts";
 
@@ -38,7 +36,8 @@ for (let i = 0; i < entries.length; i++) {
 
 	// Read / create the icon.
 	const name = parse(entry.name).name;
-	const { exportName } = getSvgStringMetadata(name); // This ensures a unique name for all icons.
+	const { exportName } = getSvgStringMetadata(name as keyof typeof iconsMetadata);
+
 	let icon = icons.get(exportName);
 	if (icon && icon.name !== name) {
 		throw new Error(`Duplicate icons found:\n\n${name}\n${icon.name}\n\nBoth resolve to: ${exportName}`);
@@ -79,7 +78,6 @@ status.succeed("Reading icons");
  */
 
 const transformers: Transformer[] = [
-	new MetadataTransformer(),
 	new ReactTransformer(),
 	new StringsTransformer(),
 ];

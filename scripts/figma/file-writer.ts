@@ -1,7 +1,7 @@
 import { join } from "path";
 
 import * as utils from "../utils.ts";
-import type { IconMetadata } from "./metadata";
+import { aggregateMetadata, type IconMetadata } from "./metadata.ts";
 
 /**
  * Optimizes the SVG contents, before writing it to its local file.
@@ -16,22 +16,18 @@ export async function writeSvgFile(metadata: IconMetadata, svg: string): Promise
 }
 
 /**
- * Writes the SVG names, indexed by their SVG file name, to the `names.g.json` JSON file.
+ * Writes the icons metadata file, indexed by their SVG file name.
  * @param icons Icons that were generated.
  */
-export async function writeNamesDbFile(icons: Map<string, IconMetadata>): Promise<void> {
-	const db = Array.from(icons.entries())
-		// Create an array of names.
-		.map(([, metadata]) => metadata.name)
-		// Sort by filename (minus .svg).
-		.sort((a, b) => a.lowerCase.localeCompare(b.lowerCase))
-		// Convert to an object.
-		.reduce((db, icon) => {
-			db[icon.lowerCase] = icon.original;
-			return db;
-		}, {});
+export async function writeIconsMetadataFile(icons: IconMetadata[]): Promise<void> {
+	const contents = `
+/**
+ * Collection of available icons, and their associated metadata.
+ */
+export const icons = ${JSON.stringify(aggregateMetadata(icons))} as const;
+`;
 
-	return utils.writeGeneratedFile("svg/names.json", JSON.stringify(db));
+	return utils.writeGeneratedFile("src/metadata/icons.ts", contents);
 }
 
 /**

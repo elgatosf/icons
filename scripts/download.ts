@@ -4,7 +4,7 @@ import { rm } from "fs/promises";
 import ora from "ora";
 
 import { FigmaFileClient } from "./figma/figma-client.ts";
-import { writeNamesDbFile, writeSvgFile } from "./figma/file-writer.ts";
+import { writeIconsMetadataFile, writeSvgFile } from "./figma/file-writer.ts";
 import { findIcons } from "./figma/find.ts";
 import * as utils from "./utils.ts";
 
@@ -48,7 +48,7 @@ for await (const { nodeId, contents } of figmaClient.getSvgImages(Array.from(ico
 	status.text = `Downloading... ${++count} / ${icons.size}`;
 }
 
-await writeNamesDbFile(icons);
+await writeIconsMetadataFile(Array.from(icons.values()));
 
 performance.mark("stop");
 const { duration } = performance.measure("timing", "start", "stop");

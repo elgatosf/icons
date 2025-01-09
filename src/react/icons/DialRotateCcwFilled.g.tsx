@@ -2,7 +2,7 @@ import type { SVGProps } from "react";
 import { sizeMap } from "../../metadata/sizing.js";
 import type { IconProps } from "../types.js";
 
-const IconDialRotateCcwFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
+const IconDialRotateCCWFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	const size = sizeMap[props?.size ?? "m"];
 	const label = props?.label ?? "Icon";
 
@@ -27,6 +27,6 @@ const IconDialRotateCcwFilled = (props: IconProps & SVGProps<SVGSVGElement>) => 
 	);
 };
 
-IconDialRotateCcwFilled.iconName = "dial-rotate-ccw--filled";
+IconDialRotateCCWFilled.iconName = "dial-rotate-cc-w--filled";
 
-export default IconDialRotateCcwFilled;
+export default IconDialRotateCCWFilled;

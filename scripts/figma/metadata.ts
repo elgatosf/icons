@@ -136,6 +136,40 @@ export class IconMetadata {
 }
 
 /**
+ * Aggregates the icons metadata to be indexed by the icon's file name (without the extension).
+ * @param icons Icons to aggregate.
+ * @returns The aggregated collection of metadata
+ */
+export function aggregateMetadata(icons: IconMetadata[]): IconMetadataCollection {
+	const db: IconMetadataCollection = {};
+
+	for (const icon of icons.sort((a, b) => a.name.lowerCase.localeCompare(b.name.lowerCase))) {
+		if (icon.name.lowerCase in db) {
+			// Icon exists, add the size in order, and ensure sizes are distinct.
+			db[icon.name.lowerCase].sizes = [...new Set([icon.size, ...db[icon.name.lowerCase].sizes].sort(compareSize))];
+		} else {
+			// Add the icon to the aggregate collection.
+			db[icon.name.lowerCase] = {
+				name: icon.name.original,
+				sizes: [icon.size],
+			};
+		}
+	}
+
+	return db;
+}
+
+/**
+ * Gets the available sizes of an icon, as an ordered array, for example `["s", "m", "l"]`.
+ * @param icon Icon.
+ * @returns Array of sizes.
+ */
+function compareSize(a: Size, b: Size): number {
+	const weights: Size[] = ["s", "m", "l"];
+	return weights.indexOf(a) - weights.indexOf(b);
+}
+
+/**
  * Names of an icon, in different formats.
  */
 type IconName = {
@@ -148,4 +182,26 @@ type IconName = {
 	 * Original name from Figma, with the "Icon" prefix removed.
 	 */
 	original: string;
+};
+
+/**
+ * An aggregation of icon metadata, indexed by the icons file name (without the extension).
+ */
+type IconMetadataCollection = {
+	[filename: string]: Icon;
+};
+
+/**
+ * An icon.
+ */
+type Icon = {
+	/**
+	 * Original name of the icon.
+	 */
+	name: string;
+
+	/**
+	 * Sizes the icon is available in.
+	 */
+	sizes: Size[];
 };

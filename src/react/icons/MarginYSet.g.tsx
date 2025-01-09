@@ -2,7 +2,7 @@ import type { SVGProps } from "react";
 import { sizeMap } from "../../metadata/sizing.js";
 import type { IconProps } from "../types.js";
 
-const IconMarginYset = (props: IconProps & SVGProps<SVGSVGElement>) => {
+const IconMarginYSet = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	const size = sizeMap[props?.size ?? "m"];
 	const label = props?.label ?? "Icon";
 
@@ -31,6 +31,6 @@ const IconMarginYset = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
-IconMarginYset.iconName = "margin-yset";
+IconMarginYSet.iconName = "margin-y-set";
 
-export default IconMarginYset;
+export default IconMarginYSet;
