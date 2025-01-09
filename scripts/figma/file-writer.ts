@@ -21,6 +21,8 @@ export async function writeSvgFile(metadata: IconMetadata, svg: string): Promise
  */
 export async function writeIconsMetadataFile(icons: IconMetadata[]): Promise<void> {
 	const contents = `
+// Last synchronized: ${new Date().toUTCString()}
+
 /**
  * Collection of available icons, and their associated metadata.
  */
