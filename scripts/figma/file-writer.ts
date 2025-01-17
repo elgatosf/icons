@@ -1,5 +1,6 @@
 import { join } from "path";
 
+import { getPixelSize } from "../../src/metadata/sizing.ts";
 import * as utils from "../utils.ts";
 import { aggregateMetadata, type IconMetadata } from "./metadata.ts";
 
@@ -39,19 +40,15 @@ export const icons = ${JSON.stringify(aggregateMetadata(icons))} as const;
  */
 function getOutputPath(metadata: IconMetadata): string {
 	const getSizeDir = () => {
-		switch (metadata.size) {
-			case "s":
-				return "16";
-			case "m":
-				return "24";
-			case "l":
-				return "32";
-			default:
-				throw new Error(`Failed to determine directory name for size: ${metadata.size}`);
+		const pixelSize = getPixelSize(metadata.size);
+		if (pixelSize === undefined) {
+			throw new Error(`Failed to determine directory name for size: ${metadata.size}`);
 		}
+
+		return pixelSize;
 	};
 
-	return join("svg", getSizeDir(), `${metadata.name.lowerCase}.svg`);
+	return join("svg", getSizeDir().toString(), `${metadata.name.lowerCase}.svg`);
 }
 
 /**

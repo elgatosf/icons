@@ -2,17 +2,13 @@ import { readdir, readFile } from "node:fs/promises";
 import { basename, extname, join, parse } from "node:path";
 import ora from "ora";
 
-import { getSvgStringMetadata, type icons as iconsMetadata, type Size } from "./metadata.ts";
+import { getShirtSize } from "../src/metadata/sizing.ts";
+import { getSvgStringMetadata, type icons as iconsMetadata } from "./metadata.ts";
 import type { SvgIcon, Transformer } from "./transformer.ts";
 import { ReactTransformer } from "./transformers/react.ts";
 import { StringsTransformer } from "./transformers/strings.ts";
 
 const status = ora("Reading icons…").start();
-const sizes: ReadonlyMap<string, Size> = new Map([
-	["16", "s"],
-	["24", "m"],
-	["32", "l"],
-]);
 
 /**
  * Get all icon SVG files.
@@ -49,7 +45,7 @@ for (let i = 0; i < entries.length; i++) {
 	};
 
 	// Determine the size of the icon.
-	const size = sizes.get(basename(entry.parentPath));
+	const size = getShirtSize(basename(entry.parentPath));
 	if (!size) {
 		throw new Error(`Unable to determine size from directory name: ${basename(entry.parentPath)}`);
 	}
