@@ -2,7 +2,7 @@ import { readdir, readFile } from "node:fs/promises";
 import { basename, extname, join, parse } from "node:path";
 import ora from "ora";
 
-import { getShirtSize } from "../src/metadata/sizing.ts";
+import { isValidSize } from "../src/metadata/sizing.ts";
 import { getSvgStringMetadata, type icons as iconsMetadata } from "./metadata.ts";
 import type { SvgIcon, Transformer } from "./transformer.ts";
 import { ReactTransformer } from "./transformers/react.ts";
@@ -45,9 +45,9 @@ for (let i = 0; i < entries.length; i++) {
 	};
 
 	// Determine the size of the icon.
-	const size = getShirtSize(basename(entry.parentPath));
-	if (!size) {
-		throw new Error(`Unable to determine size from directory name: ${basename(entry.parentPath)}`);
+	const size = basename(entry.parentPath);
+	if (!isValidSize(size)) {
+		throw new Error(`Unable to determine size from directory name: ${size}`);
 	}
 
 	if (icon.sizes.has(size)) {

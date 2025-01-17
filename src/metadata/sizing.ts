@@ -13,25 +13,10 @@ export const sizeMap = {
 export type Size = "s" | "m" | "l";
 
 /**
- * Gets the pixel size from the specified shirt size.
- * @param shirtSize Shirt size.
- * @returns The pixel size, or undefined.
+ * Validates the specified size is a known, and valid, size.
+ * @param size Size to validate.
+ * @returns `true` when the size is valid; otherwise `false`.
  */
-export function getPixelSize(shirtSize: Size): string | undefined {
-	if (shirtSize in sizeMap) {
-		return sizeMap[shirtSize].toString();
-	}
-}
-
-/**
- * Gets the shirt size from the specified pixel size.
- * @param pixelSize Pixel size.
- * @returns The shirt size, or undefined.
- */
-export function getShirtSize(pixelSize: string): Size | undefined {
-	for (const [shirtSize, value] of Object.entries(sizeMap)) {
-		if (value.toString() === pixelSize) {
-			return shirtSize as Size;
-		}
-	}
+export function isValidSize(size: string): size is Size {
+	return size in sizeMap;
 }

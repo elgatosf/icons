@@ -1,6 +1,6 @@
 import { join } from "path";
 
-import { getPixelSize } from "../../src/metadata/sizing.ts";
+import { isValidSize } from "../../src/metadata/sizing.ts";
 import * as utils from "../utils.ts";
 import { aggregateMetadata, type IconMetadata } from "./metadata.ts";
 
@@ -10,8 +10,12 @@ import { aggregateMetadata, type IconMetadata } from "./metadata.ts";
  * @param svg SVG contents for the icon.
  */
 export async function writeSvgFile(metadata: IconMetadata, svg: string): Promise<void> {
+	if (!isValidSize(metadata.size)) {
+		throw new Error(`Failed to determine directory name for size: ${metadata.size}`);
+	}
+
 	const data = optimizeSvg(svg, metadata.color);
-	const outputPath = getOutputPath(metadata);
+	const outputPath = join("svg", metadata.size, `${metadata.name.lowerCase}.svg`);
 
 	return utils.writeFile(outputPath, data);
 }
@@ -31,24 +35,6 @@ export const icons = ${JSON.stringify(aggregateMetadata(icons))} as const;
 `;
 
 	return utils.writeGeneratedFile("src/metadata/icons.ts", contents);
-}
-
-/**
- * Gets the output path of the SVG based on its metadata.
- * @param metadata SVG metadata.
- * @returns Output path.
- */
-function getOutputPath(metadata: IconMetadata): string {
-	const getSizeDir = () => {
-		const pixelSize = getPixelSize(metadata.size);
-		if (pixelSize === undefined) {
-			throw new Error(`Failed to determine directory name for size: ${metadata.size}`);
-		}
-
-		return pixelSize;
-	};
-
-	return join("svg", getSizeDir().toString(), `${metadata.name.lowerCase}.svg`);
 }
 
 /**
