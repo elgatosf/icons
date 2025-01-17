@@ -1,4 +1,4 @@
-// Last synchronized: Fri, 17 Jan 2025 18:53:29 GMT
+// Last synchronized: Fri, 17 Jan 2025 19:23:02 GMT
 
 /**
  * Collection of available icons, and their associated metadata.
@@ -671,8 +671,8 @@ export const icons = {
 	night: { name: "Night", sizes: ["l"] },
 	"night--filled": { name: "NightFilled", sizes: ["l"] },
 	"not-allowed": { name: "NotAllowed", sizes: ["l"] },
-	notification: { name: "Notification", sizes: ["l"] },
-	"notification--filled": { name: "NotificationFilled", sizes: ["l"] },
+	notification: { name: "Notification", sizes: ["m", "l"] },
+	"notification--filled": { name: "NotificationFilled", sizes: ["m", "l"] },
 	"notification-off": { name: "NotificationOff", sizes: ["l"] },
 	"notification-off--filled": { name: "NotificationOffFilled", sizes: ["l"] },
 	"number0-square": { name: "Number0Square", sizes: ["l"] },
@@ -743,8 +743,8 @@ export const icons = {
 	"phone-voice--filled": { name: "PhoneVoiceFilled", sizes: ["l"] },
 	"photo-grid": { name: "PhotoGrid", sizes: ["l"] },
 	"photo-grid--filled": { name: "PhotoGridFilled", sizes: ["l"] },
-	pin: { name: "Pin", sizes: ["l"] },
-	"pin--filled": { name: "PinFilled", sizes: ["l"] },
+	pin: { name: "Pin", sizes: ["m", "l"] },
+	"pin--filled": { name: "PinFilled", sizes: ["m", "l"] },
 	play: { name: "Play", sizes: ["m", "l"] },
 	"play--filled": { name: "PlayFilled", sizes: ["m", "l"] },
 	"play-circle": { name: "PlayCircle", sizes: ["l"] },
@@ -848,8 +848,8 @@ export const icons = {
 	"store--filled": { name: "StoreFilled", sizes: ["l"] },
 	stream: { name: "Stream", sizes: ["m", "l"] },
 	"stream--filled": { name: "StreamFilled", sizes: ["m", "l"] },
-	"stream-deck-key": { name: "StreamDeckKey", sizes: ["l"] },
-	"stream-deck-key--filled": { name: "StreamDeckKeyFilled", sizes: ["l"] },
+	"stream-deck-key": { name: "StreamDeckKey", sizes: ["m", "l"] },
+	"stream-deck-key--filled": { name: "StreamDeckKeyFilled", sizes: ["m", "l"] },
 	"stream-deck-mini": { name: "StreamDeckMini", sizes: ["l"] },
 	"stream-deck-mini--filled": { name: "StreamDeckMiniFilled", sizes: ["l"] },
 	"stream-deck-mk2": { name: "StreamDeckMk2", sizes: ["l"] },

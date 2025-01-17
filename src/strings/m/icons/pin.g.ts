@@ -1,0 +1,3 @@
+const icon: string =
+	'<svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.2672 6.41107L13.0316 2.39837C12.0756 1.49268 10.5 2.1704 10.5 3.4873V5V6C10.5 6.82843 9.82843 7.5 9 7.5H6.12132C4.78496 7.5 4.11571 9.11571 5.06066 10.0607L9.93934 14.9393C10.8843 15.8843 12.5 15.215 12.5 13.8787V10.5C12.5 9.67157 13.1716 9 14 9H15H16.2356C17.5916 9 18.2516 7.34364 17.2672 6.41107Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 13L3.5 16.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+export default icon;

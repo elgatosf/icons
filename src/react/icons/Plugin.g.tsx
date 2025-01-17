@@ -20,10 +20,9 @@ const IconPlugin = (props: IconProps & SVGProps<SVGSVGElement>) => {
 					{...props}
 				>
 					<path
-						stroke="#000"
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						d="M6 16.5h8a1.5 1.5 0 0 0 1.5-1.5V7A1.5 1.5 0 0 0 14 5.5h-1A1.5 1.5 0 0 1 11.5 4a1.5 1.5 0 0 0-3 0A1.5 1.5 0 0 1 7 5.5H6A1.5 1.5 0 0 0 4.5 7v1A1.5 1.5 0 0 0 6 9.5a1.5 1.5 0 0 1 0 3A1.5 1.5 0 0 0 4.5 14v1A1.5 1.5 0 0 0 6 16.5"
+						fillRule="evenodd"
+						d="M10 3a1 1 0 0 0-1 1 2 2 0 0 1-2 2H6a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1 2 2 0 1 1 0 4 1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-1a2 2 0 0 1-2-2 1 1 0 0 0-1-1M8 4a2 2 0 1 1 4 0 1 1 0 0 0 1 1h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-1a2 2 0 0 1 2-2 1 1 0 1 0 0-2 2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h1a1 1 0 0 0 1-1"
+						clipRule="evenodd"
 					/>
 				</svg>
 			);
