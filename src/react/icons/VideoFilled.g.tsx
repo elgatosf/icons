@@ -21,7 +21,7 @@ const IconVideoFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 				>
 					<path
 						fillRule="evenodd"
-						d="M4.5 3A1.5 1.5 0 0 0 3 4.5v11A1.5 1.5 0 0 0 4.5 17h11a1.5 1.5 0 0 0 1.5-1.5v-11A1.5 1.5 0 0 0 15.5 3zm8.794 7.866a1 1 0 0 0 0-1.732L8.5 6.366a1 1 0 0 0-1.5.866v5.536a1 1 0 0 0 1.5.866z"
+						d="M5 3a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm8.294 7.866a1 1 0 0 0 0-1.732L8.5 6.366a1 1 0 0 0-1.5.866v5.536a1 1 0 0 0 1.5.866z"
 						clipRule="evenodd"
 					/>
 				</svg>

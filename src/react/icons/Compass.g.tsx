@@ -6,29 +6,32 @@ const IconCompass = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	const size = sizeMap[props?.size ?? "m"];
 	const label = props?.label ?? "Icon";
 
-	return (
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
-			viewBox="0 0 24 24"
-			width={size}
-			height={size}
-			aria-label={label}
-			role="img"
-			{...props}
-		>
-			<path
-				fillRule="evenodd"
-				d="M6.914 15.78c-.338.823.484 1.645 1.305 1.306l5.896-2.427a1 1 0 0 0 .544-.544l2.427-5.896c.339-.822-.483-1.644-1.305-1.305L9.886 9.34a1 1 0 0 0-.544.544zm8.329-7.022-4.594 1.891 2.702 2.702z"
-				clipRule="evenodd"
-			/>
-			<path
-				fillRule="evenodd"
-				d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10m-1.5 0a8.5 8.5 0 1 1-17 0 8.5 8.5 0 0 1 17 0"
-				clipRule="evenodd"
-			/>
-		</svg>
-	);
+	switch (props?.size) {
+		default:
+			return (
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path
+						fillRule="evenodd"
+						d="M13.854 6.146a.5.5 0 0 1 .11.54l-2 5a.5.5 0 0 1-.278.278l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .278-.278l5-2a.5.5 0 0 1 .54.11m-4.97 2.739 2.231 2.23 1.487-3.717z"
+						clipRule="evenodd"
+					/>
+					<path
+						fillRule="evenodd"
+						d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16m0-1a7 7 0 1 0 0-14 7 7 0 0 0 0 14"
+						clipRule="evenodd"
+					/>
+				</svg>
+			);
+	}
 };
 
 IconCompass.iconName = "compass";

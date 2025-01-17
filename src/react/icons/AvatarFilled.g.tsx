@@ -6,24 +6,27 @@ const IconAvatarFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	const size = sizeMap[props?.size ?? "m"];
 	const label = props?.label ?? "Icon";
 
-	return (
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
-			viewBox="0 0 24 24"
-			width={size}
-			height={size}
-			aria-label={label}
-			role="img"
-			{...props}
-		>
-			<path
-				fillRule="evenodd"
-				d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10m-6-3a4 4 0 1 1-8 0 4 4 0 0 1 8 0m-4 11.5a8.49 8.49 0 0 0 6.874-3.5A6 6 0 0 0 14 14.5h-4A6 6 0 0 0 5.126 17 8.49 8.49 0 0 0 12 20.5"
-				clipRule="evenodd"
-			/>
-		</svg>
-	);
+	switch (props?.size) {
+		default:
+			return (
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path
+						fillRule="evenodd"
+						d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16m3-10a3 3 0 1 1-6 0 3 3 0 0 1 6 0m2.362 6.5A6.99 6.99 0 0 1 10 17a6.99 6.99 0 0 1-5.362-2.5 7 7 0 0 1 10.724 0"
+						clipRule="evenodd"
+					/>
+				</svg>
+			);
+	}
 };
 
 IconAvatarFilled.iconName = "avatar--filled";

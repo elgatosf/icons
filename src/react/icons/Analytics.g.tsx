@@ -6,21 +6,27 @@ const IconAnalytics = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	const size = sizeMap[props?.size ?? "m"];
 	const label = props?.label ?? "Icon";
 
-	return (
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
-			viewBox="0 0 24 24"
-			width={size}
-			height={size}
-			aria-label={label}
-			role="img"
-			{...props}
-		>
-			<path d="M3.75 3a.75.75 0 0 1 .75.75V19a.5.5 0 0 0 .5.5h15.25a.75.75 0 0 1 0 1.5H5a2 2 0 0 1-2-2V3.75A.75.75 0 0 1 3.75 3" />
-			<path d="M19.5 10.56v1.688a.75.75 0 0 0 1.5 0V8.75a.75.75 0 0 0-.75-.75h-3.5a.75.75 0 0 0 0 1.5h1.69l-3.69 3.69-2.97-2.97a.75.75 0 0 0-1.06 0l-4.5 4.5a.75.75 0 1 0 1.06 1.06l3.97-3.97 2.97 2.97a.75.75 0 0 0 1.06 0z" />
-		</svg>
-	);
+	switch (props?.size) {
+		default:
+			return (
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path
+						fillRule="evenodd"
+						d="M9.5 3A1.5 1.5 0 0 0 8 4.5v11A1.5 1.5 0 0 0 9.5 17h1a1.5 1.5 0 0 0 1.5-1.5v-11A1.5 1.5 0 0 0 10.5 3zm1 1h-1a.5.5 0 0 0-.5.5v11a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-11a.5.5 0 0 0-.5-.5M4.5 9A1.5 1.5 0 0 0 3 10.5v5A1.5 1.5 0 0 0 4.5 17h1A1.5 1.5 0 0 0 7 15.5v-5A1.5 1.5 0 0 0 5.5 9zm1 1h-1a.5.5 0 0 0-.5.5v5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5M13 7.5A1.5 1.5 0 0 1 14.5 6h1A1.5 1.5 0 0 1 17 7.5v8a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5h1a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5"
+						clipRule="evenodd"
+					/>
+				</svg>
+			);
+	}
 };
 
 IconAnalytics.iconName = "analytics";

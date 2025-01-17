@@ -6,29 +6,32 @@ const IconAvatar = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	const size = sizeMap[props?.size ?? "m"];
 	const label = props?.label ?? "Icon";
 
-	return (
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
-			viewBox="0 0 24 24"
-			width={size}
-			height={size}
-			aria-label={label}
-			role="img"
-			{...props}
-		>
-			<path
-				fillRule="evenodd"
-				d="M12 13a4 4 0 1 0 0-8 4 4 0 0 0 0 8m0-1.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
-				clipRule="evenodd"
-			/>
-			<path
-				fillRule="evenodd"
-				d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10m6.874-5a8.5 8.5 0 1 0-13.749 0A6 6 0 0 1 10 14.5h4c2.008 0 3.785.986 4.874 2.5m-1.025 1.168A4.5 4.5 0 0 0 14 16h-4c-1.631 0-3.06.868-3.85 2.168A8.47 8.47 0 0 0 12 20.5a8.47 8.47 0 0 0 5.85-2.332"
-				clipRule="evenodd"
-			/>
-		</svg>
-	);
+	switch (props?.size) {
+		default:
+			return (
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path
+						fillRule="evenodd"
+						d="M13 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-1 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0"
+						clipRule="evenodd"
+					/>
+					<path
+						fillRule="evenodd"
+						d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16m0-1c1.79 0 3.424-.672 4.661-1.778a6 6 0 0 0-9.322 0A6.97 6.97 0 0 0 10 17m3.102-4.275a7 7 0 0 1 2.26 1.775 7 7 0 1 0-10.724 0 7 7 0 0 1 8.464-1.775"
+						clipRule="evenodd"
+					/>
+				</svg>
+			);
+	}
 };
 
 IconAvatar.iconName = "avatar";

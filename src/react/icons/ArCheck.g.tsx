@@ -6,30 +6,34 @@ const IconArCheck = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	const size = sizeMap[props?.size ?? "m"];
 	const label = props?.label ?? "Icon";
 
-	return (
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
-			viewBox="0 0 24 24"
-			width={size}
-			height={size}
-			aria-label={label}
-			role="img"
-			{...props}
-		>
-			<path d="M2 2.75A.75.75 0 0 1 2.75 2h2.5a.75.75 0 0 1 0 1.5H3.5v1.75a.75.75 0 0 1-1.5 0zM2 21.25v-2.5a.75.75 0 0 1 1.5 0v1.75h1.75a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75M22 2.75v2.5a.75.75 0 0 1-1.5 0V3.5h-1.75a.75.75 0 0 1 0-1.5h2.5a.75.75 0 0 1 .75.75" />
-			<path
-				fillRule="evenodd"
-				d="M13 4.494a2 2 0 0 0-2 0L6 7.381a2 2 0 0 0-1 1.732v5.774a2 2 0 0 0 1 1.732l5 2.887q.18.103.372.166a6.5 6.5 0 0 1-.366-1.895L6.75 15.32a.5.5 0 0 1-.25-.433V9.69l4.75 2.742v3.276a6.5 6.5 0 0 1 1.5-2.646v-.63l4.75-2.742V11q.776.002 1.5.174v-2.06a2 2 0 0 0-1-1.733zm3.75 3.898-4.5-2.598a.5.5 0 0 0-.5 0l-4.5 2.598L12 11.134z"
-				clipRule="evenodd"
-			/>
-			<path
-				fillRule="evenodd"
-				d="M17.5 23a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11m2.854-6.646a.5.5 0 0 0-.708-.708L16.5 18.793l-1.646-1.647a.5.5 0 0 0-.708.708l2 2a.5.5 0 0 0 .708 0z"
-				clipRule="evenodd"
-			/>
-		</svg>
-	);
+	switch (props?.size) {
+		default:
+			return (
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path d="M2 4a2 2 0 0 1 2-2h.5a.5.5 0 0 1 0 1H4a1 1 0 0 0-1 1v.5a.5.5 0 0 1-1 0z" />
+					<path
+						fillRule="evenodd"
+						d="M11 3.65a2 2 0 0 0-2 0L5 5.958A2 2 0 0 0 4 7.69v4.618a2 2 0 0 0 1 1.732l4 2.31q.185.106.383.17a5.5 5.5 0 0 1-.336-1.298L5.5 13.175a1 1 0 0 1-.5-.866V7.691l4.5 2.598v1.916a5.5 5.5 0 0 1 1-1.48v-.436L15 7.69v1.331q.516.047 1 .185V7.691a2 2 0 0 0-1-1.732zm-.5.865 4 2.31L10 9.423 5.5 6.825l4-2.31a1 1 0 0 1 1 0"
+						clipRule="evenodd"
+					/>
+					<path d="M2 16a2 2 0 0 0 2 2h.5a.5.5 0 0 0 0-1H4a1 1 0 0 1-1-1v-.5a.5.5 0 0 0-1 0zM18 4a2 2 0 0 0-2-2h-.5a.5.5 0 0 0 0 1h.5a1 1 0 0 1 1 1v.5a.5.5 0 0 0 1 0z" />
+					<path
+						fillRule="evenodd"
+						d="M19 14.5a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0m-2.146-1.854a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708l1.146 1.147 2.646-2.647a.5.5 0 0 1 .708 0"
+						clipRule="evenodd"
+					/>
+				</svg>
+			);
+	}
 };
 
 IconArCheck.iconName = "ar-check";
