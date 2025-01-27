@@ -24,7 +24,7 @@ const IconZoomInFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 			/>
 			<path
 				fillRule="evenodd"
-				d="M16.307 15.246a7.5 7.5 0 1 0-1.06 1.06l4.473 4.474a.75.75 0 1 0 1.06-1.06l-4.473-4.473ZM10.5 16.5a6 6 0 1 0 0-12 6 6 0 0 0 0 12"
+				d="M16.307 15.247a7.5 7.5 0 1 0-1.06 1.06l4.473 4.473a.75.75 0 1 0 1.06-1.06zM10.5 16.5a6 6 0 1 0 0-12 6 6 0 0 0 0 12"
 				clipRule="evenodd"
 			/>
 		</svg>

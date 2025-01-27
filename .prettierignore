@@ -1,2 +1,2 @@
 # Source files
-svg/
+svg/**/*.svg

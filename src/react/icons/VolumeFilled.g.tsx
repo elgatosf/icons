@@ -6,21 +6,30 @@ const IconVolumeFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	const size = sizeMap[props?.size ?? "m"];
 	const label = props?.label ?? "Icon";
 
-	return (
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
-			viewBox="0 0 24 24"
-			width={size}
-			height={size}
-			aria-label={label}
-			role="img"
-			{...props}
-		>
-			<path d="M18.778 4.222a.75.75 0 0 0-1.06 1.06 9.5 9.5 0 0 1 0 13.436.75.75 0 1 0 1.06 1.06 11 11 0 0 0 0-15.556M11 5.414v13.172c0 .89-1.077 1.337-1.707.707L6 16H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h2l3.293-3.293c.63-.63 1.707-.184 1.707.707m2.828 3.758a.75.75 0 1 0-1.06 1.06 2.5 2.5 0 0 1 0 3.536.75.75 0 0 0 1.06 1.06 4 4 0 0 0 0-5.656" />
-			<path d="M15.243 6.697a.75.75 0 0 1 1.06 0 7.5 7.5 0 0 1 0 10.606.75.75 0 0 1-1.06-1.06 6 6 0 0 0 0-8.486.75.75 0 0 1 0-1.06" />
-		</svg>
-	);
+	switch (props?.size) {
+		default:
+			return (
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path d="M16.071 2.93a.5.5 0 1 0-.707.706 9 9 0 0 1 0 12.728.5.5 0 1 0 .707.707 10 10 0 0 0 0-14.142" />
+					<path
+						fillRule="evenodd"
+						d="M9 3.5a.5.5 0 0 0-.854-.353L4.293 7H3a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h1.293l3.853 3.854A.5.5 0 0 0 9 16.5z"
+						clipRule="evenodd"
+					/>
+					<path d="M11.828 7.172a.5.5 0 1 0-.707.707 3 3 0 0 1 0 4.243.5.5 0 0 0 .707.707 4 4 0 0 0 0-5.657" />
+					<path d="M13.243 5.05a.5.5 0 0 1 .707 0 7 7 0 0 1 0 9.9.5.5 0 0 1-.707-.707 6 6 0 0 0 0-8.485.5.5 0 0 1 0-.708" />
+				</svg>
+			);
+	}
 };
 
 IconVolumeFilled.iconName = "volume--filled";

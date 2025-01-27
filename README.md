@@ -31,8 +31,8 @@ iconLogoElgato; // SVG string of the Elgato logo, medium (m) size.
 All icons are available in medium (m), with some also available in small (s) and large (l).
 
 -   `@elgato/icons/s` — optimized for 16 × 16 px.
--   `@elgato/icons/m` — optimized for 24 × 24 px.
--   `@elgato/icons/l` — optimized for 32 × 32 px.
+-   `@elgato/icons/m` — optimized for 20 × 20 px.
+-   `@elgato/icons/l` — optimized for 24 × 24 px.
 
 ### React Components
 
@@ -59,13 +59,12 @@ All original SVG files are distributed with this package, and can be found withi
 ```
 .
 ├── svg/
-│   ├── 16/
-│   ├── 24/
-│   |   ├── 0-circle--filled.svg
-|   |   ├── 0-circle.svg
+│   ├── s/
+│   ├── m/
 |   │   ├── ...
-|   │   ├── zoom-out--filled.svg
-|   │   └── zoom-out.svg
-|   └── 32/
+|   │   ├── warning--filled.svg
+|   │   ├── warning.svg
+|   │   └── wave.svg
+|   └── l/
 └── ...
 ```

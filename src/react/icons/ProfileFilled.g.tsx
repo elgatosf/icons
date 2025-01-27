@@ -17,7 +17,7 @@ const IconProfileFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 			role="img"
 			{...props}
 		>
-			<path d="M9 8.5h2.25v2.75H8.5V9a.5.5 0 0 1 .5-.5m-.5 4.25V15a.5.5 0 0 0 .5.5h2.25v-2.75zm4.25 0v2.75H15a.5.5 0 0 0 .5-.5v-2.25zm2.75-1.5V9a.5.5 0 0 0-.5-.5h-2.25v2.75z" />
+			<path d="M9 8.5h2.25v2.75H8.5V9a.5.5 0 0 1 .5-.5M8.5 12.75V15a.5.5 0 0 0 .5.5h2.25v-2.75zM12.75 12.75v2.75H15a.5.5 0 0 0 .5-.5v-2.25zM15.5 11.25V9a.5.5 0 0 0-.5-.5h-2.25v2.75z" />
 			<path
 				fillRule="evenodd"
 				d="M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm2 6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2z"

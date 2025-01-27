@@ -6,20 +6,23 @@ const IconMicrophoneOffFilled = (props: IconProps & SVGProps<SVGSVGElement>) => 
 	const size = sizeMap[props?.size ?? "m"];
 	const label = props?.label ?? "Icon";
 
-	return (
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
-			viewBox="0 0 24 24"
-			width={size}
-			height={size}
-			aria-label={label}
-			role="img"
-			{...props}
-		>
-			<path d="M2.22 21.78a.75.75 0 0 1 0-1.06l18.5-18.5a.75.75 0 1 1 1.06 1.06L15 10.06V12a3 3 0 0 1-4.524 2.585l-1.083 1.083A4.5 4.5 0 0 0 16.5 12a.75.75 0 0 1 1.5 0 6 6 0 0 1-5.25 5.953V20.5h1.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5h1.5v-2.547a6 6 0 0 1-2.929-1.213l-5.04 5.04a.75.75 0 0 1-1.061 0m4.257-7.436 1.177-1.177A4.5 4.5 0 0 1 7.5 12 .75.75 0 0 0 6 12a6 6 0 0 0 .477 2.344M9 5v6.82l6-6V5a3 3 0 1 0-6 0" />
-		</svg>
-	);
+	switch (props?.size) {
+		default:
+			return (
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path d="M17.854 2.854a.5.5 0 0 0-.708-.708l-15 15a.5.5 0 0 0 .708.708l3.982-3.983A5 5 0 0 0 9.5 14.975V17h-2a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-2v-2.025A4.997 4.997 0 0 0 15 10a.5.5 0 0 0-1 0 4 4 0 0 1-6.453 3.16l.715-.715A3 3 0 0 0 13 10V7.707zM10 2a3 3 0 0 1 2.998 2.881l-5.896 5.896A3 3 0 0 1 7 10V5a3 3 0 0 1 3-3M6.304 11.53l.013.031-.75.751A5 5 0 0 1 5 10a.5.5 0 0 1 1 0 4 4 0 0 0 .304 1.53" />
+				</svg>
+			);
+	}
 };
 
 IconMicrophoneOffFilled.iconName = "microphone-off--filled";

@@ -2,9 +2,9 @@ import { type Config, transform } from "@svgr/core";
 import { existsSync } from "node:fs";
 import { rm } from "node:fs/promises";
 
-import { getReactMetadata } from "../../src/metadata/providers.ts";
-import { type Size } from "../../src/metadata/sizing.ts";
-import { type SvgIcon, Transformer, type TransformerContext } from "../transformer.ts";
+import { getReactMetadata, type icons, type Size } from "../metadata.ts";
+import type { SvgIcon, Transformer } from "../transformer.ts";
+import * as utils from "../utils.ts";
 
 const svgrConfig: Config = {
 	dimensions: false,
@@ -33,11 +33,11 @@ const svgrConfig: Config = {
 /**
  * Transformer that generates aggregated React components of icons and their supported sizes.
  */
-export class ReactTransformer extends Transformer {
+export class ReactTransformer implements Transformer {
 	/**
 	 * @inheritdoc
 	 */
-	public name = "React components";
+	public readonly name = "React components";
 
 	/**
 	 * Contents of the components index file.
@@ -47,16 +47,16 @@ export class ReactTransformer extends Transformer {
 	/**
 	 * @inheritdoc
 	 */
-	public override finalize(ctx: TransformerContext): Promise<void> {
-		return ctx.write("src/react/icons/index.ts", this.#indexContents);
+	public finalize(): Promise<void> {
+		return utils.writeGeneratedFile("src/react/icons/index.ts", this.#indexContents);
 	}
 
 	/**
 	 * @inheritdoc
 	 */
-	public override async initialize(ctx: TransformerContext): Promise<void> {
+	public async initialize(): Promise<void> {
 		// Clean up the old icons.
-		const dir = ctx.resolve("src/react/icons");
+		const dir = utils.resolve("src/react/icons");
 		if (existsSync(dir)) {
 			await rm(dir, { recursive: true });
 		}
@@ -65,24 +65,24 @@ export class ReactTransformer extends Transformer {
 	/**
 	 * @inheritdoc
 	 */
-	public override async transform(ctx: TransformerContext, icon: SvgIcon): Promise<void> {
+	public async transform(icon: SvgIcon): Promise<void> {
 		// Convert each size to a JSX element.
 		const sizes = new Map<Size, string>();
 		for (const [size, { svg }] of icon.sizes) {
 			const component = await transform(svg, svgrConfig);
-			const [, tsx] = component.match(/(<svg(.*)<\/svg>);/) ?? [];
+			const [, tsx] = component.match(/(<svg(.*)<\/svg>);/s) ?? []; // "s" flag updates "." to match newlines.
 			if (!tsx) {
-				throw new Error(`Failed to parse element from SVGR conversion: ${icon.name}`);
+				throw new Error(`Failed to parse SVG element for ${icon.name} (${size}) from SVGR component: \n\n${component}`);
 			}
 
 			sizes.set(size, tsx);
 		}
 
 		// Write all sizes of the icon as a single component.
-		const { componentName, filename } = getReactMetadata(icon.name);
+		const { componentName, filename } = getReactMetadata(icon.name as keyof typeof icons);
 		const elementOrSwitch = this.#reduceSizes(sizes);
 
-		await ctx.write(
+		await utils.writeGeneratedFile(
 			`src/react/icons/${filename}.tsx`,
 			this.#formatComponent(componentName, icon.name, elementOrSwitch),
 		);

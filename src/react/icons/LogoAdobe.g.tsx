@@ -17,7 +17,7 @@ const IconLogoAdobe = (props: IconProps & SVGProps<SVGSVGElement>) => {
 			role="img"
 			{...props}
 		>
-			<path d="M9.401 3H2v17.7zm5.207 0H22v17.7zm2.107 17.7-4.71-11.176-3.236 7.618h3.448l1.408 3.558z" />
+			<path d="M9.4 3H2v17.7zM14.608 3H22v17.7zM16.715 20.7l-4.71-11.176-3.236 7.618h3.448l1.407 3.558z" />
 		</svg>
 	);
 };

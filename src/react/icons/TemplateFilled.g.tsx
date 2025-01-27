@@ -17,7 +17,7 @@ const IconTemplateFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 			role="img"
 			{...props}
 		>
-			<path d="M13 3v18H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm1.5 0v6.5H21V5a2 2 0 0 0-2-2zm6.5 8h-6.5v10H19a2 2 0 0 0 2-2z" />
+			<path d="M13 3v18H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM14.5 3v6.5H21V5a2 2 0 0 0-2-2zM21 11h-6.5v10H19a2 2 0 0 0 2-2z" />
 		</svg>
 	);
 };

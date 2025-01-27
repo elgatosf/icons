@@ -1,3 +1,3 @@
 const icon: string =
-	'<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M11 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9h-7a2 2 0 0 1-2-2V2Z"/><path d="M19.25 9.5 12.5 2.75V9a.5.5 0 0 0 .5.5h6.25Z"/></svg>';
+	'<svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M10 2H6C4.89543 2 4 2.89543 4 4V16C4 17.1046 4.89543 18 6 18H14C15.1046 18 16 17.1046 16 16V8H12C10.8954 8 10 7.10457 10 6V2Z"/><path d="M15.9729 7C15.9048 6.59137 15.711 6.21097 15.4142 5.91421L12.0858 2.58579C11.789 2.28903 11.4086 2.09517 11 2.02714V6C11 6.55228 11.4477 7 12 7H15.9729Z"/></svg>';
 export default icon;

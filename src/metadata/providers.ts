@@ -1,9 +1,11 @@
+import { icons } from "./icons.g.js";
+
 /**
  * Gets the SVG string metadata for the specified icon.
  * @param name Name of the icon.
  * @returns The metadata.
  */
-export function getSvgStringMetadata(name: string): SvgStringMetadata {
+export function getSvgStringMetadata(name: keyof typeof icons): SvgStringMetadata {
 	const exportName = `icon${name.split("-").reduce((prev, curr) => {
 		return prev + curr.charAt(0).toUpperCase() + curr.substring(1);
 	}, "")}`;
@@ -40,13 +42,11 @@ export type SvgStringMetadata = {
  * @param name Name of the icon.
  * @returns The metadata.
  */
-export function getReactMetadata(name: string): ReactMetadata {
-	const { exportName } = getSvgStringMetadata(name);
-	const componentName = `${exportName.charAt(0).toUpperCase()}${exportName.slice(1)}`;
-
+export function getReactMetadata(name: keyof typeof icons): ReactMetadata {
+	const icon = icons[name];
 	return {
-		componentName,
-		filename: componentName.slice(4),
+		componentName: `Icon${icon.name}`,
+		filename: icon.name,
 	};
 }
 

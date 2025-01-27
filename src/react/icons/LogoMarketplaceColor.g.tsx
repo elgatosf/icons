@@ -23,18 +23,15 @@ const IconLogoMarketplaceColor = (props: IconProps & SVGProps<SVGSVGElement>) =>
 			/>
 			<path
 				fill="url(#prefix__a)"
-				d="M21 10.044a1.565 1.565 0 0 1-2.993.643l-1.134-2.512a.196.196 0 0 0-.356 0l-1.134 2.512a1.565 1.565 0 1 1-2.07-2.07l2.511-1.134a.196.196 0 0 0 0-.357l-2.511-1.133a1.565 1.565 0 1 1 2.07-2.07l1.134 2.51a.196.196 0 0 0 .356 0l1.134-2.51a1.565 1.565 0 1 1 2.07 2.07l-2.51 1.133a.195.195 0 0 0 0 .357l2.51 1.133c.544.245.922.792.922 1.428"
+				d="M21 10.044a1.565 1.565 0 0 1-2.992.643l-1.134-2.512a.196.196 0 0 0-.356 0l-1.134 2.512a1.565 1.565 0 1 1-2.07-2.07l2.511-1.134a.196.196 0 0 0 0-.357l-2.511-1.133a1.565 1.565 0 1 1 2.07-2.07l1.134 2.51a.196.196 0 0 0 .356 0l1.134-2.51a1.565 1.565 0 1 1 2.07 2.07l-2.51 1.133a.196.196 0 0 0 0 .357l2.51 1.133c.544.246.922.792.922 1.428"
 			/>
 			<path
 				fill="url(#prefix__b)"
 				d="M3.978 12.783a.978.978 0 1 0 0 1.956h4.925l-5.191 3.384A1.564 1.564 0 0 0 4.565 21c.55 0 1.033-.283 1.312-.712l3.384-5.19v4.924a.978.978 0 1 0 1.957 0v-7.24z"
 			/>
-			<path
-				fill="url(#prefix__c)"
-				d="M16.892 12.391a4.11 4.11 0 0 0-4.109 4.109v4.108h4.109a4.109 4.109 0 1 0 0-8.217"
-			/>
+			<path fill="url(#prefix__c)" d="M16.89 12.391a4.11 4.11 0 0 0-4.108 4.11v4.108h4.109a4.109 4.109 0 1 0 0-8.218" />
 			<defs>
-				<linearGradient id="prefix__a" x1={20.999} x2={12.391} y1={3} y2={11.609} gradientUnits="userSpaceOnUse">
+				<linearGradient id="prefix__a" x1={21} x2={12.392} y1={3} y2={11.609} gradientUnits="userSpaceOnUse">
 					<stop offset={0.297} stopColor="#4DE36E" />
 					<stop offset={1} stopColor="#31AFA7" />
 				</linearGradient>
@@ -42,7 +39,7 @@ const IconLogoMarketplaceColor = (props: IconProps & SVGProps<SVGSVGElement>) =>
 					<stop offset={0.339} stopColor="#FF60D0" />
 					<stop offset={1} stopColor="#A638FE" />
 				</linearGradient>
-				<linearGradient id="prefix__c" x1={21.001} x2={12.783} y1={12.391} y2={20.608} gradientUnits="userSpaceOnUse">
+				<linearGradient id="prefix__c" x1={21} x2={12.782} y1={12.391} y2={20.609} gradientUnits="userSpaceOnUse">
 					<stop offset={0.328} stopColor="#FBDB00" />
 					<stop offset={1} stopColor="#FF9959" />
 				</linearGradient>

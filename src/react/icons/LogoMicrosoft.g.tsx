@@ -17,7 +17,7 @@ const IconLogoMicrosoft = (props: IconProps & SVGProps<SVGSVGElement>) => {
 			role="img"
 			{...props}
 		>
-			<path d="M11.571 3H3v8.571h8.571zM21 3h-8.571v8.571H21zM3 12.429h8.571V21H3zm18 0h-8.571V21H21z" />
+			<path d="M11.571 3H3v8.571h8.571zM21 3h-8.571v8.571H21zM3 12.429h8.571V21H3zM21 12.429h-8.571V21H21z" />
 		</svg>
 	);
 };

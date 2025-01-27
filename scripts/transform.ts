@@ -2,19 +2,13 @@ import { readdir, readFile } from "node:fs/promises";
 import { basename, extname, join, parse } from "node:path";
 import ora from "ora";
 
-import type { Size } from "../src/metadata/index.ts";
-import { getSvgStringMetadata } from "../src/metadata/providers.ts";
-import { type SvgIcon, TransformerContext } from "./transformer.ts";
-import { MetadataTransformer } from "./transformers/metadata.ts";
+import { isValidSize } from "../src/metadata/sizing.ts";
+import { getSvgStringMetadata, type icons as iconsMetadata } from "./metadata.ts";
+import type { SvgIcon, Transformer } from "./transformer.ts";
 import { ReactTransformer } from "./transformers/react.ts";
 import { StringsTransformer } from "./transformers/strings.ts";
 
 const status = ora("Reading icons…").start();
-const sizes: ReadonlyMap<string, Size> = new Map([
-	["16", "s"],
-	["24", "m"],
-	["32", "l"],
-]);
 
 /**
  * Get all icon SVG files.
@@ -38,7 +32,8 @@ for (let i = 0; i < entries.length; i++) {
 
 	// Read / create the icon.
 	const name = parse(entry.name).name;
-	const { exportName } = getSvgStringMetadata(name); // This ensures a unique name for all icons.
+	const { exportName } = getSvgStringMetadata(name as keyof typeof iconsMetadata);
+
 	let icon = icons.get(exportName);
 	if (icon && icon.name !== name) {
 		throw new Error(`Duplicate icons found:\n\n${name}\n${icon.name}\n\nBoth resolve to: ${exportName}`);
@@ -50,9 +45,9 @@ for (let i = 0; i < entries.length; i++) {
 	};
 
 	// Determine the size of the icon.
-	const size = sizes.get(basename(entry.parentPath));
-	if (!size) {
-		throw new Error(`Unable to determine size from directory name: ${basename(entry.parentPath)}`);
+	const size = basename(entry.parentPath);
+	if (!isValidSize(size)) {
+		throw new Error(`Unable to determine size from directory name: ${size}`);
 	}
 
 	if (icon.sizes.has(size)) {
@@ -78,27 +73,25 @@ status.succeed("Reading icons");
  * Transform all of the icons against each transformer.
  */
 
-const transformers = [
-	new MetadataTransformer(),
+const transformers: Transformer[] = [
 	new ReactTransformer(),
 	new StringsTransformer(),
 ];
 
-const ctx = new TransformerContext();
 for (const transformer of transformers) {
 	const status = ora(transformer.name).start();
 
 	status.suffixText = "Initializing...";
-	await transformer.initialize?.(ctx);
+	await transformer.initialize?.();
 
 	let i = 0;
 	for (const [, icon] of icons) {
-		await transformer.transform(ctx, icon);
+		await transformer.transform(icon);
 		status.suffixText = `${i++} / ${icons.size}`;
 	}
 
 	status.suffixText = "Finalizing...";
-	await transformer.finalize?.(ctx);
+	await transformer.finalize?.();
 	status.suffixText = "";
 
 	status.succeed(transformer.name);

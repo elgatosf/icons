@@ -17,7 +17,7 @@ const IconTransitionFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 			role="img"
 			{...props}
 		>
-			<path d="M3 5a2 2 0 0 1 2-2h2.5v18H5a2 2 0 0 1-2-2zm8-2h8a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2" />
+			<path d="M3 5a2 2 0 0 1 2-2h2.5v18H5a2 2 0 0 1-2-2zM11 3h8a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2" />
 		</svg>
 	);
 };
