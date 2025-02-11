@@ -7,6 +7,21 @@ const IconArFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	const label = props?.label ?? "Icon";
 
 	switch (props?.size) {
+		case "l":
+			return (
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="currentColor"
+					viewBox="0 0 24 24"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path d="M5.25 3.5a.75.75 0 0 0 0-1.5H4a2 2 0 0 0-2 2v1.25a.75.75 0 0 0 1.5 0V4a.5.5 0 0 1 .5-.5zM3.5 18.75a.75.75 0 0 0-1.5 0V20a2 2 0 0 0 2 2h1.25a.75.75 0 0 0 0-1.5H4a.5.5 0 0 1-.5-.5zM21.25 6a.75.75 0 0 1-.75-.75V4a.5.5 0 0 0-.5-.5h-1.25a.75.75 0 0 1 0-1.5H20a2 2 0 0 1 2 2v1.25a.75.75 0 0 1-.75.75M18.75 20.5a.75.75 0 0 0 0 1.5H20a2 2 0 0 0 2-2v-1.25a.75.75 0 0 0-1.5 0V20a.5.5 0 0 1-.5.5zM11 4.495a2 2 0 0 1 2 0l5 2.886a2 2 0 0 1 .23.156L12 11.134 5.77 7.537q.108-.085.23-.156zM12.75 12.433l6.23-3.597q.02.137.02.277v5.774a2 2 0 0 1-1 1.732l-5 2.887a2 2 0 0 1-.25.122zM11.25 19.628v-7.195L5.02 8.836Q5 8.973 5 9.113v5.774a2 2 0 0 0 1 1.732l5 2.887q.122.07.25.122" />
+				</svg>
+			);
 		default:
 			return (
 				<svg

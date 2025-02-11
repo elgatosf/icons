@@ -2,7 +2,7 @@ import type { SVGProps } from "react";
 import { sizeMap } from "../../metadata/sizing.js";
 import type { IconProps } from "../types.js";
 
-const IconHDR = (props: IconProps & SVGProps<SVGSVGElement>) => {
+const IconHdr = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	const size = sizeMap[props?.size ?? "m"];
 	const label = props?.label ?? "Icon";
 
@@ -22,6 +22,6 @@ const IconHDR = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	);
 };
 
-IconHDR.iconName = "hdr";
+IconHdr.iconName = "hdr";
 
-export default IconHDR;
+export default IconHdr;
