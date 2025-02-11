@@ -113,7 +113,7 @@ export class ReactTransformer implements Transformer {
 
 		// With multiple sizes, build a switch statement.
 		let switchStatement = "switch (props?.size) {\n";
-		for (let i = orderedSizes.length - 1; i--; i >= 0) {
+		for (let i = orderedSizes.length - 1; i >= 0; i--) {
 			if (i > 0) {
 				switchStatement += `case "${orderedSizes[i].size}": return ${orderedSizes[i].tsx};\n`;
 			} else {
