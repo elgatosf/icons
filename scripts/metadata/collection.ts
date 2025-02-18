@@ -39,15 +39,20 @@ function compareSize(a: metadata.Size, b: metadata.Size): number {
  * An aggregation of icon metadata, indexed by the icons file name (without the extension).
  */
 export type IconMetadataCollection = {
-	[filename: string]: {
-		/**
-		 * Original name of the icon.
-		 */
-		name: string;
+	[filename: string]: Icon;
+};
 
-		/**
-		 * Sizes the icon is available in.
-		 */
-		sizes: metadata.Size[];
-	};
+/**
+ * Metadata for an icon.
+ */
+export type Icon = {
+	/**
+	 * Original name of the icon.
+	 */
+	name: string;
+
+	/**
+	 * Sizes the icon is available in.
+	 */
+	sizes: metadata.Size[];
 };

@@ -12,7 +12,7 @@ import type { metadata } from "../metadata/metadata";
 export function parseMetadata(node: Figma.ComponentNode, parentNode: Figma.ComponentSetNode): Readonly<IconMetadata> {
 	// Initialize a default set of metadata.
 	const icon: Omit<IconMetadata, "name"> = {
-		color: true,
+		color: false,
 		size: "m",
 		style: "outlined",
 	};
