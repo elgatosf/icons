@@ -1,7 +1,7 @@
 import { existsSync } from "fs";
 import { rm } from "fs/promises";
 
-import { getSvgStringMetadata, type icons, type Size } from "../metadata.ts";
+import { metadata } from "../core/metadata.ts";
 import type { SvgIcon, Transformer } from "../transformer.ts";
 import * as utils from "../utils.ts";
 
@@ -17,7 +17,7 @@ export class StringsTransformer implements Transformer {
 	/**
 	 * Catalogue of icons for each size.
 	 */
-	#catalogues = new Map<Size, Catalogue>([
+	#catalogues = new Map<metadata.Size, Catalogue>([
 		["s", new Catalogue()],
 		["m", new Catalogue()],
 		["l", new Catalogue()],
@@ -63,7 +63,7 @@ export class StringsTransformer implements Transformer {
 
 			const catalogue = this.#catalogues.get(size)!;
 			catalogue.names.push(icon.name);
-			catalogue.indexContents += `export { default as ${getSvgStringMetadata(icon.name as keyof typeof icons).exportName} } from "./icons/${icon.name}.g.js";\n`;
+			catalogue.indexContents += `export { default as ${metadata.getSvgStringMetadata(icon.name as keyof typeof metadata.icons).exportName} } from "./icons/${icon.name}.g.js";\n`;
 		}
 	}
 
@@ -72,7 +72,7 @@ export class StringsTransformer implements Transformer {
 	 * @param size Size.
 	 * @returns Directory for the size.
 	 */
-	#pathOf(size: Size): string {
+	#pathOf(size: metadata.Size): string {
 		return `src/strings/${size}`;
 	}
 }
