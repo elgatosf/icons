@@ -7,6 +7,21 @@ const IconCubeFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	const label = props?.label ?? "Icon";
 
 	switch (props?.size) {
+		case "l":
+			return (
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="currentColor"
+					viewBox="0 0 24 24"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path d="M3.77 6.382q.108-.086.23-.155l7-4.042a2 2 0 0 1 2 0l7 4.042a2 2 0 0 1 .23.155L12 11.134zM3.02 7.681Q3 7.818 3 7.959v8.083a2 2 0 0 0 1 1.731l7 4.042q.122.07.25.122v-9.504zM12.75 21.937q.128-.052.25-.122l7-4.042a2 2 0 0 0 1-1.732V7.96q0-.141-.02-.278l-8.23 4.752z" />
+				</svg>
+			);
 		default:
 			return (
 				<svg

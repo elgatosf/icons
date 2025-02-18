@@ -7,6 +7,25 @@ const IconSquareDashed = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	const label = props?.label ?? "Icon";
 
 	switch (props?.size) {
+		case "l":
+			return (
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="currentColor"
+					viewBox="0 0 24 24"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path
+						fillRule="evenodd"
+						d="M5 4.5a.5.5 0 0 0-.5.5v1.25a.75.75 0 0 1-1.5 0V5a2 2 0 0 1 2-2h1.25a.75.75 0 0 1 0 1.5zm5-.75a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75m7 0a.75.75 0 0 1 .75-.75H19a2 2 0 0 1 2 2v1.257a.75.75 0 0 1-1.5 0V5a.5.5 0 0 0-.5-.5h-1.25a.75.75 0 0 1-.75-.75M20.25 10a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 .75-.75m-16.5 0a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 .75-.75m16.5 7a.75.75 0 0 1 .75.75V19a2 2 0 0 1-2 2h-1.25a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5v-1.25a.75.75 0 0 1 .75-.75m-16.5 0a.75.75 0 0 1 .75.75V19a.5.5 0 0 0 .5.5h1.25a.75.75 0 0 1 0 1.5H5a2 2 0 0 1-2-2v-1.25a.75.75 0 0 1 .75-.75M10 20.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75"
+						clipRule="evenodd"
+					/>
+				</svg>
+			);
 		case "s":
 			return (
 				<svg

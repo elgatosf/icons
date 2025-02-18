@@ -7,6 +7,25 @@ const IconDiscountFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	const label = props?.label ?? "Icon";
 
 	switch (props?.size) {
+		case "l":
+			return (
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="currentColor"
+					viewBox="0 0 24 24"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path
+						fillRule="evenodd"
+						d="M13.41 2.582a2 2 0 0 0-2.82 0L9.408 3.757a2 2 0 0 1-1.404.581l-1.667.005a2 2 0 0 0-1.994 1.994l-.005 1.667a2 2 0 0 1-.581 1.404L2.582 10.59a2 2 0 0 0 0 2.82l1.175 1.182a2 2 0 0 1 .581 1.404l.005 1.667a2 2 0 0 0 1.994 1.994l1.667.005a2 2 0 0 1 1.404.581l1.182 1.175a2 2 0 0 0 2.82 0l1.182-1.175a2 2 0 0 1 1.404-.581l1.667-.005a2 2 0 0 0 1.994-1.994l.005-1.667a2 2 0 0 1 .581-1.404l1.175-1.182a2 2 0 0 0 0-2.82l-1.175-1.182a2 2 0 0 1-.581-1.404l-.005-1.667a2 2 0 0 0-1.994-1.994l-1.667-.005a2 2 0 0 1-1.404-.581zm2.37 6.698a.75.75 0 0 0-1.06-1.06l-6.5 6.5a.75.75 0 1 0 1.06 1.06zM11 9.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m3.5 6.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"
+						clipRule="evenodd"
+					/>
+				</svg>
+			);
 		default:
 			return (
 				<svg

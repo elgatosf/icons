@@ -7,6 +7,25 @@ const IconAnalytics = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	const label = props?.label ?? "Icon";
 
 	switch (props?.size) {
+		case "l":
+			return (
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="currentColor"
+					viewBox="0 0 24 24"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path
+						fillRule="evenodd"
+						d="M11.5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm1 1.5h-1a.5.5 0 0 0-.5.5v14a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V5a.5.5 0 0 0-.5-.5M5 11a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2zm1 1.5H5a.5.5 0 0 0-.5.5v6a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-6a.5.5 0 0 0-.5-.5M16 9a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2zm2-.5h1a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5V9a.5.5 0 0 1 .5-.5"
+						clipRule="evenodd"
+					/>
+				</svg>
+			);
 		default:
 			return (
 				<svg

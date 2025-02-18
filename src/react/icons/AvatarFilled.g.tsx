@@ -7,6 +7,25 @@ const IconAvatarFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	const label = props?.label ?? "Icon";
 
 	switch (props?.size) {
+		case "l":
+			return (
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="currentColor"
+					viewBox="0 0 24 24"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path
+						fillRule="evenodd"
+						d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10m4-12.5a4 4 0 1 1-8 0 4 4 0 0 1 8 0m2.363 8.136A8.48 8.48 0 0 1 12 20.5a8.48 8.48 0 0 1-6.363-2.865 9 9 0 0 1 12.726 0"
+						clipRule="evenodd"
+					/>
+				</svg>
+			);
 		default:
 			return (
 				<svg
