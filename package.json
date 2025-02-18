@@ -68,6 +68,8 @@
         "@tsconfig/node20": "^20.1.4",
         "@types/node": "^22.8.6",
         "@types/react": "^18.3.12",
+        "chalk": "^5.4.1",
+        "console-table-printer": "^2.12.1",
         "dotenv": "^16.4.7",
         "figma-api": "^2.0.1-beta",
         "ora": "^8.1.1",
