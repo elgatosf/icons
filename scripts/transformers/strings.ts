@@ -1,7 +1,7 @@
 import { existsSync } from "fs";
 import { rm } from "fs/promises";
 
-import { metadata } from "../core/metadata.ts";
+import { metadata } from "../metadata/metadata.ts";
 import type { SvgIcon, Transformer } from "../transformer.ts";
 import * as utils from "../utils.ts";
 

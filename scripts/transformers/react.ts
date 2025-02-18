@@ -2,7 +2,7 @@ import { type Config, transform } from "@svgr/core";
 import { existsSync } from "node:fs";
 import { rm } from "node:fs/promises";
 
-import { metadata } from "../core/metadata.ts";
+import { metadata } from "../metadata/metadata.ts";
 import type { SvgIcon, Transformer } from "../transformer.ts";
 import * as utils from "../utils.ts";
 

@@ -3,7 +3,7 @@ import { basename, extname, join, parse } from "node:path";
 import ora from "ora";
 
 import { isValidSize } from "../src/metadata/sizing.ts";
-import { metadata } from "./core/metadata.ts";
+import { metadata } from "./metadata/metadata.ts";
 import type { SvgIcon, Transformer } from "./transformer.ts";
 import { ReactTransformer } from "./transformers/react.ts";
 import { StringsTransformer } from "./transformers/strings.ts";
