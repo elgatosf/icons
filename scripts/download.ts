@@ -6,6 +6,7 @@ import ora from "ora";
 import { FigmaFileClient } from "./figma/figma-client.ts";
 import { writeIconsMetadataFile, writeSvgFile } from "./figma/file-writer.ts";
 import { findIcons } from "./figma/find.ts";
+import { createMetadataCollection } from "./metadata/collection.ts";
 import * as utils from "./utils.ts";
 
 // Configure the environment.
@@ -48,7 +49,9 @@ for await (const { nodeId, contents } of figmaClient.getSvgImages(Array.from(ico
 	status.text = `Downloading... ${++count} / ${icons.size}`;
 }
 
-await writeIconsMetadataFile(Array.from(icons.values()));
+// Create the collection of metadata from the icons, and write the metadata to file.
+const metadata = createMetadataCollection(icons.values());
+await writeIconsMetadataFile(metadata);
 
 performance.mark("stop");
 const { duration } = performance.measure("timing", "start", "stop");
