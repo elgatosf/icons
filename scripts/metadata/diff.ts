@@ -7,20 +7,26 @@ import { metadata } from "./metadata.ts";
 /**
  * Compares the specified metadata collection to the current metadata on disk.
  * @param icons Collection of icon metadata.
+ * @returns The number of breaking changes.
  */
-export function compare(icons: IconMetadataCollection): void {
-	const old = metadata.icons as unknown as IconMetadataCollection;
-
+export function printComparison(icons: IconMetadataCollection): ComparisonResult {
 	const changes: Change[] = [];
-	const diff = compareSets(Object.keys(old), Object.keys(icons));
+	const counts = {
+		addedSize: 0,
+		modifiedName: 0,
+		removedSize: 0,
+	};
+
+	const oldIcons = metadata.icons as unknown as IconMetadataCollection;
+	const diff = compareSets(Object.keys(oldIcons), Object.keys(icons));
 
 	// Removed icons.
 	diff.aExclusive.forEach((filename) => {
 		changes.push({
 			key: filename,
 			filename: chalk.red(filename),
-			name: old[filename].name,
-			sizes: old[filename].sizes.toString(),
+			name: oldIcons[filename].name,
+			sizes: oldIcons[filename].sizes.toString(),
 			type: "breaking",
 		});
 	});
@@ -46,16 +52,20 @@ export function compare(icons: IconMetadataCollection): void {
 		};
 
 		// Compare icon sizes.
-		const sizeComparison = compareSets(old[filename].sizes, icons[filename].sizes);
-		if (sizeComparison.aExclusive.length !== 0 || sizeComparison.bExclusive.length !== 0) {
-			change.type = sizeComparison.aExclusive.length > 0 ? "breaking" : "enhancement";
+		const sizeDiff = compareSets(oldIcons[filename].sizes, icons[filename].sizes);
+		if (sizeDiff.aExclusive.length !== 0 || sizeDiff.bExclusive.length !== 0) {
+			// Increment the counters.
+			counts.addedSize += sizeDiff.bExclusive.length;
+			counts.removedSize += sizeDiff.aExclusive.length;
 
-			change.sizes = [...sizeComparison.aExclusive, ...sizeComparison.bExclusive, ...sizeComparison.intersection]
+			// Add the "Sizes" change.
+			change.type = sizeDiff.aExclusive.length > 0 ? "breaking" : "enhancement";
+			change.sizes = [...sizeDiff.aExclusive, ...sizeDiff.bExclusive, ...sizeDiff.intersection]
 				.sort(compareSize)
 				.map((size) => {
-					if (sizeComparison.aExclusive.includes(size)) {
+					if (sizeDiff.aExclusive.includes(size)) {
 						return chalk.red(size);
-					} else if (sizeComparison.bExclusive.includes(size)) {
+					} else if (sizeDiff.bExclusive.includes(size)) {
 						return chalk.green(size);
 					} else {
 						return size;
@@ -65,8 +75,10 @@ export function compare(icons: IconMetadataCollection): void {
 		}
 
 		// Compare icon name.
-		if (old[filename].name !== icons[filename].name) {
-			change.name = `${chalk.red(icons[filename].name)} ${chalk.grey(old[filename].name)}`;
+		if (oldIcons[filename].name !== icons[filename].name) {
+			counts.modifiedName++;
+
+			change.name = `${chalk.red(icons[filename].name)} ${chalk.grey(oldIcons[filename].name)}`;
 			change.type = "breaking";
 		}
 
@@ -75,14 +87,65 @@ export function compare(icons: IconMetadataCollection): void {
 		}
 	});
 
-	print(changes);
+	// No changes.
+	if (changes.length === 0) {
+		return { isBreaking: false };
+	}
+
+	// Print the table of changes, and the summary.
+	table(changes);
+	console.log();
+
+	summarize(chalk.green, [diff.bExclusive.length, "icon(s) added"], [counts.addedSize, "icon size(s) added"]);
+	const breaking = summarize(
+		chalk.red,
+		[diff.aExclusive.length, "icon(s) removed"],
+		[counts.removedSize, "icon size(s) removed"],
+		[counts.modifiedName, "icon name(s) changed"],
+	);
+
+	console.log();
+	return { isBreaking: breaking > 0 };
+}
+
+/**
+ * Result of a comparison.
+ */
+type ComparisonResult = {
+	/**
+	 * Determines whether the comparison found breaking changes.
+	 */
+	isBreaking: boolean;
+};
+
+/**
+ * Summarizes a collection of messages when their count is greater than zero.
+ * @param format Formatter used when logging the summary.
+ * @param change The changes.
+ * @returns The total number of changes.
+ */
+function summarize(format: (...text: unknown[]) => string, ...change: [count: number, suffix: string][]): number {
+	let total = 0;
+	const text = change
+		.map(([count, suffix]) => {
+			total += count;
+			return count > 0 ? `${count} ${suffix}` : undefined;
+		})
+		.filter((c) => c !== undefined)
+		.join(", ");
+
+	if (text) {
+		console.log(format(text));
+	}
+
+	return total;
 }
 
 /**
  * Prints the changes as a table.
  * @param changes The changes.
  */
-function print(changes: Change[]): void {
+function table(changes: Change[]): void {
 	const tbl = new Table({
 		columns: [
 			{ title: " ", name: "type" },
@@ -166,7 +229,7 @@ type SetComparisonResult<T> = {
 	aExclusive: T[];
 
 	/**
-	 * Entries exclusive to set A.
+	 * Entries exclusive to set B.
 	 */
 	bExclusive: T[];
 
