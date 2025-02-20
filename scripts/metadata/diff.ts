@@ -1,7 +1,7 @@
 import chalk from "chalk";
 import { Table } from "console-table-printer";
 
-import type { IconMetadataCollection } from "./collection.ts";
+import { compareSize, type IconMetadataCollection } from "./collection.ts";
 import { metadata } from "./metadata.ts";
 
 /**
@@ -10,49 +10,70 @@ import { metadata } from "./metadata.ts";
  */
 export function compare(icons: IconMetadataCollection): void {
 	const old = metadata.icons as unknown as IconMetadataCollection;
+
 	const changes: Change[] = [];
+	const diff = compareSets(Object.keys(old), Object.keys(icons));
 
-	// Iterate over the metadata for the icons, comparing it against the previously generated.
-	for (const filename of Object.keys(icons)) {
-		const { name, sizes } = icons[filename];
-		let change: Change = { filename, name, sizes: sizes.toString() };
+	// Removed icons.
+	diff.aExclusive.forEach((filename) => {
+		changes.push({
+			key: filename,
+			filename: chalk.red(filename),
+			name: old[filename].name,
+			sizes: old[filename].sizes.toString(),
+			type: "breaking",
+		});
+	});
 
-		// Check: Added icon.
-		if (!(filename in old)) {
-			changes.push({
-				...change,
-				type: "added",
-			});
-			continue;
+	// Added icons.
+	diff.bExclusive.forEach((filename) => {
+		changes.push({
+			key: filename,
+			filename: chalk.green(filename),
+			name: icons[filename].name,
+			sizes: icons[filename].sizes.toString(),
+			type: "enhancement",
+		});
+	});
+
+	// Maybe modified.
+	diff.intersection.forEach((filename) => {
+		let change: Change = {
+			key: filename,
+			filename,
+			name: icons[filename].name,
+			sizes: icons[filename].sizes.toString(),
+		};
+
+		// Compare icon sizes.
+		const sizeComparison = compareSets(old[filename].sizes, icons[filename].sizes);
+		if (sizeComparison.aExclusive.length !== 0 || sizeComparison.bExclusive.length !== 0) {
+			change.type = sizeComparison.aExclusive.length > 0 ? "breaking" : "enhancement";
+
+			change.sizes = [...sizeComparison.aExclusive, ...sizeComparison.bExclusive, ...sizeComparison.intersection]
+				.sort(compareSize)
+				.map((size) => {
+					if (sizeComparison.aExclusive.includes(size)) {
+						return chalk.red(size);
+					} else if (sizeComparison.bExclusive.includes(size)) {
+						return chalk.green(size);
+					} else {
+						return size;
+					}
+				})
+				.toString();
 		}
 
-		// Check: Modified name.
-		const prev = old[filename];
-		console.log(prev.name);
-		if (prev.name !== name) {
-			change.type = "modified";
-			change.name = `${chalk.red(name)} ${chalk.grey(prev.name)}`;
+		// Compare icon name.
+		if (old[filename].name !== icons[filename].name) {
+			change.name = `${chalk.red(icons[filename].name)} ${chalk.grey(old[filename].name)}`;
+			change.type = "breaking";
 		}
-
-		// Check: Modified sizes.
-		// TODO.
 
 		if (change.type) {
 			changes.push(change);
 		}
-	}
-
-	// Iterate over the previously generated to determine if icons were removed.
-	for (const filename of Object.keys(old)) {
-		if (!(filename in icons)) {
-			changes.push({
-				type: "removed",
-				filename: chalk.red(filename),
-				name: old[filename].name,
-				sizes: old[filename].sizes.toString(),
-			});
-		}
-	}
+	});
 
 	print(changes);
 }
@@ -64,6 +85,7 @@ export function compare(icons: IconMetadataCollection): void {
 function print(changes: Change[]): void {
 	const tbl = new Table({
 		columns: [
+			{ title: " ", name: "type" },
 			{ title: "Filename", name: "filename", alignment: "left" },
 			{ title: "Name", name: "name", alignment: "left" },
 			{ title: "Sizes", name: "sizes", alignment: "left" },
@@ -72,10 +94,11 @@ function print(changes: Change[]): void {
 
 	// Sort the changes by the icon's filename, and then add the rows.
 	changes
-		.sort((a, b) => a.filename.localeCompare(b.filename))
+		.sort((a, b) => a.key.localeCompare(b.key))
 		.forEach(({ type, filename, name, sizes }) => {
 			tbl.addRow({
-				filename: type === "added" ? chalk.green(filename) : type === "removed" ? chalk.yellow(filename) : filename,
+				type: type === "enhancement" ? chalk.green("+") : chalk.red("!"),
+				filename,
 				name,
 				sizes,
 			});
@@ -90,6 +113,11 @@ function print(changes: Change[]): void {
  * Information about a change to an icon.
  */
 type Change = {
+	/**
+	 * Key of the change.
+	 */
+	key: string;
+
 	/**
 	 * Filename of the icon.
 	 */
@@ -108,5 +136,42 @@ type Change = {
 	/**
 	 * Type of the change.
 	 */
-	type?: "added" | "removed" | "modified";
+	type?: "enhancement" | "breaking";
+};
+
+/**
+ * Compares two sets, and returns the result of the comparison.
+ * @param a Set A.
+ * @param b Set B.
+ * @returns The result of the comparison.
+ */
+function compareSets<T>(a: T[], b: T[]): SetComparisonResult<T> {
+	const aSet = new Set(a);
+	const bSet = new Set(b);
+
+	return {
+		aExclusive: [...aSet].filter((item) => !bSet.has(item)),
+		bExclusive: [...bSet].filter((item) => !aSet.has(item)),
+		intersection: [...aSet].filter((item) => bSet.has(item)),
+	};
+}
+
+/**
+ * Results of comparing two sets.
+ */
+type SetComparisonResult<T> = {
+	/**
+	 * Entries exclusive to set A.
+	 */
+	aExclusive: T[];
+
+	/**
+	 * Entries exclusive to set A.
+	 */
+	bExclusive: T[];
+
+	/**
+	 * Entries found in both sets.
+	 */
+	intersection: T[];
 };

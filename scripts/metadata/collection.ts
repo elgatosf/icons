@@ -30,7 +30,7 @@ export function createMetadataCollection(icons: Iterable<IconMetadata>): IconMet
  * @param icon Icon.
  * @returns Array of sizes.
  */
-function compareSize(a: metadata.Size, b: metadata.Size): number {
+export function compareSize(a: metadata.Size, b: metadata.Size): number {
 	const weights: metadata.Size[] = ["s", "m", "l"];
 	return weights.indexOf(a) - weights.indexOf(b);
 }
