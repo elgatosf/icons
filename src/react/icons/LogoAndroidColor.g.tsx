@@ -28,6 +28,7 @@ const IconLogoAndroidColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 					id="prefix__b"
 					width={198}
 					height={102}
+					preserveAspectRatio="none"
 				/>
 			</defs>
 		</svg>

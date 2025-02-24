@@ -35,6 +35,7 @@ const IconLogoAdobeExpressColor = (props: IconProps & SVGProps<SVGSVGElement>) =
 					id="prefix__b"
 					width={80}
 					height={80}
+					preserveAspectRatio="none"
 				/>
 			</defs>
 		</svg>

@@ -1,6 +1,8 @@
 export { default as iconAccessibilityFilled } from "./icons/accessibility--filled.g.js";
 export { default as iconAccessibility } from "./icons/accessibility.g.js";
 export { default as iconAuxiliary } from "./icons/auxiliary.g.js";
+export { default as iconBoardFilled } from "./icons/board--filled.g.js";
+export { default as iconBoard } from "./icons/board.g.js";
 export { default as iconCheckmarkCircleFilled } from "./icons/checkmark-circle--filled.g.js";
 export { default as iconCheckmarkCircle } from "./icons/checkmark-circle.g.js";
 export { default as iconChevronRight } from "./icons/chevron-right.g.js";
@@ -202,6 +204,8 @@ export { default as iconPlugin } from "./icons/plugin.g.js";
 export { default as iconProfileFilled } from "./icons/profile--filled.g.js";
 export { default as iconProfile } from "./icons/profile.g.js";
 export { default as iconReset } from "./icons/reset.g.js";
+export { default as iconSceneCollectionFilled } from "./icons/scene-collection--filled.g.js";
+export { default as iconSceneCollection } from "./icons/scene-collection.g.js";
 export { default as iconSearchFilled } from "./icons/search--filled.g.js";
 export { default as iconSearch } from "./icons/search.g.js";
 export { default as iconSecurityFilled } from "./icons/security--filled.g.js";
