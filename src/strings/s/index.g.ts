@@ -1,6 +1,8 @@
 export { default as iconAccessibilityFilled } from "./icons/accessibility--filled.g.js";
 export { default as iconAccessibility } from "./icons/accessibility.g.js";
 export { default as iconAuxiliary } from "./icons/auxiliary.g.js";
+export { default as iconBoardFilled } from "./icons/board--filled.g.js";
+export { default as iconBoard } from "./icons/board.g.js";
 export { default as iconCheckmarkCircleFilled } from "./icons/checkmark-circle--filled.g.js";
 export { default as iconCheckmarkCircle } from "./icons/checkmark-circle.g.js";
 export { default as iconChevronRight } from "./icons/chevron-right.g.js";

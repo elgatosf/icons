@@ -1,6 +1,7 @@
 import type * as Figma from "@figma/rest-api-spec";
 
-import { IconMetadata } from "./metadata.ts";
+import type { IconMetadata } from "../metadata/icon.ts";
+import { parseMetadata } from "./node-to-metadata.ts";
 
 /**
  * Finds all icons within the specified document.
@@ -24,7 +25,7 @@ function visit(node: Figma.Node, icons: Map<string, IconMetadata>): void {
 		node.children
 			.filter((child): child is Figma.ComponentNode => child.type === "COMPONENT")
 			.forEach((icon) => {
-				icons.set(icon.id, new IconMetadata(icon, node));
+				icons.set(icon.id, parseMetadata(icon, node));
 			});
 	}
 

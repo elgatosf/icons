@@ -1,8 +1,9 @@
 import { join } from "path";
 
 import { isValidSize } from "../../src/metadata/sizing.ts";
+import { type IconMetadataCollection } from "../metadata/collection.ts";
+import type { IconMetadata } from "../metadata/icon.ts";
 import * as utils from "../utils.ts";
-import { aggregateMetadata, type IconMetadata } from "./metadata.ts";
 
 /**
  * Optimizes the SVG contents, before writing it to its local file.
@@ -24,14 +25,14 @@ export async function writeSvgFile(metadata: IconMetadata, svg: string): Promise
  * Writes the icons metadata file, indexed by their SVG file name.
  * @param icons Icons that were generated.
  */
-export async function writeIconsMetadataFile(icons: IconMetadata[]): Promise<void> {
+export async function writeIconsMetadataFile(icons: IconMetadataCollection): Promise<void> {
 	const contents = `
 // Last synchronized: ${new Date().toUTCString()}
 
 /**
  * Collection of available icons, and their associated metadata.
  */
-export const icons = ${JSON.stringify(aggregateMetadata(icons))} as const;
+export const icons = ${JSON.stringify(icons)} as const;
 `;
 
 	return utils.writeGeneratedFile("src/metadata/icons.ts", contents);

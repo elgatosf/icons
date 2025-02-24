@@ -35,6 +35,7 @@ const IconLogoAdobeCreativeCloudColor = (props: IconProps & SVGProps<SVGSVGEleme
 					id="prefix__b"
 					width={240}
 					height={234}
+					preserveAspectRatio="none"
 				/>
 			</defs>
 		</svg>

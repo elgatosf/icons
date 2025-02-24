@@ -32,12 +32,13 @@
     "scripts": {
         "build": "npm run transform && npm run lint:fix && npm run tsc",
         "build:ci": "tsc",
-        "download": "node --experimental-strip-types scripts/download.ts && prettier src/metadata/icons.g.ts --write --log-level warn",
+        "download": "npm run tsc:metadata && node --experimental-strip-types scripts/download.ts",
         "lint": "prettier . --check",
         "lint:fix": "prettier . --write --log-level warn",
         "sync": "npm run download && npm run build",
-        "transform": "tsc --project tsconfig.metadata.json && node --experimental-strip-types scripts/transform.ts",
-        "tsc": "tsc"
+        "transform": "npm run tsc:metadata && node --experimental-strip-types scripts/transform.ts",
+        "tsc": "tsc",
+        "tsc:metadata": "tsc --project tsconfig.metadata.json"
     },
     "keywords": [
         "elgato",
@@ -68,10 +69,13 @@
         "@tsconfig/node20": "^20.1.4",
         "@types/node": "^22.8.6",
         "@types/react": "^18.3.12",
+        "chalk": "^5.4.1",
+        "console-table-printer": "^2.12.1",
         "dotenv": "^16.4.7",
         "figma-api": "^2.0.1-beta",
         "ora": "^8.1.1",
         "react": "^18.3.1",
-        "typescript": "^5.6.3"
+        "typescript": "^5.6.3",
+        "zx": "^8.3.2"
     }
 }

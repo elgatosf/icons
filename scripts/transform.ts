@@ -3,7 +3,7 @@ import { basename, extname, join, parse } from "node:path";
 import ora from "ora";
 
 import { isValidSize } from "../src/metadata/sizing.ts";
-import { getSvgStringMetadata, type icons as iconsMetadata } from "./metadata.ts";
+import { metadata } from "./metadata/metadata.ts";
 import type { SvgIcon, Transformer } from "./transformer.ts";
 import { ReactTransformer } from "./transformers/react.ts";
 import { StringsTransformer } from "./transformers/strings.ts";
@@ -32,7 +32,7 @@ for (let i = 0; i < entries.length; i++) {
 
 	// Read / create the icon.
 	const name = parse(entry.name).name;
-	const { exportName } = getSvgStringMetadata(name as keyof typeof iconsMetadata);
+	const { exportName } = metadata.getSvgStringMetadata(name as keyof typeof metadata.icons);
 
 	let icon = icons.get(exportName);
 	if (icon && icon.name !== name) {

@@ -2,7 +2,7 @@ import { type Config, transform } from "@svgr/core";
 import { existsSync } from "node:fs";
 import { rm } from "node:fs/promises";
 
-import { getReactMetadata, type icons, type Size } from "../metadata.ts";
+import { metadata } from "../metadata/metadata.ts";
 import type { SvgIcon, Transformer } from "../transformer.ts";
 import * as utils from "../utils.ts";
 
@@ -67,7 +67,7 @@ export class ReactTransformer implements Transformer {
 	 */
 	public async transform(icon: SvgIcon): Promise<void> {
 		// Convert each size to a JSX element.
-		const sizes = new Map<Size, string>();
+		const sizes = new Map<metadata.Size, string>();
 		for (const [size, { svg }] of icon.sizes) {
 			const component = await transform(svg, svgrConfig);
 			const [, tsx] = component.match(/(<svg(.*)<\/svg>);/s) ?? []; // "s" flag updates "." to match newlines.
@@ -79,7 +79,7 @@ export class ReactTransformer implements Transformer {
 		}
 
 		// Write all sizes of the icon as a single component.
-		const { componentName, filename } = getReactMetadata(icon.name as keyof typeof icons);
+		const { componentName, filename } = metadata.getReactMetadata(icon.name as keyof typeof metadata.icons);
 		const elementOrSwitch = this.#reduceSizes(sizes);
 
 		await utils.writeGeneratedFile(
@@ -95,7 +95,7 @@ export class ReactTransformer implements Transformer {
 	 * @param sizes Sizes of the icons.
 	 * @returns Code that represents the icon sizes.
 	 */
-	#reduceSizes(sizes: Map<Size, string>): string {
+	#reduceSizes(sizes: Map<metadata.Size, string>): string {
 		if (sizes.size > 3 || sizes.size === 0) {
 			throw new Error(`Unable to aggregate sizes; expected "s", "m", and/or "l" only.`);
 		}
