@@ -49,7 +49,9 @@ if (!abort) {
 }
 
 // Print the changes, and the result
+await diff.compareFiles();
 diff.print();
+
 if (abort) {
 	console.log();
 	console.error(chalk.red("Breaking changes found, download aborted."));
