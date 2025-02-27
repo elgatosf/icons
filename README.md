@@ -23,12 +23,12 @@ npm install @elgato/icons
 Icons can be imported as SVG strings from `@elgato/icons/{s,m,l}`, for example:
 
 ```ts
-import { iconLogoElgato } from "@elgato/icons/m";
+import { iconLogoElgato } from "@elgato/icons/l";
 
-iconLogoElgato; // SVG string of the Elgato logo, medium (m) size.
+iconLogoElgato; // SVG string of the Elgato logo, large (l) size.
 ```
 
-All icons are available in medium (m), with some also available in small (s) and large (l).
+Icons are available in up to three sizes, small (s), medium (m), and large (l).
 
 -   `@elgato/icons/s` — optimized for 16 × 16 px.
 -   `@elgato/icons/m` — optimized for 20 × 20 px.
@@ -50,7 +50,7 @@ export default function MyComponent() {
 };
 ```
 
-All icons are available in medium (m), with some also available in small (s) and large (l), and the preferred size can be specified using the `size` property. If the preferred size does not exist, the default size will be used.
+Icons are available in up to three sizes, small (s), medium (m), and large (l), and the preferred size can be specified using the `size` property. If the preferred size does not exist, the default size will be used.
 
 ### SVG Files
 
@@ -59,12 +59,12 @@ All original SVG files are distributed with this package, and can be found withi
 ```
 .
 ├── svg/
-│   ├── s/
-│   ├── m/
-|   │   ├── ...
-|   │   ├── warning--filled.svg
-|   │   ├── warning.svg
-|   │   └── wave.svg
 |   └── l/
+│   ├── m/
+│   ├── s/
+|   │   ├── ...
+|   │   ├── warning.svg
+|   │   ├── window--filled.svg
+|   │   └── window.svg
 └── ...
 ```
