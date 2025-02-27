@@ -1,4 +1,4 @@
-// Last synchronized: Mon, 24 Feb 2025 15:37:44 GMT
+// Last synchronized: Thu, 27 Feb 2025 12:11:56 GMT
 
 /**
  * Collection of available icons, and their associated metadata.
@@ -364,8 +364,8 @@ export const icons = {
 	"image-check--filled": { name: "ImageCheckFilled", sizes: ["l"] },
 	inbox: { name: "Inbox", sizes: ["l"] },
 	"inbox--filled": { name: "InboxFilled", sizes: ["l"] },
-	info: { name: "Info", sizes: ["m", "l"] },
-	"info--filled": { name: "InfoFilled", sizes: ["m", "l"] },
+	info: { name: "Info", sizes: ["s", "m", "l"] },
+	"info--filled": { name: "InfoFilled", sizes: ["s", "m", "l"] },
 	infobar: { name: "Infobar", sizes: ["l"] },
 	"infobar--filled": { name: "InfobarFilled", sizes: ["l"] },
 	"iron-low": { name: "IronLow", sizes: ["m"] },

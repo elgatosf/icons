@@ -16,6 +16,8 @@ export { default as iconGameFilled } from "./icons/game--filled.g.js";
 export { default as iconGame } from "./icons/game.g.js";
 export { default as iconHdmiFilled } from "./icons/hdmi--filled.g.js";
 export { default as iconHdmi } from "./icons/hdmi.g.js";
+export { default as iconInfoFilled } from "./icons/info--filled.g.js";
+export { default as iconInfo } from "./icons/info.g.js";
 export { default as iconLogoCameraHubFilled } from "./icons/logo-camera-hub--filled.g.js";
 export { default as iconLogoCameraHub } from "./icons/logo-camera-hub.g.js";
 export { default as iconLogoGameCaptureFilled } from "./icons/logo-game-capture--filled.g.js";
