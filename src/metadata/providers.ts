@@ -60,7 +60,7 @@ export type ReactMetadata = {
 	componentName: string;
 
 	/**
-	 * Filename of the component.
+	 * Filename of the component, with the extension omitted.
 	 */
 	filename: string;
 };

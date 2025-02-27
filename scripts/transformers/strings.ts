@@ -27,13 +27,18 @@ export class StringsTransformer implements Transformer {
 	 * @inheritdoc
 	 */
 	public async finalize(): Promise<void> {
-		for (const [size, { names, indexContents }] of this.#catalogues) {
+		for (const [size, { names, exports }] of this.#catalogues) {
 			// Ignore empty catalogues.
 			if (names.length === 0) {
 				continue;
 			}
 
-			await utils.writeGeneratedFile(`${this.#pathOf(size)}/index.ts`, indexContents);
+			const contents = exports
+				.sort((a, b) => a.identifier.localeCompare(b.identifier))
+				.map(({ filename, identifier }) => `export { default as ${identifier} } from "${filename}";`)
+				.join("\n");
+
+			await utils.writeGeneratedFile(`${this.#pathOf(size)}/index.ts`, contents);
 		}
 	}
 
@@ -63,7 +68,10 @@ export class StringsTransformer implements Transformer {
 
 			const catalogue = this.#catalogues.get(size)!;
 			catalogue.names.push(icon.name);
-			catalogue.indexContents += `export { default as ${metadata.getSvgStringMetadata(icon.name as keyof typeof metadata.icons).exportName} } from "./icons/${icon.name}.g.js";\n`;
+			catalogue.exports.push({
+				identifier: metadata.getSvgStringMetadata(icon.name as keyof typeof metadata.icons).exportName,
+				filename: `./icons/${icon.name}.g.js`,
+			});
 		}
 	}
 
@@ -87,7 +95,7 @@ class Catalogue {
 	public readonly names: string[] = [];
 
 	/**
-	 * String that represents the index (barrel file) of the catalogue.
+	 * Icons exported from the index file.
 	 */
-	public indexContents: string = "";
+	public exports: utils.ExportSpecifier[] = [];
 }
