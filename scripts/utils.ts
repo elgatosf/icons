@@ -38,3 +38,18 @@ export function writeGeneratedFile(path: string, data: string): Promise<void> {
 
 	return writeFile(path, data);
 }
+
+/**
+ * Information for an export, for example `export { default as IconElgato } from "./logo-elgato.js"`;
+ */
+export type ExportSpecifier = {
+	/**
+	 * The identifier of the export.
+	 */
+	identifier: string;
+
+	/**
+	 * Filename of the export.
+	 */
+	filename: string;
+};

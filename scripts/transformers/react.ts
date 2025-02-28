@@ -4,6 +4,7 @@ import { rm } from "node:fs/promises";
 
 import { metadata } from "../metadata/metadata.ts";
 import type { SvgIcon, Transformer } from "../transformer.ts";
+import type { ExportSpecifier } from "../utils.ts";
 import * as utils from "../utils.ts";
 
 const svgrConfig: Config = {
@@ -40,15 +41,20 @@ export class ReactTransformer implements Transformer {
 	public readonly name = "React components";
 
 	/**
-	 * Contents of the components index file.
+	 * Components exported from the index file.
 	 */
-	#indexContents = "";
+	#exports: ExportSpecifier[] = [];
 
 	/**
 	 * @inheritdoc
 	 */
 	public finalize(): Promise<void> {
-		return utils.writeGeneratedFile("src/react/icons/index.ts", this.#indexContents);
+		const contents = this.#exports
+			.sort((a, b) => a.identifier.localeCompare(b.identifier))
+			.map(({ identifier, filename }) => `export { default as ${identifier} } from "./${filename}.g.js";`)
+			.join("\n");
+
+		return utils.writeGeneratedFile("src/react/icons/index.ts", contents);
 	}
 
 	/**
@@ -87,7 +93,10 @@ export class ReactTransformer implements Transformer {
 			this.#formatComponent(componentName, icon.name, elementOrSwitch),
 		);
 
-		this.#indexContents += `export { default as ${componentName} } from "./${filename}.g.js";\n`;
+		this.#exports.push({
+			identifier: componentName,
+			filename,
+		});
 	}
 
 	/**

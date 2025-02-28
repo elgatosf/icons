@@ -27,6 +27,25 @@ const IconInfo = (props: IconProps & SVGProps<SVGSVGElement>) => {
 					/>
 				</svg>
 			);
+		case "s":
+			return (
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="currentColor"
+					viewBox="0 0 16 16"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path
+						fillRule="evenodd"
+						d="M8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12m0 1A7 7 0 1 0 8 1a7 7 0 0 0 0 14m0-8.5a.5.5 0 0 1 .5.5v4.502a.5.5 0 0 1-1 0V7a.5.5 0 0 1 .5-.5m0-1A.75.75 0 1 0 8 4a.75.75 0 0 0 0 1.5"
+						clipRule="evenodd"
+					/>
+				</svg>
+			);
 		default:
 			return (
 				<svg
