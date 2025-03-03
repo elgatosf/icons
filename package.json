@@ -35,6 +35,7 @@
         "download": "npm run tsc:metadata && node --experimental-strip-types scripts/download.ts",
         "lint": "prettier . --check",
         "lint:fix": "prettier . --write --log-level warn",
+        "preversion": "npm run build:ci && npm run lint",
         "sync": "npm run download && npm run build",
         "transform": "npm run tsc:metadata && node --experimental-strip-types scripts/transform.ts",
         "tsc": "tsc",
