@@ -1,6 +1,6 @@
 <div align="center">
 
-[![Elgato icons banner](https://raw.githubusercontent.com/elgatosf/icons/refs/heads/main/assets/banner.png)](https://docs.elgato.com/icons)
+[![Elgato icons banner](https://raw.githubusercontent.com/elgatosf/icons/refs/heads/main/assets/banner.png)](https://docs.elgato.com/resources/icons)
 
 # Elgato Icons
 
