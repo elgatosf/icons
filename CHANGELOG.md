@@ -12,6 +12,12 @@
 
 # Change Log
 
+## 1.0.1
+
+### 🐞 Fix
+
+-   Update home page link.
+
 ## 1.0.0
 
 ### ✨ New
