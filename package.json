@@ -1,6 +1,6 @@
 {
     "name": "@elgato/icons",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Icons used throughout the Elgato ecosystem.",
     "type": "module",
     "exports": {
