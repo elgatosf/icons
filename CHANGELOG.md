@@ -12,6 +12,12 @@
 
 # Change Log
 
+## 1.0.2
+
+### 🐞 Fix
+
+-   Fix string exports.
+
 ## 1.0.1
 
 ### 🐞 Fix

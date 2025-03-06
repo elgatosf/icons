@@ -5,16 +5,16 @@
     "type": "module",
     "exports": {
         "./s": {
-            "default": "./dist/strings/s/index.js",
-            "types": "./dist/strings/s/index.d.ts"
+            "default": "./dist/strings/s/index.g.js",
+            "types": "./dist/strings/s/index.g.d.ts"
         },
         "./m": {
-            "default": "./dist/strings/m/index.js",
-            "types": "./dist/strings/m/index.d.ts"
+            "default": "./dist/strings/m/index.g.js",
+            "types": "./dist/strings/m/index.g.d.ts"
         },
         "./l": {
-            "default": "./dist/strings/l/index.js",
-            "types": "./dist/strings/l/index.d.ts"
+            "default": "./dist/strings/l/index.g.js",
+            "types": "./dist/strings/l/index.g.d.ts"
         },
         "./metadata": {
             "default": "./dist/metadata/index.js",
