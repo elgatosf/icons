@@ -12,6 +12,12 @@
 
 # Change Log
 
+## 1.0.3
+
+### 🐞 Fix
+
+-   Fix exports for usage in Next.js.
+
 ## 1.0.2
 
 ### 🐞 Fix
