@@ -26,6 +26,25 @@ const IconSearch = (props: IconProps & SVGProps<SVGSVGElement>) => {
 					/>
 				</svg>
 			);
+		case "s":
+			return (
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="currentColor"
+					viewBox="0 0 16 16"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path
+						fillRule="evenodd"
+						d="M7 2a5 5 0 0 1 3.871 8.164l2.983 2.983.064.078a.5.5 0 0 1-.693.693l-.079-.064-2.982-2.983A5 5 0 1 1 7 2m0 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8"
+						clipRule="evenodd"
+					/>
+				</svg>
+			);
 		default:
 			return (
 				<svg

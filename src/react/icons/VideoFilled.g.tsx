@@ -21,7 +21,7 @@ const IconVideoFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 				>
 					<path
 						fillRule="evenodd"
-						d="M4 4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm12.25 6.701c1 .577 1 2.02 0 2.598l-6 3.464A1.5 1.5 0 0 1 8 15.464V8.536a1.5 1.5 0 0 1 2.25-1.299z"
+						d="M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm11.25 7.701c1 .577 1 2.02 0 2.598l-6 3.464A1.5 1.5 0 0 1 8 15.464V8.536a1.5 1.5 0 0 1 2.25-1.3z"
 						clipRule="evenodd"
 					/>
 				</svg>
@@ -40,7 +40,7 @@ const IconVideoFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 				>
 					<path
 						fillRule="evenodd"
-						d="M4 4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm9.294 6.866a1 1 0 0 0 0-1.732L8.5 6.366a1 1 0 0 0-1.5.866v5.536a1 1 0 0 0 1.5.866z"
+						d="M5 3a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm3.5 10.634 4.794-2.768a1 1 0 0 0 0-1.732L8.5 6.366a1 1 0 0 0-1.5.866v5.536a1 1 0 0 0 1.5.866"
 						clipRule="evenodd"
 					/>
 				</svg>

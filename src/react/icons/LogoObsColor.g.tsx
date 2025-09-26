@@ -19,23 +19,120 @@ const IconLogoObsColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 					role="img"
 					{...props}
 				>
+					<path fill="url(#prefix__a)" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2" />
 					<path
-						fill="#C4C2C4"
-						fillRule="evenodd"
-						d="M12 2.47A9.53 9.53 0 0 0 2.47 12a9.53 9.53 0 1 0 19.06 0A9.53 9.53 0 0 0 12 2.47M1.5 12C1.5 6.201 6.201 1.5 12 1.5S22.5 6.201 22.5 12 17.799 22.5 12 22.5 1.5 17.799 1.5 12"
-						clipRule="evenodd"
+						fill="url(#prefix__b)"
+						d="M11.951 2.118c5.41 0 9.794 4.385 9.794 9.794s-4.385 9.794-9.794 9.794-9.794-4.385-9.794-9.794 4.385-9.794 9.794-9.794"
 					/>
-					<path fill="#302E31" d="M12 21.538A9.54 9.54 0 0 0 21.537 12 9.538 9.538 0 1 0 12 21.538" />
+					<path fill="url(#prefix__c)" d="M3.006 11.912a8.945 8.945 0 0 0 8.945 8.945 8.945 8.945 0 1 0-8.945-8.945" />
+					<mask
+						id="prefix__d"
+						width={18}
+						height={19}
+						x={3}
+						y={2}
+						maskUnits="userSpaceOnUse"
+						style={{
+							maskType: "luminance",
+						}}
+					>
+						<path fill="#fff" d="M3.006 11.912a8.945 8.945 0 0 0 8.945 8.945 8.945 8.945 0 1 0-8.945-8.945" />
+					</mask>
+					<g mask="url(#prefix__d)">
+						<path fill="url(#prefix__e)" d="M20.896 2.967H3.006v17.89h17.89z" />
+					</g>
+					<mask
+						id="prefix__f"
+						width={18}
+						height={18}
+						x={3}
+						y={3}
+						maskUnits="userSpaceOnUse"
+						style={{
+							maskType: "luminance",
+						}}
+					>
+						<path fill="#fff" d="M3.08 11.912a8.871 8.871 0 1 0 17.743 0 8.871 8.871 0 0 0-17.743 0" />
+					</mask>
+					<g mask="url(#prefix__f)">
+						<path fill="url(#prefix__g)" d="M20.823 3.04H3.08v17.743h17.743z" />
+					</g>
 					<path
-						fill="#fff"
-						fillRule="evenodd"
-						d="M12 2.924a9.076 9.076 0 1 0 0 18.152 9.076 9.076 0 0 0 0-18.152M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12"
-						clipRule="evenodd"
+						fill="url(#prefix__h)"
+						d="M15.433 9.06a4.012 4.012 0 0 1-6.489.658 4.01 4.01 0 0 1-.552-4.521 4 4 0 0 1 .393-.61 4 4 0 0 1 .522-.552 4 4 0 0 1 .471-.355 4.92 4.92 0 0 0-2.138 6.633c.006.007.008.006.018.006a4 4 0 0 1 .443.016 4.02 4.02 0 0 1 3.601 4.563 4 4 0 0 1-.93 2.052 4.025 4.025 0 0 1-4.267 1.212c.44.194.905.323 1.381.382a4.905 4.905 0 0 0 3.526-.92 5 5 0 0 0 1.245-1.335c.006-.008.017-.021.016-.03a3.989 3.989 0 0 1-.422-1.181 4 4 0 0 1 0-1.49 4.009 4.009 0 0 1 4.774-3.184 4 4 0 0 1 .784.25 4 4 0 0 1 .717.408 4 4 0 0 1 .426.35 4 4 0 0 1 .597.71 4 4 0 0 1 .38.722q.095.24.16.49a4.9 4.9 0 0 0-1.041-2.435 4.95 4.95 0 0 0-1.51-1.258 4.9 4.9 0 0 0-2.105-.581"
 					/>
-					<path
-						fill="#C4C2C4"
-						d="M7.152 6.991c.293-1.414 1.252-2.69 2.541-3.33-.224.228-.495.402-.703.65a4.06 4.06 0 0 0-1 3.464c.296 1.862 2.047 3.383 3.944 3.356 1.47.066 2.904-.78 3.623-2.056 1.54.052 3.037.847 3.916 2.123.45.666.802 1.447.826 2.26-.285-1.08-1.001-2.039-1.98-2.58a4.08 4.08 0 0 0-3.143-.354c-1.3.373-2.374 1.436-2.744 2.744-.315 1.042-.18 2.19.314 3.144-.687 1.19-1.929 2.04-3.277 2.296-1.036.218-2.126.05-3.09-.386.863.252 1.8.296 2.659-.01a4.1 4.1 0 0 0 2.52-2.445c.464-1.242.288-2.718-.493-3.783a4.1 4.1 0 0 0-2.501-1.641c-.318-.057-.637-.082-.957-.112-.509-1.025-.695-2.216-.44-3.33z"
-					/>
+					<defs>
+						<radialGradient
+							id="prefix__a"
+							cx={0}
+							cy={0}
+							r={1}
+							gradientTransform="matrix(10 0 0 10 12 12)"
+							gradientUnits="userSpaceOnUse"
+						>
+							<stop offset={0.913} />
+							<stop offset={1} stopOpacity={0} />
+						</radialGradient>
+						<radialGradient
+							id="prefix__b"
+							cx={0}
+							cy={0}
+							r={1}
+							gradientTransform="translate(11.951 11.912)scale(9.79396)"
+							gradientUnits="userSpaceOnUse"
+						>
+							<stop offset={0.99} stopColor="#fff" />
+							<stop offset={0.995} stopColor="#FDFDFD" />
+							<stop offset={0.997} stopColor="#F6F6F6" />
+							<stop offset={0.998} stopColor="#EBEBEB" />
+							<stop offset={0.999} stopColor="#DADADA" />
+							<stop offset={1} stopColor="#C7C7C7" />
+						</radialGradient>
+						<radialGradient
+							id="prefix__c"
+							cx={0}
+							cy={0}
+							r={1}
+							gradientTransform="translate(11.95 11.912)scale(8.94502)"
+							gradientUnits="userSpaceOnUse"
+						>
+							<stop offset={0.99} stopOpacity={0.5} />
+							<stop offset={1} stopOpacity={0} />
+						</radialGradient>
+						<radialGradient
+							id="prefix__e"
+							cx={0}
+							cy={0}
+							r={1}
+							gradientTransform="translate(11.95 11.912)scale(8.94502)"
+							gradientUnits="userSpaceOnUse"
+						>
+							<stop offset={0.99} stopOpacity={0.5} />
+							<stop offset={1} stopOpacity={0} />
+						</radialGradient>
+						<radialGradient
+							id="prefix__g"
+							cx={0}
+							cy={0}
+							r={1}
+							gradientTransform="translate(11.951 11.942)scale(8.87117)"
+							gradientUnits="userSpaceOnUse"
+						>
+							<stop />
+							<stop offset={1} stopColor="#322F32" />
+						</radialGradient>
+						<radialGradient
+							id="prefix__h"
+							cx={0}
+							cy={0}
+							r={1}
+							gradientTransform="matrix(7.1287 0 0 7.8209 13.297 11.13)"
+							gradientUnits="userSpaceOnUse"
+						>
+							<stop stopColor="#C2C0C2" />
+							<stop offset={1} stopColor="#EBEBEB" />
+						</radialGradient>
+					</defs>
 				</svg>
 			);
 		default:
@@ -50,23 +147,117 @@ const IconLogoObsColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 					role="img"
 					{...props}
 				>
+					<path fill="url(#prefix__a)" d="M10 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16" />
+					<path fill="url(#prefix__b)" d="M9.961 2.094a7.835 7.835 0 1 1 0 15.67 7.835 7.835 0 0 1 0-15.67" />
+					<path fill="url(#prefix__c)" d="M2.805 9.93a7.156 7.156 0 1 0 14.312 0 7.156 7.156 0 0 0-14.312 0" />
+					<mask
+						id="prefix__d"
+						width={16}
+						height={16}
+						x={2}
+						y={2}
+						maskUnits="userSpaceOnUse"
+						style={{
+							maskType: "luminance",
+						}}
+					>
+						<path fill="#fff" d="M2.805 9.93a7.156 7.156 0 1 0 14.312 0 7.156 7.156 0 0 0-14.312 0" />
+					</mask>
+					<g mask="url(#prefix__d)">
+						<path fill="url(#prefix__e)" d="M17.117 2.773H2.805v14.312h14.312z" />
+					</g>
+					<mask
+						id="prefix__f"
+						width={16}
+						height={16}
+						x={2}
+						y={2}
+						maskUnits="userSpaceOnUse"
+						style={{
+							maskType: "luminance",
+						}}
+					>
+						<path fill="#fff" d="M2.864 9.93a7.097 7.097 0 1 0 14.194 0 7.097 7.097 0 0 0-14.194 0" />
+					</mask>
+					<g mask="url(#prefix__f)">
+						<path fill="url(#prefix__g)" d="M17.058 2.832H2.864v14.194h14.194z" />
+					</g>
 					<path
-						fill="#C4C2C4"
-						fillRule="evenodd"
-						d="M10 2.286a7.714 7.714 0 1 0 0 15.428 7.714 7.714 0 0 0 0-15.428M1.5 10a8.5 8.5 0 1 1 17 0 8.5 8.5 0 0 1-17 0"
-						clipRule="evenodd"
+						fill="url(#prefix__h)"
+						d="M12.746 7.648a3.21 3.21 0 0 1-5.19.526 3.205 3.205 0 0 1-.128-4.104 3 3 0 0 1 .418-.442 3 3 0 0 1 .376-.284 3.94 3.94 0 0 0-1.71 5.306c.005.006.006.005.014.005a3 3 0 0 1 .355.013 3.216 3.216 0 0 1 2.88 3.65 3.2 3.2 0 0 1-1.545 2.315 3.22 3.22 0 0 1-2.612.296 3.9 3.9 0 0 0 2.175.293A3.9 3.9 0 0 0 9.53 14.5a4 4 0 0 0 .996-1.068c.004-.006.013-.017.012-.024a3.188 3.188 0 0 1-.337-2.137 3.208 3.208 0 0 1 5.36-1.74 3.2 3.2 0 0 1 .62.801 3.2 3.2 0 0 1 .29.737 3.93 3.93 0 0 0-.833-1.949 4 4 0 0 0-1.208-1.006 3.9 3.9 0 0 0-1.684-.465"
 					/>
-					<path fill="#302E31" d="M10 17.721A7.721 7.721 0 1 0 10 2.28a7.721 7.721 0 0 0 0 15.442" />
-					<path
-						fill="#fff"
-						fillRule="evenodd"
-						d="M10 2.653a7.347 7.347 0 1 0 0 14.694 7.347 7.347 0 0 0 0-14.694M1.904 10a8.095 8.095 0 1 1 16.191 0 8.095 8.095 0 0 1-16.19 0"
-						clipRule="evenodd"
-					/>
-					<path
-						fill="#C4C2C4"
-						d="M6.075 5.945C6.312 4.8 7.088 3.767 8.132 3.25c-.181.185-.4.326-.57.527a3.29 3.29 0 0 0-.808 2.803c.24 1.508 1.656 2.74 3.192 2.718 1.19.053 2.35-.632 2.933-1.665 1.247.042 2.459.686 3.17 1.719.365.539.65 1.17.67 1.829-.232-.874-.812-1.65-1.603-2.088a3.3 3.3 0 0 0-2.545-.287 3.28 3.28 0 0 0-2.222 2.222 3.44 3.44 0 0 0 .255 2.545c-.557.964-1.562 1.652-2.653 1.859-.839.176-1.721.04-2.502-.313.699.204 1.458.24 2.153-.008a3.31 3.31 0 0 0 2.04-1.98c.375-1.005.233-2.2-.4-3.062a3.32 3.32 0 0 0-2.024-1.329c-.257-.046-.516-.066-.775-.09-.411-.83-.562-1.794-.355-2.696z"
-					/>
+					<defs>
+						<radialGradient
+							id="prefix__a"
+							cx={0}
+							cy={0}
+							r={1}
+							gradientTransform="matrix(8 0 0 8 10 10)"
+							gradientUnits="userSpaceOnUse"
+						>
+							<stop offset={0.913} />
+							<stop offset={1} stopOpacity={0} />
+						</radialGradient>
+						<radialGradient
+							id="prefix__b"
+							cx={0}
+							cy={0}
+							r={1}
+							gradientTransform="translate(9.961 9.93)scale(7.83517)"
+							gradientUnits="userSpaceOnUse"
+						>
+							<stop offset={0.99} stopColor="#fff" />
+							<stop offset={0.995} stopColor="#FDFDFD" />
+							<stop offset={0.997} stopColor="#F6F6F6" />
+							<stop offset={0.998} stopColor="#EBEBEB" />
+							<stop offset={0.999} stopColor="#DADADA" />
+							<stop offset={1} stopColor="#C7C7C7" />
+						</radialGradient>
+						<radialGradient
+							id="prefix__c"
+							cx={0}
+							cy={0}
+							r={1}
+							gradientTransform="translate(9.96 9.93)scale(7.15601)"
+							gradientUnits="userSpaceOnUse"
+						>
+							<stop offset={0.99} stopOpacity={0.5} />
+							<stop offset={1} stopOpacity={0} />
+						</radialGradient>
+						<radialGradient
+							id="prefix__e"
+							cx={0}
+							cy={0}
+							r={1}
+							gradientTransform="translate(9.96 9.93)scale(7.15601)"
+							gradientUnits="userSpaceOnUse"
+						>
+							<stop offset={0.99} stopOpacity={0.5} />
+							<stop offset={1} stopOpacity={0} />
+						</radialGradient>
+						<radialGradient
+							id="prefix__g"
+							cx={0}
+							cy={0}
+							r={1}
+							gradientTransform="translate(9.961 9.954)scale(7.09693)"
+							gradientUnits="userSpaceOnUse"
+						>
+							<stop />
+							<stop offset={1} stopColor="#322F32" />
+						</radialGradient>
+						<radialGradient
+							id="prefix__h"
+							cx={0}
+							cy={0}
+							r={1}
+							gradientTransform="matrix(5.70296 0 0 6.25672 11.038 9.305)"
+							gradientUnits="userSpaceOnUse"
+						>
+							<stop stopColor="#C2C0C2" />
+							<stop offset={1} stopColor="#EBEBEB" />
+						</radialGradient>
+					</defs>
 				</svg>
 			);
 	}

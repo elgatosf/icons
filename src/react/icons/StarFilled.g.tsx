@@ -6,20 +6,38 @@ const IconStarFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 	const size = sizeMap[props?.size ?? "m"];
 	const label = props?.label ?? "Icon";
 
-	return (
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
-			viewBox="0 0 24 24"
-			width={size}
-			height={size}
-			aria-label={label}
-			role="img"
-			{...props}
-		>
-			<path d="M11.103 2.561a1 1 0 0 1 1.794 0l2.419 4.902 5.41.786a1 1 0 0 1 .553 1.706l-3.914 3.815.924 5.388a1 1 0 0 1-1.45 1.054L12 17.668l-4.838 2.544a1 1 0 0 1-1.451-1.054l.924-5.388L2.72 9.955a1 1 0 0 1 .554-1.706l5.41-.786z" />
-		</svg>
-	);
+	switch (props?.size) {
+		case "l":
+			return (
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="currentColor"
+					viewBox="0 0 24 24"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path d="M11.103 2.561a1 1 0 0 1 1.794 0l2.419 4.902 5.41.786a1 1 0 0 1 .553 1.706l-3.914 3.815.924 5.388a1 1 0 0 1-1.45 1.054L12 17.668l-4.838 2.544a1 1 0 0 1-1.451-1.054l.924-5.388L2.72 9.955a1 1 0 0 1 .554-1.706l5.41-.786z" />
+				</svg>
+			);
+		default:
+			return (
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path d="M9.215 2.375a1 1 0 0 1 1.65.116l2.042 3.508 3.968.859c.702.152 1.007.962.621 1.533l-.087.11-2.705 3.028.41 4.039a1 1 0 0 1-1.4 1.016L10 14.947l-3.715 1.637a1 1 0 0 1-1.398-1.016l.409-4.04-2.705-3.026a1 1 0 0 1 .534-1.644l3.968-.86 2.043-3.507z" />
+				</svg>
+			);
+	}
 };
 
 IconStarFilled.iconName = "star--filled";

@@ -26,6 +26,25 @@ const IconDial = (props: IconProps & SVGProps<SVGSVGElement>) => {
 					/>
 				</svg>
 			);
+		case "s":
+			return (
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="currentColor"
+					viewBox="0 0 16 16"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path
+						fillRule="evenodd"
+						d="M8 1a7 7 0 1 1 0 14A7 7 0 0 1 8 1m0 1a5.98 5.98 0 0 0-3.874 1.419l3.728 3.727.064.079a.5.5 0 0 1-.693.693l-.079-.064L3.42 4.126A6 6 0 1 0 8 2"
+						clipRule="evenodd"
+					/>
+				</svg>
+			);
 		default:
 			return (
 				<svg

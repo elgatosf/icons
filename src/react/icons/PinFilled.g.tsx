@@ -26,6 +26,21 @@ const IconPinFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 					/>
 				</svg>
 			);
+		case "s":
+			return (
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="currentColor"
+					viewBox="0 0 16 16"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path d="M8.737 1.57a2 2 0 0 1 2.677.137l2.879 2.879.138.151a2 2 0 0 1 0 2.526l-.138.151A2 2 0 0 1 12.879 8h-.965a.5.5 0 0 0-.277.084l-.077.062-.414.415a.5.5 0 0 0-.146.353v1.965c0 1.726-2.022 2.617-3.294 1.525l-.12-.111L6 10.707l-3.147 3.146a.5.5 0 1 1-.707-.707L5.293 10 3.707 8.414C2.447 7.154 3.339 5 5.121 5h1.965a.5.5 0 0 0 .353-.146l.414-.415.063-.076A.5.5 0 0 0 8 4.086V3.12a2 2 0 0 1 .586-1.414z" />
+				</svg>
+			);
 		default:
 			return (
 				<svg

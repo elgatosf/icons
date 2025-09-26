@@ -36,7 +36,7 @@ const IconSubtract = (props: IconProps & SVGProps<SVGSVGElement>) => {
 				>
 					<path
 						fillRule="evenodd"
-						d="M4 9.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"
+						d="M4 10a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 4 10"
 						clipRule="evenodd"
 					/>
 				</svg>

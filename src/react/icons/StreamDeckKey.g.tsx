@@ -27,6 +27,26 @@ const IconStreamDeckKey = (props: IconProps & SVGProps<SVGSVGElement>) => {
 					/>
 				</svg>
 			);
+		case "s":
+			return (
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="currentColor"
+					viewBox="0 0 16 16"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path d="M10.5 10a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1z" />
+					<path
+						fillRule="evenodd"
+						d="M11 2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3zM5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"
+						clipRule="evenodd"
+					/>
+				</svg>
+			);
 		default:
 			return (
 				<svg

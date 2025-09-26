@@ -19,11 +19,8 @@ const IconMailFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 					role="img"
 					{...props}
 				>
-					<path
-						fillRule="evenodd"
-						d="M4 4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm2.28 3.22a.75.75 0 0 0-1.06 1.06l6.25 6.25a.75.75 0 0 0 1.06 0l6.25-6.25a.75.75 0 0 0-1.06-1.06L12 12.94z"
-						clipRule="evenodd"
-					/>
+					<path d="M21.84 5.219c.103.24.16.504.16.781v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6c0-.277.056-.541.158-.781l9.312 9.311a.75.75 0 0 0 1.06 0z" />
+					<path d="M20 4c.277 0 .54.056.78.158L12 12.94 3.219 4.158C3.459 4.056 3.723 4 4 4z" />
 				</svg>
 			);
 		default:
@@ -38,11 +35,8 @@ const IconMailFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 					role="img"
 					{...props}
 				>
-					<path
-						fillRule="evenodd"
-						d="M4 4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm.854 2.146a.5.5 0 1 0-.708.708l5.5 5.5a.5.5 0 0 0 .708 0l5.5-5.5a.5.5 0 0 0-.708-.708L10 11.293z"
-						clipRule="evenodd"
-					/>
+					<path d="M17.72 4.985c.177.298.28.644.28 1.015v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6c0-.37.103-.717.278-1.015l7.368 7.369a.5.5 0 0 0 .707 0z" />
+					<path d="M16 4c.37 0 .716.103 1.014.278L10 11.293 2.985 4.278A2 2 0 0 1 4 4z" />
 				</svg>
 			);
 	}
