@@ -1,0 +1,46 @@
+import type { SVGProps } from "react";
+import { sizeMap } from "../../metadata/sizing.js";
+import type { IconProps } from "../types.js";
+
+const IconStreamDeckVirtual = (props: IconProps & SVGProps<SVGSVGElement>) => {
+	const size = sizeMap[props?.size ?? "m"];
+	const label = props?.label ?? "Icon";
+
+	return (
+		<svg
+			viewBox="0 0 20 20"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
+			width={size}
+			height={size}
+			aria-label={label}
+			role="img"
+			{...props}
+		>
+			<path
+				fillRule="evenodd"
+				clipRule="evenodd"
+				d="M8.10254 11.0049C8.60667 11.0562 9 11.4823 9 12V14L8.99512 14.1025C8.94379 14.6067 8.51768 15 8 15H6L5.89746 14.9951C5.39333 14.9438 5 14.5177 5 14V12C5 11.4477 5.44772 11 6 11H8L8.10254 11.0049ZM6 14H8V12H6V14Z"
+			/>
+			<path
+				fillRule="evenodd"
+				clipRule="evenodd"
+				d="M8.10254 5.00488C8.60667 5.05621 9 5.48232 9 6V8L8.99512 8.10254C8.94379 8.60667 8.51768 9 8 9H6L5.89746 8.99512C5.39333 8.94379 5 8.51768 5 8V6C5 5.44772 5.44772 5 6 5H8L8.10254 5.00488ZM6 8H8V6H6V8Z"
+			/>
+			<path
+				fillRule="evenodd"
+				clipRule="evenodd"
+				d="M14.1025 5.00488C14.6067 5.05621 15 5.48232 15 6V8L14.9951 8.10254C14.9438 8.60667 14.5177 9 14 9H12L11.8975 8.99512C11.3933 8.94379 11 8.51768 11 8V6C11 5.44772 11.4477 5 12 5H14L14.1025 5.00488ZM12 8H14V6H12V8Z"
+			/>
+			<path
+				fillRule="evenodd"
+				clipRule="evenodd"
+				d="M16.25 2C17.2165 2 18 2.7835 18 3.75V10.25C18 11.2165 17.2165 12 16.25 12H12.75C12.3358 12 12 12.3358 12 12.75V16.25C12 17.2165 11.2165 18 10.25 18H3.75C2.7835 18 2 17.2165 2 16.25V3.75C2 2.7835 2.7835 2 3.75 2H16.25ZM3.75 3C3.33579 3 3 3.33579 3 3.75V16.25C3 16.6642 3.33579 17 3.75 17H10.25C10.6642 17 11 16.6642 11 16.25V12.75C11 11.7835 11.7835 11 12.75 11H16.25C16.6642 11 17 10.6642 17 10.25V3.75C17 3.33579 16.6642 3 16.25 3H3.75Z"
+			/>
+		</svg>
+	);
+};
+
+IconStreamDeckVirtual.iconName = "stream-deck-virtual";
+
+export default IconStreamDeckVirtual;

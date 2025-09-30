@@ -10,9 +10,9 @@ const IconTagFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 		case "l":
 			return (
 				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="currentColor"
 					viewBox="0 0 24 24"
+					fill="currentColor"
+					xmlns="http://www.w3.org/2000/svg"
 					width={size}
 					height={size}
 					aria-label={label}
@@ -21,17 +21,17 @@ const IconTagFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 				>
 					<path
 						fillRule="evenodd"
-						d="M19 3h-6.172a2 2 0 0 0-1.414.586l-8 8a2 2 0 0 0 0 2.828l6.172 6.172a2 2 0 0 0 2.828 0l8-8A2 2 0 0 0 21 11.172V5a2 2 0 0 0-2-2m-2.5 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"
 						clipRule="evenodd"
+						d="M19 3H12.8284C12.298 3 11.7893 3.21071 11.4142 3.58579L3.41421 11.5858C2.63316 12.3668 2.63317 13.6332 3.41421 14.4142L9.58579 20.5858C10.3668 21.3668 11.6332 21.3668 12.4142 20.5858L20.4142 12.5858C20.7893 12.2107 21 11.702 21 11.1716V5C21 3.89543 20.1046 3 19 3ZM16.5 9C17.3284 9 18 8.32843 18 7.5C18 6.67157 17.3284 6 16.5 6C15.6716 6 15 6.67157 15 7.5C15 8.32843 15.6716 9 16.5 9Z"
 					/>
 				</svg>
 			);
 		default:
 			return (
 				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="currentColor"
 					viewBox="0 0 20 20"
+					fill="currentColor"
+					xmlns="http://www.w3.org/2000/svg"
 					width={size}
 					height={size}
 					aria-label={label}
@@ -40,8 +40,8 @@ const IconTagFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 				>
 					<path
 						fillRule="evenodd"
-						d="M16 2h-5.172a2 2 0 0 0-1.414.586l-7 7a2 2 0 0 0 0 2.828l5.172 5.172a2 2 0 0 0 2.828 0l7-7A2 2 0 0 0 18 9.172V4a2 2 0 0 0-2-2m-2 5a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
 						clipRule="evenodd"
+						d="M16 2H10.8284C10.298 2 9.78929 2.21071 9.41421 2.58579L2.41421 9.58579C1.63316 10.3668 1.63317 11.6332 2.41421 12.4142L7.58579 17.5858C8.36684 18.3668 9.63317 18.3668 10.4142 17.5858L17.4142 10.5858C17.7893 10.2107 18 9.70201 18 9.17157V4C18 2.89543 17.1046 2 16 2ZM14 7C14.5523 7 15 6.55228 15 6C15 5.44772 14.5523 5 14 5C13.4477 5 13 5.44772 13 6C13 6.55228 13.4477 7 14 7Z"
 					/>
 				</svg>
 			);

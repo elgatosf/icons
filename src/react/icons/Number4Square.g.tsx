@@ -8,9 +8,9 @@ const IconNumber4Square = (props: IconProps & SVGProps<SVGSVGElement>) => {
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
 			viewBox="0 0 24 24"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
@@ -19,13 +19,13 @@ const IconNumber4Square = (props: IconProps & SVGProps<SVGSVGElement>) => {
 		>
 			<path
 				fillRule="evenodd"
-				d="M14.046 14.273h1.221v-1.122h-1.22V8.047h-1.904l-3.289 4.796v1.43h3.652V16h1.54zm-4.048-1.11 2.552-3.84-.022 3.84z"
 				clipRule="evenodd"
+				d="M14.0464 14.2731H15.2674V13.1511H14.0464V8.04712H12.1434L8.85437 12.8431V14.2731H12.5064V16.0001H14.0464V14.2731ZM9.99837 13.1621L12.5504 9.32312L12.5284 13.1621H9.99837Z"
 			/>
 			<path
 				fillRule="evenodd"
-				d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm2-.5h14a.5.5 0 0 1 .5.5v14a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 1 .5-.5"
 				clipRule="evenodd"
+				d="M3 5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5ZM5 4.5H19C19.2761 4.5 19.5 4.72386 19.5 5V19C19.5 19.2761 19.2761 19.5 19 19.5H5C4.72386 19.5 4.5 19.2761 4.5 19V5C4.5 4.72386 4.72386 4.5 5 4.5Z"
 			/>
 		</svg>
 	);

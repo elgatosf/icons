@@ -1,0 +1,29 @@
+import type { SVGProps } from "react";
+import { sizeMap } from "../../metadata/sizing.js";
+import type { IconProps } from "../types.js";
+
+const IconLogoAtlassianJira = (props: IconProps & SVGProps<SVGSVGElement>) => {
+	const size = sizeMap[props?.size ?? "m"];
+	const label = props?.label ?? "Icon";
+
+	return (
+		<svg
+			viewBox="0 0 24 24"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
+			width={size}
+			height={size}
+			aria-label={label}
+			role="img"
+			{...props}
+		>
+			<path d="M11.3994 11.6494C11.8124 11.6494 12.1738 11.9752 12.1738 12.4014V21C9.95405 21 8.14746 19.2448 8.14746 17.0889V15.5596H6.49512C4.27551 15.5595 2.46889 13.8052 2.46875 11.6494H11.3994Z" />
+			<path d="M15.8135 7.3125C16.2522 7.3125 16.5879 7.66336 16.5879 8.06445V16.6885C14.3682 16.6884 12.5616 14.9333 12.5615 12.7773V11.2227H10.9092C8.68965 11.2225 6.88309 9.4682 6.88281 7.3125H15.8135Z" />
+			<path d="M20.2256 3C20.6643 3 20.9999 3.3259 21 3.75195V12.3516C18.7803 12.3516 16.9737 10.5963 16.9736 8.44043V6.91113H15.3213C13.1016 6.91104 11.2949 5.15594 11.2949 3H20.2256Z" />
+		</svg>
+	);
+};
+
+IconLogoAtlassianJira.iconName = "logo-atlassian-jira";
+
+export default IconLogoAtlassianJira;

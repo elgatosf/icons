@@ -8,16 +8,17 @@ const IconLogoFramer = (props: IconProps & SVGProps<SVGSVGElement>) => {
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
 			viewBox="0 0 24 24"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="M5 2h14v7h-7zM12 9H5v7l7 7v-7h7z" />
+			<path d="M5 2H19V9H12L5 2Z" />
+			<path d="M12 9H5V16L12 23V16H19L12 9Z" />
 		</svg>
 	);
 };

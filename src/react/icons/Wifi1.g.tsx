@@ -8,16 +8,16 @@ const IconWifi1 = (props: IconProps & SVGProps<SVGSVGElement>) => {
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
 			viewBox="0 0 24 24"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="M13.5 17.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+			<path d="M13.5 17.5C13.5 18.3284 12.8284 19 12 19C11.1716 19 10.5 18.3284 10.5 17.5C10.5 16.6716 11.1716 16 12 16C12.8284 16 13.5 16.6716 13.5 17.5Z" />
 		</svg>
 	);
 };

@@ -1,0 +1,31 @@
+import type { SVGProps } from "react";
+import { sizeMap } from "../../metadata/sizing.js";
+import type { IconProps } from "../types.js";
+
+const IconLogoHtml = (props: IconProps & SVGProps<SVGSVGElement>) => {
+	const size = sizeMap[props?.size ?? "m"];
+	const label = props?.label ?? "Icon";
+
+	return (
+		<svg
+			viewBox="0 0 20 20"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
+			width={size}
+			height={size}
+			aria-label={label}
+			role="img"
+			{...props}
+		>
+			<path
+				fillRule="evenodd"
+				clipRule="evenodd"
+				d="M3.39355 3L4.59473 16.4766L9.98535 18L15.4053 16.4766L16.6064 3H3.39355ZM13.8525 9.09375H7.81738L7.6709 7.39453H13.999L14.0283 7.04297L14.1162 6.19336L14.1455 5.75391H5.85449L5.88379 6.19336L6.29395 10.7637H12.0361L11.8311 12.9023L9.98535 13.4004L8.13965 12.9023L8.02246 11.584H6.38184L6.58691 14.1914L9.98535 15.1289H10.0146V15.1208L13.3838 14.1914L13.4131 13.8984L13.7939 9.5332L13.8525 9.09375Z"
+			/>
+		</svg>
+	);
+};
+
+IconLogoHtml.iconName = "logo-html";
+
+export default IconLogoHtml;

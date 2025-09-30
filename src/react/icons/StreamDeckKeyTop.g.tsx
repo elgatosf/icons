@@ -1,0 +1,75 @@
+import type { SVGProps } from "react";
+import { sizeMap } from "../../metadata/sizing.js";
+import type { IconProps } from "../types.js";
+
+const IconStreamDeckKeyTop = (props: IconProps & SVGProps<SVGSVGElement>) => {
+	const size = sizeMap[props?.size ?? "m"];
+	const label = props?.label ?? "Icon";
+
+	switch (props?.size) {
+		case "l":
+			return (
+				<svg
+					viewBox="0 0 24 24"
+					fill="currentColor"
+					xmlns="http://www.w3.org/2000/svg"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path d="M7.75 8.5C7.33579 8.5 7 8.16421 7 7.75C7 7.33579 7.33579 7 7.75 7H16.25C16.6642 7 17 7.33579 17 7.75C17 8.16421 16.6642 8.5 16.25 8.5H7.75Z" />
+					<path
+						fillRule="evenodd"
+						clipRule="evenodd"
+						d="M3 17C3 19.2091 4.79086 21 7 21H17C19.2091 21 21 19.2091 21 17V7C21 4.79086 19.2091 3 17 3H7C4.79086 3 3 4.79086 3 7V17ZM7 19.5H17C18.3807 19.5 19.5 18.3807 19.5 17V7C19.5 5.61929 18.3807 4.5 17 4.5H7C5.61929 4.5 4.5 5.61929 4.5 7V17C4.5 18.3807 5.61929 19.5 7 19.5Z"
+					/>
+				</svg>
+			);
+		case "s":
+			return (
+				<svg
+					viewBox="0 0 16 16"
+					fill="currentColor"
+					xmlns="http://www.w3.org/2000/svg"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path d="M10.5 6C10.7761 6 11 5.77614 11 5.5C11 5.22386 10.7761 5 10.5 5H5.5C5.22386 5 5 5.22386 5 5.5C5 5.77614 5.22386 6 5.5 6H10.5Z" />
+					<path
+						fillRule="evenodd"
+						clipRule="evenodd"
+						d="M11 14C12.6569 14 14 12.6569 14 11V5C14 3.34315 12.6569 2 11 2H5C3.34315 2 2 3.34315 2 5V11C2 12.6569 3.34315 14 5 14H11ZM5 13C3.89543 13 3 12.1046 3 11V5C3 3.89543 3.89543 3 5 3H11C12.1046 3 13 3.89543 13 5V11C13 12.1046 12.1046 13 11 13H5Z"
+					/>
+				</svg>
+			);
+		default:
+			return (
+				<svg
+					viewBox="0 0 20 20"
+					fill="currentColor"
+					xmlns="http://www.w3.org/2000/svg"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path d="M6.5 7C6.22386 7 6 6.77614 6 6.5C6 6.22386 6.22386 6 6.5 6H13.5C13.7761 6 14 6.22386 14 6.5C14 6.77614 13.7761 7 13.5 7H6.5Z" />
+					<path
+						fillRule="evenodd"
+						clipRule="evenodd"
+						d="M3 14C3 15.6569 4.34315 17 6 17H14C15.6569 17 17 15.6569 17 14V6C17 4.34315 15.6569 3 14 3H6C4.34315 3 3 4.34315 3 6V14ZM6 16H14C15.1046 16 16 15.1046 16 14V6C16 4.89543 15.1046 4 14 4H6C4.89543 4 4 4.89543 4 6V14C4 15.1046 4.89543 16 6 16Z"
+					/>
+				</svg>
+			);
+	}
+};
+
+IconStreamDeckKeyTop.iconName = "stream-deck-key-top";
+
+export default IconStreamDeckKeyTop;

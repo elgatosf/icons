@@ -1,0 +1,3 @@
+const icon: string =
+	'<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M10.5 6C10.7761 6 11 5.77614 11 5.5C11 5.22386 10.7761 5 10.5 5H5.5C5.22386 5 5 5.22386 5 5.5C5 5.77614 5.22386 6 5.5 6H10.5Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M11 14C12.6569 14 14 12.6569 14 11V5C14 3.34315 12.6569 2 11 2H5C3.34315 2 2 3.34315 2 5V11C2 12.6569 3.34315 14 5 14H11ZM5 13C3.89543 13 3 12.1046 3 11V5C3 3.89543 3.89543 3 5 3H11C12.1046 3 13 3.89543 13 5V11C13 12.1046 12.1046 13 11 13H5Z"/></svg>';
+export default icon;

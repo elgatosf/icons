@@ -8,9 +8,9 @@ const IconLogoGoogleSheetsColor = (props: IconProps & SVGProps<SVGSVGElement>) =
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
 			viewBox="0 0 24 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
@@ -18,13 +18,13 @@ const IconLogoGoogleSheetsColor = (props: IconProps & SVGProps<SVGSVGElement>) =
 			{...props}
 		>
 			<path
+				d="M18.5 23H5.5C4.67125 23 4 22.3288 4 21.5V2.5C4 1.67125 4.67125 1 5.5 1H14.5L20 6.5V21.5C20 22.3288 19.3287 23 18.5 23Z"
 				fill="#00AC47"
-				d="M18.5 23h-13A1.5 1.5 0 0 1 4 21.5v-19A1.5 1.5 0 0 1 5.5 1h9L20 6.5v15a1.5 1.5 0 0 1-1.5 1.5"
 			/>
-			<path fill="#00832D" d="M14.5 1 20 6.5h-5.5z" />
+			<path d="M14.5 1L20 6.5H14.5V1Z" fill="#00832D" />
 			<path
-				fill="#fff"
-				d="M15.75 9.5H7v7.25h10V9.5zm-7.5 1.25h3.125v1.75H8.25zm0 4.75v-1.75h3.125v1.75zm7.5 0h-3.125v-1.75h3.125zm0-3h-3.125v-1.75h3.125z"
+				d="M15.75 9.5H12.625H11.375H8.25H7V10.75V12.5V13.75V15.5V16.75H8.25H11.375H12.625H15.75H17V15.5V13.75V12.5V10.75V9.5H15.75ZM8.25 10.75H11.375V12.5H8.25V10.75ZM8.25 15.5V13.75H11.375V15.5H8.25ZM15.75 15.5H12.625V13.75H15.75V15.5ZM15.75 12.5H12.625V10.75H15.75V12.5Z"
+				fill="white"
 			/>
 		</svg>
 	);

@@ -8,16 +8,16 @@ const IconBookmarkFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
 			viewBox="0 0 20 20"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="M16 4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12.499c0 1.251 1.443 1.952 2.427 1.179l3.264-2.565a.5.5 0 0 1 .618 0l3.264 2.565c.984.773 2.427.072 2.427-1.18z" />
+			<path d="M16 4C16 2.89543 15.1046 2 14 2H6C4.89543 2 4 2.89543 4 4V16.4985C4 17.7502 5.44264 18.4513 6.42682 17.6779L9.69106 15.1128C9.87238 14.9703 10.1276 14.9703 10.3089 15.1128L13.5732 17.6779C14.5574 18.4513 16 17.7502 16 16.4985V4Z" />
 		</svg>
 	);
 };

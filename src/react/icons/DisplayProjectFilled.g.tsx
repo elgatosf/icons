@@ -8,17 +8,18 @@ const IconDisplayProjectFilled = (props: IconProps & SVGProps<SVGSVGElement>) =>
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
 			viewBox="0 0 24 24"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="M7 5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-1.5v-3A3.5 3.5 0 0 0 15 6.5H7z" />
-			<path d="M4 8a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2zM7 20.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 0 1.5h-3.5a.75.75 0 0 1-.75-.75" />
+			<path d="M7 5C7 3.89543 7.89543 3 9 3H20C21.1046 3 22 3.89543 22 5V11C22 12.1046 21.1046 13 20 13H18.5V10C18.5 8.067 16.933 6.5 15 6.5H7V5Z" />
+			<path d="M4 8C2.89543 8 2 8.89543 2 10V16C2 17.1046 2.89543 18 4 18H15C16.1046 18 17 17.1046 17 16V10C17 8.89543 16.1046 8 15 8H4Z" />
+			<path d="M7 20.25C7 19.8358 7.33579 19.5 7.75 19.5H11.25C11.6642 19.5 12 19.8358 12 20.25C12 20.6642 11.6642 21 11.25 21H7.75C7.33579 21 7 20.6642 7 20.25Z" />
 		</svg>
 	);
 };

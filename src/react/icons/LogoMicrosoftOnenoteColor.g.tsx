@@ -1,0 +1,78 @@
+import type { SVGProps } from "react";
+import { sizeMap } from "../../metadata/sizing.js";
+import type { IconProps } from "../types.js";
+
+const IconLogoMicrosoftOnenoteColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
+	const size = sizeMap[props?.size ?? "m"];
+	const label = props?.label ?? "Icon";
+
+	return (
+		<svg
+			viewBox="0 0 24 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+			width={size}
+			height={size}
+			aria-label={label}
+			role="img"
+			{...props}
+		>
+			<path
+				d="M17.349 21.3023H7.503C7.03266 21.3023 6.65137 20.921 6.65137 20.4507V3.54926C6.65137 3.07892 7.03266 2.69763 7.503 2.69763H21.1486C21.6189 2.69763 22.0002 3.07892 22.0002 3.54926V7.34879L17.349 21.3023Z"
+				fill="#CA64EA"
+			/>
+			<path d="M22.0008 12L19.6752 13.3954L17.3496 12V7.34888H22.0008L22.0008 12Z" fill="#AE4BD5" />
+			<path d="M22.0008 16.6512L19.6752 18.0465L17.3496 16.6512V12H22.0008V16.6512Z" fill="#9332BF" />
+			<path
+				d="M17.3496 16.6511H22.0008V20.4302C22.0008 20.9118 21.6103 21.3023 21.1287 21.3023H17.3496V16.6511Z"
+				fill="#7719AA"
+			/>
+			<path
+				opacity={0.2}
+				d="M12.3104 6.41858H6.65137V18.0465H12.3104C12.7807 18.045 13.1615 17.6641 13.163 17.1939V7.27113C13.1615 6.80092 12.7807 6.42011 12.3104 6.41858Z"
+				fill="black"
+			/>
+			<path
+				opacity={0.2}
+				d="M11.8453 6.88367H6.65137V18.5116H11.8453C12.3155 18.51 12.6963 18.1292 12.6979 17.659V7.73623C12.6964 7.26601 12.3155 6.8852 11.8453 6.88367Z"
+				fill="black"
+			/>
+			<path
+				opacity={0.5}
+				d="M11.8453 6.88367H6.65137V17.5813H11.8453C12.3155 17.5798 12.6963 17.199 12.6979 16.7288V7.73623C12.6964 7.26601 12.3155 6.8852 11.8453 6.88367Z"
+				fill="black"
+			/>
+			<path
+				opacity={0.5}
+				d="M11.3802 6.88367H6.65137V17.5813H11.3802C11.8504 17.5798 12.2312 17.199 12.2328 16.7288V7.73623C12.2312 7.26601 11.8504 6.8852 11.3802 6.88367Z"
+				fill="black"
+			/>
+			<path
+				d="M2.85256 6.88367H11.38C11.8509 6.88367 12.2326 7.26537 12.2326 7.73623V16.2637C12.2326 16.7345 11.8509 17.1162 11.38 17.1162H2.85256C2.38171 17.1162 2 16.7345 2 16.2637V7.73623C2 7.26537 2.38171 6.88367 2.85256 6.88367Z"
+				fill="url(#paint0_linear_8545_325)"
+			/>
+			<path
+				d="M4.80371 9.22888H5.95953L8.23069 12.9033C8.33394 13.0679 8.41146 13.2005 8.46325 13.301H8.47813C8.45004 13.0508 8.43885 12.7991 8.44465 12.5475V9.22888H9.4307V14.7712H8.34882L5.99254 10.9949C5.91273 10.8703 5.84246 10.7399 5.78231 10.6047H5.7637C5.78746 10.8797 5.79724 11.1557 5.793 11.4317V14.7712H4.80371V9.22888Z"
+				fill="white"
+			/>
+			<defs>
+				<linearGradient
+					id="paint0_linear_8545_325"
+					x1={3.7776}
+					y1={6.2175}
+					x2={10.455}
+					y2={17.7824}
+					gradientUnits="userSpaceOnUse"
+				>
+					<stop stopColor="#8324B3" />
+					<stop offset={0.5} stopColor="#7A1BAC" />
+					<stop offset={1} stopColor="#621197" />
+				</linearGradient>
+			</defs>
+		</svg>
+	);
+};
+
+IconLogoMicrosoftOnenoteColor.iconName = "logo-microsoft-onenote--color";
+
+export default IconLogoMicrosoftOnenoteColor;

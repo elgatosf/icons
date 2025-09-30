@@ -1,0 +1,27 @@
+import type { SVGProps } from "react";
+import { sizeMap } from "../../metadata/sizing.js";
+import type { IconProps } from "../types.js";
+
+const IconNumber2 = (props: IconProps & SVGProps<SVGSVGElement>) => {
+	const size = sizeMap[props?.size ?? "m"];
+	const label = props?.label ?? "Icon";
+
+	return (
+		<svg
+			viewBox="0 0 24 24"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
+			width={size}
+			height={size}
+			aria-label={label}
+			role="img"
+			{...props}
+		>
+			<path d="M15.654 17.187H8.34601V15.521C9.71801 14.429 13.442 11.615 13.442 9.71099C13.442 8.84299 12.896 8.29699 12.084 8.29699C11.174 8.29699 10.656 8.92699 10.628 9.86499H8.51401C8.55601 7.66699 10.32 6.81299 12.182 6.81299C13.848 6.81299 15.598 7.69499 15.598 9.62699C15.598 12.049 12.406 14.219 10.796 15.647H15.654V17.187Z" />
+		</svg>
+	);
+};
+
+IconNumber2.iconName = "number2";
+
+export default IconNumber2;

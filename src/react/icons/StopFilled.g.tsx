@@ -10,31 +10,31 @@ const IconStopFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 		case "l":
 			return (
 				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="currentColor"
 					viewBox="0 0 24 24"
+					fill="currentColor"
+					xmlns="http://www.w3.org/2000/svg"
 					width={size}
 					height={size}
 					aria-label={label}
 					role="img"
 					{...props}
 				>
-					<path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+					<path d="M3 5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5Z" />
 				</svg>
 			);
 		default:
 			return (
 				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="currentColor"
 					viewBox="0 0 20 20"
+					fill="currentColor"
+					xmlns="http://www.w3.org/2000/svg"
 					width={size}
 					height={size}
 					aria-label={label}
 					role="img"
 					{...props}
 				>
-					<path d="M3 5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+					<path d="M3 5C3 3.89543 3.89543 3 5 3H15C16.1046 3 17 3.89543 17 5V15C17 16.1046 16.1046 17 15 17H5C3.89543 17 3 16.1046 3 15V5Z" />
 				</svg>
 			);
 	}

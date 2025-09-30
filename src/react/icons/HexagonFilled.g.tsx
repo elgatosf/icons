@@ -8,9 +8,9 @@ const IconHexagonFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
 			viewBox="0 0 24 24"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
@@ -19,8 +19,8 @@ const IconHexagonFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 		>
 			<path
 				fillRule="evenodd"
-				d="M13 2.185a2 2 0 0 0-2 0L4 6.227a2 2 0 0 0-1 1.732v8.083a2 2 0 0 0 1 1.731l7 4.042a2 2 0 0 0 2 0l7-4.042a2 2 0 0 0 1-1.732V7.96a2 2 0 0 0-1-1.732z"
 				clipRule="evenodd"
+				d="M13 2.18506C12.3812 1.8278 11.6188 1.8278 11 2.18506L4 6.22651C3.3812 6.58378 3 7.24403 3 7.95856V16.0415C3 16.756 3.3812 17.4163 4 17.7735L11 21.815C11.6188 22.1722 12.3812 22.1722 13 21.815L20 17.7735C20.6188 17.4163 21 16.756 21 16.0415V7.95857C21 7.24403 20.6188 6.58378 20 6.22651L13 2.18506Z"
 			/>
 		</svg>
 	);
