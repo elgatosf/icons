@@ -1,4 +1,4 @@
-// Last synchronized: Fri, 26 Sep 2025 17:16:23 GMT
+// Last synchronized: Tue, 30 Sep 2025 13:33:25 GMT
 
 /**
  * Collection of available icons, and their associated metadata.
@@ -80,6 +80,8 @@ export const icons = {
 	badge: { name: "Badge", sizes: ["l"] },
 	"badge--filled": { name: "BadgeFilled", sizes: ["l"] },
 	"bleach-no": { name: "BleachNo", sizes: ["m"] },
+	blinds: { name: "Blinds", sizes: ["l"] },
+	"blinds--filled": { name: "BlindsFilled", sizes: ["l"] },
 	"block-quote": { name: "BlockQuote", sizes: ["l"] },
 	bluetooth: { name: "Bluetooth", sizes: ["l"] },
 	blur: { name: "Blur", sizes: ["l"] },

@@ -74,6 +74,8 @@ export { default as IconBackspaceFilled } from "./BackspaceFilled.g.js";
 export { default as IconBadge } from "./Badge.g.js";
 export { default as IconBadgeFilled } from "./BadgeFilled.g.js";
 export { default as IconBleachNo } from "./BleachNo.g.js";
+export { default as IconBlinds } from "./Blinds.g.js";
+export { default as IconBlindsFilled } from "./BlindsFilled.g.js";
 export { default as IconBlockQuote } from "./BlockQuote.g.js";
 export { default as IconBluetooth } from "./Bluetooth.g.js";
 export { default as IconBlur } from "./Blur.g.js";

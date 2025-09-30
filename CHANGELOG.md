@@ -19,6 +19,8 @@
 -   add (s)
 -   background-remove (m)
 -   background-remove--filled (m)
+-   blinds (l)
+-   blinds--filled (l)
 -   calendar-today (l,m)
 -   calendar-today--filled (l,m)
 -   camera (m)

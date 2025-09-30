@@ -65,6 +65,8 @@ export { default as iconBackspace } from "./icons/backspace.g.js";
 export { default as iconBackspaceFilled } from "./icons/backspace--filled.g.js";
 export { default as iconBadge } from "./icons/badge.g.js";
 export { default as iconBadgeFilled } from "./icons/badge--filled.g.js";
+export { default as iconBlinds } from "./icons/blinds.g.js";
+export { default as iconBlindsFilled } from "./icons/blinds--filled.g.js";
 export { default as iconBlockQuote } from "./icons/block-quote.g.js";
 export { default as iconBluetooth } from "./icons/bluetooth.g.js";
 export { default as iconBlur } from "./icons/blur.g.js";
