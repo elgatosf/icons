@@ -8,9 +8,9 @@ const IconLogoMicrosoftTodoColor = (props: IconProps & SVGProps<SVGSVGElement>) 
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
 			viewBox="0 0 24 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
@@ -18,15 +18,22 @@ const IconLogoMicrosoftTodoColor = (props: IconProps & SVGProps<SVGSVGElement>) 
 			{...props}
 		>
 			<path
+				d="M5.34207 8.55539L2.49378 11.4037C2.16444 11.733 2.16444 12.267 2.49378 12.5963L9.38299 19.4855C9.71233 19.8149 10.2463 19.8149 10.5756 19.4855L13.4239 16.6372C13.7532 16.3079 13.7532 15.7739 13.4239 15.4446L6.5347 8.55539C6.20536 8.22606 5.6714 8.22606 5.34207 8.55539Z"
 				fill="#195ABD"
-				d="m5.342 8.555-2.848 2.849a.843.843 0 0 0 0 1.192l6.889 6.89c.33.329.863.329 1.193 0l2.848-2.849a.843.843 0 0 0 0-1.192l-6.89-6.89a.843.843 0 0 0-1.192 0"
 			/>
 			<path
-				fill="url(#prefix__a)"
-				d="m21.506 7.363-2.848-2.849a.843.843 0 0 0-1.193 0l-10.93 10.93a.843.843 0 0 0 0 1.193l2.848 2.848c.33.33.864.33 1.193 0l10.93-10.93a.843.843 0 0 0 0-1.192"
+				d="M21.5061 7.3627L18.6578 4.51441C18.3285 4.18507 17.7945 4.18507 17.4652 4.51441L6.53507 15.4445C6.20574 15.7739 6.20574 16.3078 6.53507 16.6372L9.38336 19.4855C9.7127 19.8148 10.2467 19.8148 10.576 19.4855L21.5061 8.55533C21.8355 8.22599 21.8355 7.69203 21.5061 7.3627Z"
+				fill="url(#paint0_linear_8545_427)"
 			/>
 			<defs>
-				<linearGradient id="prefix__a" x1={7.959} x2={20.082} y1={18.061} y2={5.939} gradientUnits="userSpaceOnUse">
+				<linearGradient
+					id="paint0_linear_8545_427"
+					x1={7.95921}
+					y1={18.0613}
+					x2={20.082}
+					y2={5.93855}
+					gradientUnits="userSpaceOnUse"
+				>
 					<stop stopColor="#2987E6" />
 					<stop offset={0.994} stopColor="#58C1F5" />
 				</linearGradient>

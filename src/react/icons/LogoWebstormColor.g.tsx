@@ -8,38 +8,67 @@ const IconLogoWebstormColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
 			viewBox="0 0 24 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path fill="url(#prefix__a)" d="M4.686 20.086 2 4.086l5-2.057 3.171 1.885 2.915-1.571 6.085 2.343L15.743 22z" />
 			<path
-				fill="url(#prefix__b)"
-				d="M22.001 8.771 19.43 2.4 14.744 2 7.516 8.943l1.942 8.943 3.63 2.571L22 15.143l-2.2-4.086z"
+				d="M4.68571 20.0857L2 4.08571L7 2.02856L10.1714 3.91428L13.0857 2.34285L19.1714 4.68571L15.7429 22L4.68571 20.0857Z"
+				fill="url(#paint0_linear_3603_1323)"
 			/>
-			<path fill="url(#prefix__c)" d="m18 7.829 1.8 3.228L22 8.771 20.4 4.8z" />
-			<path fill="#000" d="M18.171 5.829H5.828v12.343h12.343z" />
 			<path
-				fill="#fff"
-				d="M11.629 15.857H7v.772h4.629zM13.059 11.8l.657-.8c.457.371.943.629 1.514.629.457 0 .714-.172.714-.486v-.029c0-.285-.171-.428-1.028-.657-1.029-.257-1.657-.543-1.657-1.571v-.029c0-.943.742-1.543 1.771-1.543.743 0 1.371.229 1.886.657l-.572.858c-.457-.315-.885-.515-1.314-.515-.428 0-.657.2-.657.457V8.8c0 .343.229.457 1.086.686 1.028.285 1.6.657 1.6 1.543v.028c0 1.029-.772 1.6-1.858 1.6a3.38 3.38 0 0 1-2.142-.857M12.057 7.429l-.772 2.971-.857-2.971H9.57L8.685 10.4l-.771-2.971H6.742L8.2 12.543h.943L10 9.57l.829 2.972h.971l1.458-5.114z"
+				d="M22.0013 8.77143L19.4299 2.4L14.7442 2L7.51562 8.94286L9.45848 17.8857L13.0871 20.4571L22.0013 15.1429L19.8013 11.0571L22.0013 8.77143Z"
+				fill="url(#paint1_linear_3603_1323)"
+			/>
+			<path d="M18 7.82862L19.8 11.0572L22 8.77148L20.4 4.80005L18 7.82862Z" fill="url(#paint2_linear_3603_1323)" />
+			<path d="M18.171 5.82861H5.82812V18.1715H18.171V5.82861Z" fill="black" />
+			<path d="M11.6286 15.8572H7V16.6286H11.6286V15.8572Z" fill="white" />
+			<path
+				d="M13.0586 11.8L13.7157 11C14.1729 11.3715 14.6586 11.6286 15.23 11.6286C15.6872 11.6286 15.9443 11.4572 15.9443 11.1429V11.1143C15.9443 10.8286 15.7729 10.6858 14.9157 10.4572C13.8872 10.2 13.2586 9.91433 13.2586 8.88576V8.85719C13.2586 7.91433 14.0015 7.31433 15.03 7.31433C15.7729 7.31433 16.4015 7.5429 16.9157 7.97147L16.3443 8.82862C15.8872 8.51433 15.4586 8.31433 15.03 8.31433C14.6015 8.31433 14.3729 8.51433 14.3729 8.77147V8.80005C14.3729 9.1429 14.6015 9.25719 15.4586 9.48576C16.4872 9.77147 17.0586 10.1429 17.0586 11.0286V11.0572C17.0586 12.0858 16.2872 12.6572 15.2015 12.6572C14.43 12.6286 13.6586 12.3429 13.0586 11.8Z"
+				fill="white"
+			/>
+			<path
+				d="M12.0565 7.42859L11.285 10.4L10.4279 7.42859H9.57076L8.68504 10.4L7.91362 7.42859H6.74219L8.19933 12.5429H9.14219L9.99933 9.57145L10.8279 12.5429H11.7993L13.2565 7.42859H12.0565Z"
+				fill="white"
 			/>
 			<defs>
-				<linearGradient id="prefix__a" x1={9.162} x2={14.338} y1={2.417} y2={21.05} gradientUnits="userSpaceOnUse">
-					<stop offset={0.285} stopColor="#00CDD7" />
-					<stop offset={0.941} stopColor="#2086D7" />
+				<linearGradient
+					id="paint0_linear_3603_1323"
+					x1={9.16229}
+					y1={2.41711}
+					x2={14.338}
+					y2={21.05}
+					gradientUnits="userSpaceOnUse"
+				>
+					<stop offset={0.2849} stopColor="#00CDD7" />
+					<stop offset={0.9409} stopColor="#2086D7" />
 				</linearGradient>
-				<linearGradient id="prefix__b" x1={10.778} x2={19.534} y1={4.781} y2={17.62} gradientUnits="userSpaceOnUse">
-					<stop offset={0.14} stopColor="#FFF045" />
-					<stop offset={0.366} stopColor="#00CDD7" />
+				<linearGradient
+					id="paint1_linear_3603_1323"
+					x1={10.7785}
+					y1={4.78123}
+					x2={19.5342}
+					y2={17.6203}
+					gradientUnits="userSpaceOnUse"
+				>
+					<stop offset={0.1398} stopColor="#FFF045" />
+					<stop offset={0.3656} stopColor="#00CDD7" />
 				</linearGradient>
-				<linearGradient id="prefix__c" x1={19.452} x2={20.602} y1={6.369} y2={10.441} gradientUnits="userSpaceOnUse">
-					<stop offset={0.285} stopColor="#00CDD7" />
-					<stop offset={0.941} stopColor="#2086D7" />
+				<linearGradient
+					id="paint2_linear_3603_1323"
+					x1={19.452}
+					y1={6.36862}
+					x2={20.6017}
+					y2={10.4412}
+					gradientUnits="userSpaceOnUse"
+				>
+					<stop offset={0.2849} stopColor="#00CDD7" />
+					<stop offset={0.9409} stopColor="#2086D7" />
 				</linearGradient>
 			</defs>
 		</svg>

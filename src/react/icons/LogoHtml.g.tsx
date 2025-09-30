@@ -8,9 +8,9 @@ const IconLogoHtml = (props: IconProps & SVGProps<SVGSVGElement>) => {
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
 			viewBox="0 0 20 20"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
@@ -19,8 +19,8 @@ const IconLogoHtml = (props: IconProps & SVGProps<SVGSVGElement>) => {
 		>
 			<path
 				fillRule="evenodd"
-				d="m3.394 3 1.2 13.477L9.986 18l5.42-1.523L16.606 3zm10.458 6.094H7.817l-.146-1.7h6.328l.03-.351.087-.85.03-.44H5.854l.03.44.41 4.57h5.742l-.205 2.14-1.846.497-1.845-.498-.118-1.318h-1.64l.205 2.607 3.398.938h.03v-.008l3.369-.93.03-.293.38-4.365z"
 				clipRule="evenodd"
+				d="M3.39355 3L4.59473 16.4766L9.98535 18L15.4053 16.4766L16.6064 3H3.39355ZM13.8525 9.09375H7.81738L7.6709 7.39453H13.999L14.0283 7.04297L14.1162 6.19336L14.1455 5.75391H5.85449L5.88379 6.19336L6.29395 10.7637H12.0361L11.8311 12.9023L9.98535 13.4004L8.13965 12.9023L8.02246 11.584H6.38184L6.58691 14.1914L9.98535 15.1289H10.0146V15.1208L13.3838 14.1914L13.4131 13.8984L13.7939 9.5332L13.8525 9.09375Z"
 			/>
 		</svg>
 	);

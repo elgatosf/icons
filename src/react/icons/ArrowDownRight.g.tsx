@@ -8,9 +8,9 @@ const IconArrowDownRight = (props: IconProps & SVGProps<SVGSVGElement>) => {
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
 			viewBox="0 0 20 20"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
@@ -19,8 +19,8 @@ const IconArrowDownRight = (props: IconProps & SVGProps<SVGSVGElement>) => {
 		>
 			<path
 				fillRule="evenodd"
-				d="M5.146 5.146a.5.5 0 0 1 .708 0L14 13.293V8a.5.5 0 0 1 1 0v6.5a.5.5 0 0 1-.5.5H8a.5.5 0 0 1 0-1h5.293L5.146 5.854a.5.5 0 0 1 0-.708"
 				clipRule="evenodd"
+				d="M5.14645 5.14645C5.34171 4.95118 5.65829 4.95118 5.85355 5.14645L14 13.2929V8C14 7.72386 14.2239 7.5 14.5 7.5C14.7761 7.5 15 7.72386 15 8V14.5C15 14.7761 14.7761 15 14.5 15H8C7.72386 15 7.5 14.7761 7.5 14.5C7.5 14.2239 7.72386 14 8 14H13.2929L5.14645 5.85355C4.95118 5.65829 4.95118 5.34171 5.14645 5.14645Z"
 			/>
 		</svg>
 	);

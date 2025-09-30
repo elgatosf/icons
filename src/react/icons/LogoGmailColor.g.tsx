@@ -8,20 +8,26 @@ const IconLogoGmailColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
 			viewBox="0 0 24 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path fill="#C5221F" d="M1 5.75v2l2.294 2.22L6 11.5l.5-3.366L6 5 4.6 3.95C3.116 2.838 1 3.896 1 5.75" />
-			<path fill="#FFBA00" d="m18 5-.5 3.175.5 3.325 2.456-1.216L23 7.75v-2c0-1.854-2.116-2.912-3.6-1.8z" />
-			<path fill="#2684FC" d="M2.5 20H6v-8.5L1 7.75V18.5A1.5 1.5 0 0 0 2.5 20" />
-			<path fill="#00AC47" d="M18 20h3.5a1.5 1.5 0 0 0 1.5-1.5V7.75l-5 3.75z" />
-			<path fill="#E94235" d="M12 9.5 6 5v6.5l6 4.5 6-4.5V5z" />
+			<path
+				d="M1 5.75001V7.75001L3.29375 9.97001L6 11.5L6.5 8.13376L6 5.00001L4.6 3.95001C3.11625 2.83751 1 3.89626 1 5.75001Z"
+				fill="#C5221F"
+			/>
+			<path
+				d="M18 5.00001L17.5 8.17501L18 11.5L20.4562 10.2838L23 7.75001V5.75001C23 3.89626 20.8837 2.83751 19.4 3.95001L18 5.00001Z"
+				fill="#FFBA00"
+			/>
+			<path d="M2.5 20H6V11.5L1 7.75V18.5C1 19.3287 1.67125 20 2.5 20Z" fill="#2684FC" />
+			<path d="M18 20H21.5C22.3288 20 23 19.3287 23 18.5V7.75L18 11.5V20Z" fill="#00AC47" />
+			<path d="M12 9.5L6 5V11.5L12 16L18 11.5V5L12 9.5Z" fill="#E94235" />
 		</svg>
 	);
 };

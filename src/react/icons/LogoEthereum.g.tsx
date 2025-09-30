@@ -8,17 +8,17 @@ const IconLogoEthereum = (props: IconProps & SVGProps<SVGSVGElement>) => {
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
 			viewBox="0 0 24 24"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="M5.094 12.157 12 1l6.906 11.157L12 16.108z" />
-			<path d="m12 23-6.828-9.512L12 17.48l6.828-3.992z" />
+			<path d="M5.09375 12.1566L12 1L18.9063 12.1566L12 16.1085L5.09375 12.1566Z" />
+			<path d="M12 23L5.17205 13.4876L12 17.4804L18.8279 13.4876L12 23Z" />
 		</svg>
 	);
 };

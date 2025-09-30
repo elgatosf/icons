@@ -8,16 +8,16 @@ const IconLogoX = (props: IconProps & SVGProps<SVGSVGElement>) => {
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
 			viewBox="0 0 24 24"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="M17.089 4h2.714l-5.93 6.777L20.85 20h-5.462l-4.278-5.593L6.214 20H3.498l6.343-7.25L3.148 4H8.75l3.867 5.113zm-.953 14.375h1.504L7.932 5.54H6.318z" />
+			<path d="M17.0889 4H19.8032L13.8734 10.7774L20.8494 20H15.3872L11.1091 14.4066L6.21387 20H3.49798L9.84054 12.7508L3.14844 4H8.74926L12.6163 9.11262L17.0889 4ZM16.1363 18.3754H17.6403L7.93203 5.53928H6.31808L16.1363 18.3754Z" />
 		</svg>
 	);
 };

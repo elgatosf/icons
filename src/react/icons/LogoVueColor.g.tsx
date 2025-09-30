@@ -8,17 +8,23 @@ const IconLogoVueColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
 			viewBox="0 0 24 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path fill="#41B883" d="M14.482 3 12 7.3 9.517 3H1.25L12 21.62 22.75 3z" />
-			<path fill="#34495E" d="M14.481 3 12 7.3 9.516 3H5.55l6.45 11.171L18.449 3z" />
+			<path
+				d="M14.4823 3.0001L11.9997 7.29999L9.5172 3.0001H1.25L11.9997 21.6194L22.7495 3.0001H14.4823Z"
+				fill="#41B883"
+			/>
+			<path
+				d="M14.4812 3.00003L11.9987 7.29993L9.51613 3.00003H5.54883L11.9987 14.1714L18.4485 3.00003H14.4812Z"
+				fill="#34495E"
+			/>
 		</svg>
 	);
 };

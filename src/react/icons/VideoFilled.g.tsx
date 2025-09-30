@@ -10,9 +10,9 @@ const IconVideoFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 		case "l":
 			return (
 				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="currentColor"
 					viewBox="0 0 24 24"
+					fill="currentColor"
+					xmlns="http://www.w3.org/2000/svg"
 					width={size}
 					height={size}
 					aria-label={label}
@@ -21,17 +21,17 @@ const IconVideoFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 				>
 					<path
 						fillRule="evenodd"
-						d="M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm11.25 7.701c1 .577 1 2.02 0 2.598l-6 3.464A1.5 1.5 0 0 1 8 15.464V8.536a1.5 1.5 0 0 1 2.25-1.3z"
 						clipRule="evenodd"
+						d="M5 3C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3H5ZM16.25 10.701C17.25 11.2783 17.25 12.7217 16.25 13.2991L10.25 16.7632C9.25 17.3405 8 16.6188 8 15.4641V8.53593C8 7.38123 9.25 6.65954 10.25 7.23689L16.25 10.701Z"
 					/>
 				</svg>
 			);
 		default:
 			return (
 				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="currentColor"
 					viewBox="0 0 20 20"
+					fill="currentColor"
+					xmlns="http://www.w3.org/2000/svg"
 					width={size}
 					height={size}
 					aria-label={label}
@@ -40,8 +40,8 @@ const IconVideoFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 				>
 					<path
 						fillRule="evenodd"
-						d="M5 3a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm3.5 10.634 4.794-2.768a1 1 0 0 0 0-1.732L8.5 6.366a1 1 0 0 0-1.5.866v5.536a1 1 0 0 0 1.5.866"
 						clipRule="evenodd"
+						d="M5 3C3.89543 3 3 3.89543 3 5V15C3 16.1046 3.89543 17 5 17H15C16.1046 17 17 16.1046 17 15V5C17 3.89543 16.1046 3 15 3H5ZM8.5 13.6339L13.2942 10.8659C13.9609 10.481 13.9609 9.51878 13.2942 9.13388L8.5 6.36594C7.83333 5.98104 7 6.46216 7 7.23196L7 12.7679C7 13.5377 7.83333 14.0188 8.5 13.6339Z"
 					/>
 				</svg>
 			);

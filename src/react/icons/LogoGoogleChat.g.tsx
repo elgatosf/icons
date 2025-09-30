@@ -8,9 +8,9 @@ const IconLogoGoogleChat = (props: IconProps & SVGProps<SVGSVGElement>) => {
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
 			viewBox="0 0 24 24"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
@@ -19,8 +19,8 @@ const IconLogoGoogleChat = (props: IconProps & SVGProps<SVGSVGElement>) => {
 		>
 			<path
 				fillRule="evenodd"
-				d="M3.8 2.5c-.725 0-1.3.575-1.3 1.3v13.05c0 .725.575 1.3 1.3 1.3h3.125v2.625c0 .625.775.95 1.225.5l3.125-3.125H20.2c.725 0 1.3-.575 1.3-1.3V6.925L17.075 2.5zm13.275 4.425H6.925V16L9.2 13.725h7.875z"
 				clipRule="evenodd"
+				d="M3.80001 2.5C3.07499 2.5 2.5 3.07499 2.5 3.80001V16.85C2.5 17.575 3.07499 18.15 3.80001 18.15H6.925V20.7749C6.925 21.3999 7.70001 21.7249 8.15001 21.2749L11.275 18.1499H20.2C20.925 18.1499 21.5 17.5749 21.5 16.8499V6.92493L17.0748 2.50011L3.80001 2.5ZM17.0747 6.925L6.925 6.925L6.925 15.9999L9.20001 13.7249H17.075L17.0747 6.925Z"
 			/>
 		</svg>
 	);

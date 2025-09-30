@@ -8,9 +8,9 @@ const IconLogoSteamDeckColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
 			viewBox="0 0 24 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
@@ -18,15 +18,25 @@ const IconLogoSteamDeckColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 			{...props}
 		>
 			<path
-				fill="#000"
 				fillRule="evenodd"
-				d="M15.91 12A6.41 6.41 0 0 0 9.5 5.59V2c5.523 0 10 4.477 10 10s-4.477 10-10 10v-3.59A6.41 6.41 0 0 0 15.91 12"
 				clipRule="evenodd"
+				d="M15.9102 12C15.9102 8.4597 13.0403 5.58975 9.5 5.58975V2C15.0229 2 19.5 6.47714 19.5 12C19.5 17.5229 15.0229 22 9.5 22V18.4102C13.0403 18.4102 15.9102 15.5403 15.9102 12Z"
+				fill="black"
 			/>
-			<path fill="url(#prefix__a)" d="M9.5 17.01a5 5 0 1 0 0-10 5 5 0 0 0 0 10" />
+			<path
+				d="M9.5 17.0107C12.2614 17.0107 14.5 14.7722 14.5 12.0107C14.5 9.24932 12.2614 7.01074 9.5 7.01074C6.73858 7.01074 4.5 9.24932 4.5 12.0107C4.5 14.7722 6.73858 17.0107 9.5 17.0107Z"
+				fill="url(#paint0_linear_8575_597)"
+			/>
 			<defs>
-				<linearGradient id="prefix__a" x1={0.653} x2={12.397} y1={8.857} y2={14.527} gradientUnits="userSpaceOnUse">
-					<stop offset={0.107} stopColor="#C957E6" />
+				<linearGradient
+					id="paint0_linear_8575_597"
+					x1={0.652724}
+					y1={8.85727}
+					x2={12.397}
+					y2={14.5269}
+					gradientUnits="userSpaceOnUse"
+				>
+					<stop offset={0.106991} stopColor="#C957E6" />
 					<stop offset={1} stopColor="#1A9FFF" />
 				</linearGradient>
 			</defs>

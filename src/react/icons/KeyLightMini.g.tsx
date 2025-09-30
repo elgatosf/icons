@@ -8,9 +8,9 @@ const IconKeyLightMini = (props: IconProps & SVGProps<SVGSVGElement>) => {
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
 			viewBox="0 0 24 24"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
@@ -19,8 +19,8 @@ const IconKeyLightMini = (props: IconProps & SVGProps<SVGSVGElement>) => {
 		>
 			<path
 				fillRule="evenodd"
-				d="M4 5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-3.5h.75a.75.75 0 0 0 0-1.5H22v-2h.75a.75.75 0 0 0 0-1.5H22V7a2 2 0 0 0-2-2zm16 1.5H4a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h16a.5.5 0 0 0 .5-.5V7a.5.5 0 0 0-.5-.5"
 				clipRule="evenodd"
+				d="M4 5C2.89543 5 2 5.89543 2 7V17C2 18.1046 2.89543 19 4 19H20C21.1046 19 22 18.1046 22 17V13.5H22.75C23.1642 13.5 23.5 13.1642 23.5 12.75C23.5 12.3358 23.1642 12 22.75 12H22V10H22.75C23.1642 10 23.5 9.66421 23.5 9.25C23.5 8.83579 23.1642 8.5 22.75 8.5H22V7C22 5.89543 21.1046 5 20 5H4ZM20 6.5H4C3.72386 6.5 3.5 6.72386 3.5 7V17C3.5 17.2761 3.72386 17.5 4 17.5H20C20.2761 17.5 20.5 17.2761 20.5 17V7C20.5 6.72386 20.2761 6.5 20 6.5Z"
 			/>
 		</svg>
 	);

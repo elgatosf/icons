@@ -8,9 +8,9 @@ const IconCalendar = (props: IconProps & SVGProps<SVGSVGElement>) => {
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
 			viewBox="0 0 24 24"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
@@ -19,8 +19,8 @@ const IconCalendar = (props: IconProps & SVGProps<SVGSVGElement>) => {
 		>
 			<path
 				fillRule="evenodd"
-				d="M8.5 2.75a.75.75 0 0 0-1.5 0V4H5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2.75a.75.75 0 0 0-1.5 0V4h-7zM4.5 19v-9h15v9a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5M19 5.5a.5.5 0 0 1 .5.5v2.5h-15V6a.5.5 0 0 1 .5-.5z"
 				clipRule="evenodd"
+				d="M8.5 2.75C8.5 2.33579 8.16421 2 7.75 2C7.33579 2 7 2.33579 7 2.75V4H5C3.89543 4 3 4.89543 3 6V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V6C21 4.89543 20.1046 4 19 4H17V2.75C17 2.33579 16.6642 2 16.25 2C15.8358 2 15.5 2.33579 15.5 2.75V4H8.5V2.75ZM4.5 19V10L19.5 10V19C19.5 19.2761 19.2761 19.5 19 19.5H5C4.72386 19.5 4.5 19.2761 4.5 19ZM19 5.5C19.2761 5.5 19.5 5.72386 19.5 6V8.5L4.5 8.5V6C4.5 5.72386 4.72386 5.5 5 5.5H19Z"
 			/>
 		</svg>
 	);

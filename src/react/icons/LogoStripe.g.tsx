@@ -8,16 +8,16 @@ const IconLogoStripe = (props: IconProps & SVGProps<SVGSVGElement>) => {
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
 			viewBox="0 0 24 24"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path fillRule="evenodd" d="m3 21.215 18-3.872V2.785l-18 3.8z" clipRule="evenodd" />
+			<path fillRule="evenodd" clipRule="evenodd" d="M3 21.2152L21 17.3427V2.78491L3 6.58571V21.2152Z" />
 		</svg>
 	);
 };

@@ -8,9 +8,9 @@ const IconLogoMiroColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
 			viewBox="0 0 24 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
@@ -18,14 +18,14 @@ const IconLogoMiroColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 			{...props}
 		>
 			<path
-				fill="#FD3"
-				d="M3 7.5A4.5 4.5 0 0 1 7.5 3h9A4.5 4.5 0 0 1 21 7.5v9a4.5 4.5 0 0 1-4.5 4.5h-9A4.5 4.5 0 0 1 3 16.5z"
+				d="M3 7.5C3 5.01472 5.01472 3 7.5 3H16.5C18.9853 3 21 5.01472 21 7.5V16.5C21 18.9853 18.9853 21 16.5 21H7.5C5.01472 21 3 18.9853 3 16.5V7.5Z"
+				fill="#FFDD33"
 			/>
 			<path
-				fill="#1C1C1E"
 				fillRule="evenodd"
-				d="M14.967 6.431h-1.634l1.361 2.393L11.7 6.43h-1.634l1.498 2.924L8.43 6.431H6.797l1.634 3.722-1.634 7.444H8.43l3.132-7.975-1.498 7.975h1.634l2.996-8.507-1.362 8.507h1.634l2.995-9.305z"
 				clipRule="evenodd"
+				d="M14.9669 6.43127H13.3328L14.6945 8.8237L11.6988 6.43127H10.0649L11.5627 9.35543L8.43087 6.43127H6.79688L8.43087 10.1534L6.79688 17.5969H8.43087L11.5627 9.62166L10.0649 17.5969H11.6988L14.6945 9.08993L13.3328 17.5969H14.9669L17.9625 8.29199L14.9669 6.43127Z"
+				fill="#1C1C1E"
 			/>
 		</svg>
 	);

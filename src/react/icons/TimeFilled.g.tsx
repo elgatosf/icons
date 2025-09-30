@@ -10,9 +10,9 @@ const IconTimeFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 		case "l":
 			return (
 				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="currentColor"
 					viewBox="0 0 24 24"
+					fill="currentColor"
+					xmlns="http://www.w3.org/2000/svg"
 					width={size}
 					height={size}
 					aria-label={label}
@@ -21,17 +21,17 @@ const IconTimeFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 				>
 					<path
 						fillRule="evenodd"
-						d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10m.75-16.25a.75.75 0 0 0-1.5 0V12c0 .199.079.39.22.53l3.25 3.25a.75.75 0 1 0 1.06-1.06l-3.03-3.03z"
 						clipRule="evenodd"
+						d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM12.75 5.75C12.75 5.33579 12.4142 5 12 5C11.5858 5 11.25 5.33579 11.25 5.75V12C11.25 12.1989 11.329 12.3897 11.4697 12.5303L14.7197 15.7803C15.0126 16.0732 15.4874 16.0732 15.7803 15.7803C16.0732 15.4874 16.0732 15.0126 15.7803 14.7197L12.75 11.6893V5.75Z"
 					/>
 				</svg>
 			);
 		default:
 			return (
 				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="currentColor"
 					viewBox="0 0 16 16"
+					fill="currentColor"
+					xmlns="http://www.w3.org/2000/svg"
 					width={size}
 					height={size}
 					aria-label={label}
@@ -40,8 +40,8 @@ const IconTimeFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 				>
 					<path
 						fillRule="evenodd"
-						d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14m.5-11.5a.5.5 0 0 0-1 0V8a.5.5 0 0 0 .146.354l2.5 2.5a.5.5 0 0 0 .708-.708L8.5 7.793z"
 						clipRule="evenodd"
+						d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15ZM8.5 3.5C8.5 3.22386 8.27614 3 8 3C7.72386 3 7.5 3.22386 7.5 3.5V8C7.5 8.13261 7.55268 8.25979 7.64645 8.35355L10.1464 10.8536C10.3417 11.0488 10.6583 11.0488 10.8536 10.8536C11.0488 10.6583 11.0488 10.3417 10.8536 10.1464L8.5 7.79289V3.5Z"
 					/>
 				</svg>
 			);

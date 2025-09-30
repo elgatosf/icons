@@ -8,9 +8,9 @@ const IconLogoLovableColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
 			viewBox="0 0 24 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
@@ -18,103 +18,110 @@ const IconLogoLovableColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 			{...props}
 		>
 			<mask
-				id="prefix__b"
-				width={18}
-				height={19}
-				x={3}
-				y={2}
-				maskUnits="userSpaceOnUse"
+				id="mask0_8575_392"
 				style={{
 					maskType: "alpha",
 				}}
+				maskUnits="userSpaceOnUse"
+				x={3}
+				y={2}
+				width={18}
+				height={19}
 			>
 				<path
-					fill="url(#prefix__a)"
 					fillRule="evenodd"
-					d="M8.366 2.857a5.367 5.367 0 0 1 5.365 5.367v2.04h1.786a5.367 5.367 0 0 1 5.366 5.368A5.367 5.367 0 0 1 15.517 21H3V8.224a5.367 5.367 0 0 1 5.366-5.367"
 					clipRule="evenodd"
+					d="M8.36559 2.85657C11.3289 2.85657 13.7312 5.25981 13.7312 8.22436V10.2645H15.5168C18.4801 10.2645 20.8825 12.6677 20.8825 15.6322C20.8825 18.5967 18.4801 21 15.5168 21H3V8.22436C3 5.25981 5.40226 2.85657 8.36559 2.85657Z"
+					fill="url(#paint0_linear_8575_392)"
 				/>
 			</mask>
-			<g mask="url(#prefix__b)">
-				<g filter="url(#prefix__c)">
+			<g mask="url(#mask0_8575_392)">
+				<g filter="url(#filter0_f_8575_392)">
 					<path
+						d="M10.8443 24.6192C17.5298 24.6192 22.9494 19.2116 22.9494 12.541C22.9494 5.87036 17.5298 0.462769 10.8443 0.462769C4.15888 0.462769 -1.26074 5.87036 -1.26074 12.541C-1.26074 19.2116 4.15888 24.6192 10.8443 24.6192Z"
 						fill="#4B73FF"
-						d="M10.844 24.62c6.686 0 12.105-5.408 12.105-12.079 0-6.67-5.42-12.078-12.105-12.078S-1.26 5.87-1.26 12.54s5.42 12.078 12.105 12.078"
 					/>
 				</g>
-				<g filter="url(#prefix__d)">
+				<g filter="url(#filter1_f_8575_392)">
 					<path
+						d="M12.1722 17.9914C20.7343 17.9914 27.6754 12.5838 27.6754 5.91316C27.6754 -0.757447 20.7343 -6.16504 12.1722 -6.16504C3.60997 -6.16504 -3.33105 -0.757447 -3.33105 5.91316C-3.33105 12.5838 3.60997 17.9914 12.1722 17.9914Z"
 						fill="#FF66F4"
-						d="M12.172 17.991c8.562 0 15.503-5.407 15.503-12.078S20.735-6.165 12.172-6.165-3.33-.757-3.33 5.913 3.61 17.991 12.172 17.991"
 					/>
 				</g>
-				<g filter="url(#prefix__e)">
+				<g filter="url(#filter2_f_8575_392)">
 					<path
+						d="M14.7017 14.2474C21.3872 14.2474 26.8068 9.49841 26.8068 3.64019C26.8068 -2.21802 21.3872 -6.96704 14.7017 -6.96704C8.0163 -6.96704 2.59668 -2.21802 2.59668 3.64019C2.59668 9.49841 8.0163 14.2474 14.7017 14.2474Z"
 						fill="#FF0105"
-						d="M14.702 14.247c6.685 0 12.105-4.749 12.105-10.607S21.387-6.967 14.702-6.967 2.597-2.218 2.597 3.64s5.42 10.607 12.105 10.607"
 					/>
 				</g>
-				<g filter="url(#prefix__f)">
+				<g filter="url(#filter3_f_8575_392)">
 					<path
+						d="M12.3903 13.1739C16.4109 13.1739 19.6702 9.92183 19.6702 5.91015C19.6702 1.89847 16.4109 -1.35364 12.3903 -1.35364C8.36969 -1.35364 5.11035 1.89847 5.11035 5.91015C5.11035 9.92183 8.36969 13.1739 12.3903 13.1739Z"
 						fill="#FE7B02"
-						d="M12.39 13.174c4.02 0 7.28-3.252 7.28-7.264s-3.26-7.264-7.28-7.264S5.11 1.898 5.11 5.91s3.26 7.264 7.28 7.264"
 					/>
 				</g>
 			</g>
 			<defs>
 				<filter
-					id="prefix__c"
-					width={35.036}
-					height={34.982}
-					x={-6.674}
-					y={-4.95}
-					colorInterpolationFilters="sRGB"
+					id="filter0_f_8575_392"
+					x={-6.67371}
+					y={-4.9502}
+					width={35.0359}
+					height={34.9823}
 					filterUnits="userSpaceOnUse"
+					colorInterpolationFilters="sRGB"
 				>
 					<feFlood floodOpacity={0} result="BackgroundImageFix" />
-					<feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-					<feGaussianBlur result="effect1_foregroundBlur_8575_392" stdDeviation={2.706} />
+					<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+					<feGaussianBlur stdDeviation={2.70649} result="effect1_foregroundBlur_8575_392" />
 				</filter>
 				<filter
-					id="prefix__d"
-					width={41.833}
-					height={34.982}
-					x={-8.744}
+					id="filter1_f_8575_392"
+					x={-8.74403}
 					y={-11.578}
-					colorInterpolationFilters="sRGB"
+					width={41.8328}
+					height={34.9823}
 					filterUnits="userSpaceOnUse"
+					colorInterpolationFilters="sRGB"
 				>
 					<feFlood floodOpacity={0} result="BackgroundImageFix" />
-					<feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-					<feGaussianBlur result="effect1_foregroundBlur_8575_392" stdDeviation={2.706} />
+					<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+					<feGaussianBlur stdDeviation={2.70649} result="effect1_foregroundBlur_8575_392" />
 				</filter>
 				<filter
-					id="prefix__e"
-					width={35.036}
-					height={32.04}
-					x={-2.816}
+					id="filter2_f_8575_392"
+					x={-2.81629}
 					y={-12.38}
-					colorInterpolationFilters="sRGB"
+					width={35.0359}
+					height={32.0404}
 					filterUnits="userSpaceOnUse"
+					colorInterpolationFilters="sRGB"
 				>
 					<feFlood floodOpacity={0} result="BackgroundImageFix" />
-					<feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-					<feGaussianBlur result="effect1_foregroundBlur_8575_392" stdDeviation={2.706} />
+					<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+					<feGaussianBlur stdDeviation={2.70649} result="effect1_foregroundBlur_8575_392" />
 				</filter>
 				<filter
-					id="prefix__f"
-					width={25.386}
-					height={25.354}
-					x={-0.303}
-					y={-6.767}
-					colorInterpolationFilters="sRGB"
+					id="filter3_f_8575_392"
+					x={-0.30262}
+					y={-6.76661}
+					width={25.3855}
+					height={25.3535}
 					filterUnits="userSpaceOnUse"
+					colorInterpolationFilters="sRGB"
 				>
 					<feFlood floodOpacity={0} result="BackgroundImageFix" />
-					<feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-					<feGaussianBlur result="effect1_foregroundBlur_8575_392" stdDeviation={2.706} />
+					<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+					<feGaussianBlur stdDeviation={2.70649} result="effect1_foregroundBlur_8575_392" />
 				</filter>
-				<linearGradient id="prefix__a" x1={9.018} x2={14.444} y1={6.045} y2={21.001} gradientUnits="userSpaceOnUse">
+				<linearGradient
+					id="paint0_linear_8575_392"
+					x1={9.01776}
+					y1={6.04496}
+					x2={14.4445}
+					y2={21.001}
+					gradientUnits="userSpaceOnUse"
+				>
 					<stop offset={0.025} stopColor="#FF8E63" />
 					<stop offset={0.56} stopColor="#FF7EB0" />
 					<stop offset={0.95} stopColor="#4B73FF" />

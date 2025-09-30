@@ -8,19 +8,18 @@ const IconLogoAdobeColor = (props: IconProps & SVGProps<SVGSVGElement>) => {
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
 			viewBox="0 0 24 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path
-				fill="#FA0C00"
-				d="M9.4 3H2v17.7zM14.608 3H22v17.7zM16.715 20.7l-4.71-11.176-3.236 7.618h3.448l1.407 3.558z"
-			/>
+			<path d="M9.40091 3H1.99976V20.7001L9.40091 3Z" fill="#FA0C00" />
+			<path d="M14.6082 3H21.9997V20.7001L14.6082 3Z" fill="#FA0C00" />
+			<path d="M16.7151 20.7002L12.0044 9.52369L8.76913 17.1418H12.2166L13.6245 20.7002H16.7151Z" fill="#FA0C00" />
 		</svg>
 	);
 };

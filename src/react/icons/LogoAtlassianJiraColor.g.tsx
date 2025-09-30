@@ -8,9 +8,9 @@ const IconLogoAtlassianJiraColor = (props: IconProps & SVGProps<SVGSVGElement>) 
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
 			viewBox="0 0 24 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
@@ -18,23 +18,37 @@ const IconLogoAtlassianJiraColor = (props: IconProps & SVGProps<SVGSVGElement>) 
 			{...props}
 		>
 			<path
+				d="M20.2256 3.00012H11.2949C11.2949 5.15612 13.1017 6.91101 15.3215 6.91101H16.9734V8.44026C16.9734 10.5962 18.7802 12.3512 21 12.3512V3.75222C21 3.32603 20.6645 3.00012 20.2256 3.00012Z"
 				fill="#2684FF"
-				d="M20.226 3h-8.931c0 2.156 1.807 3.911 4.027 3.911h1.651v1.53c0 2.155 1.807 3.91 4.027 3.91V3.752c0-.426-.335-.752-.774-.752"
 			/>
 			<path
-				fill="url(#prefix__a)"
-				d="M15.814 7.312H6.883c0 2.156 1.807 3.91 4.026 3.91h1.652v1.555c0 2.156 1.807 3.911 4.027 3.911V8.064a.766.766 0 0 0-.774-.752"
+				d="M15.8136 7.31201H6.88281C6.88281 9.46801 8.68961 11.2229 10.9094 11.2229H12.5613V12.7772C12.5613 14.9332 14.3682 16.6881 16.5879 16.6881V8.06408C16.5879 7.66299 16.2523 7.31201 15.8136 7.31201Z"
+				fill="url(#paint0_linear_8575_341)"
 			/>
 			<path
-				fill="url(#prefix__b)"
-				d="M11.4 11.65H2.469c0 2.155 1.807 3.91 4.026 3.91h1.652v1.53c0 2.155 1.807 3.91 4.027 3.91v-8.599c0-.426-.361-.752-.774-.752"
+				d="M11.3995 11.6492H2.46875C2.46875 13.8052 4.27555 15.56 6.49533 15.56H8.14727V17.0893C8.14727 19.2453 9.95405 21.0002 12.1738 21.0002V12.4012C12.1738 11.975 11.8125 11.6492 11.3995 11.6492Z"
+				fill="url(#paint1_linear_8575_341)"
 			/>
 			<defs>
-				<linearGradient id="prefix__a" x1={16.664} x2={12.98} y1={7.334} y2={11.244} gradientUnits="userSpaceOnUse">
+				<linearGradient
+					id="paint0_linear_8575_341"
+					x1={16.6636}
+					y1={7.33365}
+					x2={12.9805}
+					y2={11.2441}
+					gradientUnits="userSpaceOnUse"
+				>
 					<stop offset={0.176} stopColor="#0052CC" />
 					<stop offset={1} stopColor="#2684FF" />
 				</linearGradient>
-				<linearGradient id="prefix__b" x1={12.498} x2={8.232} y1={11.678} y2={15.951} gradientUnits="userSpaceOnUse">
+				<linearGradient
+					id="paint1_linear_8575_341"
+					x1={12.4977}
+					y1={11.678}
+					x2={8.23205}
+					y2={15.9511}
+					gradientUnits="userSpaceOnUse"
+				>
 					<stop offset={0.176} stopColor="#0052CC" />
 					<stop offset={1} stopColor="#2684FF" />
 				</linearGradient>

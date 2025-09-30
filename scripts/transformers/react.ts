@@ -22,6 +22,16 @@ const svgrConfig: Config = {
 		"#151515": "currentColor",
 	},
 	svgo: true,
+	svgoConfig: {
+		plugins: [
+			{
+				name: "cleanupIds",
+				params: {
+					minify: false,
+				},
+			},
+		],
+	},
 	svgProps: {
 		width: "{size}",
 		height: "{size}",

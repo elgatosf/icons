@@ -8,16 +8,16 @@ const IconNumber4 = (props: IconProps & SVGProps<SVGSVGElement>) => {
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
 			viewBox="0 0 24 24"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="M16.08 14.863h-1.553v2.198h-1.96v-2.198H7.919v-1.82l4.186-6.104h2.422v6.496h1.554zm-3.457-6.3-3.248 4.886h3.22z" />
+			<path d="M16.0809 14.863H14.5269V17.061H12.5669V14.863H7.91895V13.043L12.1049 6.93896H14.5269V13.435H16.0809V14.863ZM12.6229 8.56296L9.37495 13.449H12.5949L12.6229 8.56296Z" />
 		</svg>
 	);
 };

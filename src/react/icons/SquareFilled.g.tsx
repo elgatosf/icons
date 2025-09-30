@@ -10,31 +10,31 @@ const IconSquareFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 		case "l":
 			return (
 				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="currentColor"
 					viewBox="0 0 24 24"
+					fill="currentColor"
+					xmlns="http://www.w3.org/2000/svg"
 					width={size}
 					height={size}
 					aria-label={label}
 					role="img"
 					{...props}
 				>
-					<path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+					<path d="M3 5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5Z" />
 				</svg>
 			);
 		default:
 			return (
 				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="currentColor"
 					viewBox="0 0 16 16"
+					fill="currentColor"
+					xmlns="http://www.w3.org/2000/svg"
 					width={size}
 					height={size}
 					aria-label={label}
 					role="img"
 					{...props}
 				>
-					<path d="M2 4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z" />
+					<path d="M2 4C2 2.89543 2.89543 2 4 2H12C13.1046 2 14 2.89543 14 4V12C14 13.1046 13.1046 14 12 14H4C2.89543 14 2 13.1046 2 12V4Z" />
 				</svg>
 			);
 	}

@@ -8,9 +8,9 @@ const IconLogoGoogleMeet = (props: IconProps & SVGProps<SVGSVGElement>) => {
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
 			viewBox="0 0 24 24"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
@@ -19,8 +19,8 @@ const IconLogoGoogleMeet = (props: IconProps & SVGProps<SVGSVGElement>) => {
 		>
 			<path
 				fillRule="evenodd"
-				d="m2 8.75 5-5h9.244c.897 0 1.631.741 1.631 1.648v2.577l3.092-2.45A.627.627 0 0 1 22 6.01v11.73c0 .54-.633.831-1.046.485l-3.079-2.478v2.858c0 .905-.734 1.645-1.631 1.645H3.667C2.75 20.25 2 19.5 2 18.583zm2 9.5V9.578L7.828 5.75h8.047v12.5z"
 				clipRule="evenodd"
+				d="M2 8.75L7 3.75H16.2437C17.1409 3.75 17.875 4.4914 17.875 5.39755V7.97488L20.9674 5.52523C21.3804 5.17863 22 5.46978 22 6.01048V17.7395C22 18.2802 21.3667 18.5714 20.9536 18.2248L17.875 15.747V18.6049C17.875 19.5097 17.1409 20.25 16.2437 20.25H3.66668C2.75 20.25 2 19.5 2 18.5833V8.75ZM4 18.25V9.57843L7.82843 5.75H15.875V18.25H4Z"
 			/>
 		</svg>
 	);

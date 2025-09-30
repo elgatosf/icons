@@ -8,16 +8,16 @@ const IconLogoVercel = (props: IconProps & SVGProps<SVGSVGElement>) => {
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
 			viewBox="0 0 24 24"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path d="m12.16 2.68 10 17.32h-20z" />
+			<path d="M12.1601 2.67929L22.1602 20H2.16016L12.1601 2.67929Z" />
 		</svg>
 	);
 };

@@ -8,21 +8,22 @@ const IconLogoGoogleDocsColor = (props: IconProps & SVGProps<SVGSVGElement>) => 
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
 			viewBox="0 0 24 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
 			role="img"
 			{...props}
 		>
-			<path fill="#fff" d="M16.75 12.25h-9.5V14h9.5zM14.25 15.25h-7V17h7z" />
-			<path fill="#0066DA" d="m14.5 6.5 2.578.125L20 6.5 14.5 1l-.125 3.358z" />
-			<path fill="#fff" d="M16.75 9.25h-9.5V11h9.5z" />
+			<path d="M16.75 12.25H7.25V14H16.75V12.25Z" fill="white" />
+			<path d="M14.25 15.25H7.25V17H14.25V15.25Z" fill="white" />
+			<path d="M14.5 6.5L17.0775 6.625L20 6.5L14.5 1L14.375 4.3575L14.5 6.5Z" fill="#0066DA" />
+			<path d="M16.75 9.25H7.25V11H16.75V9.25Z" fill="white" />
 			<path
+				d="M14.5 6.5V1H5.5C4.67125 1 4 1.67125 4 2.5V21.5C4 22.3288 4.67125 23 5.5 23H18.5C19.3287 23 20 22.3288 20 21.5V6.5H14.5ZM14 16.75H7.5V15.5H14V16.75ZM16.5 13.75H7.5V12.5H16.5V13.75ZM16.5 10.75H7.5V9.5H16.5V10.75Z"
 				fill="#2684FC"
-				d="M14.5 6.5V1h-9A1.5 1.5 0 0 0 4 2.5v19A1.5 1.5 0 0 0 5.5 23h13a1.5 1.5 0 0 0 1.5-1.5v-15zM14 16.75H7.5V15.5H14zm2.5-3h-9V12.5h9zm0-3h-9V9.5h9z"
 			/>
 		</svg>
 	);

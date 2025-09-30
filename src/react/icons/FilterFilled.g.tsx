@@ -8,9 +8,9 @@ const IconFilterFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
 			viewBox="0 0 20 20"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
@@ -19,8 +19,8 @@ const IconFilterFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 		>
 			<path
 				fillRule="evenodd"
-				d="M18 10a8 8 0 1 0-16 0 8 8 0 0 0 16 0m-5.5 0a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1zm2-2.5A.5.5 0 0 0 14 7H6a.5.5 0 0 0 0 1h8a.5.5 0 0 0 .5-.5M11 13a.5.5 0 0 1 0 1H9a.5.5 0 0 1 0-1z"
 				clipRule="evenodd"
+				d="M18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10ZM12.5 10C12.7761 10 13 10.2239 13 10.5C13 10.7761 12.7761 11 12.5 11H7.5C7.22386 11 7 10.7761 7 10.5C7 10.2239 7.22386 10 7.5 10H12.5ZM14.5 7.5C14.5 7.22386 14.2761 7 14 7H6C5.72386 7 5.5 7.22386 5.5 7.5C5.5 7.77614 5.72386 8 6 8H14C14.2761 8 14.5 7.77614 14.5 7.5ZM11 13C11.2761 13 11.5 13.2239 11.5 13.5C11.5 13.7761 11.2761 14 11 14H9C8.72386 14 8.5 13.7761 8.5 13.5C8.5 13.2239 8.72386 13 9 13H11Z"
 			/>
 		</svg>
 	);

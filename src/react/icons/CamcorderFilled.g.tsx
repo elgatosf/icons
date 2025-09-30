@@ -8,9 +8,9 @@ const IconCamcorderFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 
 	return (
 		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
 			viewBox="0 0 24 24"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			aria-label={label}
@@ -19,8 +19,8 @@ const IconCamcorderFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
 		>
 			<path
 				fillRule="evenodd"
-				d="M18 6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1.959l2.75 1.588A1.5 1.5 0 0 0 23 16.33V7.67a1.5 1.5 0 0 0-2.25-1.3L18 7.96z"
 				clipRule="evenodd"
+				d="M18 6C18 4.89543 17.1046 4 16 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H16C17.1046 20 18 19.1046 18 18V16.0415L20.75 17.6292C21.75 18.2065 23 17.4848 23 16.3301V7.66987C23 6.51517 21.75 5.79348 20.75 6.37084L18 7.95855V6Z"
 			/>
 		</svg>
 	);
