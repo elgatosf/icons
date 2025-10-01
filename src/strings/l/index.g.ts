@@ -655,8 +655,6 @@ export { default as iconLogoSteamDeck } from "./icons/logo-steam-deck.g.js";
 export { default as iconLogoSteamDeckColor } from "./icons/logo-steam-deck--color.g.js";
 export { default as iconLogoStripe } from "./icons/logo-stripe.g.js";
 export { default as iconLogoStripeColor } from "./icons/logo-stripe--color.g.js";
-export { default as iconLogoStudio } from "./icons/logo-studio.g.js";
-export { default as iconLogoStudioColor } from "./icons/logo-studio--color.g.js";
 export { default as iconLogoTelegram } from "./icons/logo-telegram.g.js";
 export { default as iconLogoTelegramColor } from "./icons/logo-telegram--color.g.js";
 export { default as iconLogoThreads } from "./icons/logo-threads.g.js";

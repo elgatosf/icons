@@ -1,4 +1,4 @@
-// Last synchronized: Tue, 30 Sep 2025 13:33:25 GMT
+// Last synchronized: Wed, 01 Oct 2025 11:08:39 GMT
 
 /**
  * Collection of available icons, and their associated metadata.
@@ -705,8 +705,8 @@ export const icons = {
 	"logo-streamlabs--color": { name: "LogoStreamlabsColor", sizes: ["m"] },
 	"logo-stripe": { name: "LogoStripe", sizes: ["l"] },
 	"logo-stripe--color": { name: "LogoStripeColor", sizes: ["l"] },
-	"logo-studio": { name: "LogoStudio", sizes: ["s", "m", "l"] },
-	"logo-studio--color": { name: "LogoStudioColor", sizes: ["s", "m", "l"] },
+	"logo-studio": { name: "LogoStudio", sizes: ["s", "m"] },
+	"logo-studio--color": { name: "LogoStudioColor", sizes: ["s", "m"] },
 	"logo-telegram": { name: "LogoTelegram", sizes: ["l"] },
 	"logo-telegram--color": { name: "LogoTelegramColor", sizes: ["l"] },
 	"logo-threads": { name: "LogoThreads", sizes: ["l"] },
