@@ -1,4 +1,4 @@
-// Last synchronized: Wed, 01 Oct 2025 11:08:39 GMT
+// Last synchronized: Thu, 02 Oct 2025 11:58:48 GMT
 
 /**
  * Collection of available icons, and their associated metadata.
@@ -512,14 +512,17 @@ export const icons = {
 	"logo-calendly--color": { name: "LogoCalendlyColor", sizes: ["l"] },
 	"logo-camera-hub": { name: "LogoCameraHub", sizes: ["s", "m"] },
 	"logo-camera-hub--color": { name: "LogoCameraHubColor", sizes: ["s", "m"] },
+	"logo-camera-hub--filled": { name: "LogoCameraHubFilled", sizes: ["s", "m"] },
 	"logo-capture": { name: "LogoCapture", sizes: ["s", "m"] },
 	"logo-capture--color": { name: "LogoCaptureColor", sizes: ["s", "m"] },
+	"logo-capture--filled": { name: "LogoCaptureFilled", sizes: ["s", "m"] },
 	"logo-chrome": { name: "LogoChrome", sizes: ["l"] },
 	"logo-chrome--color": { name: "LogoChromeColor", sizes: ["l"] },
 	"logo-claude": { name: "LogoClaude", sizes: ["l"] },
 	"logo-claude--color": { name: "LogoClaudeColor", sizes: ["l"] },
 	"logo-control-center": { name: "LogoControlCenter", sizes: ["s", "m"] },
 	"logo-control-center--color": { name: "LogoControlCenterColor", sizes: ["s", "m"] },
+	"logo-control-center--filled": { name: "LogoControlCenterFilled", sizes: ["s", "m"] },
 	"logo-corsair": { name: "LogoCorsair", sizes: ["l"] },
 	"logo-css": { name: "LogoCss", sizes: ["m"] },
 	"logo-css--color": { name: "LogoCssColor", sizes: ["l"] },
