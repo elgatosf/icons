@@ -1,0 +1,27 @@
+import type { SVGProps } from "react";
+import { sizeMap } from "../../metadata/sizing.js";
+import type { IconProps } from "../types.js";
+
+const IconLogoMakerConsole = (props: IconProps & SVGProps<SVGSVGElement>) => {
+	const size = sizeMap[props?.size ?? "m"];
+	const label = props?.label ?? "Icon";
+
+	return (
+		<svg
+			viewBox="0 0 24 24"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
+			width={size}
+			height={size}
+			aria-label={label}
+			role="img"
+			{...props}
+		>
+			<path d="M11.9992 13.7773L15.0643 12.0055L11.9961 10.2305L8.93725 12.0055L11.9992 13.7773ZM22 19.1706L19.162 20.8146L6.77412 13.6464V10.3583L9.49085 8.77978L4.50213 5.89223V18.1109L7.29351 16.4965L9.79099 17.9442L4.83804 20.8099L2 19.1659V4.82945L4.84115 3.18542L17.2259 10.3537V13.6417L14.5029 15.2171L19.4979 18.1078V5.88755L16.7096 7.50194L14.2043 6.05426L19.1573 3.18854L22 4.83257V19.169V19.1706Z" />
+		</svg>
+	);
+};
+
+IconLogoMakerConsole.iconName = "logo-maker-console";
+
+export default IconLogoMakerConsole;

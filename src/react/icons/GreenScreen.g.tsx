@@ -1,0 +1,31 @@
+import type { SVGProps } from "react";
+import { sizeMap } from "../../metadata/sizing.js";
+import type { IconProps } from "../types.js";
+
+const IconGreenScreen = (props: IconProps & SVGProps<SVGSVGElement>) => {
+	const size = sizeMap[props?.size ?? "m"];
+	const label = props?.label ?? "Icon";
+
+	return (
+		<svg
+			viewBox="0 0 24 24"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
+			width={size}
+			height={size}
+			aria-label={label}
+			role="img"
+			{...props}
+		>
+			<path
+				fillRule="evenodd"
+				clipRule="evenodd"
+				d="M12 1C12.4142 1 12.75 1.33579 12.75 1.75V3H20.25C20.6642 3 21 3.33579 21 3.75C21 4.16421 20.6642 4.5 20.25 4.5H19V16.5C20.1046 16.5 21 17.3954 21 18.5V19C21 20.0357 20.2128 20.887 19.2041 20.9893L19 21H5L4.7959 20.9893C3.85435 20.8938 3.1062 20.1457 3.01074 19.2041L3 19V18.5C3 17.3954 3.89543 16.5 5 16.5V4.5H3.75C3.33579 4.5 3 4.16421 3 3.75C3 3.33579 3.33579 3 3.75 3H11.25V1.75C11.25 1.33579 11.5858 1 12 1ZM5 18C4.72386 18 4.5 18.2239 4.5 18.5V19C4.5 19.2761 4.72386 19.5 5 19.5H19C19.2761 19.5 19.5 19.2761 19.5 19V18.5C19.5 18.2239 19.2761 18 19 18H5ZM6.5 16.5H17.5V4.5H6.5V16.5Z"
+			/>
+		</svg>
+	);
+};
+
+IconGreenScreen.iconName = "green-screen";
+
+export default IconGreenScreen;
