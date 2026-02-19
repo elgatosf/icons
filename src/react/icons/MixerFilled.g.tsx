@@ -1,0 +1,27 @@
+import type { SVGProps } from "react";
+import { sizeMap } from "../../metadata/sizing.js";
+import type { IconProps } from "../types.js";
+
+const IconMixerFilled = (props: IconProps & SVGProps<SVGSVGElement>) => {
+	const size = sizeMap[props?.size ?? "m"];
+	const label = props?.label ?? "Icon";
+
+	return (
+		<svg
+			viewBox="0 0 20 20"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
+			width={size}
+			height={size}
+			aria-label={label}
+			role="img"
+			{...props}
+		>
+			<path d="M15 3C16.1046 3 17 3.89543 17 5V15C17 16.0357 16.2128 16.887 15.2041 16.9893L15 17H5L4.7959 16.9893C3.85435 16.8938 3.1062 16.1457 3.01074 15.2041L3 15V5C3 3.89543 3.89543 3 5 3H15ZM7 6C6.72386 6 6.5 6.22386 6.5 6.5V10.5H6C5.72386 10.5 5.5 10.7239 5.5 11C5.5 11.2761 5.72386 11.5 6 11.5H6.5V13.5C6.5 13.7761 6.72386 14 7 14C7.27614 14 7.5 13.7761 7.5 13.5V11.5H8C8.27614 11.5 8.5 11.2761 8.5 11C8.5 10.7239 8.27614 10.5 8 10.5H7.5V6.5C7.5 6.22386 7.27614 6 7 6ZM10 6C9.72386 6 9.5 6.22386 9.5 6.5V7.5H9C8.72386 7.5 8.5 7.72386 8.5 8C8.5 8.27614 8.72386 8.5 9 8.5H9.5V13.5C9.5 13.7761 9.72386 14 10 14C10.2761 14 10.5 13.7761 10.5 13.5V8.5H11C11.2761 8.5 11.5 8.27614 11.5 8C11.5 7.72386 11.2761 7.5 11 7.5H10.5V6.5C10.5 6.22386 10.2761 6 10 6ZM13 6C12.7239 6 12.5 6.22386 12.5 6.5V10.5H12C11.7239 10.5 11.5 10.7239 11.5 11C11.5 11.2761 11.7239 11.5 12 11.5H12.5V13.5C12.5 13.7761 12.7239 14 13 14C13.2761 14 13.5 13.7761 13.5 13.5V11.5H14C14.2761 11.5 14.5 11.2761 14.5 11C14.5 10.7239 14.2761 10.5 14 10.5H13.5V6.5C13.5 6.22386 13.2761 6 13 6Z" />
+		</svg>
+	);
+};
+
+IconMixerFilled.iconName = "mixer--filled";
+
+export default IconMixerFilled;
