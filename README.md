@@ -71,11 +71,12 @@ All original SVG files are distributed with this package, and can be found withi
 
 ### Font
 
-An icon font available in the `font/` directory, in TTF, WOFF, and WOFF2 formats. A `info.json` mapping file is also included, providing each icon's name, unicode code point, and CSS class name.
+An icon font available in the `font/` directory, in TTF, WOFF, and WOFF2 formats. A bundled CSS file provides ready-to-use classes for every icon.
 
 ```
 .
 ├── font/
+│   ├── elgato-icons.css
 │   ├── elgato-icons.ttf
 │   ├── elgato-icons.woff
 │   ├── elgato-icons.woff2
@@ -83,21 +84,14 @@ An icon font available in the `font/` directory, in TTF, WOFF, and WOFF2 formats
 └── ...
 ```
 
-To use the font on the web, declare it via `@font-face` and reference glyphs by their unicode code point:
+Include `elgato-icons.css` and use the icon class names directly:
 
-```css
-@font-face {
-    font-family: "elgato-icons";
-    src:
-        url("./font/elgato-icons.woff2") format("woff2"),
-        url("./font/elgato-icons.woff") format("woff"),
-        url("./font/elgato-icons.ttf") format("truetype");
-}
+```html
+<link rel="stylesheet" href="font/elgato-icons.css">
 
-.icon::before {
-    font-family: "elgato-icons";
-    content: "\ea03"; /* accessories */
-}
+<i class="elgato-icons-accessories"></i>
+<i class="elgato-icons-camera"></i>
+<i class="elgato-icons-settings"></i>
 ```
 
-Unicode values for each icon can be found in `font/info.json`.
+Class names follow the pattern `elgato-icons-{icon-name}`. A full mapping of icon names to unicode code points can be found in `font/info.json`.
