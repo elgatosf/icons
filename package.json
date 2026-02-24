@@ -31,8 +31,7 @@
         "svg/"
     ],
     "scripts": {
-        "build": "npm run transform && npm run font && npm run lint:fix && npm run tsc",
-        "font": "npm run tsc:metadata && node --experimental-strip-types scripts/generate-font.ts",
+        "build": "npm run transform && npm run lint:fix && npm run tsc",
         "build:ci": "tsc",
         "download": "npm run tsc:metadata && node --experimental-strip-types scripts/download.ts",
         "lint": "prettier . --check",
