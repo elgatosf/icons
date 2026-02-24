@@ -68,3 +68,35 @@ All original SVG files are distributed with this package, and can be found withi
 |   │   └── window.svg
 └── ...
 ```
+
+### Font
+
+An icon font available in the `font/` directory, in TTF, WOFF, and WOFF2 formats. A `info.json` mapping file is also included, providing each icon's name, unicode code point, and CSS class name.
+
+```
+.
+├── font/
+│   ├── elgato-icons.ttf
+│   ├── elgato-icons.woff
+│   ├── elgato-icons.woff2
+│   └── info.json
+└── ...
+```
+
+To use the font on the web, declare it via `@font-face` and reference glyphs by their unicode code point:
+
+```css
+@font-face {
+    font-family: "elgato-icons";
+    src: url("./font/elgato-icons.woff2") format("woff2"),
+         url("./font/elgato-icons.woff") format("woff"),
+         url("./font/elgato-icons.ttf") format("truetype");
+}
+
+.icon::before {
+    font-family: "elgato-icons";
+    content: "\ea03"; /* accessories */
+}
+```
+
+Unicode values for each icon can be found in `font/info.json`.
