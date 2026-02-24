@@ -88,9 +88,10 @@ To use the font on the web, declare it via `@font-face` and reference glyphs by 
 ```css
 @font-face {
     font-family: "elgato-icons";
-    src: url("./font/elgato-icons.woff2") format("woff2"),
-         url("./font/elgato-icons.woff") format("woff"),
-         url("./font/elgato-icons.ttf") format("truetype");
+    src:
+        url("./font/elgato-icons.woff2") format("woff2"),
+        url("./font/elgato-icons.woff") format("woff"),
+        url("./font/elgato-icons.ttf") format("truetype");
 }
 
 .icon::before {
