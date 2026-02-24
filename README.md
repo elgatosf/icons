@@ -87,7 +87,7 @@ An icon font available in the `font/` directory, in TTF, WOFF, and WOFF2 formats
 Include `elgato-icons.css` and use the icon class names directly:
 
 ```html
-<link rel="stylesheet" href="font/elgato-icons.css">
+<link rel="stylesheet" href="font/elgato-icons.css" />
 
 <i class="elgato-icons-accessories"></i>
 <i class="elgato-icons-camera"></i>
