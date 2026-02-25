@@ -27,8 +27,10 @@ export class FontTransformer implements Transformer {
 		await svgtofont({
 			src: join(root, "svg", "l"),
 			dist: fontDir,
+			css: {
+				fontSize: "16px",
+			},
 			fontName,
-			css: false,
 			outSVGReact: false,
 			outSVGReactNative: false,
 			outSVGVue: false,
