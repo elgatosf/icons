@@ -1,4 +1,4 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import svgtofont from "svgtofont";
 
@@ -81,7 +81,7 @@ export class FontTransformer implements Transformer {
 
 		lines.push(``);
 
-		await writeFile(join(fontDir, `${fontName}.css`), lines.join("\n"), "utf8");
+		await utils.writeFile(join(fontDir, `${fontName}.css`), lines.join("\n"));
 	}
 
 	/**
