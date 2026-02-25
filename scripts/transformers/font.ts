@@ -75,7 +75,7 @@ export class FontTransformer implements Transformer {
 			``,
 		];
 
-		for (const [, { encodedCode, className }] of Object.entries(info)) {
+		for (const [, { encodedCode, className }] of Object.entries(info).sort(([a], [b]) => a.localeCompare(b))) {
 			lines.push(`.${className}::before { content: "${encodedCode}"; }`);
 		}
 
