@@ -71,12 +71,16 @@ All original SVG files are distributed with this package, and can be found withi
 
 ### Font
 
-An icon font available in the `font/` directory, in TTF, WOFF, and WOFF2 formats. A bundled CSS file provides ready-to-use classes for every icon.
+An icon font available in the `font/` directory, in TTF, WOFF, and WOFF2 formats. Bundled stylesheets provide ready-to-use classes for every icon, available in CSS, Less, SCSS, and Stylus formats.
 
 ```
 .
 ├── font/
 │   ├── elgato-icons.css
+│   ├── elgato-icons.less
+│   ├── elgato-icons.module.less
+│   ├── elgato-icons.scss
+│   ├── elgato-icons.styl
 │   ├── elgato-icons.ttf
 │   ├── elgato-icons.woff
 │   ├── elgato-icons.woff2
@@ -84,7 +88,7 @@ An icon font available in the `font/` directory, in TTF, WOFF, and WOFF2 formats
 └── ...
 ```
 
-Include `elgato-icons.css` and use the icon class names directly:
+Include the stylesheet for your preferred format and use the icon class names directly:
 
 ```html
 <link rel="stylesheet" href="font/elgato-icons.css" />
