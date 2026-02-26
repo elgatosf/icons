@@ -20,33 +20,37 @@ export class FontTransformer implements Transformer {
 	 * @inheritdoc
 	 */
 	public async finalize(): Promise<void> {
-		const root = utils.resolve(".");
-		const fontDir = utils.resolve("font");
+		try {
+			const root = utils.resolve(".");
+			const fontDir = utils.resolve("font");
 
-		// Generate font files from the large SVGs.
-		await svgtofont({
-			src: join(root, "svg", "l"),
-			dist: fontDir,
-			css: {
-				fontSize: "16px",
-			},
-			fontName,
-			outSVGReact: false,
-			outSVGReactNative: false,
-			outSVGVue: false,
-			outSVGPath: false,
-			generateInfoData: true,
-			emptyDist: true,
-			typescript: false,
-			log: false,
-			excludeFormat: ["eot", "svg", "symbol.svg"],
-			svgicons2svgfont: {
-				fontHeight: 1000,
-				normalize: true,
-				centerHorizontally: true,
-			},
-			website: undefined,
-		});
+			// Generate font files from the large SVGs.
+			await svgtofont({
+				src: join(root, "svg", "l"),
+				dist: fontDir,
+				css: {
+					fontSize: "16px",
+				},
+				fontName,
+				outSVGReact: false,
+				outSVGReactNative: false,
+				outSVGVue: false,
+				outSVGPath: false,
+				generateInfoData: true,
+				emptyDist: true,
+				typescript: false,
+				log: false,
+				excludeFormat: ["eot", "svg", "symbol.svg"],
+				svgicons2svgfont: {
+					fontHeight: 1000,
+					normalize: true,
+					centerHorizontally: true,
+				},
+				website: undefined,
+			});
+		} catch (error) {
+			console.error("Error generating font:", error);
+		}
 	}
 
 	/**
