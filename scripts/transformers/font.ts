@@ -29,6 +29,7 @@ export class FontTransformer implements Transformer {
 				dist: fontDir,
 				css: {
 					fontSize: "16px",
+					hasTimestamp: false,
 				},
 				fontName,
 				outSVGReact: false,
