@@ -47,43 +47,6 @@ export class FontTransformer implements Transformer {
 			},
 			website: undefined,
 		});
-
-		// Generate CSS file from the info.json glyph mapping.
-		const info: Record<string, { encodedCode: string; className: string }> = JSON.parse(
-			await readFile(join(fontDir, "info.json"), "utf8"),
-		);
-
-		const lines = [
-			`@font-face {`,
-			`  font-family: "${fontName}";`,
-			`  src: url("./${fontName}.woff2") format("woff2"),`,
-			`       url("./${fontName}.woff") format("woff"),`,
-			`       url("./${fontName}.ttf") format("truetype");`,
-			`  font-weight: normal;`,
-			`  font-style: normal;`,
-			`}`,
-			``,
-			`[class^="${fontName}-"],`,
-			`[class*=" ${fontName}-"] {`,
-			`  font-family: "${fontName}" !important;`,
-			`  font-style: normal;`,
-			`  font-weight: normal;`,
-			`  font-variant: normal;`,
-			`  text-transform: none;`,
-			`  line-height: 1;`,
-			`  -webkit-font-smoothing: antialiased;`,
-			`  -moz-osx-font-smoothing: grayscale;`,
-			`}`,
-			``,
-		];
-
-		for (const [, { encodedCode, className }] of Object.entries(info).sort(([a], [b]) => a.localeCompare(b))) {
-			lines.push(`.${className}::before { content: "${encodedCode}"; }`);
-		}
-
-		lines.push(``);
-
-		await utils.writeFile(join(fontDir, `${fontName}.css`), lines.join("\n"));
 	}
 
 	/**
