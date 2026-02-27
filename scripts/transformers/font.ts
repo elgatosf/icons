@@ -1,4 +1,8 @@
+import fs from "node:fs/promises";
+import { tmpdir } from "node:os";
 import { join } from "node:path";
+// @ts-ignore - No types available for oslllo-svg-fixer
+import SVGFixer from "oslllo-svg-fixer";
 import svgtofont from "svgtofont";
 
 import type { SvgIcon, Transformer } from "../transformer.ts";
@@ -10,28 +14,22 @@ const fontName = "elgato-icons";
  * Transformer that generates an icon font and accompanying CSS from the large (l) SVG icons.
  */
 export class FontTransformer implements Transformer {
-	/**
-	 * @inheritdoc
-	 */
+	/** @inheritdoc */
 	public readonly name = "Icon font";
 
-	/**
-	 * @inheritdoc
-	 */
+	/** @inheritdoc */
 	public async finalize(): Promise<void> {
-		try {
-			const root = utils.resolve(".");
-			const fontDir = utils.resolve("font");
+		const tmpDir = join(tmpdir(), `elgato-icons-${Date.now()}`);
+		const svgSrc = join(utils.resolve("."), "svg", "l");
 
-			// Generate font files from the large SVGs.
+		try {
+			// Fix SVG strokes to fills (required for correct font rendering), then generate the font.
+			await SVGFixer(svgSrc, tmpDir, { throwIfDestinationDoesNotExist: false }).fix();
+
 			await svgtofont({
-				src: join(root, "svg", "l"),
-				dist: fontDir,
-				css: {
-					fontSize: "16px",
-					hasTimestamp: false,
-					include: /\.css$/,
-				},
+				src: tmpDir,
+				dist: utils.resolve("font"),
+				css: { fontSize: "16px", hasTimestamp: false, include: /\.css$/ },
 				fontName,
 				outSVGReact: false,
 				outSVGReactNative: false,
@@ -42,22 +40,16 @@ export class FontTransformer implements Transformer {
 				typescript: false,
 				log: false,
 				excludeFormat: ["eot", "svg", "symbol.svg"],
-				svgicons2svgfont: {
-					fontHeight: 1000,
-					normalize: true,
-					centerHorizontally: true,
-				},
+				svgicons2svgfont: { fontHeight: 1000, normalize: true, centerHorizontally: true },
 				website: undefined,
 			});
-		} catch (error) {
-			console.error("Error generating font:", error);
+		} finally {
+			await fs.rm(tmpDir, { recursive: true, force: true });
 		}
 	}
 
-	/**
-	 * @inheritdoc
-	 */
+	/** @inheritdoc */
 	public transform(_icon: SvgIcon): void {
-		// Font generation is handled in finalize() using svgtofont directly against the svg/l directory.
+		// Font generation is handled in finalize().
 	}
 }
