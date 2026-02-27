@@ -4,6 +4,8 @@
     "description": "Icons used throughout the Elgato ecosystem.",
     "type": "module",
     "exports": {
+        "./font": "./font/elgato-icons.css",
+        "./font/*": "./font/*",
         "./s": {
             "types": "./dist/strings/s/index.g.d.ts",
             "default": "./dist/strings/s/index.g.js"
