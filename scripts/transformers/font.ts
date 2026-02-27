@@ -30,6 +30,7 @@ export class FontTransformer implements Transformer {
 				css: {
 					fontSize: "16px",
 					hasTimestamp: false,
+					include: /\.css$/,
 				},
 				fontName,
 				outSVGReact: false,
