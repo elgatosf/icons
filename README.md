@@ -95,9 +95,9 @@ Or reference it directly in HTML via a CDN:
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@elgato/icons/font/elgato-icons.css" />
 
-<i class="elgato-icons-accessories"></i>
-<i class="elgato-icons-camera"></i>
-<i class="elgato-icons-settings"></i>
+<i class="elgato-icons-accessories-l"></i>
+<i class="elgato-icons-camera-l"></i>
+<i class="elgato-icons-settings-l"></i>
 ```
 
-Class names follow the pattern `elgato-icons-{icon-name}`. A full mapping of icon names to unicode code points can be found in `font/info.json`.
+Class names follow the pattern `elgato-icons-{icon-name}-{size}`, where `{size}` is one of `l`, `m`, or `s`. A full mapping of icon names to unicode code points can be found in `font/info.json`.
