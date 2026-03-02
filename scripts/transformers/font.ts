@@ -40,7 +40,13 @@ export class FontTransformer implements Transformer {
 				typescript: false,
 				log: false,
 				excludeFormat: ["eot", "svg", "symbol.svg"],
-				svgicons2svgfont: { fontHeight: 1000, normalize: true, centerHorizontally: true },
+				svgicons2svgfont: {
+					fontHeight: 1024,
+					descent: 64,
+					normalize: true,
+					centerHorizontally: true,
+					centerVertically: true,
+				},
 				website: undefined,
 			});
 		} finally {
