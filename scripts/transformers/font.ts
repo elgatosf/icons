@@ -11,23 +11,45 @@ import * as utils from "../utils.ts";
 const fontName = "elgato-icons";
 
 /**
- * Transformer that generates an icon font and accompanying CSS from the large (l) SVG icons.
+ * Transformer that generates an icon font and accompanying CSS from all SVG icon sizes (l, m, s).
+ * Icons are named with a size suffix (e.g. `accessibility-l`, `accessibility-m`) to avoid collisions.
  */
 export class FontTransformer implements Transformer {
 	/** @inheritdoc */
 	public readonly name = "Icon font";
 
+	/**
+	 * Collected icons and their sizes for font generation.
+	 */
+	#icons: SvgIcon[] = [];
+
+	/** @inheritdoc */
+	public transform(icon: SvgIcon): void {
+		this.#icons.push(icon);
+	}
+
 	/** @inheritdoc */
 	public async finalize(): Promise<void> {
-		const tmpDir = join(tmpdir(), `elgato-icons-${Date.now()}`);
-		const svgSrc = join(utils.resolve("."), "svg", "l");
+		const svgDir = join(tmpdir(), `elgato-icons-svg-${Date.now()}`);
+		const fixedDir = join(tmpdir(), `elgato-icons-fixed-${Date.now()}`);
 
 		try {
+			// Create the temp directory for the combined SVGs.
+			await fs.mkdir(svgDir, { recursive: true });
+
+			// Write each icon size as a separate SVG file with a size suffix.
+			for (const icon of this.#icons) {
+				for (const [size, { svg }] of icon.sizes) {
+					const filename = `${icon.name}-${size}.svg`;
+					await fs.writeFile(join(svgDir, filename), svg, "utf8");
+				}
+			}
+
 			// Fix SVG strokes to fills (required for correct font rendering), then generate the font.
-			await SVGFixer(svgSrc, tmpDir, { throwIfDestinationDoesNotExist: false }).fix();
+			await SVGFixer(svgDir, fixedDir, { throwIfDestinationDoesNotExist: false }).fix();
 
 			await svgtofont({
-				src: tmpDir,
+				src: fixedDir,
 				dist: utils.resolve("font"),
 				css: { fontSize: "16px", hasTimestamp: false, include: /\.css$/ },
 				fontName,
@@ -43,19 +65,14 @@ export class FontTransformer implements Transformer {
 				svgicons2svgfont: {
 					fontHeight: 1024,
 					descent: 64,
-					normalize: true,
 					centerHorizontally: true,
 					centerVertically: true,
 				},
 				website: undefined,
 			});
 		} finally {
-			await fs.rm(tmpDir, { recursive: true, force: true });
+			await fs.rm(svgDir, { recursive: true, force: true });
+			await fs.rm(fixedDir, { recursive: true, force: true });
 		}
-	}
-
-	/** @inheritdoc */
-	public transform(_icon: SvgIcon): void {
-		// Font generation is handled in finalize().
 	}
 }

@@ -52,23 +52,79 @@
 				border-color: #555;
 			}
 
+			.controls {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				gap: 20px;
+				margin-bottom: 28px;
+			}
+
 			.size-controls {
 				display: flex;
 				align-items: center;
 				gap: 12px;
-				margin-bottom: 28px;
 				font-size: 0.8rem;
 				color: #888;
 			}
 
-			.size-controls input {
+			.size-controls input[type="range"] {
 				accent-color: #0ea5e9;
 				cursor: pointer;
 			}
 
+			.size-filter {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				font-size: 0.8rem;
+				color: #888;
+			}
+
+			.size-filter label {
+				display: flex;
+				align-items: center;
+				gap: 4px;
+				cursor: pointer;
+				user-select: none;
+			}
+
+			.size-filter input[type="checkbox"] {
+				accent-color: #0ea5e9;
+				cursor: pointer;
+			}
+
+			.size-badge {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 0.55rem;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 0.04em;
+				padding: 2px 5px;
+				border-radius: 4px;
+				line-height: 1;
+			}
+
+			.size-badge.l {
+				background: #0ea5e933;
+				color: #0ea5e9;
+			}
+
+			.size-badge.m {
+				background: #a855f733;
+				color: #a855f7;
+			}
+
+			.size-badge.s {
+				background: #f9731633;
+				color: #f97316;
+			}
+
 			.grid {
 				display: grid;
-				grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+				grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
 				gap: 8px;
 			}
 
@@ -76,12 +132,11 @@
 				display: flex;
 				flex-direction: column;
 				align-items: center;
-				gap: 8px;
-				padding: 16px 8px;
+				gap: 10px;
+				padding: 16px 8px 12px;
 				background: #242424;
 				border: 1px solid #2e2e2e;
 				border-radius: 8px;
-				cursor: pointer;
 				transition:
 					background 0.15s,
 					border-color 0.15s;
@@ -92,11 +147,6 @@
 				border-color: #444;
 			}
 
-			.icon-card i {
-				display: block;
-				line-height: 1;
-			}
-
 			.icon-card .label {
 				font-size: 0.65rem;
 				color: #777;
@@ -105,8 +155,35 @@
 				line-height: 1.3;
 			}
 
-			.icon-card.copied {
-				border-color: #0ea5e9;
+			.icon-card .sizes-row {
+				display: flex;
+				align-items: flex-end;
+				justify-content: center;
+				gap: 12px;
+			}
+
+			.icon-card .size-slot {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 4px;
+				cursor: pointer;
+				border-radius: 6px;
+				padding: 6px;
+				transition: background 0.15s;
+			}
+
+			.icon-card .size-slot:hover {
+				background: #3a3a3a;
+			}
+
+			.icon-card .size-slot.copied {
+				background: #0ea5e922;
+			}
+
+			.icon-card .size-slot i {
+				display: block;
+				line-height: 1;
 			}
 
 			.empty {
@@ -120,73 +197,148 @@
 			#count {
 				color: #0ea5e9;
 			}
+
+			#sizeBreakdown {
+				color: #666;
+			}
 		</style>
 	</head>
 	<body>
 		<h1>Elgato Icons — Font</h1>
-		<p class="meta"><span id="count">…</span> icons &nbsp;·&nbsp; click any card to copy class name</p>
+		<p class="meta">
+			<span id="count">…</span> glyphs &nbsp;·&nbsp; <span id="sizeBreakdown"></span>
+			&nbsp;·&nbsp; click a size to copy its class name
+		</p>
 
 		<input class="search" type="search" placeholder="Filter icons…" id="search" autocomplete="off" />
 
-		<div class="size-controls">
-			<label for="sizeRange">Size</label>
-			<input type="range" id="sizeRange" min="12" max="48" value="20" step="2" />
-			<span id="sizeLabel">20px</span>
+		<div class="controls">
+			<div class="size-filter">
+				<span>Sizes:</span>
+				<label><input type="checkbox" id="filterL" checked /> <span class="size-badge l">L</span></label>
+				<label><input type="checkbox" id="filterM" checked /> <span class="size-badge m">M</span></label>
+				<label><input type="checkbox" id="filterS" checked /> <span class="size-badge s">S</span></label>
+			</div>
+
+			<div class="size-controls">
+				<label for="sizeRange">Preview size</label>
+				<input type="range" id="sizeRange" min="12" max="48" value="24" step="2" />
+				<span id="sizeLabel">24px</span>
+			</div>
 		</div>
 
 		<div class="grid" id="grid"></div>
 
 		<script>
+			const SIZE_SUFFIX_RE = /-(l|m|s)$/;
+
 			fetch("font/info.json")
 				.then((r) => r.json())
 				.then((info) => {
-					const icons = Object.entries(info).map(([name, data]) => ({
-						name,
-						className: data.className,
-					}));
+					// Parse all glyphs and group by base icon name.
+					const allEntries = Object.entries(info);
+					const grouped = new Map();
 
-					document.getElementById("count").textContent = icons.length;
+					for (const [name, data] of allEntries) {
+						const match = name.match(SIZE_SUFFIX_RE);
+						if (!match) continue;
+
+						const size = match[1];
+						const baseName = name.slice(0, -size.length - 1);
+
+						if (!grouped.has(baseName)) {
+							grouped.set(baseName, {});
+						}
+						grouped.get(baseName)[size] = { name, className: data.className };
+					}
+
+					const iconGroups = Array.from(grouped.entries())
+						.map(([baseName, sizes]) => ({ baseName, sizes }))
+						.sort((a, b) => a.baseName.localeCompare(b.baseName));
+
+					// Counts.
+					const totalGlyphs = allEntries.length;
+					const countL = iconGroups.filter((g) => g.sizes.l).length;
+					const countM = iconGroups.filter((g) => g.sizes.m).length;
+					const countS = iconGroups.filter((g) => g.sizes.s).length;
+
+					document.getElementById("count").textContent = totalGlyphs;
+					document.getElementById("sizeBreakdown").textContent =
+						`${iconGroups.length} icons (${countL} L · ${countM} M · ${countS} S)`;
 
 					const grid = document.getElementById("grid");
 					const sizeRange = document.getElementById("sizeRange");
 					const sizeLabel = document.getElementById("sizeLabel");
 					const search = document.getElementById("search");
+					const filterL = document.getElementById("filterL");
+					const filterM = document.getElementById("filterM");
+					const filterS = document.getElementById("filterS");
 
-					function render(filter = "") {
-						const lower = filter.toLowerCase();
-						const filtered = filter ? icons.filter((i) => i.name.includes(lower)) : icons;
+					function render() {
+						const filter = (search.value || "").toLowerCase();
+						const showL = filterL.checked;
+						const showM = filterM.checked;
+						const showS = filterS.checked;
+
+						const filtered = iconGroups.filter((g) => {
+							if (filter && !g.baseName.includes(filter)) return false;
+							// Show card if at least one checked size exists.
+							if (showL && g.sizes.l) return true;
+							if (showM && g.sizes.m) return true;
+							if (showS && g.sizes.s) return true;
+							return false;
+						});
 
 						grid.innerHTML = "";
 
 						if (filtered.length === 0) {
-							grid.innerHTML = `<p class="empty">No icons match "${filter}"</p>`;
+							grid.innerHTML = `<p class="empty">No icons match the current filters</p>`;
 							return;
 						}
 
-						const size = sizeRange.value + "px";
+						const previewSize = sizeRange.value + "px";
 
-						for (const icon of filtered) {
+						for (const group of filtered) {
 							const card = document.createElement("div");
 							card.className = "icon-card";
-							card.title = icon.className;
 
-							const i = document.createElement("i");
-							i.className = icon.className;
-							i.style.fontSize = size;
+							const sizesRow = document.createElement("div");
+							sizesRow.className = "sizes-row";
+
+							for (const s of ["l", "m", "s"]) {
+								const show = s === "l" ? showL : s === "m" ? showM : showS;
+								if (!show || !group.sizes[s]) continue;
+
+								const slot = document.createElement("div");
+								slot.className = "size-slot";
+								slot.title = group.sizes[s].className;
+
+								const icon = document.createElement("i");
+								icon.className = group.sizes[s].className;
+								icon.style.fontSize = previewSize;
+
+								const badge = document.createElement("span");
+								badge.className = `size-badge ${s}`;
+								badge.textContent = s.toUpperCase();
+
+								slot.appendChild(icon);
+								slot.appendChild(badge);
+
+								slot.addEventListener("click", () => {
+									navigator.clipboard?.writeText(group.sizes[s].className);
+									slot.classList.add("copied");
+									setTimeout(() => slot.classList.remove("copied"), 800);
+								});
+
+								sizesRow.appendChild(slot);
+							}
 
 							const label = document.createElement("span");
 							label.className = "label";
-							label.textContent = icon.name;
+							label.textContent = group.baseName;
 
-							card.appendChild(i);
+							card.appendChild(sizesRow);
 							card.appendChild(label);
-
-							card.addEventListener("click", () => {
-								navigator.clipboard?.writeText(icon.className);
-								card.classList.add("copied");
-								setTimeout(() => card.classList.remove("copied"), 800);
-							});
-
 							grid.appendChild(card);
 						}
 					}
@@ -195,14 +347,18 @@
 
 					sizeRange.addEventListener("input", () => {
 						sizeLabel.textContent = sizeRange.value + "px";
-						grid.querySelectorAll("i").forEach((i) => {
+						grid.querySelectorAll(".size-slot i").forEach((i) => {
 							i.style.fontSize = sizeRange.value + "px";
 						});
 					});
 
-					search.addEventListener("input", () => render(search.value));
+					search.addEventListener("input", () => render());
+					filterL.addEventListener("change", () => render());
+					filterM.addEventListener("change", () => render());
+					filterS.addEventListener("change", () => render());
 				})
-				.catch(() => {
+				.catch((err) => {
+					console.error(err);
 					document.getElementById("grid").innerHTML =
 						`<p class="empty">Could not load font/info.json — make sure you're running a local server.</p>`;
 				});

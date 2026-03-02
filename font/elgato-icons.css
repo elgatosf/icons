@@ -15,3429 +15,4863 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.elgato-icons-accessibility--filled::before {
+.elgato-icons-accessibility--filled-l::before {
 	content: "\ea01";
 }
-.elgato-icons-accessibility::before {
+.elgato-icons-accessibility--filled-m::before {
 	content: "\ea02";
 }
-.elgato-icons-accessories::before {
+.elgato-icons-accessibility--filled-s::before {
 	content: "\ea03";
 }
-.elgato-icons-action--filled::before {
+.elgato-icons-accessibility-l::before {
 	content: "\ea04";
 }
-.elgato-icons-action-wheel--filled::before {
+.elgato-icons-accessibility-m::before {
 	content: "\ea05";
 }
-.elgato-icons-action-wheel::before {
+.elgato-icons-accessibility-s::before {
 	content: "\ea06";
 }
-.elgato-icons-action::before {
+.elgato-icons-accessories-l::before {
 	content: "\ea07";
 }
-.elgato-icons-add-circle--filled::before {
+.elgato-icons-action--filled-l::before {
 	content: "\ea08";
 }
-.elgato-icons-add-circle::before {
+.elgato-icons-action--filled-m::before {
 	content: "\ea09";
 }
-.elgato-icons-add::before {
+.elgato-icons-action-l::before {
 	content: "\ea0a";
 }
-.elgato-icons-adjust-horizontal--filled::before {
+.elgato-icons-action-m::before {
 	content: "\ea0b";
 }
-.elgato-icons-adjust-horizontal::before {
+.elgato-icons-action-wheel--filled-l::before {
 	content: "\ea0c";
 }
-.elgato-icons-adjust-vertical--filled::before {
+.elgato-icons-action-wheel--filled-m::before {
 	content: "\ea0d";
 }
-.elgato-icons-adjust-vertical::before {
+.elgato-icons-action-wheel-l::before {
 	content: "\ea0e";
 }
-.elgato-icons-align-bottom--filled::before {
+.elgato-icons-action-wheel-m::before {
 	content: "\ea0f";
 }
-.elgato-icons-align-bottom::before {
+.elgato-icons-add-circle--filled-l::before {
 	content: "\ea10";
 }
-.elgato-icons-align-horizontal-center--filled::before {
+.elgato-icons-add-circle--filled-m::before {
 	content: "\ea11";
 }
-.elgato-icons-align-horizontal-center::before {
+.elgato-icons-add-circle-l::before {
 	content: "\ea12";
 }
-.elgato-icons-align-left--filled::before {
+.elgato-icons-add-circle-m::before {
 	content: "\ea13";
 }
-.elgato-icons-align-left::before {
+.elgato-icons-add-l::before {
 	content: "\ea14";
 }
-.elgato-icons-align-right--filled::before {
+.elgato-icons-add-m::before {
 	content: "\ea15";
 }
-.elgato-icons-align-right::before {
+.elgato-icons-add-s::before {
 	content: "\ea16";
 }
-.elgato-icons-align-top--filled::before {
+.elgato-icons-adjust-horizontal--filled-l::before {
 	content: "\ea17";
 }
-.elgato-icons-align-top::before {
+.elgato-icons-adjust-horizontal--filled-m::before {
 	content: "\ea18";
 }
-.elgato-icons-align-vertical-center--filled::before {
+.elgato-icons-adjust-horizontal-l::before {
 	content: "\ea19";
 }
-.elgato-icons-align-vertical-center::before {
+.elgato-icons-adjust-horizontal-m::before {
 	content: "\ea1a";
 }
-.elgato-icons-analytics--filled::before {
+.elgato-icons-adjust-vertical--filled-l::before {
 	content: "\ea1b";
 }
-.elgato-icons-analytics::before {
+.elgato-icons-adjust-vertical--filled-m::before {
 	content: "\ea1c";
 }
-.elgato-icons-apps--filled::before {
+.elgato-icons-adjust-vertical-l::before {
 	content: "\ea1d";
 }
-.elgato-icons-apps-add--filled::before {
+.elgato-icons-adjust-vertical-m::before {
 	content: "\ea1e";
 }
-.elgato-icons-apps-add::before {
+.elgato-icons-align-bottom--filled-l::before {
 	content: "\ea1f";
 }
-.elgato-icons-apps::before {
+.elgato-icons-align-bottom--filled-m::before {
 	content: "\ea20";
 }
-.elgato-icons-ar--filled::before {
+.elgato-icons-align-bottom-l::before {
 	content: "\ea21";
 }
-.elgato-icons-ar-check--filled::before {
+.elgato-icons-align-bottom-m::before {
 	content: "\ea22";
 }
-.elgato-icons-ar-check::before {
+.elgato-icons-align-horizontal-center--filled-l::before {
 	content: "\ea23";
 }
-.elgato-icons-ar::before {
+.elgato-icons-align-horizontal-center--filled-m::before {
 	content: "\ea24";
 }
-.elgato-icons-arrow-down-to-right::before {
+.elgato-icons-align-horizontal-center-l::before {
 	content: "\ea25";
 }
-.elgato-icons-arrow-down::before {
+.elgato-icons-align-horizontal-center-m::before {
 	content: "\ea26";
 }
-.elgato-icons-arrow-horizontal::before {
+.elgato-icons-align-left--filled-l::before {
 	content: "\ea27";
 }
-.elgato-icons-arrow-left::before {
+.elgato-icons-align-left--filled-m::before {
 	content: "\ea28";
 }
-.elgato-icons-arrow-right::before {
+.elgato-icons-align-left-l::before {
 	content: "\ea29";
 }
-.elgato-icons-arrow-up::before {
+.elgato-icons-align-left-m::before {
 	content: "\ea2a";
 }
-.elgato-icons-arrow-vertical::before {
+.elgato-icons-align-right--filled-l::before {
 	content: "\ea2b";
 }
-.elgato-icons-article--filled::before {
+.elgato-icons-align-right--filled-m::before {
 	content: "\ea2c";
 }
-.elgato-icons-article::before {
+.elgato-icons-align-right-l::before {
 	content: "\ea2d";
 }
-.elgato-icons-aspect-ratio--filled::before {
+.elgato-icons-align-right-m::before {
 	content: "\ea2e";
 }
-.elgato-icons-aspect-ratio::before {
+.elgato-icons-align-top--filled-l::before {
 	content: "\ea2f";
 }
-.elgato-icons-attachment::before {
+.elgato-icons-align-top--filled-m::before {
 	content: "\ea30";
 }
-.elgato-icons-auto-scroll--filled::before {
+.elgato-icons-align-top-l::before {
 	content: "\ea31";
 }
-.elgato-icons-auto-scroll-decrease--filled::before {
+.elgato-icons-align-top-m::before {
 	content: "\ea32";
 }
-.elgato-icons-auto-scroll-decrease::before {
+.elgato-icons-align-vertical-center--filled-l::before {
 	content: "\ea33";
 }
-.elgato-icons-auto-scroll-down--filled::before {
+.elgato-icons-align-vertical-center--filled-m::before {
 	content: "\ea34";
 }
-.elgato-icons-auto-scroll-down::before {
+.elgato-icons-align-vertical-center-l::before {
 	content: "\ea35";
 }
-.elgato-icons-auto-scroll-increase--filled::before {
+.elgato-icons-align-vertical-center-m::before {
 	content: "\ea36";
 }
-.elgato-icons-auto-scroll-increase::before {
+.elgato-icons-analytics--filled-l::before {
 	content: "\ea37";
 }
-.elgato-icons-auto-scroll-set--filled::before {
+.elgato-icons-analytics--filled-m::before {
 	content: "\ea38";
 }
-.elgato-icons-auto-scroll-set::before {
+.elgato-icons-analytics-l::before {
 	content: "\ea39";
 }
-.elgato-icons-auto-scroll-up--filled::before {
+.elgato-icons-analytics-m::before {
 	content: "\ea3a";
 }
-.elgato-icons-auto-scroll-up::before {
+.elgato-icons-announce--filled-m::before {
 	content: "\ea3b";
 }
-.elgato-icons-auto-scroll::before {
+.elgato-icons-announce-m::before {
 	content: "\ea3c";
 }
-.elgato-icons-auxiliary-add::before {
+.elgato-icons-apps--filled-l::before {
 	content: "\ea3d";
 }
-.elgato-icons-auxiliary::before {
+.elgato-icons-apps--filled-m::before {
 	content: "\ea3e";
 }
-.elgato-icons-avatar--filled::before {
+.elgato-icons-apps-add--filled-l::before {
 	content: "\ea3f";
 }
-.elgato-icons-avatar::before {
+.elgato-icons-apps-add--filled-m::before {
 	content: "\ea40";
 }
-.elgato-icons-background-remove--filled::before {
+.elgato-icons-apps-add-l::before {
 	content: "\ea41";
 }
-.elgato-icons-background-remove::before {
+.elgato-icons-apps-add-m::before {
 	content: "\ea42";
 }
-.elgato-icons-backspace--filled::before {
+.elgato-icons-apps-l::before {
 	content: "\ea43";
 }
-.elgato-icons-backspace::before {
+.elgato-icons-apps-m::before {
 	content: "\ea44";
 }
-.elgato-icons-badge--filled::before {
+.elgato-icons-ar--filled-l::before {
 	content: "\ea45";
 }
-.elgato-icons-badge::before {
+.elgato-icons-ar--filled-m::before {
 	content: "\ea46";
 }
-.elgato-icons-blinds--filled::before {
+.elgato-icons-ar-check--filled-l::before {
 	content: "\ea47";
 }
-.elgato-icons-blinds::before {
+.elgato-icons-ar-check--filled-m::before {
 	content: "\ea48";
 }
-.elgato-icons-block-quote::before {
+.elgato-icons-ar-check-l::before {
 	content: "\ea49";
 }
-.elgato-icons-bluetooth::before {
+.elgato-icons-ar-check-m::before {
 	content: "\ea4a";
 }
-.elgato-icons-blur-background::before {
+.elgato-icons-ar-l::before {
 	content: "\ea4b";
 }
-.elgato-icons-blur::before {
+.elgato-icons-ar-m::before {
 	content: "\ea4c";
 }
-.elgato-icons-board--filled::before {
+.elgato-icons-arrow-bottom-left-m::before {
 	content: "\ea4d";
 }
-.elgato-icons-board::before {
+.elgato-icons-arrow-down-l::before {
 	content: "\ea4e";
 }
-.elgato-icons-bold::before {
+.elgato-icons-arrow-down-m::before {
 	content: "\ea4f";
 }
-.elgato-icons-book--filled::before {
+.elgato-icons-arrow-down-right-m::before {
 	content: "\ea50";
 }
-.elgato-icons-book-closed::before {
+.elgato-icons-arrow-down-to-right-l::before {
 	content: "\ea51";
 }
-.elgato-icons-book::before {
+.elgato-icons-arrow-down-to-right-m::before {
 	content: "\ea52";
 }
-.elgato-icons-briefcase--filled::before {
+.elgato-icons-arrow-horizontal-l::before {
 	content: "\ea53";
 }
-.elgato-icons-briefcase::before {
+.elgato-icons-arrow-left-l::before {
 	content: "\ea54";
 }
-.elgato-icons-brightness--filled::before {
+.elgato-icons-arrow-left-m::before {
 	content: "\ea55";
 }
-.elgato-icons-brightness-decrease--filled::before {
+.elgato-icons-arrow-right-l::before {
 	content: "\ea56";
 }
-.elgato-icons-brightness-decrease::before {
+.elgato-icons-arrow-right-m::before {
 	content: "\ea57";
 }
-.elgato-icons-brightness-increase--filled::before {
+.elgato-icons-arrow-top-left-m::before {
 	content: "\ea58";
 }
-.elgato-icons-brightness-increase::before {
+.elgato-icons-arrow-top-right-m::before {
 	content: "\ea59";
 }
-.elgato-icons-brightness-off--filled::before {
+.elgato-icons-arrow-up-l::before {
 	content: "\ea5a";
 }
-.elgato-icons-brightness-off::before {
+.elgato-icons-arrow-up-m::before {
 	content: "\ea5b";
 }
-.elgato-icons-brightness-reset--filled::before {
+.elgato-icons-arrow-vertical-l::before {
 	content: "\ea5c";
 }
-.elgato-icons-brightness-reset::before {
+.elgato-icons-article--filled-l::before {
 	content: "\ea5d";
 }
-.elgato-icons-brightness-set--filled::before {
+.elgato-icons-article--filled-m::before {
 	content: "\ea5e";
 }
-.elgato-icons-brightness-set::before {
+.elgato-icons-article-l::before {
 	content: "\ea5f";
 }
-.elgato-icons-brightness::before {
+.elgato-icons-article-m::before {
 	content: "\ea60";
 }
-.elgato-icons-bug--filled::before {
+.elgato-icons-aspect-ratio--filled-l::before {
 	content: "\ea61";
 }
-.elgato-icons-bug::before {
+.elgato-icons-aspect-ratio--filled-m::before {
 	content: "\ea62";
 }
-.elgato-icons-calendar--filled::before {
+.elgato-icons-aspect-ratio-l::before {
 	content: "\ea63";
 }
-.elgato-icons-calendar-today--filled::before {
+.elgato-icons-aspect-ratio-m::before {
 	content: "\ea64";
 }
-.elgato-icons-calendar-today::before {
+.elgato-icons-attachment-l::before {
 	content: "\ea65";
 }
-.elgato-icons-calendar::before {
+.elgato-icons-attachment-m::before {
 	content: "\ea66";
 }
-.elgato-icons-camcorder--filled::before {
+.elgato-icons-auto-scroll--filled-l::before {
 	content: "\ea67";
 }
-.elgato-icons-camcorder::before {
+.elgato-icons-auto-scroll-decrease--filled-l::before {
 	content: "\ea68";
 }
-.elgato-icons-camera--filled::before {
+.elgato-icons-auto-scroll-decrease-l::before {
 	content: "\ea69";
 }
-.elgato-icons-camera-flip--filled::before {
+.elgato-icons-auto-scroll-down--filled-l::before {
 	content: "\ea6a";
 }
-.elgato-icons-camera-flip::before {
+.elgato-icons-auto-scroll-down-l::before {
 	content: "\ea6b";
 }
-.elgato-icons-camera-frame-preset--filled::before {
+.elgato-icons-auto-scroll-increase--filled-l::before {
 	content: "\ea6c";
 }
-.elgato-icons-camera-frame-preset-check--filled::before {
+.elgato-icons-auto-scroll-increase-l::before {
 	content: "\ea6d";
 }
-.elgato-icons-camera-frame-preset-check::before {
+.elgato-icons-auto-scroll-l::before {
 	content: "\ea6e";
 }
-.elgato-icons-camera-frame-preset-reset--filled::before {
+.elgato-icons-auto-scroll-set--filled-l::before {
 	content: "\ea6f";
 }
-.elgato-icons-camera-frame-preset-reset::before {
+.elgato-icons-auto-scroll-set-l::before {
 	content: "\ea70";
 }
-.elgato-icons-camera-frame-preset-set--filled::before {
+.elgato-icons-auto-scroll-up--filled-l::before {
 	content: "\ea71";
 }
-.elgato-icons-camera-frame-preset-set::before {
+.elgato-icons-auto-scroll-up-l::before {
 	content: "\ea72";
 }
-.elgato-icons-camera-frame-preset::before {
+.elgato-icons-auxiliary-add-l::before {
 	content: "\ea73";
 }
-.elgato-icons-camera-input--filled::before {
+.elgato-icons-auxiliary-add-m::before {
 	content: "\ea74";
 }
-.elgato-icons-camera-input-check--filled::before {
+.elgato-icons-auxiliary-l::before {
 	content: "\ea75";
 }
-.elgato-icons-camera-input-check::before {
+.elgato-icons-auxiliary-m::before {
 	content: "\ea76";
 }
-.elgato-icons-camera-input::before {
+.elgato-icons-auxiliary-s::before {
 	content: "\ea77";
 }
-.elgato-icons-camera-monitor-mount-alt::before {
+.elgato-icons-avatar--filled-l::before {
 	content: "\ea78";
 }
-.elgato-icons-camera-monitor-mount::before {
+.elgato-icons-avatar--filled-m::before {
 	content: "\ea79";
 }
-.elgato-icons-camera-off--filled::before {
+.elgato-icons-avatar-l::before {
 	content: "\ea7a";
 }
-.elgato-icons-camera-off::before {
+.elgato-icons-avatar-m::before {
 	content: "\ea7b";
 }
-.elgato-icons-camera-preview-to-prompter--filled::before {
+.elgato-icons-background-remove--filled-l::before {
 	content: "\ea7c";
 }
-.elgato-icons-camera-preview-to-prompter::before {
+.elgato-icons-background-remove--filled-m::before {
 	content: "\ea7d";
 }
-.elgato-icons-camera-sensor::before {
+.elgato-icons-background-remove-l::before {
 	content: "\ea7e";
 }
-.elgato-icons-camera::before {
+.elgato-icons-background-remove-m::before {
 	content: "\ea7f";
 }
-.elgato-icons-capture--filled::before {
+.elgato-icons-background-replace--filled-m::before {
 	content: "\ea80";
 }
-.elgato-icons-capture::before {
+.elgato-icons-background-replace-m::before {
 	content: "\ea81";
 }
-.elgato-icons-carousel::before {
+.elgato-icons-backspace--filled-l::before {
 	content: "\ea82";
 }
-.elgato-icons-cart--filled::before {
+.elgato-icons-backspace-l::before {
 	content: "\ea83";
 }
-.elgato-icons-cart-add::before {
+.elgato-icons-badge--filled-l::before {
 	content: "\ea84";
 }
-.elgato-icons-cart-remove::before {
+.elgato-icons-badge-l::before {
 	content: "\ea85";
 }
-.elgato-icons-cart::before {
+.elgato-icons-bleach-no-m::before {
 	content: "\ea86";
 }
-.elgato-icons-cathedral--filled::before {
+.elgato-icons-blinds--filled-l::before {
 	content: "\ea87";
 }
-.elgato-icons-cathedral::before {
+.elgato-icons-blinds-l::before {
 	content: "\ea88";
 }
-.elgato-icons-cave--filled::before {
+.elgato-icons-block-quote-l::before {
 	content: "\ea89";
 }
-.elgato-icons-cave::before {
+.elgato-icons-bluetooth-l::before {
 	content: "\ea8a";
 }
-.elgato-icons-chair-desk::before {
+.elgato-icons-blur-background-l::before {
 	content: "\ea8b";
 }
-.elgato-icons-chapter--filled::before {
+.elgato-icons-blur-l::before {
 	content: "\ea8c";
 }
-.elgato-icons-chapter-check--filled::before {
+.elgato-icons-board--filled-l::before {
 	content: "\ea8d";
 }
-.elgato-icons-chapter-check::before {
+.elgato-icons-board--filled-m::before {
 	content: "\ea8e";
 }
-.elgato-icons-chapter-down-to-bottom--filled::before {
+.elgato-icons-board--filled-s::before {
 	content: "\ea8f";
 }
-.elgato-icons-chapter-down-to-bottom::before {
+.elgato-icons-board-l::before {
 	content: "\ea90";
 }
-.elgato-icons-chapter-marker--filled::before {
+.elgato-icons-board-m::before {
 	content: "\ea91";
 }
-.elgato-icons-chapter-marker-off--filled::before {
+.elgato-icons-board-s::before {
 	content: "\ea92";
 }
-.elgato-icons-chapter-marker-off::before {
+.elgato-icons-bold-l::before {
 	content: "\ea93";
 }
-.elgato-icons-chapter-marker::before {
+.elgato-icons-bold-m::before {
 	content: "\ea94";
 }
-.elgato-icons-chapter-set--filled::before {
+.elgato-icons-book--filled-l::before {
 	content: "\ea95";
 }
-.elgato-icons-chapter-set::before {
+.elgato-icons-book--filled-m::before {
 	content: "\ea96";
 }
-.elgato-icons-chapter-up-to-top--filled::before {
+.elgato-icons-book-closed-l::before {
 	content: "\ea97";
 }
-.elgato-icons-chapter-up-to-top::before {
+.elgato-icons-book-l::before {
 	content: "\ea98";
 }
-.elgato-icons-chapter::before {
+.elgato-icons-book-m::before {
 	content: "\ea99";
 }
-.elgato-icons-checkmark-circle--filled::before {
+.elgato-icons-bookmark--filled-m::before {
 	content: "\ea9a";
 }
-.elgato-icons-checkmark-circle::before {
+.elgato-icons-bookmark-m::before {
 	content: "\ea9b";
 }
-.elgato-icons-checkmark::before {
+.elgato-icons-briefcase--filled-l::before {
 	content: "\ea9c";
 }
-.elgato-icons-chevron-down::before {
+.elgato-icons-briefcase-l::before {
 	content: "\ea9d";
 }
-.elgato-icons-chevron-left::before {
+.elgato-icons-brightness--filled-l::before {
 	content: "\ea9e";
 }
-.elgato-icons-chevron-right::before {
+.elgato-icons-brightness--filled-m::before {
 	content: "\ea9f";
 }
-.elgato-icons-chevron-up::before {
+.elgato-icons-brightness-decrease--filled-l::before {
 	content: "\eaa0";
 }
-.elgato-icons-chevrons-down-decrease::before {
+.elgato-icons-brightness-decrease--filled-m::before {
 	content: "\eaa1";
 }
-.elgato-icons-chevrons-down-increase::before {
+.elgato-icons-brightness-decrease-l::before {
 	content: "\eaa2";
 }
-.elgato-icons-chevrons-down-set::before {
+.elgato-icons-brightness-decrease-m::before {
 	content: "\eaa3";
 }
-.elgato-icons-chevrons-down::before {
+.elgato-icons-brightness-increase--filled-l::before {
 	content: "\eaa4";
 }
-.elgato-icons-chevrons-left-right::before {
+.elgato-icons-brightness-increase--filled-m::before {
 	content: "\eaa5";
 }
-.elgato-icons-chevrons-left::before {
+.elgato-icons-brightness-increase-l::before {
 	content: "\eaa6";
 }
-.elgato-icons-chevrons-right::before {
+.elgato-icons-brightness-increase-m::before {
 	content: "\eaa7";
 }
-.elgato-icons-chevrons-up-down::before {
+.elgato-icons-brightness-l::before {
 	content: "\eaa8";
 }
-.elgato-icons-chevrons-up::before {
+.elgato-icons-brightness-m::before {
 	content: "\eaa9";
 }
-.elgato-icons-circle--filled::before {
+.elgato-icons-brightness-off--filled-l::before {
 	content: "\eaaa";
 }
-.elgato-icons-circle::before {
+.elgato-icons-brightness-off-l::before {
 	content: "\eaab";
 }
-.elgato-icons-city--filled::before {
+.elgato-icons-brightness-reset--filled-l::before {
 	content: "\eaac";
 }
-.elgato-icons-city::before {
+.elgato-icons-brightness-reset-l::before {
 	content: "\eaad";
 }
-.elgato-icons-clamp::before {
+.elgato-icons-brightness-set--filled-l::before {
 	content: "\eaae";
 }
-.elgato-icons-clipboard--filled::before {
+.elgato-icons-brightness-set-l::before {
 	content: "\eaaf";
 }
-.elgato-icons-clipboard::before {
+.elgato-icons-bug--filled-l::before {
 	content: "\eab0";
 }
-.elgato-icons-clipguard::before {
+.elgato-icons-bug-l::before {
 	content: "\eab1";
 }
-.elgato-icons-close-circle--filled::before {
+.elgato-icons-calendar--filled-l::before {
 	content: "\eab2";
 }
-.elgato-icons-close-circle::before {
+.elgato-icons-calendar--filled-m::before {
 	content: "\eab3";
 }
-.elgato-icons-close-square--filled::before {
+.elgato-icons-calendar-l::before {
 	content: "\eab4";
 }
-.elgato-icons-close-square::before {
+.elgato-icons-calendar-m::before {
 	content: "\eab5";
 }
-.elgato-icons-close::before {
+.elgato-icons-calendar-today--filled-l::before {
 	content: "\eab6";
 }
-.elgato-icons-cloud--filled::before {
+.elgato-icons-calendar-today--filled-m::before {
 	content: "\eab7";
 }
-.elgato-icons-cloud::before {
+.elgato-icons-calendar-today-l::before {
 	content: "\eab8";
 }
-.elgato-icons-code-block--filled::before {
+.elgato-icons-calendar-today-m::before {
 	content: "\eab9";
 }
-.elgato-icons-code-block::before {
+.elgato-icons-camcorder--filled-l::before {
 	content: "\eaba";
 }
-.elgato-icons-code-build::before {
+.elgato-icons-camcorder-l::before {
 	content: "\eabb";
 }
-.elgato-icons-code::before {
+.elgato-icons-camera--filled-l::before {
 	content: "\eabc";
 }
-.elgato-icons-collab::before {
+.elgato-icons-camera--filled-m::before {
 	content: "\eabd";
 }
-.elgato-icons-color-wheel::before {
+.elgato-icons-camera-flip--filled-l::before {
 	content: "\eabe";
 }
-.elgato-icons-company--filled::before {
+.elgato-icons-camera-flip-l::before {
 	content: "\eabf";
 }
-.elgato-icons-company::before {
+.elgato-icons-camera-frame-preset--filled-l::before {
 	content: "\eac0";
 }
-.elgato-icons-compass--filled::before {
+.elgato-icons-camera-frame-preset-check--filled-l::before {
 	content: "\eac1";
 }
-.elgato-icons-compass::before {
+.elgato-icons-camera-frame-preset-check-l::before {
 	content: "\eac2";
 }
-.elgato-icons-compose--filled::before {
+.elgato-icons-camera-frame-preset-l::before {
 	content: "\eac3";
 }
-.elgato-icons-compose::before {
+.elgato-icons-camera-frame-preset-reset--filled-l::before {
 	content: "\eac4";
 }
-.elgato-icons-copy--filled::before {
+.elgato-icons-camera-frame-preset-reset-l::before {
 	content: "\eac5";
 }
-.elgato-icons-copy::before {
+.elgato-icons-camera-frame-preset-set--filled-l::before {
 	content: "\eac6";
 }
-.elgato-icons-couch--filled::before {
+.elgato-icons-camera-frame-preset-set-l::before {
 	content: "\eac7";
 }
-.elgato-icons-couch::before {
+.elgato-icons-camera-input--filled-l::before {
 	content: "\eac8";
 }
-.elgato-icons-cpu--filled::before {
+.elgato-icons-camera-input-check--filled-l::before {
 	content: "\eac9";
 }
-.elgato-icons-cpu::before {
+.elgato-icons-camera-input-check-l::before {
 	content: "\eaca";
 }
-.elgato-icons-crop::before {
+.elgato-icons-camera-input-l::before {
 	content: "\eacb";
 }
-.elgato-icons-crossfade::before {
+.elgato-icons-camera-l::before {
 	content: "\eacc";
 }
-.elgato-icons-crosshair-check::before {
+.elgato-icons-camera-m::before {
 	content: "\eacd";
 }
-.elgato-icons-crosshair::before {
+.elgato-icons-camera-monitor-mount-alt-l::before {
 	content: "\eace";
 }
-.elgato-icons-crown--filled::before {
+.elgato-icons-camera-monitor-mount-l::before {
 	content: "\eacf";
 }
-.elgato-icons-crown::before {
+.elgato-icons-camera-off--filled-l::before {
 	content: "\ead0";
 }
-.elgato-icons-cube--filled::before {
+.elgato-icons-camera-off--filled-m::before {
 	content: "\ead1";
 }
-.elgato-icons-cube::before {
+.elgato-icons-camera-off-l::before {
 	content: "\ead2";
 }
-.elgato-icons-currency-dollar::before {
+.elgato-icons-camera-off-m::before {
 	content: "\ead3";
 }
-.elgato-icons-currency-euro::before {
+.elgato-icons-camera-preview-to-prompter--filled-l::before {
 	content: "\ead4";
 }
-.elgato-icons-currency-pound::before {
+.elgato-icons-camera-preview-to-prompter-l::before {
 	content: "\ead5";
 }
-.elgato-icons-currency-yen::before {
+.elgato-icons-camera-sensor-l::before {
 	content: "\ead6";
 }
-.elgato-icons-cursor--filled::before {
+.elgato-icons-capture--filled-l::before {
 	content: "\ead7";
 }
-.elgato-icons-cursor::before {
+.elgato-icons-capture-l::before {
 	content: "\ead8";
 }
-.elgato-icons-cut::before {
+.elgato-icons-carousel-l::before {
 	content: "\ead9";
 }
-.elgato-icons-database--filled::before {
+.elgato-icons-cart--filled-l::before {
 	content: "\eada";
 }
-.elgato-icons-database::before {
+.elgato-icons-cart--filled-m::before {
 	content: "\eadb";
 }
-.elgato-icons-debug::before {
+.elgato-icons-cart-add-l::before {
 	content: "\eadc";
 }
-.elgato-icons-delivery--filled::before {
+.elgato-icons-cart-add-m::before {
 	content: "\eadd";
 }
-.elgato-icons-delivery::before {
+.elgato-icons-cart-l::before {
 	content: "\eade";
 }
-.elgato-icons-desktop::before {
+.elgato-icons-cart-m::before {
 	content: "\eadf";
 }
-.elgato-icons-diagram--filled::before {
+.elgato-icons-cart-remove-l::before {
 	content: "\eae0";
 }
-.elgato-icons-diagram::before {
+.elgato-icons-cart-remove-m::before {
 	content: "\eae1";
 }
-.elgato-icons-dial--filled::before {
+.elgato-icons-cathedral--filled-l::before {
 	content: "\eae2";
 }
-.elgato-icons-dial-press::before {
+.elgato-icons-cathedral-l::before {
 	content: "\eae3";
 }
-.elgato-icons-dial-rotate-c-w--filled::before {
+.elgato-icons-cave--filled-l::before {
 	content: "\eae4";
 }
-.elgato-icons-dial-rotate-c-w::before {
+.elgato-icons-cave-l::before {
 	content: "\eae5";
 }
-.elgato-icons-dial-rotate-cc-w--filled::before {
+.elgato-icons-chair-desk-l::before {
 	content: "\eae6";
 }
-.elgato-icons-dial-rotate-cc-w::before {
+.elgato-icons-chapter--filled-l::before {
 	content: "\eae7";
 }
-.elgato-icons-dial-rotate::before {
+.elgato-icons-chapter-check--filled-l::before {
 	content: "\eae8";
 }
-.elgato-icons-dial-stack--filled::before {
+.elgato-icons-chapter-check-l::before {
 	content: "\eae9";
 }
-.elgato-icons-dial-stack::before {
+.elgato-icons-chapter-down-to-bottom--filled-l::before {
 	content: "\eaea";
 }
-.elgato-icons-dial::before {
+.elgato-icons-chapter-down-to-bottom-l::before {
 	content: "\eaeb";
 }
-.elgato-icons-diamond--filled::before {
+.elgato-icons-chapter-l::before {
 	content: "\eaec";
 }
-.elgato-icons-diamond::before {
+.elgato-icons-chapter-marker--filled-l::before {
 	content: "\eaed";
 }
-.elgato-icons-diffuse::before {
+.elgato-icons-chapter-marker-l::before {
 	content: "\eaee";
 }
-.elgato-icons-discount--filled::before {
+.elgato-icons-chapter-marker-off--filled-l::before {
 	content: "\eaef";
 }
-.elgato-icons-discount::before {
+.elgato-icons-chapter-marker-off-l::before {
 	content: "\eaf0";
 }
-.elgato-icons-display--filled::before {
+.elgato-icons-chapter-set--filled-l::before {
 	content: "\eaf1";
 }
-.elgato-icons-display-add--filled::before {
+.elgato-icons-chapter-set-l::before {
 	content: "\eaf2";
 }
-.elgato-icons-display-add::before {
+.elgato-icons-chapter-up-to-top--filled-l::before {
 	content: "\eaf3";
 }
-.elgato-icons-display-project--filled::before {
+.elgato-icons-chapter-up-to-top-l::before {
 	content: "\eaf4";
 }
-.elgato-icons-display-project-check--filled::before {
+.elgato-icons-checkmark-circle--filled-l::before {
 	content: "\eaf5";
 }
-.elgato-icons-display-project-check::before {
+.elgato-icons-checkmark-circle--filled-m::before {
 	content: "\eaf6";
 }
-.elgato-icons-display-project-set--filled::before {
+.elgato-icons-checkmark-circle--filled-s::before {
 	content: "\eaf7";
 }
-.elgato-icons-display-project-set::before {
+.elgato-icons-checkmark-circle-l::before {
 	content: "\eaf8";
 }
-.elgato-icons-display-project::before {
+.elgato-icons-checkmark-circle-m::before {
 	content: "\eaf9";
 }
-.elgato-icons-display::before {
+.elgato-icons-checkmark-circle-s::before {
 	content: "\eafa";
 }
-.elgato-icons-download::before {
+.elgato-icons-checkmark-l::before {
 	content: "\eafb";
 }
-.elgato-icons-drag::before {
+.elgato-icons-checkmark-m::before {
 	content: "\eafc";
 }
-.elgato-icons-droplet--filled::before {
+.elgato-icons-chevron-down-l::before {
 	content: "\eafd";
 }
-.elgato-icons-droplet::before {
+.elgato-icons-chevron-down-m::before {
 	content: "\eafe";
 }
-.elgato-icons-ear--filled::before {
+.elgato-icons-chevron-left-l::before {
 	content: "\eaff";
 }
-.elgato-icons-ear::before {
+.elgato-icons-chevron-left-m::before {
 	content: "\eb00";
 }
-.elgato-icons-edit--filled::before {
+.elgato-icons-chevron-left-s::before {
 	content: "\eb01";
 }
-.elgato-icons-edit::before {
+.elgato-icons-chevron-right-l::before {
 	content: "\eb02";
 }
-.elgato-icons-effect::before {
+.elgato-icons-chevron-right-m::before {
 	content: "\eb03";
 }
-.elgato-icons-elements--filled::before {
+.elgato-icons-chevron-right-s::before {
 	content: "\eb04";
 }
-.elgato-icons-elements::before {
+.elgato-icons-chevron-up-l::before {
 	content: "\eb05";
 }
-.elgato-icons-exit-fullscreen::before {
+.elgato-icons-chevron-up-m::before {
 	content: "\eb06";
 }
-.elgato-icons-expand-square--filled::before {
+.elgato-icons-chevrons-down-decrease-l::before {
 	content: "\eb07";
 }
-.elgato-icons-expand-square::before {
+.elgato-icons-chevrons-down-increase-l::before {
 	content: "\eb08";
 }
-.elgato-icons-external-link::before {
+.elgato-icons-chevrons-down-l::before {
 	content: "\eb09";
 }
-.elgato-icons-eye-contact--filled::before {
+.elgato-icons-chevrons-down-set-l::before {
 	content: "\eb0a";
 }
-.elgato-icons-eye-contact-check--filled::before {
+.elgato-icons-chevrons-left-l::before {
 	content: "\eb0b";
 }
-.elgato-icons-eye-contact-check::before {
+.elgato-icons-chevrons-left-right-l::before {
 	content: "\eb0c";
 }
-.elgato-icons-eye-contact::before {
+.elgato-icons-chevrons-right-l::before {
 	content: "\eb0d";
 }
-.elgato-icons-eyedropper--filled::before {
+.elgato-icons-chevrons-up-down-l::before {
 	content: "\eb0e";
 }
-.elgato-icons-eyedropper::before {
+.elgato-icons-chevrons-up-l::before {
 	content: "\eb0f";
 }
-.elgato-icons-face-satisfied--filled::before {
+.elgato-icons-circle--filled-l::before {
 	content: "\eb10";
 }
-.elgato-icons-face-satisfied-add--filled::before {
+.elgato-icons-circle--filled-s::before {
 	content: "\eb11";
 }
-.elgato-icons-face-satisfied-add::before {
+.elgato-icons-circle-l::before {
 	content: "\eb12";
 }
-.elgato-icons-face-satisfied::before {
+.elgato-icons-circle-s::before {
 	content: "\eb13";
 }
-.elgato-icons-face-tracking-check::before {
+.elgato-icons-city--filled-l::before {
 	content: "\eb14";
 }
-.elgato-icons-face-tracking::before {
+.elgato-icons-city-l::before {
 	content: "\eb15";
 }
-.elgato-icons-facecam--filled::before {
+.elgato-icons-clamp-l::before {
 	content: "\eb16";
 }
-.elgato-icons-facecam-neo--filled::before {
+.elgato-icons-clamp-m::before {
 	content: "\eb17";
 }
-.elgato-icons-facecam-neo::before {
+.elgato-icons-clamp-s::before {
 	content: "\eb18";
 }
-.elgato-icons-facecam-off--filled::before {
+.elgato-icons-clipboard--filled-l::before {
 	content: "\eb19";
 }
-.elgato-icons-facecam-off::before {
+.elgato-icons-clipboard-l::before {
 	content: "\eb1a";
 }
-.elgato-icons-facecam::before {
+.elgato-icons-clipguard-l::before {
 	content: "\eb1b";
 }
-.elgato-icons-featured::before {
+.elgato-icons-close-circle--filled-l::before {
 	content: "\eb1c";
 }
-.elgato-icons-file--filled::before {
+.elgato-icons-close-circle-l::before {
 	content: "\eb1d";
 }
-.elgato-icons-file-download--filled::before {
+.elgato-icons-close-l::before {
 	content: "\eb1e";
 }
-.elgato-icons-file-download::before {
+.elgato-icons-close-m::before {
 	content: "\eb1f";
 }
-.elgato-icons-file-upload--filled::before {
+.elgato-icons-close-square--filled-l::before {
 	content: "\eb20";
 }
-.elgato-icons-file-upload::before {
+.elgato-icons-close-square--filled-m::before {
 	content: "\eb21";
 }
-.elgato-icons-file::before {
+.elgato-icons-close-square--filled-s::before {
 	content: "\eb22";
 }
-.elgato-icons-film--filled::before {
+.elgato-icons-close-square-l::before {
 	content: "\eb23";
 }
-.elgato-icons-film::before {
+.elgato-icons-close-square-m::before {
 	content: "\eb24";
 }
-.elgato-icons-filter-alt--filled::before {
+.elgato-icons-close-square-s::before {
 	content: "\eb25";
 }
-.elgato-icons-filter-alt::before {
+.elgato-icons-cloud--filled-l::before {
 	content: "\eb26";
 }
-.elgato-icons-filter::before {
+.elgato-icons-cloud-l::before {
 	content: "\eb27";
 }
-.elgato-icons-flame--filled::before {
+.elgato-icons-code-block--filled-l::before {
 	content: "\eb28";
 }
-.elgato-icons-flame::before {
+.elgato-icons-code-block--filled-m::before {
 	content: "\eb29";
 }
-.elgato-icons-flash--filled::before {
+.elgato-icons-code-block-l::before {
 	content: "\eb2a";
 }
-.elgato-icons-flash-off--filled::before {
+.elgato-icons-code-block-m::before {
 	content: "\eb2b";
 }
-.elgato-icons-flash-off::before {
+.elgato-icons-code-build-l::before {
 	content: "\eb2c";
 }
-.elgato-icons-flash::before {
+.elgato-icons-code-build-m::before {
 	content: "\eb2d";
 }
-.elgato-icons-flip-horizontal--filled::before {
+.elgato-icons-code-l::before {
 	content: "\eb2e";
 }
-.elgato-icons-flip-horizontal-check--filled::before {
+.elgato-icons-collab-l::before {
 	content: "\eb2f";
 }
-.elgato-icons-flip-horizontal-check::before {
+.elgato-icons-color-wheel-l::before {
 	content: "\eb30";
 }
-.elgato-icons-flip-horizontal::before {
+.elgato-icons-color-wheel-m::before {
 	content: "\eb31";
 }
-.elgato-icons-flip-vertical--filled::before {
+.elgato-icons-company--filled-l::before {
 	content: "\eb32";
 }
-.elgato-icons-flip-vertical-check--filled::before {
+.elgato-icons-company-l::before {
 	content: "\eb33";
 }
-.elgato-icons-flip-vertical-check::before {
+.elgato-icons-compass--filled-l::before {
 	content: "\eb34";
 }
-.elgato-icons-flip-vertical::before {
+.elgato-icons-compass--filled-m::before {
 	content: "\eb35";
 }
-.elgato-icons-focus--filled::before {
+.elgato-icons-compass-l::before {
 	content: "\eb36";
 }
-.elgato-icons-focus::before {
+.elgato-icons-compass-m::before {
 	content: "\eb37";
 }
-.elgato-icons-folder--filled::before {
+.elgato-icons-compose--filled-l::before {
 	content: "\eb38";
 }
-.elgato-icons-folder-back--filled::before {
+.elgato-icons-compose-l::before {
 	content: "\eb39";
 }
-.elgato-icons-folder-back::before {
+.elgato-icons-copy--filled-l::before {
 	content: "\eb3a";
 }
-.elgato-icons-folder-download--filled::before {
+.elgato-icons-copy--filled-m::before {
 	content: "\eb3b";
 }
-.elgato-icons-folder-download::before {
+.elgato-icons-copy-l::before {
 	content: "\eb3c";
 }
-.elgato-icons-folder-open--filled::before {
+.elgato-icons-copy-m::before {
 	content: "\eb3d";
 }
-.elgato-icons-folder-open::before {
+.elgato-icons-couch--filled-l::before {
 	content: "\eb3e";
 }
-.elgato-icons-folder-upload--filled::before {
+.elgato-icons-couch-l::before {
 	content: "\eb3f";
 }
-.elgato-icons-folder-upload::before {
+.elgato-icons-cpu--filled-l::before {
 	content: "\eb40";
 }
-.elgato-icons-folder::before {
+.elgato-icons-cpu-l::before {
 	content: "\eb41";
 }
-.elgato-icons-forest--filled::before {
+.elgato-icons-crop-l::before {
 	content: "\eb42";
 }
-.elgato-icons-forest::before {
+.elgato-icons-crop-m::before {
 	content: "\eb43";
 }
-.elgato-icons-fullscreen::before {
+.elgato-icons-crop-s::before {
 	content: "\eb44";
 }
-.elgato-icons-game--filled::before {
+.elgato-icons-crossfade-l::before {
 	content: "\eb45";
 }
-.elgato-icons-game-add--filled::before {
+.elgato-icons-crossfade-m::before {
 	content: "\eb46";
 }
-.elgato-icons-game-add::before {
+.elgato-icons-crosshair-check-l::before {
 	content: "\eb47";
 }
-.elgato-icons-game-capture::before {
+.elgato-icons-crosshair-l::before {
 	content: "\eb48";
 }
-.elgato-icons-game::before {
+.elgato-icons-crown--filled-l::before {
 	content: "\eb49";
 }
-.elgato-icons-gap-horizontal--filled::before {
+.elgato-icons-crown-l::before {
 	content: "\eb4a";
 }
-.elgato-icons-gap-horizontal::before {
+.elgato-icons-cube--filled-l::before {
 	content: "\eb4b";
 }
-.elgato-icons-gap-vertical--filled::before {
+.elgato-icons-cube--filled-m::before {
 	content: "\eb4c";
 }
-.elgato-icons-gap-vertical::before {
+.elgato-icons-cube-l::before {
 	content: "\eb4d";
 }
-.elgato-icons-globe--filled::before {
+.elgato-icons-cube-m::before {
 	content: "\eb4e";
 }
-.elgato-icons-globe-add--filled::before {
+.elgato-icons-currency-dollar-l::before {
 	content: "\eb4f";
 }
-.elgato-icons-globe-add::before {
+.elgato-icons-currency-euro-l::before {
 	content: "\eb50";
 }
-.elgato-icons-globe::before {
+.elgato-icons-currency-pound-l::before {
 	content: "\eb51";
 }
-.elgato-icons-green-screen::before {
+.elgato-icons-currency-yen-l::before {
 	content: "\eb52";
 }
-.elgato-icons-grid--filled::before {
+.elgato-icons-cursor--filled-l::before {
 	content: "\eb53";
 }
-.elgato-icons-grid::before {
+.elgato-icons-cursor-l::before {
 	content: "\eb54";
 }
-.elgato-icons-group--filled::before {
+.elgato-icons-cut-l::before {
 	content: "\eb55";
 }
-.elgato-icons-group::before {
+.elgato-icons-database--filled-l::before {
 	content: "\eb56";
 }
-.elgato-icons-hand-point-up::before {
+.elgato-icons-database-l::before {
 	content: "\eb57";
 }
-.elgato-icons-hdmi--filled::before {
+.elgato-icons-database-m::before {
 	content: "\eb58";
 }
-.elgato-icons-hdmi::before {
+.elgato-icons-debug-l::before {
 	content: "\eb59";
 }
-.elgato-icons-hdr::before {
+.elgato-icons-debug-m::before {
 	content: "\eb5a";
 }
-.elgato-icons-headphones--filled::before {
+.elgato-icons-delivery--filled-l::before {
 	content: "\eb5b";
 }
-.elgato-icons-headphones-add--filled::before {
+.elgato-icons-delivery-l::before {
 	content: "\eb5c";
 }
-.elgato-icons-headphones-add::before {
+.elgato-icons-design--filled-m::before {
 	content: "\eb5d";
 }
-.elgato-icons-headphones-off--filled::before {
+.elgato-icons-design-m::before {
 	content: "\eb5e";
 }
-.elgato-icons-headphones-off::before {
+.elgato-icons-desktop-l::before {
 	content: "\eb5f";
 }
-.elgato-icons-headphones-switch-to--filled::before {
+.elgato-icons-diagram--filled-l::before {
 	content: "\eb60";
 }
-.elgato-icons-headphones-switch-to::before {
+.elgato-icons-diagram-l::before {
 	content: "\eb61";
 }
-.elgato-icons-headphones::before {
+.elgato-icons-dial--filled-l::before {
 	content: "\eb62";
 }
-.elgato-icons-heart--filled::before {
+.elgato-icons-dial--filled-m::before {
 	content: "\eb63";
 }
-.elgato-icons-heart::before {
+.elgato-icons-dial--filled-s::before {
 	content: "\eb64";
 }
-.elgato-icons-heat-sink::before {
+.elgato-icons-dial-l::before {
 	content: "\eb65";
 }
-.elgato-icons-help--filled::before {
+.elgato-icons-dial-m::before {
 	content: "\eb66";
 }
-.elgato-icons-help::before {
+.elgato-icons-dial-press-l::before {
 	content: "\eb67";
 }
-.elgato-icons-hexagon--filled::before {
+.elgato-icons-dial-rotate-c-w--filled-l::before {
 	content: "\eb68";
 }
-.elgato-icons-hexagon::before {
+.elgato-icons-dial-rotate-c-w-l::before {
 	content: "\eb69";
 }
-.elgato-icons-home--filled::before {
+.elgato-icons-dial-rotate-cc-w--filled-l::before {
 	content: "\eb6a";
 }
-.elgato-icons-home::before {
+.elgato-icons-dial-rotate-cc-w-l::before {
 	content: "\eb6b";
 }
-.elgato-icons-hotkey--filled::before {
+.elgato-icons-dial-rotate-l::before {
 	content: "\eb6c";
 }
-.elgato-icons-hotkey::before {
+.elgato-icons-dial-s::before {
 	content: "\eb6d";
 }
-.elgato-icons-image--filled::before {
+.elgato-icons-dial-stack--filled-l::before {
 	content: "\eb6e";
 }
-.elgato-icons-image-check--filled::before {
+.elgato-icons-dial-stack-l::before {
 	content: "\eb6f";
 }
-.elgato-icons-image-check::before {
+.elgato-icons-diamond--filled-l::before {
 	content: "\eb70";
 }
-.elgato-icons-image::before {
+.elgato-icons-diamond-l::before {
 	content: "\eb71";
 }
-.elgato-icons-inbox--filled::before {
+.elgato-icons-diffuse-l::before {
 	content: "\eb72";
 }
-.elgato-icons-inbox::before {
+.elgato-icons-discount--filled-l::before {
 	content: "\eb73";
 }
-.elgato-icons-info--filled::before {
+.elgato-icons-discount--filled-m::before {
 	content: "\eb74";
 }
-.elgato-icons-info::before {
+.elgato-icons-discount-increase-m::before {
 	content: "\eb75";
 }
-.elgato-icons-infobar--filled::before {
+.elgato-icons-discount-l::before {
 	content: "\eb76";
 }
-.elgato-icons-infobar::before {
+.elgato-icons-discount-m::before {
 	content: "\eb77";
 }
-.elgato-icons-italic::before {
+.elgato-icons-display--filled-l::before {
 	content: "\eb78";
 }
-.elgato-icons-key--filled::before {
+.elgato-icons-display--filled-m::before {
 	content: "\eb79";
 }
-.elgato-icons-key-light--filled::before {
+.elgato-icons-display--filled-s::before {
 	content: "\eb7a";
 }
-.elgato-icons-key-light-air--filled::before {
+.elgato-icons-display-add--filled-l::before {
 	content: "\eb7b";
 }
-.elgato-icons-key-light-air-off--filled::before {
+.elgato-icons-display-add-l::before {
 	content: "\eb7c";
 }
-.elgato-icons-key-light-air-off::before {
+.elgato-icons-display-l::before {
 	content: "\eb7d";
 }
-.elgato-icons-key-light-air-power--filled::before {
+.elgato-icons-display-m::before {
 	content: "\eb7e";
 }
-.elgato-icons-key-light-air-power::before {
+.elgato-icons-display-project--filled-l::before {
 	content: "\eb7f";
 }
-.elgato-icons-key-light-air::before {
+.elgato-icons-display-project-check--filled-l::before {
 	content: "\eb80";
 }
-.elgato-icons-key-light-mini--filled::before {
+.elgato-icons-display-project-check-l::before {
 	content: "\eb81";
 }
-.elgato-icons-key-light-mini-off--filled::before {
+.elgato-icons-display-project-l::before {
 	content: "\eb82";
 }
-.elgato-icons-key-light-mini-off::before {
+.elgato-icons-display-project-set--filled-l::before {
 	content: "\eb83";
 }
-.elgato-icons-key-light-mini-power--filled::before {
+.elgato-icons-display-project-set-l::before {
 	content: "\eb84";
 }
-.elgato-icons-key-light-mini-power::before {
+.elgato-icons-display-s::before {
 	content: "\eb85";
 }
-.elgato-icons-key-light-mini::before {
+.elgato-icons-download-l::before {
 	content: "\eb86";
 }
-.elgato-icons-key-light-neo--filled::before {
+.elgato-icons-download-m::before {
 	content: "\eb87";
 }
-.elgato-icons-key-light-neo-off--filled::before {
+.elgato-icons-download-s::before {
 	content: "\eb88";
 }
-.elgato-icons-key-light-neo-off::before {
+.elgato-icons-drag-l::before {
 	content: "\eb89";
 }
-.elgato-icons-key-light-neo-power--filled::before {
+.elgato-icons-drag-m::before {
 	content: "\eb8a";
 }
-.elgato-icons-key-light-neo-power::before {
+.elgato-icons-droplet--filled-l::before {
 	content: "\eb8b";
 }
-.elgato-icons-key-light-neo::before {
+.elgato-icons-droplet-l::before {
 	content: "\eb8c";
 }
-.elgato-icons-key-light-off--filled::before {
+.elgato-icons-dry-clean-no-m::before {
 	content: "\eb8d";
 }
-.elgato-icons-key-light-off::before {
+.elgato-icons-ear--filled-l::before {
 	content: "\eb8e";
 }
-.elgato-icons-key-light-power--filled::before {
+.elgato-icons-ear-l::before {
 	content: "\eb8f";
 }
-.elgato-icons-key-light-power::before {
+.elgato-icons-edit--filled-l::before {
 	content: "\eb90";
 }
-.elgato-icons-key-light::before {
+.elgato-icons-edit--filled-m::before {
 	content: "\eb91";
 }
-.elgato-icons-key::before {
+.elgato-icons-edit-l::before {
 	content: "\eb92";
 }
-.elgato-icons-keyboard--filled::before {
+.elgato-icons-edit-m::before {
 	content: "\eb93";
 }
-.elgato-icons-keyboard-emoji--filled::before {
+.elgato-icons-effect-l::before {
 	content: "\eb94";
 }
-.elgato-icons-keyboard-emoji::before {
+.elgato-icons-elements--filled-l::before {
 	content: "\eb95";
 }
-.elgato-icons-keyboard::before {
+.elgato-icons-elements-l::before {
 	content: "\eb96";
 }
-.elgato-icons-laptop--filled::before {
+.elgato-icons-ethernet--filled-m::before {
 	content: "\eb97";
 }
-.elgato-icons-laptop::before {
+.elgato-icons-ethernet-m::before {
 	content: "\eb98";
 }
-.elgato-icons-layers--filled::before {
+.elgato-icons-exit-fullscreen-l::before {
 	content: "\eb99";
 }
-.elgato-icons-layers::before {
+.elgato-icons-exit-fullscreen-m::before {
 	content: "\eb9a";
 }
-.elgato-icons-learn--filled::before {
+.elgato-icons-expand-square--filled-l::before {
 	content: "\eb9b";
 }
-.elgato-icons-learn::before {
+.elgato-icons-expand-square-l::before {
 	content: "\eb9c";
 }
-.elgato-icons-lens--filled::before {
+.elgato-icons-external-link-l::before {
 	content: "\eb9d";
 }
-.elgato-icons-lens-check--filled::before {
+.elgato-icons-external-link-m::before {
 	content: "\eb9e";
 }
-.elgato-icons-lens-check::before {
+.elgato-icons-eye-contact--filled-l::before {
 	content: "\eb9f";
 }
-.elgato-icons-lens::before {
+.elgato-icons-eye-contact-check--filled-l::before {
 	content: "\eba0";
 }
-.elgato-icons-library--filled::before {
+.elgato-icons-eye-contact-check-l::before {
 	content: "\eba1";
 }
-.elgato-icons-library::before {
+.elgato-icons-eye-contact-l::before {
 	content: "\eba2";
 }
-.elgato-icons-light-strip--filled::before {
+.elgato-icons-eyedropper--filled-l::before {
 	content: "\eba3";
 }
-.elgato-icons-light-strip-off--filled::before {
+.elgato-icons-eyedropper-l::before {
 	content: "\eba4";
 }
-.elgato-icons-light-strip-off::before {
+.elgato-icons-face-satisfied--filled-l::before {
 	content: "\eba5";
 }
-.elgato-icons-light-strip-power--filled::before {
+.elgato-icons-face-satisfied--filled-m::before {
 	content: "\eba6";
 }
-.elgato-icons-light-strip-power::before {
+.elgato-icons-face-satisfied-add--filled-l::before {
 	content: "\eba7";
 }
-.elgato-icons-light-strip::before {
+.elgato-icons-face-satisfied-add-l::before {
 	content: "\eba8";
 }
-.elgato-icons-link-broken::before {
+.elgato-icons-face-satisfied-l::before {
 	content: "\eba9";
 }
-.elgato-icons-link::before {
+.elgato-icons-face-satisfied-m::before {
 	content: "\ebaa";
 }
-.elgato-icons-list::before {
+.elgato-icons-face-tracking-check-l::before {
 	content: "\ebab";
 }
-.elgato-icons-location--filled::before {
+.elgato-icons-face-tracking-l::before {
 	content: "\ebac";
 }
-.elgato-icons-location::before {
+.elgato-icons-facecam--filled-l::before {
 	content: "\ebad";
 }
-.elgato-icons-lock--filled::before {
+.elgato-icons-facecam--filled-m::before {
 	content: "\ebae";
 }
-.elgato-icons-lock-open--filled::before {
+.elgato-icons-facecam-l::before {
 	content: "\ebaf";
 }
-.elgato-icons-lock-open::before {
+.elgato-icons-facecam-m::before {
 	content: "\ebb0";
 }
-.elgato-icons-lock::before {
+.elgato-icons-facecam-neo--filled-l::before {
 	content: "\ebb1";
 }
-.elgato-icons-logo-adobe--color::before {
+.elgato-icons-facecam-neo-l::before {
 	content: "\ebb2";
 }
-.elgato-icons-logo-adobe-acrobat--color::before {
+.elgato-icons-facecam-off--filled-l::before {
 	content: "\ebb3";
 }
-.elgato-icons-logo-adobe-acrobat::before {
+.elgato-icons-facecam-off-l::before {
 	content: "\ebb4";
 }
-.elgato-icons-logo-adobe-audition--color::before {
+.elgato-icons-featured-l::before {
 	content: "\ebb5";
 }
-.elgato-icons-logo-adobe-audition::before {
+.elgato-icons-file--filled-l::before {
 	content: "\ebb6";
 }
-.elgato-icons-logo-adobe-character-animator--color::before {
+.elgato-icons-file--filled-m::before {
 	content: "\ebb7";
 }
-.elgato-icons-logo-adobe-character-animator::before {
+.elgato-icons-file-download--filled-l::before {
 	content: "\ebb8";
 }
-.elgato-icons-logo-adobe-creative-cloud--color::before {
+.elgato-icons-file-download-l::before {
 	content: "\ebb9";
 }
-.elgato-icons-logo-adobe-creative-cloud::before {
+.elgato-icons-file-l::before {
 	content: "\ebba";
 }
-.elgato-icons-logo-adobe-express--color::before {
+.elgato-icons-file-m::before {
 	content: "\ebbb";
 }
-.elgato-icons-logo-adobe-express::before {
+.elgato-icons-file-upload--filled-l::before {
 	content: "\ebbc";
 }
-.elgato-icons-logo-adobe-illustrator--color::before {
+.elgato-icons-file-upload-l::before {
 	content: "\ebbd";
 }
-.elgato-icons-logo-adobe-illustrator::before {
+.elgato-icons-film--filled-l::before {
 	content: "\ebbe";
 }
-.elgato-icons-logo-adobe-indesign--color::before {
+.elgato-icons-film--filled-m::before {
 	content: "\ebbf";
 }
-.elgato-icons-logo-adobe-indesign::before {
+.elgato-icons-film-l::before {
 	content: "\ebc0";
 }
-.elgato-icons-logo-adobe-lightroom--color::before {
+.elgato-icons-film-m::before {
 	content: "\ebc1";
 }
-.elgato-icons-logo-adobe-lightroom::before {
+.elgato-icons-filter--filled-m::before {
 	content: "\ebc2";
 }
-.elgato-icons-logo-adobe-media-encoder--color::before {
+.elgato-icons-filter-alt--filled-l::before {
 	content: "\ebc3";
 }
-.elgato-icons-logo-adobe-media-encoder::before {
+.elgato-icons-filter-alt-l::before {
 	content: "\ebc4";
 }
-.elgato-icons-logo-adobe-photoshop--color::before {
+.elgato-icons-filter-l::before {
 	content: "\ebc5";
 }
-.elgato-icons-logo-adobe-photoshop::before {
+.elgato-icons-filter-m::before {
 	content: "\ebc6";
 }
-.elgato-icons-logo-adobe-premiere-pro--color::before {
+.elgato-icons-flame--filled-l::before {
 	content: "\ebc7";
 }
-.elgato-icons-logo-adobe-premiere-pro::before {
+.elgato-icons-flame-l::before {
 	content: "\ebc8";
 }
-.elgato-icons-logo-adobe::before {
+.elgato-icons-flash--filled-l::before {
 	content: "\ebc9";
 }
-.elgato-icons-logo-after-effects--color::before {
+.elgato-icons-flash-l::before {
 	content: "\ebca";
 }
-.elgato-icons-logo-after-effects::before {
+.elgato-icons-flash-off--filled-l::before {
 	content: "\ebcb";
 }
-.elgato-icons-logo-airtable--color::before {
+.elgato-icons-flash-off-l::before {
 	content: "\ebcc";
 }
-.elgato-icons-logo-airtable::before {
+.elgato-icons-flip-horizontal--filled-l::before {
 	content: "\ebcd";
 }
-.elgato-icons-logo-amazon--color::before {
+.elgato-icons-flip-horizontal-check--filled-l::before {
 	content: "\ebce";
 }
-.elgato-icons-logo-amazon-alexa--color::before {
+.elgato-icons-flip-horizontal-check-l::before {
 	content: "\ebcf";
 }
-.elgato-icons-logo-amazon-alexa::before {
+.elgato-icons-flip-horizontal-l::before {
 	content: "\ebd0";
 }
-.elgato-icons-logo-amazon::before {
+.elgato-icons-flip-vertical--filled-l::before {
 	content: "\ebd1";
 }
-.elgato-icons-logo-android--color::before {
+.elgato-icons-flip-vertical-check--filled-l::before {
 	content: "\ebd2";
 }
-.elgato-icons-logo-android::before {
+.elgato-icons-flip-vertical-check-l::before {
 	content: "\ebd3";
 }
-.elgato-icons-logo-anthropic::before {
+.elgato-icons-flip-vertical-l::before {
 	content: "\ebd4";
 }
-.elgato-icons-logo-apple-home::before {
+.elgato-icons-flow--filled-m::before {
 	content: "\ebd5";
 }
-.elgato-icons-logo-apple-intelligence--color::before {
+.elgato-icons-flow-m::before {
 	content: "\ebd6";
 }
-.elgato-icons-logo-apple-intelligence::before {
+.elgato-icons-focus--filled-l::before {
 	content: "\ebd7";
 }
-.elgato-icons-logo-apple-music--color::before {
+.elgato-icons-focus-l::before {
 	content: "\ebd8";
 }
-.elgato-icons-logo-apple-music::before {
+.elgato-icons-folder--filled-l::before {
 	content: "\ebd9";
 }
-.elgato-icons-logo-apple::before {
+.elgato-icons-folder--filled-m::before {
 	content: "\ebda";
 }
-.elgato-icons-logo-asana--color::before {
+.elgato-icons-folder-back--filled-l::before {
 	content: "\ebdb";
 }
-.elgato-icons-logo-asana::before {
+.elgato-icons-folder-back-l::before {
 	content: "\ebdc";
 }
-.elgato-icons-logo-atlassian-confluence--color::before {
+.elgato-icons-folder-download--filled-l::before {
 	content: "\ebdd";
 }
-.elgato-icons-logo-atlassian-confluence::before {
+.elgato-icons-folder-download-l::before {
 	content: "\ebde";
 }
-.elgato-icons-logo-atlassian-jira--color::before {
+.elgato-icons-folder-l::before {
 	content: "\ebdf";
 }
-.elgato-icons-logo-atlassian-jira::before {
+.elgato-icons-folder-m::before {
 	content: "\ebe0";
 }
-.elgato-icons-logo-audio-technica::before {
+.elgato-icons-folder-open--filled-l::before {
 	content: "\ebe1";
 }
-.elgato-icons-logo-behance::before {
+.elgato-icons-folder-open--filled-m::before {
 	content: "\ebe2";
 }
-.elgato-icons-logo-best-buy--color::before {
+.elgato-icons-folder-open-l::before {
 	content: "\ebe3";
 }
-.elgato-icons-logo-best-buy::before {
+.elgato-icons-folder-open-m::before {
 	content: "\ebe4";
 }
-.elgato-icons-logo-bitcoin--color::before {
+.elgato-icons-folder-upload--filled-l::before {
 	content: "\ebe5";
 }
-.elgato-icons-logo-bitcoin::before {
+.elgato-icons-folder-upload-l::before {
 	content: "\ebe6";
 }
-.elgato-icons-logo-blender--color::before {
+.elgato-icons-forest--filled-l::before {
 	content: "\ebe7";
 }
-.elgato-icons-logo-blender::before {
+.elgato-icons-forest-l::before {
 	content: "\ebe8";
 }
-.elgato-icons-logo-brave--color::before {
+.elgato-icons-fullscreen-l::before {
 	content: "\ebe9";
 }
-.elgato-icons-logo-brave::before {
+.elgato-icons-fullscreen-m::before {
 	content: "\ebea";
 }
-.elgato-icons-logo-calendly--color::before {
+.elgato-icons-game--filled-l::before {
 	content: "\ebeb";
 }
-.elgato-icons-logo-calendly::before {
+.elgato-icons-game--filled-m::before {
 	content: "\ebec";
 }
-.elgato-icons-logo-chrome--color::before {
+.elgato-icons-game--filled-s::before {
 	content: "\ebed";
 }
-.elgato-icons-logo-chrome::before {
+.elgato-icons-game-add--filled-l::before {
 	content: "\ebee";
 }
-.elgato-icons-logo-claude--color::before {
+.elgato-icons-game-add-l::before {
 	content: "\ebef";
 }
-.elgato-icons-logo-claude::before {
+.elgato-icons-game-capture-l::before {
 	content: "\ebf0";
 }
-.elgato-icons-logo-corsair::before {
+.elgato-icons-game-l::before {
 	content: "\ebf1";
 }
-.elgato-icons-logo-css--color::before {
+.elgato-icons-game-m::before {
 	content: "\ebf2";
 }
-.elgato-icons-logo-cursor::before {
+.elgato-icons-game-s::before {
 	content: "\ebf3";
 }
-.elgato-icons-logo-deepseek--color::before {
+.elgato-icons-gap-horizontal--filled-l::before {
 	content: "\ebf4";
 }
-.elgato-icons-logo-deepseek::before {
+.elgato-icons-gap-horizontal-l::before {
 	content: "\ebf5";
 }
-.elgato-icons-logo-discord--color::before {
+.elgato-icons-gap-vertical--filled-l::before {
 	content: "\ebf6";
 }
-.elgato-icons-logo-discord::before {
+.elgato-icons-gap-vertical-l::before {
 	content: "\ebf7";
 }
-.elgato-icons-logo-dribbble--color::before {
+.elgato-icons-gift--filled-m::before {
 	content: "\ebf8";
 }
-.elgato-icons-logo-dribbble::before {
+.elgato-icons-gift-m::before {
 	content: "\ebf9";
 }
-.elgato-icons-logo-dropbox--color::before {
+.elgato-icons-globe--filled-l::before {
 	content: "\ebfa";
 }
-.elgato-icons-logo-dropbox::before {
+.elgato-icons-globe--filled-m::before {
 	content: "\ebfb";
 }
-.elgato-icons-logo-eclipse--color::before {
+.elgato-icons-globe-add--filled-l::before {
 	content: "\ebfc";
 }
-.elgato-icons-logo-eclipse::before {
+.elgato-icons-globe-add-l::before {
 	content: "\ebfd";
 }
-.elgato-icons-logo-elgato::before {
+.elgato-icons-globe-l::before {
 	content: "\ebfe";
 }
-.elgato-icons-logo-epic-games::before {
+.elgato-icons-globe-m::before {
 	content: "\ebff";
 }
-.elgato-icons-logo-ethereum--color::before {
+.elgato-icons-gradient-linear--filled-m::before {
 	content: "\ec00";
 }
-.elgato-icons-logo-ethereum::before {
+.elgato-icons-gradient-linear-m::before {
 	content: "\ec01";
 }
-.elgato-icons-logo-explorer::before {
+.elgato-icons-green-screen-l::before {
 	content: "\ec02";
 }
-.elgato-icons-logo-facebook--color::before {
+.elgato-icons-grid--filled-l::before {
 	content: "\ec03";
 }
-.elgato-icons-logo-facebook::before {
+.elgato-icons-grid--filled-m::before {
 	content: "\ec04";
 }
-.elgato-icons-logo-figma--color::before {
+.elgato-icons-grid-l::before {
 	content: "\ec05";
 }
-.elgato-icons-logo-figma::before {
+.elgato-icons-grid-m::before {
 	content: "\ec06";
 }
-.elgato-icons-logo-firefox-browser--color::before {
+.elgato-icons-group--filled-l::before {
 	content: "\ec07";
 }
-.elgato-icons-logo-firefox-browser::before {
+.elgato-icons-group--filled-m::before {
 	content: "\ec08";
 }
-.elgato-icons-logo-frameio--color::before {
+.elgato-icons-group-l::before {
 	content: "\ec09";
 }
-.elgato-icons-logo-frameio::before {
+.elgato-icons-group-m::before {
 	content: "\ec0a";
 }
-.elgato-icons-logo-framer::before {
+.elgato-icons-hand-point-up-l::before {
 	content: "\ec0b";
 }
-.elgato-icons-logo-gamer-sensei--color::before {
+.elgato-icons-hdmi--filled-l::before {
 	content: "\ec0c";
 }
-.elgato-icons-logo-gamer-sensei::before {
+.elgato-icons-hdmi--filled-m::before {
 	content: "\ec0d";
 }
-.elgato-icons-logo-github-copilot::before {
+.elgato-icons-hdmi--filled-s::before {
 	content: "\ec0e";
 }
-.elgato-icons-logo-github::before {
+.elgato-icons-hdmi-l::before {
 	content: "\ec0f";
 }
-.elgato-icons-logo-gitlab--color::before {
+.elgato-icons-hdmi-m::before {
 	content: "\ec10";
 }
-.elgato-icons-logo-gitlab::before {
+.elgato-icons-hdmi-s::before {
 	content: "\ec11";
 }
-.elgato-icons-logo-gmail--color::before {
+.elgato-icons-hdr-l::before {
 	content: "\ec12";
 }
-.elgato-icons-logo-gmail::before {
+.elgato-icons-headphones--filled-l::before {
 	content: "\ec13";
 }
-.elgato-icons-logo-google--color::before {
+.elgato-icons-headphones--filled-m::before {
 	content: "\ec14";
 }
-.elgato-icons-logo-google-assistant--color::before {
+.elgato-icons-headphones-add--filled-l::before {
 	content: "\ec15";
 }
-.elgato-icons-logo-google-assistant::before {
+.elgato-icons-headphones-add-l::before {
 	content: "\ec16";
 }
-.elgato-icons-logo-google-calendar--color::before {
+.elgato-icons-headphones-l::before {
 	content: "\ec17";
 }
-.elgato-icons-logo-google-calendar::before {
+.elgato-icons-headphones-m::before {
 	content: "\ec18";
 }
-.elgato-icons-logo-google-chat--color::before {
+.elgato-icons-headphones-off--filled-l::before {
 	content: "\ec19";
 }
-.elgato-icons-logo-google-chat::before {
+.elgato-icons-headphones-off-l::before {
 	content: "\ec1a";
 }
-.elgato-icons-logo-google-docs--color::before {
+.elgato-icons-headphones-switch-to--filled-l::before {
 	content: "\ec1b";
 }
-.elgato-icons-logo-google-docs::before {
+.elgato-icons-headphones-switch-to-l::before {
 	content: "\ec1c";
 }
-.elgato-icons-logo-google-drive--color::before {
+.elgato-icons-heart--filled-l::before {
 	content: "\ec1d";
 }
-.elgato-icons-logo-google-drive::before {
+.elgato-icons-heart-l::before {
 	content: "\ec1e";
 }
-.elgato-icons-logo-google-forms--color::before {
+.elgato-icons-heat-sink-l::before {
 	content: "\ec1f";
 }
-.elgato-icons-logo-google-forms::before {
+.elgato-icons-help--filled-l::before {
 	content: "\ec20";
 }
-.elgato-icons-logo-google-gemini--color::before {
+.elgato-icons-help--filled-m::before {
 	content: "\ec21";
 }
-.elgato-icons-logo-google-gemini::before {
+.elgato-icons-help-l::before {
 	content: "\ec22";
 }
-.elgato-icons-logo-google-maps--color::before {
+.elgato-icons-help-m::before {
 	content: "\ec23";
 }
-.elgato-icons-logo-google-maps::before {
+.elgato-icons-hexagon--filled-l::before {
 	content: "\ec24";
 }
-.elgato-icons-logo-google-meet--color::before {
+.elgato-icons-hexagon-l::before {
 	content: "\ec25";
 }
-.elgato-icons-logo-google-meet::before {
+.elgato-icons-home--filled-l::before {
 	content: "\ec26";
 }
-.elgato-icons-logo-google-photos--color::before {
+.elgato-icons-home--filled-m::before {
 	content: "\ec27";
 }
-.elgato-icons-logo-google-photos::before {
+.elgato-icons-home-l::before {
 	content: "\ec28";
 }
-.elgato-icons-logo-google-sheets--color::before {
+.elgato-icons-home-m::before {
 	content: "\ec29";
 }
-.elgato-icons-logo-google-sheets::before {
+.elgato-icons-hotkey--filled-l::before {
 	content: "\ec2a";
 }
-.elgato-icons-logo-google-sites--color::before {
+.elgato-icons-hotkey--filled-m::before {
 	content: "\ec2b";
 }
-.elgato-icons-logo-google-sites::before {
+.elgato-icons-hotkey-l::before {
 	content: "\ec2c";
 }
-.elgato-icons-logo-google-slides--color::before {
+.elgato-icons-hotkey-m::before {
 	content: "\ec2d";
 }
-.elgato-icons-logo-google-slides::before {
+.elgato-icons-image--filled-l::before {
 	content: "\ec2e";
 }
-.elgato-icons-logo-google-translate--color::before {
+.elgato-icons-image--filled-m::before {
 	content: "\ec2f";
 }
-.elgato-icons-logo-google-translate::before {
+.elgato-icons-image-check--filled-l::before {
 	content: "\ec30";
 }
-.elgato-icons-logo-google::before {
+.elgato-icons-image-check-l::before {
 	content: "\ec31";
 }
-.elgato-icons-logo-grok::before {
+.elgato-icons-image-l::before {
 	content: "\ec32";
 }
-.elgato-icons-logo-instagram--color::before {
+.elgato-icons-image-m::before {
 	content: "\ec33";
 }
-.elgato-icons-logo-instagram::before {
+.elgato-icons-inbox--filled-l::before {
 	content: "\ec34";
 }
-.elgato-icons-logo-intel--color::before {
+.elgato-icons-inbox-l::before {
 	content: "\ec35";
 }
-.elgato-icons-logo-intel::before {
+.elgato-icons-info--filled-l::before {
 	content: "\ec36";
 }
-.elgato-icons-logo-kick--color::before {
+.elgato-icons-info--filled-m::before {
 	content: "\ec37";
 }
-.elgato-icons-logo-kick::before {
+.elgato-icons-info--filled-s::before {
 	content: "\ec38";
 }
-.elgato-icons-logo-linear--color::before {
+.elgato-icons-info-l::before {
 	content: "\ec39";
 }
-.elgato-icons-logo-linear::before {
+.elgato-icons-info-m::before {
 	content: "\ec3a";
 }
-.elgato-icons-logo-linkedin--color::before {
+.elgato-icons-info-s::before {
 	content: "\ec3b";
 }
-.elgato-icons-logo-linkedin::before {
+.elgato-icons-infobar--filled-l::before {
 	content: "\ec3c";
 }
-.elgato-icons-logo-lovable--color::before {
+.elgato-icons-infobar--filled-m::before {
 	content: "\ec3d";
 }
-.elgato-icons-logo-lovable::before {
+.elgato-icons-infobar--filled-s::before {
 	content: "\ec3e";
 }
-.elgato-icons-logo-macos::before {
+.elgato-icons-infobar-l::before {
 	content: "\ec3f";
 }
-.elgato-icons-logo-maker-console::before {
+.elgato-icons-infobar-m::before {
 	content: "\ec40";
 }
-.elgato-icons-logo-markdown::before {
+.elgato-icons-infobar-s::before {
 	content: "\ec41";
 }
-.elgato-icons-logo-marketplace--color::before {
+.elgato-icons-iron-low-m::before {
 	content: "\ec42";
 }
-.elgato-icons-logo-marketplace::before {
+.elgato-icons-italic-l::before {
 	content: "\ec43";
 }
-.elgato-icons-logo-matter::before {
+.elgato-icons-italic-m::before {
 	content: "\ec44";
 }
-.elgato-icons-logo-medium::before {
+.elgato-icons-key--filled-l::before {
 	content: "\ec45";
 }
-.elgato-icons-logo-meld-studio::before {
+.elgato-icons-key-l::before {
 	content: "\ec46";
 }
-.elgato-icons-logo-meta--color::before {
+.elgato-icons-key-light--filled-l::before {
 	content: "\ec47";
 }
-.elgato-icons-logo-meta::before {
+.elgato-icons-key-light-air--filled-l::before {
 	content: "\ec48";
 }
-.elgato-icons-logo-microsoft--color::before {
+.elgato-icons-key-light-air-l::before {
 	content: "\ec49";
 }
-.elgato-icons-logo-microsoft-copilot--color::before {
+.elgato-icons-key-light-air-off--filled-l::before {
 	content: "\ec4a";
 }
-.elgato-icons-logo-microsoft-copilot::before {
+.elgato-icons-key-light-air-off-l::before {
 	content: "\ec4b";
 }
-.elgato-icons-logo-microsoft-excel--color::before {
+.elgato-icons-key-light-air-power--filled-l::before {
 	content: "\ec4c";
 }
-.elgato-icons-logo-microsoft-excel::before {
+.elgato-icons-key-light-air-power-l::before {
 	content: "\ec4d";
 }
-.elgato-icons-logo-microsoft-forms--color::before {
+.elgato-icons-key-light-l::before {
 	content: "\ec4e";
 }
-.elgato-icons-logo-microsoft-forms::before {
+.elgato-icons-key-light-mini--filled-l::before {
 	content: "\ec4f";
 }
-.elgato-icons-logo-microsoft-onedrive--color::before {
+.elgato-icons-key-light-mini-l::before {
 	content: "\ec50";
 }
-.elgato-icons-logo-microsoft-onedrive::before {
+.elgato-icons-key-light-mini-off--filled-l::before {
 	content: "\ec51";
 }
-.elgato-icons-logo-microsoft-onenote--color::before {
+.elgato-icons-key-light-mini-off-l::before {
 	content: "\ec52";
 }
-.elgato-icons-logo-microsoft-onenote::before {
+.elgato-icons-key-light-mini-power--filled-l::before {
 	content: "\ec53";
 }
-.elgato-icons-logo-microsoft-outlook--color::before {
+.elgato-icons-key-light-mini-power-l::before {
 	content: "\ec54";
 }
-.elgato-icons-logo-microsoft-outlook::before {
+.elgato-icons-key-light-neo--filled-l::before {
 	content: "\ec55";
 }
-.elgato-icons-logo-microsoft-powerpoint--color::before {
+.elgato-icons-key-light-neo-l::before {
 	content: "\ec56";
 }
-.elgato-icons-logo-microsoft-powerpoint::before {
+.elgato-icons-key-light-neo-off--filled-l::before {
 	content: "\ec57";
 }
-.elgato-icons-logo-microsoft-project--color::before {
+.elgato-icons-key-light-neo-off-l::before {
 	content: "\ec58";
 }
-.elgato-icons-logo-microsoft-project::before {
+.elgato-icons-key-light-neo-power--filled-l::before {
 	content: "\ec59";
 }
-.elgato-icons-logo-microsoft-sharepoint--color::before {
+.elgato-icons-key-light-neo-power-l::before {
 	content: "\ec5a";
 }
-.elgato-icons-logo-microsoft-sharepoint::before {
+.elgato-icons-key-light-off--filled-l::before {
 	content: "\ec5b";
 }
-.elgato-icons-logo-microsoft-teams--color::before {
+.elgato-icons-key-light-off-l::before {
 	content: "\ec5c";
 }
-.elgato-icons-logo-microsoft-teams::before {
+.elgato-icons-key-light-power--filled-l::before {
 	content: "\ec5d";
 }
-.elgato-icons-logo-microsoft-todo--color::before {
+.elgato-icons-key-light-power-l::before {
 	content: "\ec5e";
 }
-.elgato-icons-logo-microsoft-todo::before {
+.elgato-icons-keyboard--filled-l::before {
 	content: "\ec5f";
 }
-.elgato-icons-logo-microsoft-visio--color::before {
+.elgato-icons-keyboard-emoji--filled-l::before {
 	content: "\ec60";
 }
-.elgato-icons-logo-microsoft-visio::before {
+.elgato-icons-keyboard-emoji-l::before {
 	content: "\ec61";
 }
-.elgato-icons-logo-microsoft-word--color::before {
+.elgato-icons-keyboard-l::before {
 	content: "\ec62";
 }
-.elgato-icons-logo-microsoft-word::before {
+.elgato-icons-laptop--filled-l::before {
 	content: "\ec63";
 }
-.elgato-icons-logo-microsoft::before {
+.elgato-icons-laptop-l::before {
 	content: "\ec64";
 }
-.elgato-icons-logo-miro--color::before {
+.elgato-icons-layers--filled-l::before {
 	content: "\ec65";
 }
-.elgato-icons-logo-miro::before {
+.elgato-icons-layers-l::before {
 	content: "\ec66";
 }
-.elgato-icons-logo-ndi::before {
+.elgato-icons-learn--filled-l::before {
 	content: "\ec67";
 }
-.elgato-icons-logo-nintendo-switch--color::before {
+.elgato-icons-learn--filled-m::before {
 	content: "\ec68";
 }
-.elgato-icons-logo-nintendo-switch::before {
+.elgato-icons-learn-l::before {
 	content: "\ec69";
 }
-.elgato-icons-logo-notion--color::before {
+.elgato-icons-learn-m::before {
 	content: "\ec6a";
 }
-.elgato-icons-logo-notion::before {
+.elgato-icons-lens--filled-l::before {
 	content: "\ec6b";
 }
-.elgato-icons-logo-nvidia--color::before {
+.elgato-icons-lens-check--filled-l::before {
 	content: "\ec6c";
 }
-.elgato-icons-logo-nvidia::before {
+.elgato-icons-lens-check-l::before {
 	content: "\ec6d";
 }
-.elgato-icons-logo-obs--color::before {
+.elgato-icons-lens-l::before {
 	content: "\ec6e";
 }
-.elgato-icons-logo-obs--filled::before {
+.elgato-icons-library--filled-l::before {
 	content: "\ec6f";
 }
-.elgato-icons-logo-obs::before {
+.elgato-icons-library-l::before {
 	content: "\ec70";
 }
-.elgato-icons-logo-obsidian--color::before {
+.elgato-icons-light-bulb--filled-m::before {
 	content: "\ec71";
 }
-.elgato-icons-logo-obsidian::before {
+.elgato-icons-light-bulb-m::before {
 	content: "\ec72";
 }
-.elgato-icons-logo-openai::before {
+.elgato-icons-light-strip--filled-l::before {
 	content: "\ec73";
 }
-.elgato-icons-logo-origin--color::before {
+.elgato-icons-light-strip-l::before {
 	content: "\ec74";
 }
-.elgato-icons-logo-origin::before {
+.elgato-icons-light-strip-off--filled-l::before {
 	content: "\ec75";
 }
-.elgato-icons-logo-perplexity--color::before {
+.elgato-icons-light-strip-off-l::before {
 	content: "\ec76";
 }
-.elgato-icons-logo-perplexity::before {
+.elgato-icons-light-strip-power--filled-l::before {
 	content: "\ec77";
 }
-.elgato-icons-logo-pinterest--color::before {
+.elgato-icons-light-strip-power-l::before {
 	content: "\ec78";
 }
-.elgato-icons-logo-pinterest::before {
+.elgato-icons-link-broken-l::before {
 	content: "\ec79";
 }
-.elgato-icons-logo-play-station--color::before {
+.elgato-icons-link-broken-m::before {
 	content: "\ec7a";
 }
-.elgato-icons-logo-play-station::before {
+.elgato-icons-link-l::before {
 	content: "\ec7b";
 }
-.elgato-icons-logo-python--color::before {
+.elgato-icons-link-m::before {
 	content: "\ec7c";
 }
-.elgato-icons-logo-python::before {
+.elgato-icons-list-collapse-m::before {
 	content: "\ec7d";
 }
-.elgato-icons-logo-qt--color::before {
+.elgato-icons-list-expand-m::before {
 	content: "\ec7e";
 }
-.elgato-icons-logo-qt::before {
+.elgato-icons-list-l::before {
 	content: "\ec7f";
 }
-.elgato-icons-logo-raycast--color::before {
+.elgato-icons-list-m::before {
 	content: "\ec80";
 }
-.elgato-icons-logo-raycast::before {
+.elgato-icons-location--filled-l::before {
 	content: "\ec81";
 }
-.elgato-icons-logo-react--color::before {
+.elgato-icons-location-l::before {
 	content: "\ec82";
 }
-.elgato-icons-logo-react::before {
+.elgato-icons-lock--filled-l::before {
 	content: "\ec83";
 }
-.elgato-icons-logo-reddit--color::before {
+.elgato-icons-lock--filled-m::before {
 	content: "\ec84";
 }
-.elgato-icons-logo-reddit::before {
+.elgato-icons-lock-l::before {
 	content: "\ec85";
 }
-.elgato-icons-logo-scuf--color::before {
+.elgato-icons-lock-m::before {
 	content: "\ec86";
 }
-.elgato-icons-logo-scuf::before {
+.elgato-icons-lock-open--filled-l::before {
 	content: "\ec87";
 }
-.elgato-icons-logo-shopify--color::before {
+.elgato-icons-lock-open-l::before {
 	content: "\ec88";
 }
-.elgato-icons-logo-shopify::before {
+.elgato-icons-logo-adobe--color-l::before {
 	content: "\ec89";
 }
-.elgato-icons-logo-siri::before {
+.elgato-icons-logo-adobe-acrobat--color-l::before {
 	content: "\ec8a";
 }
-.elgato-icons-logo-sketch--color::before {
+.elgato-icons-logo-adobe-acrobat-l::before {
 	content: "\ec8b";
 }
-.elgato-icons-logo-sketch::before {
+.elgato-icons-logo-adobe-audition--color-l::before {
 	content: "\ec8c";
 }
-.elgato-icons-logo-skype--color::before {
+.elgato-icons-logo-adobe-audition-l::before {
 	content: "\ec8d";
 }
-.elgato-icons-logo-skype::before {
+.elgato-icons-logo-adobe-character-animator--color-l::before {
 	content: "\ec8e";
 }
-.elgato-icons-logo-slack--color::before {
+.elgato-icons-logo-adobe-character-animator-l::before {
 	content: "\ec8f";
 }
-.elgato-icons-logo-slack::before {
+.elgato-icons-logo-adobe-creative-cloud--color-l::before {
 	content: "\ec90";
 }
-.elgato-icons-logo-snapchat--color::before {
+.elgato-icons-logo-adobe-creative-cloud-l::before {
 	content: "\ec91";
 }
-.elgato-icons-logo-snapchat-check::before {
+.elgato-icons-logo-adobe-express--color-l::before {
 	content: "\ec92";
 }
-.elgato-icons-logo-snapchat-reset::before {
+.elgato-icons-logo-adobe-express-l::before {
 	content: "\ec93";
 }
-.elgato-icons-logo-snapchat-set::before {
+.elgato-icons-logo-adobe-illustrator--color-l::before {
 	content: "\ec94";
 }
-.elgato-icons-logo-snapchat::before {
+.elgato-icons-logo-adobe-illustrator-l::before {
 	content: "\ec95";
 }
-.elgato-icons-logo-spotify--color::before {
+.elgato-icons-logo-adobe-indesign--color-l::before {
 	content: "\ec96";
 }
-.elgato-icons-logo-spotify::before {
+.elgato-icons-logo-adobe-indesign-l::before {
 	content: "\ec97";
 }
-.elgato-icons-logo-steam--color::before {
+.elgato-icons-logo-adobe-l::before {
 	content: "\ec98";
 }
-.elgato-icons-logo-steam-deck--color::before {
+.elgato-icons-logo-adobe-lightroom--color-l::before {
 	content: "\ec99";
 }
-.elgato-icons-logo-steam-deck::before {
+.elgato-icons-logo-adobe-lightroom-l::before {
 	content: "\ec9a";
 }
-.elgato-icons-logo-steam::before {
+.elgato-icons-logo-adobe-media-encoder--color-l::before {
 	content: "\ec9b";
 }
-.elgato-icons-logo-stripe--color::before {
+.elgato-icons-logo-adobe-media-encoder-l::before {
 	content: "\ec9c";
 }
-.elgato-icons-logo-stripe::before {
+.elgato-icons-logo-adobe-photoshop--color-l::before {
 	content: "\ec9d";
 }
-.elgato-icons-logo-studio::before {
+.elgato-icons-logo-adobe-photoshop-l::before {
 	content: "\ec9e";
 }
-.elgato-icons-logo-telegram--color::before {
+.elgato-icons-logo-adobe-premiere-pro--color-l::before {
 	content: "\ec9f";
 }
-.elgato-icons-logo-telegram::before {
+.elgato-icons-logo-adobe-premiere-pro-l::before {
 	content: "\eca0";
 }
-.elgato-icons-logo-threads::before {
+.elgato-icons-logo-after-effects--color-l::before {
 	content: "\eca1";
 }
-.elgato-icons-logo-tiktok--color::before {
+.elgato-icons-logo-after-effects-l::before {
 	content: "\eca2";
 }
-.elgato-icons-logo-tiktok::before {
+.elgato-icons-logo-airtable--color-l::before {
 	content: "\eca3";
 }
-.elgato-icons-logo-tumblr::before {
+.elgato-icons-logo-airtable-l::before {
 	content: "\eca4";
 }
-.elgato-icons-logo-twitch--color::before {
+.elgato-icons-logo-amazon--color-l::before {
 	content: "\eca5";
 }
-.elgato-icons-logo-twitch::before {
+.elgato-icons-logo-amazon-alexa--color-l::before {
 	content: "\eca6";
 }
-.elgato-icons-logo-twitter--color::before {
+.elgato-icons-logo-amazon-alexa-l::before {
 	content: "\eca7";
 }
-.elgato-icons-logo-twitter::before {
+.elgato-icons-logo-amazon-l::before {
 	content: "\eca8";
 }
-.elgato-icons-logo-v0::before {
+.elgato-icons-logo-android--color-l::before {
 	content: "\eca9";
 }
-.elgato-icons-logo-vercel::before {
+.elgato-icons-logo-android-l::before {
 	content: "\ecaa";
 }
-.elgato-icons-logo-visual-studio--color::before {
+.elgato-icons-logo-anthropic-l::before {
 	content: "\ecab";
 }
-.elgato-icons-logo-visual-studio-code--color::before {
+.elgato-icons-logo-apple-home-l::before {
 	content: "\ecac";
 }
-.elgato-icons-logo-visual-studio-code::before {
+.elgato-icons-logo-apple-intelligence--color-l::before {
 	content: "\ecad";
 }
-.elgato-icons-logo-visual-studio::before {
+.elgato-icons-logo-apple-intelligence-l::before {
 	content: "\ecae";
 }
-.elgato-icons-logo-voicemod--color::before {
+.elgato-icons-logo-apple-l::before {
 	content: "\ecaf";
 }
-.elgato-icons-logo-voicemod::before {
+.elgato-icons-logo-apple-music--color-l::before {
 	content: "\ecb0";
 }
-.elgato-icons-logo-vue--color::before {
+.elgato-icons-logo-apple-music-l::before {
 	content: "\ecb1";
 }
-.elgato-icons-logo-vue::before {
+.elgato-icons-logo-asana--color-l::before {
 	content: "\ecb2";
 }
-.elgato-icons-logo-wave-fx--color::before {
+.elgato-icons-logo-asana-l::before {
 	content: "\ecb3";
 }
-.elgato-icons-logo-wave-fx::before {
+.elgato-icons-logo-atlassian-confluence--color-l::before {
 	content: "\ecb4";
 }
-.elgato-icons-logo-webflow--color::before {
+.elgato-icons-logo-atlassian-confluence-l::before {
 	content: "\ecb5";
 }
-.elgato-icons-logo-webflow::before {
+.elgato-icons-logo-atlassian-jira--color-l::before {
 	content: "\ecb6";
 }
-.elgato-icons-logo-webstorm--color::before {
+.elgato-icons-logo-atlassian-jira-l::before {
 	content: "\ecb7";
 }
-.elgato-icons-logo-webstorm::before {
+.elgato-icons-logo-audio-technica-l::before {
 	content: "\ecb8";
 }
-.elgato-icons-logo-wechat::before {
+.elgato-icons-logo-behance-l::before {
 	content: "\ecb9";
 }
-.elgato-icons-logo-windows--color::before {
+.elgato-icons-logo-best-buy--color-l::before {
 	content: "\ecba";
 }
-.elgato-icons-logo-windows::before {
+.elgato-icons-logo-best-buy-l::before {
 	content: "\ecbb";
 }
-.elgato-icons-logo-windsurf--color::before {
+.elgato-icons-logo-bitcoin--color-l::before {
 	content: "\ecbc";
 }
-.elgato-icons-logo-windsurf::before {
+.elgato-icons-logo-bitcoin-l::before {
 	content: "\ecbd";
 }
-.elgato-icons-logo-x::before {
+.elgato-icons-logo-blender--color-l::before {
 	content: "\ecbe";
 }
-.elgato-icons-logo-xbox--color::before {
+.elgato-icons-logo-blender-l::before {
 	content: "\ecbf";
 }
-.elgato-icons-logo-xbox::before {
+.elgato-icons-logo-brave--color-l::before {
 	content: "\ecc0";
 }
-.elgato-icons-logo-youtube--color::before {
+.elgato-icons-logo-brave-l::before {
 	content: "\ecc1";
 }
-.elgato-icons-logo-youtube::before {
+.elgato-icons-logo-calendly--color-l::before {
 	content: "\ecc2";
 }
-.elgato-icons-logo-zapier::before {
+.elgato-icons-logo-calendly-l::before {
 	content: "\ecc3";
 }
-.elgato-icons-logo-zoom--color::before {
+.elgato-icons-logo-camera-hub--color-m::before {
 	content: "\ecc4";
 }
-.elgato-icons-logo-zoom::before {
+.elgato-icons-logo-camera-hub--color-s::before {
 	content: "\ecc5";
 }
-.elgato-icons-logo4kcu--filled::before {
+.elgato-icons-logo-camera-hub--filled-m::before {
 	content: "\ecc6";
 }
-.elgato-icons-logo4kcu::before {
+.elgato-icons-logo-camera-hub--filled-s::before {
 	content: "\ecc7";
 }
-.elgato-icons-lut--filled::before {
+.elgato-icons-logo-camera-hub-m::before {
 	content: "\ecc8";
 }
-.elgato-icons-lut::before {
+.elgato-icons-logo-camera-hub-s::before {
 	content: "\ecc9";
 }
-.elgato-icons-magic-wand--filled::before {
+.elgato-icons-logo-capture--color-m::before {
 	content: "\ecca";
 }
-.elgato-icons-magic-wand::before {
+.elgato-icons-logo-capture--color-s::before {
 	content: "\eccb";
 }
-.elgato-icons-mail--filled::before {
+.elgato-icons-logo-capture--filled-m::before {
 	content: "\eccc";
 }
-.elgato-icons-mail::before {
+.elgato-icons-logo-capture--filled-s::before {
 	content: "\eccd";
 }
-.elgato-icons-margin-decrease::before {
+.elgato-icons-logo-capture-m::before {
 	content: "\ecce";
 }
-.elgato-icons-margin-increase::before {
+.elgato-icons-logo-capture-s::before {
 	content: "\eccf";
 }
-.elgato-icons-margin-set::before {
+.elgato-icons-logo-chrome--color-l::before {
 	content: "\ecd0";
 }
-.elgato-icons-margin-x-decrease::before {
+.elgato-icons-logo-chrome-l::before {
 	content: "\ecd1";
 }
-.elgato-icons-margin-x-increase::before {
+.elgato-icons-logo-claude--color-l::before {
 	content: "\ecd2";
 }
-.elgato-icons-margin-x-set::before {
+.elgato-icons-logo-claude-l::before {
 	content: "\ecd3";
 }
-.elgato-icons-margin-x::before {
+.elgato-icons-logo-control-center--color-m::before {
 	content: "\ecd4";
 }
-.elgato-icons-margin-y-set::before {
+.elgato-icons-logo-control-center--color-s::before {
 	content: "\ecd5";
 }
-.elgato-icons-margin-y::before {
+.elgato-icons-logo-control-center--filled-m::before {
 	content: "\ecd6";
 }
-.elgato-icons-margin::before {
+.elgato-icons-logo-control-center--filled-s::before {
 	content: "\ecd7";
 }
-.elgato-icons-marketplace-brand--filled::before {
+.elgato-icons-logo-control-center-m::before {
 	content: "\ecd8";
 }
-.elgato-icons-marketplace-brand::before {
+.elgato-icons-logo-control-center-s::before {
 	content: "\ecd9";
 }
-.elgato-icons-marketplace-create--filled::before {
+.elgato-icons-logo-corsair-l::before {
 	content: "\ecda";
 }
-.elgato-icons-marketplace-create::before {
+.elgato-icons-logo-css--color-l::before {
 	content: "\ecdb";
 }
-.elgato-icons-marketplace-engage--filled::before {
+.elgato-icons-logo-css-m::before {
 	content: "\ecdc";
 }
-.elgato-icons-marketplace-engage::before {
+.elgato-icons-logo-cursor-l::before {
 	content: "\ecdd";
 }
-.elgato-icons-maximize::before {
+.elgato-icons-logo-deepseek--color-l::before {
 	content: "\ecde";
 }
-.elgato-icons-media-cast--filled::before {
+.elgato-icons-logo-deepseek-l::before {
 	content: "\ecdf";
 }
-.elgato-icons-media-cast::before {
+.elgato-icons-logo-discord--color-l::before {
 	content: "\ece0";
 }
-.elgato-icons-menu::before {
+.elgato-icons-logo-discord-l::before {
 	content: "\ece1";
 }
-.elgato-icons-message--filled::before {
+.elgato-icons-logo-dribbble--color-l::before {
 	content: "\ece2";
 }
-.elgato-icons-message-add--filled::before {
+.elgato-icons-logo-dribbble-l::before {
 	content: "\ece3";
 }
-.elgato-icons-message-add::before {
+.elgato-icons-logo-dropbox--color-l::before {
 	content: "\ece4";
 }
-.elgato-icons-message-check--filled::before {
+.elgato-icons-logo-dropbox-l::before {
 	content: "\ece5";
 }
-.elgato-icons-message-check::before {
+.elgato-icons-logo-eclipse--color-l::before {
 	content: "\ece6";
 }
-.elgato-icons-message-down-to-bottom--filled::before {
+.elgato-icons-logo-eclipse-l::before {
 	content: "\ece7";
 }
-.elgato-icons-message-down-to-bottom::before {
+.elgato-icons-logo-elgato-l::before {
 	content: "\ece8";
 }
-.elgato-icons-message-set--filled::before {
+.elgato-icons-logo-epic-games-l::before {
 	content: "\ece9";
 }
-.elgato-icons-message-set::before {
+.elgato-icons-logo-ethereum--color-l::before {
 	content: "\ecea";
 }
-.elgato-icons-message-up-to-top--filled::before {
+.elgato-icons-logo-ethereum-l::before {
 	content: "\eceb";
 }
-.elgato-icons-message-up-to-top::before {
+.elgato-icons-logo-explorer-l::before {
 	content: "\ecec";
 }
-.elgato-icons-message::before {
+.elgato-icons-logo-explorer-m::before {
 	content: "\eced";
 }
-.elgato-icons-metering-center-weighted--filled::before {
+.elgato-icons-logo-facebook--color-l::before {
 	content: "\ecee";
 }
-.elgato-icons-metering-center-weighted::before {
+.elgato-icons-logo-facebook-l::before {
 	content: "\ecef";
 }
-.elgato-icons-metering-evaluative::before {
+.elgato-icons-logo-figma--color-l::before {
 	content: "\ecf0";
 }
-.elgato-icons-metering-spot--filled::before {
+.elgato-icons-logo-figma-l::before {
 	content: "\ecf1";
 }
-.elgato-icons-metering-spot::before {
+.elgato-icons-logo-firefox-browser--color-l::before {
 	content: "\ecf2";
 }
-.elgato-icons-mic-arm::before {
+.elgato-icons-logo-firefox-browser-l::before {
 	content: "\ecf3";
 }
-.elgato-icons-microphone--filled::before {
+.elgato-icons-logo-frameio--color-l::before {
 	content: "\ecf4";
 }
-.elgato-icons-microphone-off--filled::before {
+.elgato-icons-logo-frameio-l::before {
 	content: "\ecf5";
 }
-.elgato-icons-microphone-off::before {
+.elgato-icons-logo-framer-l::before {
 	content: "\ecf6";
 }
-.elgato-icons-microphone::before {
+.elgato-icons-logo-gamer-sensei--color-l::before {
 	content: "\ecf7";
 }
-.elgato-icons-minimize::before {
+.elgato-icons-logo-gamer-sensei-l::before {
 	content: "\ecf8";
 }
-.elgato-icons-mobile--filled::before {
+.elgato-icons-logo-github-copilot-l::before {
 	content: "\ecf9";
 }
-.elgato-icons-mobile::before {
+.elgato-icons-logo-github-l::before {
 	content: "\ecfa";
 }
-.elgato-icons-money--filled::before {
+.elgato-icons-logo-gitlab--color-l::before {
 	content: "\ecfb";
 }
-.elgato-icons-money::before {
+.elgato-icons-logo-gitlab-l::before {
 	content: "\ecfc";
 }
-.elgato-icons-more-alt::before {
+.elgato-icons-logo-gmail--color-l::before {
 	content: "\ecfd";
 }
-.elgato-icons-more-circle::before {
+.elgato-icons-logo-gmail-l::before {
 	content: "\ecfe";
 }
-.elgato-icons-more::before {
+.elgato-icons-logo-google--color-l::before {
 	content: "\ecff";
 }
-.elgato-icons-mountain--filled::before {
+.elgato-icons-logo-google-assistant--color-l::before {
 	content: "\ed00";
 }
-.elgato-icons-mountain::before {
+.elgato-icons-logo-google-assistant-l::before {
 	content: "\ed01";
 }
-.elgato-icons-mouse--filled::before {
+.elgato-icons-logo-google-calendar--color-l::before {
 	content: "\ed02";
 }
-.elgato-icons-mouse::before {
+.elgato-icons-logo-google-calendar-l::before {
 	content: "\ed03";
 }
-.elgato-icons-move-to-bottom::before {
+.elgato-icons-logo-google-chat--color-l::before {
 	content: "\ed04";
 }
-.elgato-icons-move-to-center::before {
+.elgato-icons-logo-google-chat-l::before {
 	content: "\ed05";
 }
-.elgato-icons-move-to-top::before {
+.elgato-icons-logo-google-docs--color-l::before {
 	content: "\ed06";
 }
-.elgato-icons-move::before {
+.elgato-icons-logo-google-docs-l::before {
 	content: "\ed07";
 }
-.elgato-icons-multi-action--filled::before {
+.elgato-icons-logo-google-drive--color-l::before {
 	content: "\ed08";
 }
-.elgato-icons-multi-action-switch--filled::before {
+.elgato-icons-logo-google-drive-l::before {
 	content: "\ed09";
 }
-.elgato-icons-multi-action-switch::before {
+.elgato-icons-logo-google-forms--color-l::before {
 	content: "\ed0a";
 }
-.elgato-icons-multi-action::before {
+.elgato-icons-logo-google-forms-l::before {
 	content: "\ed0b";
 }
-.elgato-icons-multi-mount::before {
+.elgato-icons-logo-google-gemini--color-l::before {
 	content: "\ed0c";
 }
-.elgato-icons-music--filled::before {
+.elgato-icons-logo-google-gemini-l::before {
 	content: "\ed0d";
 }
-.elgato-icons-music-add--filled::before {
+.elgato-icons-logo-google-l::before {
 	content: "\ed0e";
 }
-.elgato-icons-music-add::before {
+.elgato-icons-logo-google-maps--color-l::before {
 	content: "\ed0f";
 }
-.elgato-icons-music::before {
+.elgato-icons-logo-google-maps-l::before {
 	content: "\ed10";
 }
-.elgato-icons-new--filled::before {
+.elgato-icons-logo-google-meet--color-l::before {
 	content: "\ed11";
 }
-.elgato-icons-new::before {
+.elgato-icons-logo-google-meet-l::before {
 	content: "\ed12";
 }
-.elgato-icons-nfc--filled::before {
+.elgato-icons-logo-google-photos--color-l::before {
 	content: "\ed13";
 }
-.elgato-icons-nfc::before {
+.elgato-icons-logo-google-photos-l::before {
 	content: "\ed14";
 }
-.elgato-icons-night--filled::before {
+.elgato-icons-logo-google-sheets--color-l::before {
 	content: "\ed15";
 }
-.elgato-icons-night::before {
+.elgato-icons-logo-google-sheets-l::before {
 	content: "\ed16";
 }
-.elgato-icons-not-allowed::before {
+.elgato-icons-logo-google-sites--color-l::before {
 	content: "\ed17";
 }
-.elgato-icons-notification--filled::before {
+.elgato-icons-logo-google-sites-l::before {
 	content: "\ed18";
 }
-.elgato-icons-notification-off--filled::before {
+.elgato-icons-logo-google-slides--color-l::before {
 	content: "\ed19";
 }
-.elgato-icons-notification-off::before {
+.elgato-icons-logo-google-slides-l::before {
 	content: "\ed1a";
 }
-.elgato-icons-notification::before {
+.elgato-icons-logo-google-translate--color-l::before {
 	content: "\ed1b";
 }
-.elgato-icons-number0-square--filled::before {
+.elgato-icons-logo-google-translate-l::before {
 	content: "\ed1c";
 }
-.elgato-icons-number0-square::before {
+.elgato-icons-logo-grok-l::before {
 	content: "\ed1d";
 }
-.elgato-icons-number0::before {
+.elgato-icons-logo-html--color-m::before {
 	content: "\ed1e";
 }
-.elgato-icons-number1-square--filled::before {
+.elgato-icons-logo-html-m::before {
 	content: "\ed1f";
 }
-.elgato-icons-number1-square::before {
+.elgato-icons-logo-instagram--color-l::before {
 	content: "\ed20";
 }
-.elgato-icons-number1::before {
+.elgato-icons-logo-instagram-l::before {
 	content: "\ed21";
 }
-.elgato-icons-number10-square--filled::before {
+.elgato-icons-logo-intel--color-l::before {
 	content: "\ed22";
 }
-.elgato-icons-number10-square::before {
+.elgato-icons-logo-intel-l::before {
 	content: "\ed23";
 }
-.elgato-icons-number10::before {
+.elgato-icons-logo-js--color-m::before {
 	content: "\ed24";
 }
-.elgato-icons-number2-square--filled::before {
+.elgato-icons-logo-js-m::before {
 	content: "\ed25";
 }
-.elgato-icons-number2-square::before {
+.elgato-icons-logo-kick--color-l::before {
 	content: "\ed26";
 }
-.elgato-icons-number2::before {
+.elgato-icons-logo-kick-l::before {
 	content: "\ed27";
 }
-.elgato-icons-number3-square--filled::before {
+.elgato-icons-logo-linear--color-l::before {
 	content: "\ed28";
 }
-.elgato-icons-number3-square::before {
+.elgato-icons-logo-linear-l::before {
 	content: "\ed29";
 }
-.elgato-icons-number3::before {
+.elgato-icons-logo-linkedin--color-l::before {
 	content: "\ed2a";
 }
-.elgato-icons-number4-square--filled::before {
+.elgato-icons-logo-linkedin-l::before {
 	content: "\ed2b";
 }
-.elgato-icons-number4-square::before {
+.elgato-icons-logo-lovable--color-l::before {
 	content: "\ed2c";
 }
-.elgato-icons-number4::before {
+.elgato-icons-logo-lovable-l::before {
 	content: "\ed2d";
 }
-.elgato-icons-number5-square--filled::before {
+.elgato-icons-logo-lua--color-m::before {
 	content: "\ed2e";
 }
-.elgato-icons-number5-square::before {
+.elgato-icons-logo-lua-m::before {
 	content: "\ed2f";
 }
-.elgato-icons-number5::before {
+.elgato-icons-logo-macos-l::before {
 	content: "\ed30";
 }
-.elgato-icons-number6-square--filled::before {
+.elgato-icons-logo-maker-console-l::before {
 	content: "\ed31";
 }
-.elgato-icons-number6-square::before {
+.elgato-icons-logo-markdown-l::before {
 	content: "\ed32";
 }
-.elgato-icons-number6::before {
+.elgato-icons-logo-marketplace--color-l::before {
 	content: "\ed33";
 }
-.elgato-icons-number7-square--filled::before {
+.elgato-icons-logo-marketplace-l::before {
 	content: "\ed34";
 }
-.elgato-icons-number7-square::before {
+.elgato-icons-logo-matter-l::before {
 	content: "\ed35";
 }
-.elgato-icons-number7::before {
+.elgato-icons-logo-medium-l::before {
 	content: "\ed36";
 }
-.elgato-icons-number8-square--filled::before {
+.elgato-icons-logo-meld-studio-l::before {
 	content: "\ed37";
 }
-.elgato-icons-number8-square::before {
+.elgato-icons-logo-meta--color-l::before {
 	content: "\ed38";
 }
-.elgato-icons-number8::before {
+.elgato-icons-logo-meta-l::before {
 	content: "\ed39";
 }
-.elgato-icons-number9-square--filled::before {
+.elgato-icons-logo-microsoft--color-l::before {
 	content: "\ed3a";
 }
-.elgato-icons-number9-square::before {
+.elgato-icons-logo-microsoft-copilot--color-l::before {
 	content: "\ed3b";
 }
-.elgato-icons-number9::before {
+.elgato-icons-logo-microsoft-copilot-l::before {
 	content: "\ed3c";
 }
-.elgato-icons-numbered-list::before {
+.elgato-icons-logo-microsoft-excel--color-l::before {
 	content: "\ed3d";
 }
-.elgato-icons-octagon--filled::before {
+.elgato-icons-logo-microsoft-excel-l::before {
 	content: "\ed3e";
 }
-.elgato-icons-octagon::before {
+.elgato-icons-logo-microsoft-forms--color-l::before {
 	content: "\ed3f";
 }
-.elgato-icons-opacity-increase::before {
+.elgato-icons-logo-microsoft-forms-l::before {
 	content: "\ed40";
 }
-.elgato-icons-opacity-set::before {
+.elgato-icons-logo-microsoft-l::before {
 	content: "\ed41";
 }
-.elgato-icons-opacity::before {
+.elgato-icons-logo-microsoft-onedrive--color-l::before {
 	content: "\ed42";
 }
-.elgato-icons-package--filled::before {
+.elgato-icons-logo-microsoft-onedrive-l::before {
 	content: "\ed43";
 }
-.elgato-icons-package::before {
+.elgato-icons-logo-microsoft-onenote--color-l::before {
 	content: "\ed44";
 }
-.elgato-icons-padding--filled::before {
+.elgato-icons-logo-microsoft-onenote-l::before {
 	content: "\ed45";
 }
-.elgato-icons-padding-bottom--filled::before {
+.elgato-icons-logo-microsoft-outlook--color-l::before {
 	content: "\ed46";
 }
-.elgato-icons-padding-bottom::before {
+.elgato-icons-logo-microsoft-outlook-l::before {
 	content: "\ed47";
 }
-.elgato-icons-padding-left--filled::before {
+.elgato-icons-logo-microsoft-powerpoint--color-l::before {
 	content: "\ed48";
 }
-.elgato-icons-padding-left::before {
+.elgato-icons-logo-microsoft-powerpoint-l::before {
 	content: "\ed49";
 }
-.elgato-icons-padding-right--filled::before {
+.elgato-icons-logo-microsoft-project--color-l::before {
 	content: "\ed4a";
 }
-.elgato-icons-padding-right::before {
+.elgato-icons-logo-microsoft-project-l::before {
 	content: "\ed4b";
 }
-.elgato-icons-padding-top--filled::before {
+.elgato-icons-logo-microsoft-sharepoint--color-l::before {
 	content: "\ed4c";
 }
-.elgato-icons-padding-top::before {
+.elgato-icons-logo-microsoft-sharepoint-l::before {
 	content: "\ed4d";
 }
-.elgato-icons-padding-x--filled::before {
+.elgato-icons-logo-microsoft-teams--color-l::before {
 	content: "\ed4e";
 }
-.elgato-icons-padding-x::before {
+.elgato-icons-logo-microsoft-teams-l::before {
 	content: "\ed4f";
 }
-.elgato-icons-padding-y--filled::before {
+.elgato-icons-logo-microsoft-todo--color-l::before {
 	content: "\ed50";
 }
-.elgato-icons-padding-y::before {
+.elgato-icons-logo-microsoft-todo-l::before {
 	content: "\ed51";
 }
-.elgato-icons-padding::before {
+.elgato-icons-logo-microsoft-visio--color-l::before {
 	content: "\ed52";
 }
-.elgato-icons-palette--filled::before {
+.elgato-icons-logo-microsoft-visio-l::before {
 	content: "\ed53";
 }
-.elgato-icons-palette::before {
+.elgato-icons-logo-microsoft-word--color-l::before {
 	content: "\ed54";
 }
-.elgato-icons-panel-left--filled::before {
+.elgato-icons-logo-microsoft-word-l::before {
 	content: "\ed55";
 }
-.elgato-icons-panel-left::before {
+.elgato-icons-logo-miro--color-l::before {
 	content: "\ed56";
 }
-.elgato-icons-panel-right--filled::before {
+.elgato-icons-logo-miro-l::before {
 	content: "\ed57";
 }
-.elgato-icons-panel-right::before {
+.elgato-icons-logo-ndi-l::before {
 	content: "\ed58";
 }
-.elgato-icons-paste--filled::before {
+.elgato-icons-logo-nintendo-switch--color-l::before {
 	content: "\ed59";
 }
-.elgato-icons-paste::before {
+.elgato-icons-logo-nintendo-switch-l::before {
 	content: "\ed5a";
 }
-.elgato-icons-pause--filled::before {
+.elgato-icons-logo-notion--color-l::before {
 	content: "\ed5b";
 }
-.elgato-icons-pause::before {
+.elgato-icons-logo-notion-l::before {
 	content: "\ed5c";
 }
-.elgato-icons-payment--filled::before {
+.elgato-icons-logo-nvidia--color-l::before {
 	content: "\ed5d";
 }
-.elgato-icons-payment::before {
+.elgato-icons-logo-nvidia-l::before {
 	content: "\ed5e";
 }
-.elgato-icons-pen-tool--filled::before {
+.elgato-icons-logo-obs--color-l::before {
 	content: "\ed5f";
 }
-.elgato-icons-pen-tool::before {
+.elgato-icons-logo-obs--color-m::before {
 	content: "\ed60";
 }
-.elgato-icons-pentagon--filled::before {
+.elgato-icons-logo-obs--filled-l::before {
 	content: "\ed61";
 }
-.elgato-icons-pentagon::before {
+.elgato-icons-logo-obs--filled-m::before {
 	content: "\ed62";
 }
-.elgato-icons-person--filled::before {
+.elgato-icons-logo-obs-l::before {
 	content: "\ed63";
 }
-.elgato-icons-person::before {
+.elgato-icons-logo-obs-m::before {
 	content: "\ed64";
 }
-.elgato-icons-phone--filled::before {
+.elgato-icons-logo-obsidian--color-l::before {
 	content: "\ed65";
 }
-.elgato-icons-phone-voice--filled::before {
+.elgato-icons-logo-obsidian-l::before {
 	content: "\ed66";
 }
-.elgato-icons-phone-voice::before {
+.elgato-icons-logo-openai-l::before {
 	content: "\ed67";
 }
-.elgato-icons-phone::before {
+.elgato-icons-logo-origin--color-l::before {
 	content: "\ed68";
 }
-.elgato-icons-photo-grid--filled::before {
+.elgato-icons-logo-origin-l::before {
 	content: "\ed69";
 }
-.elgato-icons-photo-grid::before {
+.elgato-icons-logo-perplexity--color-l::before {
 	content: "\ed6a";
 }
-.elgato-icons-pin--filled::before {
+.elgato-icons-logo-perplexity-l::before {
 	content: "\ed6b";
 }
-.elgato-icons-pin::before {
+.elgato-icons-logo-pinterest--color-l::before {
 	content: "\ed6c";
 }
-.elgato-icons-play--filled::before {
+.elgato-icons-logo-pinterest-l::before {
 	content: "\ed6d";
 }
-.elgato-icons-play-circle--filled::before {
+.elgato-icons-logo-play-station--color-l::before {
 	content: "\ed6e";
 }
-.elgato-icons-play-circle::before {
+.elgato-icons-logo-play-station-l::before {
 	content: "\ed6f";
 }
-.elgato-icons-play-pause--filled::before {
+.elgato-icons-logo-python--color-l::before {
 	content: "\ed70";
 }
-.elgato-icons-play-pause::before {
+.elgato-icons-logo-python-l::before {
 	content: "\ed71";
 }
-.elgato-icons-play::before {
+.elgato-icons-logo-qt--color-l::before {
 	content: "\ed72";
 }
-.elgato-icons-plugin--filled::before {
+.elgato-icons-logo-qt-l::before {
 	content: "\ed73";
 }
-.elgato-icons-plugin::before {
+.elgato-icons-logo-raycast--color-l::before {
 	content: "\ed74";
 }
-.elgato-icons-podcast--filled::before {
+.elgato-icons-logo-raycast-l::before {
 	content: "\ed75";
 }
-.elgato-icons-podcast::before {
+.elgato-icons-logo-react--color-l::before {
 	content: "\ed76";
 }
-.elgato-icons-power-off::before {
+.elgato-icons-logo-react-l::before {
 	content: "\ed77";
 }
-.elgato-icons-power::before {
+.elgato-icons-logo-reddit--color-l::before {
 	content: "\ed78";
 }
-.elgato-icons-presentation--filled::before {
+.elgato-icons-logo-reddit-l::before {
 	content: "\ed79";
 }
-.elgato-icons-presentation-play--filled::before {
+.elgato-icons-logo-scuf--color-l::before {
 	content: "\ed7a";
 }
-.elgato-icons-presentation-play::before {
+.elgato-icons-logo-scuf-l::before {
 	content: "\ed7b";
 }
-.elgato-icons-presentation::before {
+.elgato-icons-logo-shopify--color-l::before {
 	content: "\ed7c";
 }
-.elgato-icons-profile--filled::before {
+.elgato-icons-logo-shopify-l::before {
 	content: "\ed7d";
 }
-.elgato-icons-profile-switch--filled::before {
+.elgato-icons-logo-siri-l::before {
 	content: "\ed7e";
 }
-.elgato-icons-profile-switch::before {
+.elgato-icons-logo-sketch--color-l::before {
 	content: "\ed7f";
 }
-.elgato-icons-profile::before {
+.elgato-icons-logo-sketch-l::before {
 	content: "\ed80";
 }
-.elgato-icons-prompter--filled::before {
+.elgato-icons-logo-skype--color-l::before {
 	content: "\ed81";
 }
-.elgato-icons-prompter::before {
+.elgato-icons-logo-skype-l::before {
 	content: "\ed82";
 }
-.elgato-icons-qr-code-scan::before {
+.elgato-icons-logo-slack--color-l::before {
 	content: "\ed83";
 }
-.elgato-icons-qr-code::before {
+.elgato-icons-logo-slack-l::before {
 	content: "\ed84";
 }
-.elgato-icons-question-mark::before {
+.elgato-icons-logo-snapchat--color-l::before {
 	content: "\ed85";
 }
-.elgato-icons-quote--filled::before {
+.elgato-icons-logo-snapchat-check-l::before {
 	content: "\ed86";
 }
-.elgato-icons-quote::before {
+.elgato-icons-logo-snapchat-l::before {
 	content: "\ed87";
 }
-.elgato-icons-receipt--filled::before {
+.elgato-icons-logo-snapchat-reset-l::before {
 	content: "\ed88";
 }
-.elgato-icons-receipt::before {
+.elgato-icons-logo-snapchat-set-l::before {
 	content: "\ed89";
 }
-.elgato-icons-record--filled::before {
+.elgato-icons-logo-spotify--color-l::before {
 	content: "\ed8a";
 }
-.elgato-icons-record::before {
+.elgato-icons-logo-spotify-l::before {
 	content: "\ed8b";
 }
-.elgato-icons-redo::before {
+.elgato-icons-logo-steam--color-l::before {
 	content: "\ed8c";
 }
-.elgato-icons-reflect::before {
+.elgato-icons-logo-steam-deck--color-l::before {
 	content: "\ed8d";
 }
-.elgato-icons-refresh::before {
+.elgato-icons-logo-steam-deck-l::before {
 	content: "\ed8e";
 }
-.elgato-icons-reset::before {
+.elgato-icons-logo-steam-l::before {
 	content: "\ed8f";
 }
-.elgato-icons-ring-light--filled::before {
+.elgato-icons-logo-stream-deck--color-m::before {
 	content: "\ed90";
 }
-.elgato-icons-ring-light-off--filled::before {
+.elgato-icons-logo-stream-deck--color-s::before {
 	content: "\ed91";
 }
-.elgato-icons-ring-light-off::before {
+.elgato-icons-logo-stream-deck-m::before {
 	content: "\ed92";
 }
-.elgato-icons-ring-light-power--filled::before {
+.elgato-icons-logo-stream-deck-s::before {
 	content: "\ed93";
 }
-.elgato-icons-ring-light-power::before {
+.elgato-icons-logo-streamelements--color-m::before {
 	content: "\ed94";
 }
-.elgato-icons-ring-light::before {
+.elgato-icons-logo-streamelements-m::before {
 	content: "\ed95";
 }
-.elgato-icons-rocket--filled::before {
+.elgato-icons-logo-streamlabs--color-m::before {
 	content: "\ed96";
 }
-.elgato-icons-rocket::before {
+.elgato-icons-logo-streamlabs-m::before {
 	content: "\ed97";
 }
-.elgato-icons-rotate::before {
+.elgato-icons-logo-stripe--color-l::before {
 	content: "\ed98";
 }
-.elgato-icons-rotate180::before {
+.elgato-icons-logo-stripe-l::before {
 	content: "\ed99";
 }
-.elgato-icons-rotate360::before {
+.elgato-icons-logo-studio--color-m::before {
 	content: "\ed9a";
 }
-.elgato-icons-rss--filled::before {
+.elgato-icons-logo-studio--color-s::before {
 	content: "\ed9b";
 }
-.elgato-icons-rss::before {
+.elgato-icons-logo-studio-l::before {
 	content: "\ed9c";
 }
-.elgato-icons-save--filled::before {
+.elgato-icons-logo-studio-m::before {
 	content: "\ed9d";
 }
-.elgato-icons-save::before {
+.elgato-icons-logo-studio-s::before {
 	content: "\ed9e";
 }
-.elgato-icons-scene-collection--filled::before {
+.elgato-icons-logo-telegram--color-l::before {
 	content: "\ed9f";
 }
-.elgato-icons-scene-collection::before {
+.elgato-icons-logo-telegram-l::before {
 	content: "\eda0";
 }
-.elgato-icons-screen-rotation--filled::before {
+.elgato-icons-logo-threads-l::before {
 	content: "\eda1";
 }
-.elgato-icons-screen-rotation::before {
+.elgato-icons-logo-tiktok--color-l::before {
 	content: "\eda2";
 }
-.elgato-icons-screenshot::before {
+.elgato-icons-logo-tiktok-l::before {
 	content: "\eda3";
 }
-.elgato-icons-scroll::before {
+.elgato-icons-logo-tumblr-l::before {
 	content: "\eda4";
 }
-.elgato-icons-search--filled::before {
+.elgato-icons-logo-twitch--color-l::before {
 	content: "\eda5";
 }
-.elgato-icons-search::before {
+.elgato-icons-logo-twitch-l::before {
 	content: "\eda6";
 }
-.elgato-icons-security--filled::before {
+.elgato-icons-logo-twitter--color-l::before {
 	content: "\eda7";
 }
-.elgato-icons-security-camera--filled::before {
+.elgato-icons-logo-twitter-l::before {
 	content: "\eda8";
 }
-.elgato-icons-security-camera::before {
+.elgato-icons-logo-v0-l::before {
 	content: "\eda9";
 }
-.elgato-icons-security::before {
+.elgato-icons-logo-vercel-l::before {
 	content: "\edaa";
 }
-.elgato-icons-server::before {
+.elgato-icons-logo-visual-studio--color-l::before {
 	content: "\edab";
 }
-.elgato-icons-settings--filled::before {
+.elgato-icons-logo-visual-studio-code--color-l::before {
 	content: "\edac";
 }
-.elgato-icons-settings-adjust-focus-check::before {
+.elgato-icons-logo-visual-studio-code-l::before {
 	content: "\edad";
 }
-.elgato-icons-settings-adjust-focus::before {
+.elgato-icons-logo-visual-studio-l::before {
 	content: "\edae";
 }
-.elgato-icons-settings-adjust::before {
+.elgato-icons-logo-voicemod--color-l::before {
 	content: "\edaf";
 }
-.elgato-icons-settings::before {
+.elgato-icons-logo-voicemod-l::before {
 	content: "\edb0";
 }
-.elgato-icons-shapes--filled::before {
+.elgato-icons-logo-vue--color-l::before {
 	content: "\edb1";
 }
-.elgato-icons-shapes::before {
+.elgato-icons-logo-vue-l::before {
 	content: "\edb2";
 }
-.elgato-icons-share-web--filled::before {
+.elgato-icons-logo-wave-cast--color-m::before {
 	content: "\edb3";
 }
-.elgato-icons-share-web::before {
+.elgato-icons-logo-wave-cast--color-s::before {
 	content: "\edb4";
 }
-.elgato-icons-share::before {
+.elgato-icons-logo-wave-cast-m::before {
 	content: "\edb5";
 }
-.elgato-icons-sheet--filled::before {
+.elgato-icons-logo-wave-cast-s::before {
 	content: "\edb6";
 }
-.elgato-icons-sheet::before {
+.elgato-icons-logo-wave-fx--color-l::before {
 	content: "\edb7";
 }
-.elgato-icons-shield--filled::before {
+.elgato-icons-logo-wave-fx--color-m::before {
 	content: "\edb8";
 }
-.elgato-icons-shield-off--filled::before {
+.elgato-icons-logo-wave-fx-l::before {
 	content: "\edb9";
 }
-.elgato-icons-shield-off::before {
+.elgato-icons-logo-wave-fx-m::before {
 	content: "\edba";
 }
-.elgato-icons-shield::before {
+.elgato-icons-logo-wave-link--color-m::before {
 	content: "\edbb";
 }
-.elgato-icons-shuffle::before {
+.elgato-icons-logo-wave-link--color-s::before {
 	content: "\edbc";
 }
-.elgato-icons-shutter::before {
+.elgato-icons-logo-wave-link-m::before {
 	content: "\edbd";
 }
-.elgato-icons-sign-in::before {
+.elgato-icons-logo-wave-link-s::before {
 	content: "\edbe";
 }
-.elgato-icons-sign-out::before {
+.elgato-icons-logo-webflow--color-l::before {
 	content: "\edbf";
 }
-.elgato-icons-signal-off::before {
+.elgato-icons-logo-webflow-l::before {
 	content: "\edc0";
 }
-.elgato-icons-signal::before {
+.elgato-icons-logo-webstorm--color-l::before {
 	content: "\edc1";
 }
-.elgato-icons-signal1::before {
+.elgato-icons-logo-webstorm-l::before {
 	content: "\edc2";
 }
-.elgato-icons-signal2::before {
+.elgato-icons-logo-wechat-l::before {
 	content: "\edc3";
 }
-.elgato-icons-signal3::before {
+.elgato-icons-logo-windows--color-l::before {
 	content: "\edc4";
 }
-.elgato-icons-skip-back--filled::before {
+.elgato-icons-logo-windows-l::before {
 	content: "\edc5";
 }
-.elgato-icons-skip-back::before {
+.elgato-icons-logo-windsurf--color-l::before {
 	content: "\edc6";
 }
-.elgato-icons-skip-forward--filled::before {
+.elgato-icons-logo-windsurf-l::before {
 	content: "\edc7";
 }
-.elgato-icons-skip-forward::before {
+.elgato-icons-logo-x-l::before {
 	content: "\edc8";
 }
-.elgato-icons-snorkel--filled::before {
+.elgato-icons-logo-xbox--color-l::before {
 	content: "\edc9";
 }
-.elgato-icons-snorkel::before {
+.elgato-icons-logo-xbox-l::before {
 	content: "\edca";
 }
-.elgato-icons-sort::before {
+.elgato-icons-logo-youtube--color-l::before {
 	content: "\edcb";
 }
-.elgato-icons-sound-effect-add::before {
+.elgato-icons-logo-youtube-l::before {
 	content: "\edcc";
 }
-.elgato-icons-sound-effect-off::before {
+.elgato-icons-logo-zapier-l::before {
 	content: "\edcd";
 }
-.elgato-icons-sound-effect::before {
+.elgato-icons-logo-zoom--color-l::before {
 	content: "\edce";
 }
-.elgato-icons-speaker--filled::before {
+.elgato-icons-logo-zoom-l::before {
 	content: "\edcf";
 }
-.elgato-icons-speaker-switch-to--filled::before {
+.elgato-icons-logo4kcu--filled-l::before {
 	content: "\edd0";
 }
-.elgato-icons-speaker-switch-to::before {
+.elgato-icons-logo4kcu--filled-s::before {
 	content: "\edd1";
 }
-.elgato-icons-speaker::before {
+.elgato-icons-logo4kcu-l::before {
 	content: "\edd2";
 }
-.elgato-icons-speech--filled::before {
+.elgato-icons-logo4kcu-s::before {
 	content: "\edd3";
 }
-.elgato-icons-speech::before {
+.elgato-icons-lut--filled-l::before {
 	content: "\edd4";
 }
-.elgato-icons-square--filled::before {
+.elgato-icons-lut--filled-m::before {
 	content: "\edd5";
 }
-.elgato-icons-square-dashed::before {
+.elgato-icons-lut--filled-s::before {
 	content: "\edd6";
 }
-.elgato-icons-square::before {
+.elgato-icons-lut-l::before {
 	content: "\edd7";
 }
-.elgato-icons-star--filled::before {
+.elgato-icons-lut-m::before {
 	content: "\edd8";
 }
-.elgato-icons-star::before {
+.elgato-icons-lut-s::before {
 	content: "\edd9";
 }
-.elgato-icons-starbursts--filled::before {
+.elgato-icons-machine-wash-cold-delicate-m::before {
 	content: "\edda";
 }
-.elgato-icons-starbursts::before {
+.elgato-icons-magic-wand--filled-l::before {
 	content: "\eddb";
 }
-.elgato-icons-stop--filled::before {
+.elgato-icons-magic-wand-l::before {
 	content: "\eddc";
 }
-.elgato-icons-stop::before {
+.elgato-icons-mail--filled-l::before {
 	content: "\eddd";
 }
-.elgato-icons-store--filled::before {
+.elgato-icons-mail--filled-m::before {
 	content: "\edde";
 }
-.elgato-icons-store::before {
+.elgato-icons-mail-l::before {
 	content: "\eddf";
 }
-.elgato-icons-stream--filled::before {
+.elgato-icons-mail-m::before {
 	content: "\ede0";
 }
-.elgato-icons-stream-deck-key--filled::before {
+.elgato-icons-margin-decrease-l::before {
 	content: "\ede1";
 }
-.elgato-icons-stream-deck-key-bottom--filled::before {
+.elgato-icons-margin-increase-l::before {
 	content: "\ede2";
 }
-.elgato-icons-stream-deck-key-bottom::before {
+.elgato-icons-margin-l::before {
 	content: "\ede3";
 }
-.elgato-icons-stream-deck-key-middle--filled::before {
+.elgato-icons-margin-set-l::before {
 	content: "\ede4";
 }
-.elgato-icons-stream-deck-key-middle::before {
+.elgato-icons-margin-x-decrease-l::before {
 	content: "\ede5";
 }
-.elgato-icons-stream-deck-key-top--filled::before {
+.elgato-icons-margin-x-increase-l::before {
 	content: "\ede6";
 }
-.elgato-icons-stream-deck-key-top::before {
+.elgato-icons-margin-x-l::before {
 	content: "\ede7";
 }
-.elgato-icons-stream-deck-key::before {
+.elgato-icons-margin-x-set-l::before {
 	content: "\ede8";
 }
-.elgato-icons-stream-deck-mini--filled::before {
+.elgato-icons-margin-y-l::before {
 	content: "\ede9";
 }
-.elgato-icons-stream-deck-mini::before {
+.elgato-icons-margin-y-set-l::before {
 	content: "\edea";
 }
-.elgato-icons-stream-deck-mk2--filled::before {
+.elgato-icons-marketplace-brand--filled-l::before {
 	content: "\edeb";
 }
-.elgato-icons-stream-deck-mk2::before {
+.elgato-icons-marketplace-brand-l::before {
 	content: "\edec";
 }
-.elgato-icons-stream-deck-neo--filled::before {
+.elgato-icons-marketplace-create--filled-l::before {
 	content: "\eded";
 }
-.elgato-icons-stream-deck-neo::before {
+.elgato-icons-marketplace-create-l::before {
 	content: "\edee";
 }
-.elgato-icons-stream-deck-pedal--filled::before {
+.elgato-icons-marketplace-engage--filled-l::before {
 	content: "\edef";
 }
-.elgato-icons-stream-deck-pedal::before {
+.elgato-icons-marketplace-engage-l::before {
 	content: "\edf0";
 }
-.elgato-icons-stream-deck-plus--filled::before {
+.elgato-icons-maximize-l::before {
 	content: "\edf1";
 }
-.elgato-icons-stream-deck-plus::before {
+.elgato-icons-maximize-m::before {
 	content: "\edf2";
 }
-.elgato-icons-stream-off--filled::before {
+.elgato-icons-maximize-s::before {
 	content: "\edf3";
 }
-.elgato-icons-stream-off::before {
+.elgato-icons-media-cast--filled-l::before {
 	content: "\edf4";
 }
-.elgato-icons-stream-switch-to--filled::before {
+.elgato-icons-media-cast--filled-m::before {
 	content: "\edf5";
 }
-.elgato-icons-stream-switch-to::before {
+.elgato-icons-media-cast-l::before {
 	content: "\edf6";
 }
-.elgato-icons-stream::before {
+.elgato-icons-media-cast-m::before {
 	content: "\edf7";
 }
-.elgato-icons-strikethrough::before {
+.elgato-icons-menu-l::before {
 	content: "\edf8";
 }
-.elgato-icons-subtract-circle--filled::before {
+.elgato-icons-menu-m::before {
 	content: "\edf9";
 }
-.elgato-icons-subtract-circle::before {
+.elgato-icons-message--filled-l::before {
 	content: "\edfa";
 }
-.elgato-icons-subtract::before {
+.elgato-icons-message--filled-m::before {
 	content: "\edfb";
 }
-.elgato-icons-sync::before {
+.elgato-icons-message--filled-s::before {
 	content: "\edfc";
 }
-.elgato-icons-tag--filled::before {
+.elgato-icons-message-add--filled-l::before {
 	content: "\edfd";
 }
-.elgato-icons-tag::before {
+.elgato-icons-message-add-l::before {
 	content: "\edfe";
 }
-.elgato-icons-tap-double::before {
+.elgato-icons-message-check--filled-l::before {
 	content: "\edff";
 }
-.elgato-icons-tap-hold::before {
+.elgato-icons-message-check-l::before {
 	content: "\ee00";
 }
-.elgato-icons-tap::before {
+.elgato-icons-message-down-to-bottom--filled-l::before {
 	content: "\ee01";
 }
-.elgato-icons-temperature--filled::before {
+.elgato-icons-message-down-to-bottom-l::before {
 	content: "\ee02";
 }
-.elgato-icons-temperature-cool--filled::before {
+.elgato-icons-message-l::before {
 	content: "\ee03";
 }
-.elgato-icons-temperature-cool::before {
+.elgato-icons-message-m::before {
 	content: "\ee04";
 }
-.elgato-icons-temperature-warm--filled::before {
+.elgato-icons-message-s::before {
 	content: "\ee05";
 }
-.elgato-icons-temperature-warm::before {
+.elgato-icons-message-set--filled-l::before {
 	content: "\ee06";
 }
-.elgato-icons-temperature::before {
+.elgato-icons-message-set-l::before {
 	content: "\ee07";
 }
-.elgato-icons-template--filled::before {
+.elgato-icons-message-up-to-top--filled-l::before {
 	content: "\ee08";
 }
-.elgato-icons-template::before {
+.elgato-icons-message-up-to-top-l::before {
 	content: "\ee09";
 }
-.elgato-icons-terminal--filled::before {
+.elgato-icons-metering-center-weighted--filled-l::before {
 	content: "\ee0a";
 }
-.elgato-icons-terminal::before {
+.elgato-icons-metering-center-weighted-l::before {
 	content: "\ee0b";
 }
-.elgato-icons-test-tube::before {
+.elgato-icons-metering-evaluative-l::before {
 	content: "\ee0c";
 }
-.elgato-icons-text-align-center::before {
+.elgato-icons-metering-spot--filled-l::before {
 	content: "\ee0d";
 }
-.elgato-icons-text-align-left::before {
+.elgato-icons-metering-spot-l::before {
 	content: "\ee0e";
 }
-.elgato-icons-text-align-right::before {
+.elgato-icons-mic-arm-l::before {
 	content: "\ee0f";
 }
-.elgato-icons-text-down-to-bottom::before {
+.elgato-icons-microphone--filled-l::before {
 	content: "\ee10";
 }
-.elgato-icons-text-line-spacing-set::before {
+.elgato-icons-microphone--filled-m::before {
 	content: "\ee11";
 }
-.elgato-icons-text-line-spacing::before {
+.elgato-icons-microphone--filled-s::before {
 	content: "\ee12";
 }
-.elgato-icons-text-next::before {
+.elgato-icons-microphone-l::before {
 	content: "\ee13";
 }
-.elgato-icons-text-previous::before {
+.elgato-icons-microphone-m::before {
 	content: "\ee14";
 }
-.elgato-icons-text-set::before {
+.elgato-icons-microphone-off--filled-l::before {
 	content: "\ee15";
 }
-.elgato-icons-text-size-decrease::before {
+.elgato-icons-microphone-off--filled-m::before {
 	content: "\ee16";
 }
-.elgato-icons-text-size-increase::before {
+.elgato-icons-microphone-off-l::before {
 	content: "\ee17";
 }
-.elgato-icons-text-size-set::before {
+.elgato-icons-microphone-off-m::before {
 	content: "\ee18";
 }
-.elgato-icons-text-size::before {
+.elgato-icons-microphone-s::before {
 	content: "\ee19";
 }
-.elgato-icons-text-up-to-top::before {
+.elgato-icons-minimize-l::before {
 	content: "\ee1a";
 }
-.elgato-icons-text::before {
+.elgato-icons-minimize-m::before {
 	content: "\ee1b";
 }
-.elgato-icons-thumb-down--filled::before {
+.elgato-icons-minimize-s::before {
 	content: "\ee1c";
 }
-.elgato-icons-thumb-down::before {
+.elgato-icons-mixer--filled-m::before {
 	content: "\ee1d";
 }
-.elgato-icons-thumb-up--filled::before {
+.elgato-icons-mixer-m::before {
 	content: "\ee1e";
 }
-.elgato-icons-thumb-up::before {
+.elgato-icons-mobile--filled-l::before {
 	content: "\ee1f";
 }
-.elgato-icons-time--filled::before {
+.elgato-icons-mobile--filled-m::before {
 	content: "\ee20";
 }
-.elgato-icons-time-delay::before {
+.elgato-icons-mobile-l::before {
 	content: "\ee21";
 }
-.elgato-icons-time-history::before {
+.elgato-icons-mobile-m::before {
 	content: "\ee22";
 }
-.elgato-icons-time::before {
+.elgato-icons-money--filled-l::before {
 	content: "\ee23";
 }
-.elgato-icons-timer--filled::before {
+.elgato-icons-money-l::before {
 	content: "\ee24";
 }
-.elgato-icons-timer::before {
+.elgato-icons-more-alt-l::before {
 	content: "\ee25";
 }
-.elgato-icons-tint--filled::before {
+.elgato-icons-more-alt-m::before {
 	content: "\ee26";
 }
-.elgato-icons-tint::before {
+.elgato-icons-more-circle-l::before {
 	content: "\ee27";
 }
-.elgato-icons-token--filled::before {
+.elgato-icons-more-l::before {
 	content: "\ee28";
 }
-.elgato-icons-token::before {
+.elgato-icons-more-m::before {
 	content: "\ee29";
 }
-.elgato-icons-train--filled::before {
+.elgato-icons-mountain--filled-l::before {
 	content: "\ee2a";
 }
-.elgato-icons-train::before {
+.elgato-icons-mountain-l::before {
 	content: "\ee2b";
 }
-.elgato-icons-transition--filled::before {
+.elgato-icons-mouse--filled-l::before {
 	content: "\ee2c";
 }
-.elgato-icons-transition::before {
+.elgato-icons-mouse-l::before {
 	content: "\ee2d";
 }
-.elgato-icons-trash--filled::before {
+.elgato-icons-move-l::before {
 	content: "\ee2e";
 }
-.elgato-icons-trash::before {
+.elgato-icons-move-to-bottom-l::before {
 	content: "\ee2f";
 }
-.elgato-icons-triangle--filled::before {
+.elgato-icons-move-to-center-l::before {
 	content: "\ee30";
 }
-.elgato-icons-triangle::before {
+.elgato-icons-move-to-top-l::before {
 	content: "\ee31";
 }
-.elgato-icons-underline::before {
+.elgato-icons-multi-action--filled-l::before {
 	content: "\ee32";
 }
-.elgato-icons-undo::before {
+.elgato-icons-multi-action--filled-m::before {
 	content: "\ee33";
 }
-.elgato-icons-unordered-list::before {
+.elgato-icons-multi-action-l::before {
 	content: "\ee34";
 }
-.elgato-icons-upload::before {
+.elgato-icons-multi-action-m::before {
 	content: "\ee35";
 }
-.elgato-icons-usb::before {
+.elgato-icons-multi-action-switch--filled-l::before {
 	content: "\ee36";
 }
-.elgato-icons-verified--filled::before {
+.elgato-icons-multi-action-switch--filled-m::before {
 	content: "\ee37";
 }
-.elgato-icons-verified::before {
+.elgato-icons-multi-action-switch-l::before {
 	content: "\ee38";
 }
-.elgato-icons-video--filled::before {
+.elgato-icons-multi-action-switch-m::before {
 	content: "\ee39";
 }
-.elgato-icons-video::before {
+.elgato-icons-multi-mount-l::before {
 	content: "\ee3a";
 }
-.elgato-icons-view--filled::before {
+.elgato-icons-multi-mount-m::before {
 	content: "\ee3b";
 }
-.elgato-icons-view-off--filled::before {
+.elgato-icons-music--filled-l::before {
 	content: "\ee3c";
 }
-.elgato-icons-view-off::before {
+.elgato-icons-music--filled-m::before {
 	content: "\ee3d";
 }
-.elgato-icons-view::before {
+.elgato-icons-music--filled-s::before {
 	content: "\ee3e";
 }
-.elgato-icons-voice-sync--filled::before {
+.elgato-icons-music-add--filled-l::before {
 	content: "\ee3f";
 }
-.elgato-icons-voice-sync::before {
+.elgato-icons-music-add-l::before {
 	content: "\ee40";
 }
-.elgato-icons-voice-tune--filled::before {
+.elgato-icons-music-l::before {
 	content: "\ee41";
 }
-.elgato-icons-voice-tune::before {
+.elgato-icons-music-m::before {
 	content: "\ee42";
 }
-.elgato-icons-volume--filled::before {
+.elgato-icons-music-s::before {
 	content: "\ee43";
 }
-.elgato-icons-volume-down--filled::before {
+.elgato-icons-network--filled-m::before {
 	content: "\ee44";
 }
-.elgato-icons-volume-down::before {
+.elgato-icons-network-m::before {
 	content: "\ee45";
 }
-.elgato-icons-volume-mixer--filled::before {
+.elgato-icons-new--filled-l::before {
 	content: "\ee46";
 }
-.elgato-icons-volume-mixer::before {
+.elgato-icons-new-l::before {
 	content: "\ee47";
 }
-.elgato-icons-volume-muted--filled::before {
+.elgato-icons-nfc--filled-l::before {
 	content: "\ee48";
 }
-.elgato-icons-volume-muted::before {
+.elgato-icons-nfc-l::before {
 	content: "\ee49";
 }
-.elgato-icons-volume::before {
+.elgato-icons-night--filled-l::before {
 	content: "\ee4a";
 }
-.elgato-icons-volume0--filled::before {
+.elgato-icons-night--filled-m::before {
 	content: "\ee4b";
 }
-.elgato-icons-volume0::before {
+.elgato-icons-night-l::before {
 	content: "\ee4c";
 }
-.elgato-icons-volume1--filled::before {
+.elgato-icons-night-m::before {
 	content: "\ee4d";
 }
-.elgato-icons-volume1::before {
+.elgato-icons-not-allowed-l::before {
 	content: "\ee4e";
 }
-.elgato-icons-volume2--filled::before {
+.elgato-icons-notification--filled-l::before {
 	content: "\ee4f";
 }
-.elgato-icons-volume2::before {
+.elgato-icons-notification--filled-m::before {
 	content: "\ee50";
 }
-.elgato-icons-warning--filled::before {
+.elgato-icons-notification-l::before {
 	content: "\ee51";
 }
-.elgato-icons-warning::before {
+.elgato-icons-notification-m::before {
 	content: "\ee52";
 }
-.elgato-icons-wave-dx--filled::before {
+.elgato-icons-notification-off--filled-l::before {
 	content: "\ee53";
 }
-.elgato-icons-wave-dx::before {
+.elgato-icons-notification-off-l::before {
 	content: "\ee54";
 }
-.elgato-icons-wave-mic--filled::before {
+.elgato-icons-number0-l::before {
 	content: "\ee55";
 }
-.elgato-icons-wave-mic::before {
+.elgato-icons-number0-square--filled-l::before {
 	content: "\ee56";
 }
-.elgato-icons-wave-neo--filled::before {
+.elgato-icons-number0-square-l::before {
 	content: "\ee57";
 }
-.elgato-icons-wave-neo::before {
+.elgato-icons-number1-l::before {
 	content: "\ee58";
 }
-.elgato-icons-wave-xlr--filled::before {
+.elgato-icons-number1-square--filled-l::before {
 	content: "\ee59";
 }
-.elgato-icons-wave-xlr::before {
+.elgato-icons-number1-square-l::before {
 	content: "\ee5a";
 }
-.elgato-icons-wave::before {
+.elgato-icons-number10-l::before {
 	content: "\ee5b";
 }
-.elgato-icons-weather--filled::before {
+.elgato-icons-number10-square--filled-l::before {
 	content: "\ee5c";
 }
-.elgato-icons-weather::before {
+.elgato-icons-number10-square-l::before {
 	content: "\ee5d";
 }
-.elgato-icons-webcam--filled::before {
+.elgato-icons-number2-l::before {
 	content: "\ee5e";
 }
-.elgato-icons-webcam::before {
+.elgato-icons-number2-square--filled-l::before {
 	content: "\ee5f";
 }
-.elgato-icons-widget--filled::before {
+.elgato-icons-number2-square-l::before {
 	content: "\ee60";
 }
-.elgato-icons-widget::before {
+.elgato-icons-number3-l::before {
 	content: "\ee61";
 }
-.elgato-icons-wifi-off::before {
+.elgato-icons-number3-square--filled-l::before {
 	content: "\ee62";
 }
-.elgato-icons-wifi::before {
+.elgato-icons-number3-square-l::before {
 	content: "\ee63";
 }
-.elgato-icons-wifi1::before {
+.elgato-icons-number4-l::before {
 	content: "\ee64";
 }
-.elgato-icons-wifi2::before {
+.elgato-icons-number4-square--filled-l::before {
 	content: "\ee65";
 }
-.elgato-icons-wifi3::before {
+.elgato-icons-number4-square-l::before {
 	content: "\ee66";
 }
-.elgato-icons-window--filled::before {
+.elgato-icons-number5-l::before {
 	content: "\ee67";
 }
-.elgato-icons-window-check--filled::before {
+.elgato-icons-number5-square--filled-l::before {
 	content: "\ee68";
 }
-.elgato-icons-window-check::before {
+.elgato-icons-number5-square-l::before {
 	content: "\ee69";
 }
-.elgato-icons-window-foreground--filled::before {
+.elgato-icons-number6-l::before {
 	content: "\ee6a";
 }
-.elgato-icons-window-foreground::before {
+.elgato-icons-number6-square--filled-l::before {
 	content: "\ee6b";
 }
-.elgato-icons-window-to-prompter--filled::before {
+.elgato-icons-number6-square-l::before {
 	content: "\ee6c";
 }
-.elgato-icons-window-to-prompter::before {
+.elgato-icons-number7-l::before {
 	content: "\ee6d";
 }
-.elgato-icons-window::before {
+.elgato-icons-number7-square--filled-l::before {
 	content: "\ee6e";
 }
-.elgato-icons-wrench--filled::before {
+.elgato-icons-number7-square-l::before {
 	content: "\ee6f";
 }
-.elgato-icons-wrench::before {
+.elgato-icons-number8-l::before {
 	content: "\ee70";
 }
-.elgato-icons-xlr--filled::before {
+.elgato-icons-number8-square--filled-l::before {
 	content: "\ee71";
 }
-.elgato-icons-xlr::before {
+.elgato-icons-number8-square-l::before {
 	content: "\ee72";
 }
-.elgato-icons-zoom-in--filled::before {
+.elgato-icons-number9-l::before {
 	content: "\ee73";
 }
-.elgato-icons-zoom-in::before {
+.elgato-icons-number9-square--filled-l::before {
 	content: "\ee74";
 }
-.elgato-icons-zoom-out--filled::before {
+.elgato-icons-number9-square-l::before {
 	content: "\ee75";
 }
-.elgato-icons-zoom-out::before {
+.elgato-icons-numbered-list-l::before {
 	content: "\ee76";
+}
+.elgato-icons-numbered-list-m::before {
+	content: "\ee77";
+}
+.elgato-icons-numbers-m::before {
+	content: "\ee78";
+}
+.elgato-icons-octagon--filled-l::before {
+	content: "\ee79";
+}
+.elgato-icons-octagon-l::before {
+	content: "\ee7a";
+}
+.elgato-icons-opacity-increase-l::before {
+	content: "\ee7b";
+}
+.elgato-icons-opacity-l::before {
+	content: "\ee7c";
+}
+.elgato-icons-opacity-set-l::before {
+	content: "\ee7d";
+}
+.elgato-icons-package--filled-l::before {
+	content: "\ee7e";
+}
+.elgato-icons-package-l::before {
+	content: "\ee7f";
+}
+.elgato-icons-padding--filled-l::before {
+	content: "\ee80";
+}
+.elgato-icons-padding-bottom--filled-l::before {
+	content: "\ee81";
+}
+.elgato-icons-padding-bottom-l::before {
+	content: "\ee82";
+}
+.elgato-icons-padding-l::before {
+	content: "\ee83";
+}
+.elgato-icons-padding-left--filled-l::before {
+	content: "\ee84";
+}
+.elgato-icons-padding-left-l::before {
+	content: "\ee85";
+}
+.elgato-icons-padding-right--filled-l::before {
+	content: "\ee86";
+}
+.elgato-icons-padding-right-l::before {
+	content: "\ee87";
+}
+.elgato-icons-padding-top--filled-l::before {
+	content: "\ee88";
+}
+.elgato-icons-padding-top-l::before {
+	content: "\ee89";
+}
+.elgato-icons-padding-x--filled-l::before {
+	content: "\ee8a";
+}
+.elgato-icons-padding-x-l::before {
+	content: "\ee8b";
+}
+.elgato-icons-padding-y--filled-l::before {
+	content: "\ee8c";
+}
+.elgato-icons-padding-y-l::before {
+	content: "\ee8d";
+}
+.elgato-icons-palette--filled-l::before {
+	content: "\ee8e";
+}
+.elgato-icons-palette--filled-m::before {
+	content: "\ee8f";
+}
+.elgato-icons-palette-l::before {
+	content: "\ee90";
+}
+.elgato-icons-palette-m::before {
+	content: "\ee91";
+}
+.elgato-icons-panel-left--filled-l::before {
+	content: "\ee92";
+}
+.elgato-icons-panel-left--filled-m::before {
+	content: "\ee93";
+}
+.elgato-icons-panel-left-l::before {
+	content: "\ee94";
+}
+.elgato-icons-panel-left-m::before {
+	content: "\ee95";
+}
+.elgato-icons-panel-right--filled-l::before {
+	content: "\ee96";
+}
+.elgato-icons-panel-right--filled-m::before {
+	content: "\ee97";
+}
+.elgato-icons-panel-right-l::before {
+	content: "\ee98";
+}
+.elgato-icons-panel-right-m::before {
+	content: "\ee99";
+}
+.elgato-icons-panel-split-horizontal-m::before {
+	content: "\ee9a";
+}
+.elgato-icons-panel-split-vertical-m::before {
+	content: "\ee9b";
+}
+.elgato-icons-paste--filled-l::before {
+	content: "\ee9c";
+}
+.elgato-icons-paste-l::before {
+	content: "\ee9d";
+}
+.elgato-icons-pause--filled-l::before {
+	content: "\ee9e";
+}
+.elgato-icons-pause--filled-m::before {
+	content: "\ee9f";
+}
+.elgato-icons-pause-l::before {
+	content: "\eea0";
+}
+.elgato-icons-pause-m::before {
+	content: "\eea1";
+}
+.elgato-icons-payment--filled-l::before {
+	content: "\eea2";
+}
+.elgato-icons-payment--filled-m::before {
+	content: "\eea3";
+}
+.elgato-icons-payment-l::before {
+	content: "\eea4";
+}
+.elgato-icons-payment-m::before {
+	content: "\eea5";
+}
+.elgato-icons-pen-tool--filled-l::before {
+	content: "\eea6";
+}
+.elgato-icons-pen-tool-l::before {
+	content: "\eea7";
+}
+.elgato-icons-pentagon--filled-l::before {
+	content: "\eea8";
+}
+.elgato-icons-pentagon-l::before {
+	content: "\eea9";
+}
+.elgato-icons-person--filled-l::before {
+	content: "\eeaa";
+}
+.elgato-icons-person--filled-m::before {
+	content: "\eeab";
+}
+.elgato-icons-person-l::before {
+	content: "\eeac";
+}
+.elgato-icons-person-m::before {
+	content: "\eead";
+}
+.elgato-icons-phone--filled-l::before {
+	content: "\eeae";
+}
+.elgato-icons-phone-l::before {
+	content: "\eeaf";
+}
+.elgato-icons-phone-voice--filled-l::before {
+	content: "\eeb0";
+}
+.elgato-icons-phone-voice-l::before {
+	content: "\eeb1";
+}
+.elgato-icons-photo-grid--filled-l::before {
+	content: "\eeb2";
+}
+.elgato-icons-photo-grid-l::before {
+	content: "\eeb3";
+}
+.elgato-icons-pin--filled-l::before {
+	content: "\eeb4";
+}
+.elgato-icons-pin--filled-m::before {
+	content: "\eeb5";
+}
+.elgato-icons-pin--filled-s::before {
+	content: "\eeb6";
+}
+.elgato-icons-pin-l::before {
+	content: "\eeb7";
+}
+.elgato-icons-pin-m::before {
+	content: "\eeb8";
+}
+.elgato-icons-pin-s::before {
+	content: "\eeb9";
+}
+.elgato-icons-play--filled-l::before {
+	content: "\eeba";
+}
+.elgato-icons-play--filled-m::before {
+	content: "\eebb";
+}
+.elgato-icons-play-circle--filled-l::before {
+	content: "\eebc";
+}
+.elgato-icons-play-circle-l::before {
+	content: "\eebd";
+}
+.elgato-icons-play-l::before {
+	content: "\eebe";
+}
+.elgato-icons-play-m::before {
+	content: "\eebf";
+}
+.elgato-icons-play-pause--filled-l::before {
+	content: "\eec0";
+}
+.elgato-icons-play-pause-l::before {
+	content: "\eec1";
+}
+.elgato-icons-plugin--filled-l::before {
+	content: "\eec2";
+}
+.elgato-icons-plugin--filled-m::before {
+	content: "\eec3";
+}
+.elgato-icons-plugin-l::before {
+	content: "\eec4";
+}
+.elgato-icons-plugin-m::before {
+	content: "\eec5";
+}
+.elgato-icons-podcast--filled-l::before {
+	content: "\eec6";
+}
+.elgato-icons-podcast-l::before {
+	content: "\eec7";
+}
+.elgato-icons-power-l::before {
+	content: "\eec8";
+}
+.elgato-icons-power-off-l::before {
+	content: "\eec9";
+}
+.elgato-icons-presentation--filled-l::before {
+	content: "\eeca";
+}
+.elgato-icons-presentation-l::before {
+	content: "\eecb";
+}
+.elgato-icons-presentation-play--filled-l::before {
+	content: "\eecc";
+}
+.elgato-icons-presentation-play-l::before {
+	content: "\eecd";
+}
+.elgato-icons-profile--filled-l::before {
+	content: "\eece";
+}
+.elgato-icons-profile--filled-m::before {
+	content: "\eecf";
+}
+.elgato-icons-profile-l::before {
+	content: "\eed0";
+}
+.elgato-icons-profile-m::before {
+	content: "\eed1";
+}
+.elgato-icons-profile-switch--filled-l::before {
+	content: "\eed2";
+}
+.elgato-icons-profile-switch--filled-m::before {
+	content: "\eed3";
+}
+.elgato-icons-profile-switch-l::before {
+	content: "\eed4";
+}
+.elgato-icons-profile-switch-m::before {
+	content: "\eed5";
+}
+.elgato-icons-prompter--filled-l::before {
+	content: "\eed6";
+}
+.elgato-icons-prompter-l::before {
+	content: "\eed7";
+}
+.elgato-icons-qr-code-l::before {
+	content: "\eed8";
+}
+.elgato-icons-qr-code-scan-l::before {
+	content: "\eed9";
+}
+.elgato-icons-question-mark-l::before {
+	content: "\eeda";
+}
+.elgato-icons-question-mark-s::before {
+	content: "\eedb";
+}
+.elgato-icons-quote--filled-l::before {
+	content: "\eedc";
+}
+.elgato-icons-quote-l::before {
+	content: "\eedd";
+}
+.elgato-icons-receipt--filled-l::before {
+	content: "\eede";
+}
+.elgato-icons-receipt--filled-m::before {
+	content: "\eedf";
+}
+.elgato-icons-receipt-l::before {
+	content: "\eee0";
+}
+.elgato-icons-receipt-m::before {
+	content: "\eee1";
+}
+.elgato-icons-record--filled-l::before {
+	content: "\eee2";
+}
+.elgato-icons-record-l::before {
+	content: "\eee3";
+}
+.elgato-icons-redo-l::before {
+	content: "\eee4";
+}
+.elgato-icons-reflect-l::before {
+	content: "\eee5";
+}
+.elgato-icons-refresh-l::before {
+	content: "\eee6";
+}
+.elgato-icons-reset-l::before {
+	content: "\eee7";
+}
+.elgato-icons-reset-m::before {
+	content: "\eee8";
+}
+.elgato-icons-ring-light--filled-l::before {
+	content: "\eee9";
+}
+.elgato-icons-ring-light-l::before {
+	content: "\eeea";
+}
+.elgato-icons-ring-light-off--filled-l::before {
+	content: "\eeeb";
+}
+.elgato-icons-ring-light-off-l::before {
+	content: "\eeec";
+}
+.elgato-icons-ring-light-power--filled-l::before {
+	content: "\eeed";
+}
+.elgato-icons-ring-light-power-l::before {
+	content: "\eeee";
+}
+.elgato-icons-rocket--filled-l::before {
+	content: "\eeef";
+}
+.elgato-icons-rocket-l::before {
+	content: "\eef0";
+}
+.elgato-icons-rotate-l::before {
+	content: "\eef1";
+}
+.elgato-icons-rotate180-l::before {
+	content: "\eef2";
+}
+.elgato-icons-rotate360-l::before {
+	content: "\eef3";
+}
+.elgato-icons-rss--filled-l::before {
+	content: "\eef4";
+}
+.elgato-icons-rss-l::before {
+	content: "\eef5";
+}
+.elgato-icons-save--filled-l::before {
+	content: "\eef6";
+}
+.elgato-icons-save--filled-m::before {
+	content: "\eef7";
+}
+.elgato-icons-save-l::before {
+	content: "\eef8";
+}
+.elgato-icons-save-m::before {
+	content: "\eef9";
+}
+.elgato-icons-scene-collection--filled-l::before {
+	content: "\eefa";
+}
+.elgato-icons-scene-collection--filled-m::before {
+	content: "\eefb";
+}
+.elgato-icons-scene-collection-l::before {
+	content: "\eefc";
+}
+.elgato-icons-scene-collection-m::before {
+	content: "\eefd";
+}
+.elgato-icons-screen-rotation--filled-l::before {
+	content: "\eefe";
+}
+.elgato-icons-screen-rotation-l::before {
+	content: "\eeff";
+}
+.elgato-icons-screenshot-l::before {
+	content: "\ef00";
+}
+.elgato-icons-scroll-l::before {
+	content: "\ef01";
+}
+.elgato-icons-search--filled-l::before {
+	content: "\ef02";
+}
+.elgato-icons-search--filled-m::before {
+	content: "\ef03";
+}
+.elgato-icons-search--filled-s::before {
+	content: "\ef04";
+}
+.elgato-icons-search-l::before {
+	content: "\ef05";
+}
+.elgato-icons-search-m::before {
+	content: "\ef06";
+}
+.elgato-icons-search-s::before {
+	content: "\ef07";
+}
+.elgato-icons-security--filled-l::before {
+	content: "\ef08";
+}
+.elgato-icons-security--filled-m::before {
+	content: "\ef09";
+}
+.elgato-icons-security-camera--filled-l::before {
+	content: "\ef0a";
+}
+.elgato-icons-security-camera-l::before {
+	content: "\ef0b";
+}
+.elgato-icons-security-l::before {
+	content: "\ef0c";
+}
+.elgato-icons-security-m::before {
+	content: "\ef0d";
+}
+.elgato-icons-send--filled-m::before {
+	content: "\ef0e";
+}
+.elgato-icons-send-m::before {
+	content: "\ef0f";
+}
+.elgato-icons-server-l::before {
+	content: "\ef10";
+}
+.elgato-icons-settings--filled-l::before {
+	content: "\ef11";
+}
+.elgato-icons-settings--filled-m::before {
+	content: "\ef12";
+}
+.elgato-icons-settings-adjust-focus-check-l::before {
+	content: "\ef13";
+}
+.elgato-icons-settings-adjust-focus-l::before {
+	content: "\ef14";
+}
+.elgato-icons-settings-adjust-l::before {
+	content: "\ef15";
+}
+.elgato-icons-settings-l::before {
+	content: "\ef16";
+}
+.elgato-icons-settings-m::before {
+	content: "\ef17";
+}
+.elgato-icons-shapes--filled-l::before {
+	content: "\ef18";
+}
+.elgato-icons-shapes--filled-m::before {
+	content: "\ef19";
+}
+.elgato-icons-shapes-l::before {
+	content: "\ef1a";
+}
+.elgato-icons-shapes-m::before {
+	content: "\ef1b";
+}
+.elgato-icons-share-l::before {
+	content: "\ef1c";
+}
+.elgato-icons-share-m::before {
+	content: "\ef1d";
+}
+.elgato-icons-share-web--filled-l::before {
+	content: "\ef1e";
+}
+.elgato-icons-share-web-l::before {
+	content: "\ef1f";
+}
+.elgato-icons-sheet--filled-l::before {
+	content: "\ef20";
+}
+.elgato-icons-sheet-l::before {
+	content: "\ef21";
+}
+.elgato-icons-shield--filled-l::before {
+	content: "\ef22";
+}
+.elgato-icons-shield-l::before {
+	content: "\ef23";
+}
+.elgato-icons-shield-off--filled-l::before {
+	content: "\ef24";
+}
+.elgato-icons-shield-off-l::before {
+	content: "\ef25";
+}
+.elgato-icons-shuffle-l::before {
+	content: "\ef26";
+}
+.elgato-icons-shutter-l::before {
+	content: "\ef27";
+}
+.elgato-icons-shutter-m::before {
+	content: "\ef28";
+}
+.elgato-icons-sign-in-l::before {
+	content: "\ef29";
+}
+.elgato-icons-sign-in-m::before {
+	content: "\ef2a";
+}
+.elgato-icons-sign-out-l::before {
+	content: "\ef2b";
+}
+.elgato-icons-sign-out-m::before {
+	content: "\ef2c";
+}
+.elgato-icons-signal-l::before {
+	content: "\ef2d";
+}
+.elgato-icons-signal-m::before {
+	content: "\ef2e";
+}
+.elgato-icons-signal-off-l::before {
+	content: "\ef2f";
+}
+.elgato-icons-signal-off-m::before {
+	content: "\ef30";
+}
+.elgato-icons-signal1-l::before {
+	content: "\ef31";
+}
+.elgato-icons-signal1-m::before {
+	content: "\ef32";
+}
+.elgato-icons-signal2-l::before {
+	content: "\ef33";
+}
+.elgato-icons-signal2-m::before {
+	content: "\ef34";
+}
+.elgato-icons-signal3-l::before {
+	content: "\ef35";
+}
+.elgato-icons-signal3-m::before {
+	content: "\ef36";
+}
+.elgato-icons-skip-back--filled-l::before {
+	content: "\ef37";
+}
+.elgato-icons-skip-back-l::before {
+	content: "\ef38";
+}
+.elgato-icons-skip-forward--filled-l::before {
+	content: "\ef39";
+}
+.elgato-icons-skip-forward-l::before {
+	content: "\ef3a";
+}
+.elgato-icons-snorkel--filled-l::before {
+	content: "\ef3b";
+}
+.elgato-icons-snorkel-l::before {
+	content: "\ef3c";
+}
+.elgato-icons-sort-l::before {
+	content: "\ef3d";
+}
+.elgato-icons-sort-m::before {
+	content: "\ef3e";
+}
+.elgato-icons-sort-s::before {
+	content: "\ef3f";
+}
+.elgato-icons-sound-effect-add-l::before {
+	content: "\ef40";
+}
+.elgato-icons-sound-effect-l::before {
+	content: "\ef41";
+}
+.elgato-icons-sound-effect-m::before {
+	content: "\ef42";
+}
+.elgato-icons-sound-effect-off-l::before {
+	content: "\ef43";
+}
+.elgato-icons-sound-effect-off-m::before {
+	content: "\ef44";
+}
+.elgato-icons-sound-effect-off-s::before {
+	content: "\ef45";
+}
+.elgato-icons-sound-effect-s::before {
+	content: "\ef46";
+}
+.elgato-icons-speaker--filled-l::before {
+	content: "\ef47";
+}
+.elgato-icons-speaker--filled-m::before {
+	content: "\ef48";
+}
+.elgato-icons-speaker-l::before {
+	content: "\ef49";
+}
+.elgato-icons-speaker-m::before {
+	content: "\ef4a";
+}
+.elgato-icons-speaker-switch-to--filled-l::before {
+	content: "\ef4b";
+}
+.elgato-icons-speaker-switch-to-l::before {
+	content: "\ef4c";
+}
+.elgato-icons-speech--filled-l::before {
+	content: "\ef4d";
+}
+.elgato-icons-speech--filled-m::before {
+	content: "\ef4e";
+}
+.elgato-icons-speech-l::before {
+	content: "\ef4f";
+}
+.elgato-icons-speech-m::before {
+	content: "\ef50";
+}
+.elgato-icons-square--filled-l::before {
+	content: "\ef51";
+}
+.elgato-icons-square--filled-s::before {
+	content: "\ef52";
+}
+.elgato-icons-square-dashed-l::before {
+	content: "\ef53";
+}
+.elgato-icons-square-dashed-m::before {
+	content: "\ef54";
+}
+.elgato-icons-square-dashed-s::before {
+	content: "\ef55";
+}
+.elgato-icons-square-l::before {
+	content: "\ef56";
+}
+.elgato-icons-square-s::before {
+	content: "\ef57";
+}
+.elgato-icons-star--filled-l::before {
+	content: "\ef58";
+}
+.elgato-icons-star--filled-m::before {
+	content: "\ef59";
+}
+.elgato-icons-star-l::before {
+	content: "\ef5a";
+}
+.elgato-icons-star-m::before {
+	content: "\ef5b";
+}
+.elgato-icons-starbursts--filled-l::before {
+	content: "\ef5c";
+}
+.elgato-icons-starbursts-l::before {
+	content: "\ef5d";
+}
+.elgato-icons-stop--filled-l::before {
+	content: "\ef5e";
+}
+.elgato-icons-stop--filled-m::before {
+	content: "\ef5f";
+}
+.elgato-icons-stop-l::before {
+	content: "\ef60";
+}
+.elgato-icons-stop-m::before {
+	content: "\ef61";
+}
+.elgato-icons-store--filled-l::before {
+	content: "\ef62";
+}
+.elgato-icons-store--filled-m::before {
+	content: "\ef63";
+}
+.elgato-icons-store-l::before {
+	content: "\ef64";
+}
+.elgato-icons-store-m::before {
+	content: "\ef65";
+}
+.elgato-icons-stream--filled-l::before {
+	content: "\ef66";
+}
+.elgato-icons-stream--filled-m::before {
+	content: "\ef67";
+}
+.elgato-icons-stream-deck-key--filled-l::before {
+	content: "\ef68";
+}
+.elgato-icons-stream-deck-key--filled-m::before {
+	content: "\ef69";
+}
+.elgato-icons-stream-deck-key--filled-s::before {
+	content: "\ef6a";
+}
+.elgato-icons-stream-deck-key-bottom--filled-l::before {
+	content: "\ef6b";
+}
+.elgato-icons-stream-deck-key-bottom--filled-m::before {
+	content: "\ef6c";
+}
+.elgato-icons-stream-deck-key-bottom--filled-s::before {
+	content: "\ef6d";
+}
+.elgato-icons-stream-deck-key-bottom-l::before {
+	content: "\ef6e";
+}
+.elgato-icons-stream-deck-key-bottom-m::before {
+	content: "\ef6f";
+}
+.elgato-icons-stream-deck-key-bottom-s::before {
+	content: "\ef70";
+}
+.elgato-icons-stream-deck-key-l::before {
+	content: "\ef71";
+}
+.elgato-icons-stream-deck-key-m::before {
+	content: "\ef72";
+}
+.elgato-icons-stream-deck-key-middle--filled-l::before {
+	content: "\ef73";
+}
+.elgato-icons-stream-deck-key-middle--filled-m::before {
+	content: "\ef74";
+}
+.elgato-icons-stream-deck-key-middle--filled-s::before {
+	content: "\ef75";
+}
+.elgato-icons-stream-deck-key-middle-l::before {
+	content: "\ef76";
+}
+.elgato-icons-stream-deck-key-middle-m::before {
+	content: "\ef77";
+}
+.elgato-icons-stream-deck-key-middle-s::before {
+	content: "\ef78";
+}
+.elgato-icons-stream-deck-key-s::before {
+	content: "\ef79";
+}
+.elgato-icons-stream-deck-key-top--filled-l::before {
+	content: "\ef7a";
+}
+.elgato-icons-stream-deck-key-top--filled-m::before {
+	content: "\ef7b";
+}
+.elgato-icons-stream-deck-key-top--filled-s::before {
+	content: "\ef7c";
+}
+.elgato-icons-stream-deck-key-top-l::before {
+	content: "\ef7d";
+}
+.elgato-icons-stream-deck-key-top-m::before {
+	content: "\ef7e";
+}
+.elgato-icons-stream-deck-key-top-s::before {
+	content: "\ef7f";
+}
+.elgato-icons-stream-deck-mini--filled-l::before {
+	content: "\ef80";
+}
+.elgato-icons-stream-deck-mini-l::before {
+	content: "\ef81";
+}
+.elgato-icons-stream-deck-mk2--filled-l::before {
+	content: "\ef82";
+}
+.elgato-icons-stream-deck-mk2-l::before {
+	content: "\ef83";
+}
+.elgato-icons-stream-deck-neo--filled-l::before {
+	content: "\ef84";
+}
+.elgato-icons-stream-deck-neo-l::before {
+	content: "\ef85";
+}
+.elgato-icons-stream-deck-pedal--filled-l::before {
+	content: "\ef86";
+}
+.elgato-icons-stream-deck-pedal-l::before {
+	content: "\ef87";
+}
+.elgato-icons-stream-deck-plus--filled-l::before {
+	content: "\ef88";
+}
+.elgato-icons-stream-deck-plus-l::before {
+	content: "\ef89";
+}
+.elgato-icons-stream-deck-virtual-m::before {
+	content: "\ef8a";
+}
+.elgato-icons-stream-l::before {
+	content: "\ef8b";
+}
+.elgato-icons-stream-m::before {
+	content: "\ef8c";
+}
+.elgato-icons-stream-off--filled-l::before {
+	content: "\ef8d";
+}
+.elgato-icons-stream-off-l::before {
+	content: "\ef8e";
+}
+.elgato-icons-stream-switch-to--filled-l::before {
+	content: "\ef8f";
+}
+.elgato-icons-stream-switch-to-l::before {
+	content: "\ef90";
+}
+.elgato-icons-strikethrough-l::before {
+	content: "\ef91";
+}
+.elgato-icons-strikethrough-m::before {
+	content: "\ef92";
+}
+.elgato-icons-subscription--filled-m::before {
+	content: "\ef93";
+}
+.elgato-icons-subscription-m::before {
+	content: "\ef94";
+}
+.elgato-icons-subtract-circle--filled-l::before {
+	content: "\ef95";
+}
+.elgato-icons-subtract-circle-l::before {
+	content: "\ef96";
+}
+.elgato-icons-subtract-l::before {
+	content: "\ef97";
+}
+.elgato-icons-subtract-m::before {
+	content: "\ef98";
+}
+.elgato-icons-sync-l::before {
+	content: "\ef99";
+}
+.elgato-icons-system--filled-m::before {
+	content: "\ef9a";
+}
+.elgato-icons-system-m::before {
+	content: "\ef9b";
+}
+.elgato-icons-tag--filled-l::before {
+	content: "\ef9c";
+}
+.elgato-icons-tag--filled-m::before {
+	content: "\ef9d";
+}
+.elgato-icons-tag-l::before {
+	content: "\ef9e";
+}
+.elgato-icons-tag-m::before {
+	content: "\ef9f";
+}
+.elgato-icons-tap-double-l::before {
+	content: "\efa0";
+}
+.elgato-icons-tap-hold-l::before {
+	content: "\efa1";
+}
+.elgato-icons-tap-l::before {
+	content: "\efa2";
+}
+.elgato-icons-temperature--filled-l::before {
+	content: "\efa3";
+}
+.elgato-icons-temperature-cool--filled-l::before {
+	content: "\efa4";
+}
+.elgato-icons-temperature-cool-l::before {
+	content: "\efa5";
+}
+.elgato-icons-temperature-l::before {
+	content: "\efa6";
+}
+.elgato-icons-temperature-warm--filled-l::before {
+	content: "\efa7";
+}
+.elgato-icons-temperature-warm-l::before {
+	content: "\efa8";
+}
+.elgato-icons-template--filled-l::before {
+	content: "\efa9";
+}
+.elgato-icons-template-l::before {
+	content: "\efaa";
+}
+.elgato-icons-terminal--filled-l::before {
+	content: "\efab";
+}
+.elgato-icons-terminal--filled-m::before {
+	content: "\efac";
+}
+.elgato-icons-terminal-l::before {
+	content: "\efad";
+}
+.elgato-icons-terminal-m::before {
+	content: "\efae";
+}
+.elgato-icons-test-tube-l::before {
+	content: "\efaf";
+}
+.elgato-icons-test-tube-m::before {
+	content: "\efb0";
+}
+.elgato-icons-text-align-center-l::before {
+	content: "\efb1";
+}
+.elgato-icons-text-align-left-l::before {
+	content: "\efb2";
+}
+.elgato-icons-text-align-right-l::before {
+	content: "\efb3";
+}
+.elgato-icons-text-down-to-bottom-l::before {
+	content: "\efb4";
+}
+.elgato-icons-text-l::before {
+	content: "\efb5";
+}
+.elgato-icons-text-line-spacing-l::before {
+	content: "\efb6";
+}
+.elgato-icons-text-line-spacing-set-l::before {
+	content: "\efb7";
+}
+.elgato-icons-text-next-l::before {
+	content: "\efb8";
+}
+.elgato-icons-text-previous-l::before {
+	content: "\efb9";
+}
+.elgato-icons-text-set-l::before {
+	content: "\efba";
+}
+.elgato-icons-text-size-decrease-l::before {
+	content: "\efbb";
+}
+.elgato-icons-text-size-increase-l::before {
+	content: "\efbc";
+}
+.elgato-icons-text-size-l::before {
+	content: "\efbd";
+}
+.elgato-icons-text-size-set-l::before {
+	content: "\efbe";
+}
+.elgato-icons-text-up-to-top-l::before {
+	content: "\efbf";
+}
+.elgato-icons-thumb-down--filled-l::before {
+	content: "\efc0";
+}
+.elgato-icons-thumb-down-l::before {
+	content: "\efc1";
+}
+.elgato-icons-thumb-up--filled-l::before {
+	content: "\efc2";
+}
+.elgato-icons-thumb-up-l::before {
+	content: "\efc3";
+}
+.elgato-icons-time--filled-l::before {
+	content: "\efc4";
+}
+.elgato-icons-time--filled-s::before {
+	content: "\efc5";
+}
+.elgato-icons-time-delay-l::before {
+	content: "\efc6";
+}
+.elgato-icons-time-history-l::before {
+	content: "\efc7";
+}
+.elgato-icons-time-history-m::before {
+	content: "\efc8";
+}
+.elgato-icons-time-l::before {
+	content: "\efc9";
+}
+.elgato-icons-time-s::before {
+	content: "\efca";
+}
+.elgato-icons-timer--filled-l::before {
+	content: "\efcb";
+}
+.elgato-icons-timer-l::before {
+	content: "\efcc";
+}
+.elgato-icons-tint--filled-l::before {
+	content: "\efcd";
+}
+.elgato-icons-tint-l::before {
+	content: "\efce";
+}
+.elgato-icons-token--filled-l::before {
+	content: "\efcf";
+}
+.elgato-icons-token--filled-m::before {
+	content: "\efd0";
+}
+.elgato-icons-token-l::before {
+	content: "\efd1";
+}
+.elgato-icons-token-m::before {
+	content: "\efd2";
+}
+.elgato-icons-train--filled-l::before {
+	content: "\efd3";
+}
+.elgato-icons-train-l::before {
+	content: "\efd4";
+}
+.elgato-icons-transition--filled-l::before {
+	content: "\efd5";
+}
+.elgato-icons-transition--filled-m::before {
+	content: "\efd6";
+}
+.elgato-icons-transition-l::before {
+	content: "\efd7";
+}
+.elgato-icons-transition-m::before {
+	content: "\efd8";
+}
+.elgato-icons-trash--filled-l::before {
+	content: "\efd9";
+}
+.elgato-icons-trash--filled-m::before {
+	content: "\efda";
+}
+.elgato-icons-trash-l::before {
+	content: "\efdb";
+}
+.elgato-icons-trash-m::before {
+	content: "\efdc";
+}
+.elgato-icons-triangle--filled-l::before {
+	content: "\efdd";
+}
+.elgato-icons-triangle-l::before {
+	content: "\efde";
+}
+.elgato-icons-tumble-dry-no-m::before {
+	content: "\efdf";
+}
+.elgato-icons-underline-l::before {
+	content: "\efe0";
+}
+.elgato-icons-underline-m::before {
+	content: "\efe1";
+}
+.elgato-icons-undo-l::before {
+	content: "\efe2";
+}
+.elgato-icons-unordered-list-l::before {
+	content: "\efe3";
+}
+.elgato-icons-unordered-list-m::before {
+	content: "\efe4";
+}
+.elgato-icons-upload-l::before {
+	content: "\efe5";
+}
+.elgato-icons-upload-m::before {
+	content: "\efe6";
+}
+.elgato-icons-usb-c--filled-m::before {
+	content: "\efe7";
+}
+.elgato-icons-usb-c-m::before {
+	content: "\efe8";
+}
+.elgato-icons-usb-l::before {
+	content: "\efe9";
+}
+.elgato-icons-usb-m::before {
+	content: "\efea";
+}
+.elgato-icons-verified--filled-l::before {
+	content: "\efeb";
+}
+.elgato-icons-verified--filled-s::before {
+	content: "\efec";
+}
+.elgato-icons-verified-l::before {
+	content: "\efed";
+}
+.elgato-icons-verified-s::before {
+	content: "\efee";
+}
+.elgato-icons-video--filled-l::before {
+	content: "\efef";
+}
+.elgato-icons-video--filled-m::before {
+	content: "\eff0";
+}
+.elgato-icons-video-l::before {
+	content: "\eff1";
+}
+.elgato-icons-video-m::before {
+	content: "\eff2";
+}
+.elgato-icons-view--filled-l::before {
+	content: "\eff3";
+}
+.elgato-icons-view--filled-m::before {
+	content: "\eff4";
+}
+.elgato-icons-view-hidden-m::before {
+	content: "\eff5";
+}
+.elgato-icons-view-l::before {
+	content: "\eff6";
+}
+.elgato-icons-view-m::before {
+	content: "\eff7";
+}
+.elgato-icons-view-off--filled-l::before {
+	content: "\eff8";
+}
+.elgato-icons-view-off--filled-m::before {
+	content: "\eff9";
+}
+.elgato-icons-view-off-l::before {
+	content: "\effa";
+}
+.elgato-icons-view-off-m::before {
+	content: "\effb";
+}
+.elgato-icons-voice-sync--filled-l::before {
+	content: "\effc";
+}
+.elgato-icons-voice-sync-l::before {
+	content: "\effd";
+}
+.elgato-icons-voice-tune--filled-l::before {
+	content: "\effe";
+}
+.elgato-icons-voice-tune--filled-m::before {
+	content: "\efff";
+}
+.elgato-icons-voice-tune-l::before {
+	content: "\f000";
+}
+.elgato-icons-voice-tune-m::before {
+	content: "\f001";
+}
+.elgato-icons-volume--filled-l::before {
+	content: "\f002";
+}
+.elgato-icons-volume--filled-m::before {
+	content: "\f003";
+}
+.elgato-icons-volume-down--filled-l::before {
+	content: "\f004";
+}
+.elgato-icons-volume-down--filled-m::before {
+	content: "\f005";
+}
+.elgato-icons-volume-down-l::before {
+	content: "\f006";
+}
+.elgato-icons-volume-down-m::before {
+	content: "\f007";
+}
+.elgato-icons-volume-l::before {
+	content: "\f008";
+}
+.elgato-icons-volume-m::before {
+	content: "\f009";
+}
+.elgato-icons-volume-mixer--filled-l::before {
+	content: "\f00a";
+}
+.elgato-icons-volume-mixer-l::before {
+	content: "\f00b";
+}
+.elgato-icons-volume-muted--filled-l::before {
+	content: "\f00c";
+}
+.elgato-icons-volume-muted--filled-m::before {
+	content: "\f00d";
+}
+.elgato-icons-volume-muted-l::before {
+	content: "\f00e";
+}
+.elgato-icons-volume-muted-m::before {
+	content: "\f00f";
+}
+.elgato-icons-volume0--filled-l::before {
+	content: "\f010";
+}
+.elgato-icons-volume0--filled-m::before {
+	content: "\f011";
+}
+.elgato-icons-volume0-l::before {
+	content: "\f012";
+}
+.elgato-icons-volume0-m::before {
+	content: "\f013";
+}
+.elgato-icons-volume1--filled-l::before {
+	content: "\f014";
+}
+.elgato-icons-volume1--filled-m::before {
+	content: "\f015";
+}
+.elgato-icons-volume1-l::before {
+	content: "\f016";
+}
+.elgato-icons-volume1-m::before {
+	content: "\f017";
+}
+.elgato-icons-volume2--filled-l::before {
+	content: "\f018";
+}
+.elgato-icons-volume2--filled-m::before {
+	content: "\f019";
+}
+.elgato-icons-volume2-l::before {
+	content: "\f01a";
+}
+.elgato-icons-volume2-m::before {
+	content: "\f01b";
+}
+.elgato-icons-warning--filled-l::before {
+	content: "\f01c";
+}
+.elgato-icons-warning--filled-m::before {
+	content: "\f01d";
+}
+.elgato-icons-warning--filled-s::before {
+	content: "\f01e";
+}
+.elgato-icons-warning-l::before {
+	content: "\f01f";
+}
+.elgato-icons-warning-m::before {
+	content: "\f020";
+}
+.elgato-icons-warning-s::before {
+	content: "\f021";
+}
+.elgato-icons-wave-dx--filled-l::before {
+	content: "\f022";
+}
+.elgato-icons-wave-dx-l::before {
+	content: "\f023";
+}
+.elgato-icons-wave-l::before {
+	content: "\f024";
+}
+.elgato-icons-wave-m::before {
+	content: "\f025";
+}
+.elgato-icons-wave-mic--filled-l::before {
+	content: "\f026";
+}
+.elgato-icons-wave-mic-l::before {
+	content: "\f027";
+}
+.elgato-icons-wave-neo--filled-l::before {
+	content: "\f028";
+}
+.elgato-icons-wave-neo-l::before {
+	content: "\f029";
+}
+.elgato-icons-wave-xlr--filled-l::before {
+	content: "\f02a";
+}
+.elgato-icons-wave-xlr-l::before {
+	content: "\f02b";
+}
+.elgato-icons-weather--filled-l::before {
+	content: "\f02c";
+}
+.elgato-icons-weather--filled-m::before {
+	content: "\f02d";
+}
+.elgato-icons-weather-l::before {
+	content: "\f02e";
+}
+.elgato-icons-weather-m::before {
+	content: "\f02f";
+}
+.elgato-icons-webcam--filled-l::before {
+	content: "\f030";
+}
+.elgato-icons-webcam-l::before {
+	content: "\f031";
+}
+.elgato-icons-widget--filled-l::before {
+	content: "\f032";
+}
+.elgato-icons-widget--filled-m::before {
+	content: "\f033";
+}
+.elgato-icons-widget-l::before {
+	content: "\f034";
+}
+.elgato-icons-widget-m::before {
+	content: "\f035";
+}
+.elgato-icons-wifi-l::before {
+	content: "\f036";
+}
+.elgato-icons-wifi-off-l::before {
+	content: "\f037";
+}
+.elgato-icons-wifi1-l::before {
+	content: "\f038";
+}
+.elgato-icons-wifi2-l::before {
+	content: "\f039";
+}
+.elgato-icons-wifi3-l::before {
+	content: "\f03a";
+}
+.elgato-icons-window--filled-l::before {
+	content: "\f03b";
+}
+.elgato-icons-window--filled-m::before {
+	content: "\f03c";
+}
+.elgato-icons-window--filled-s::before {
+	content: "\f03d";
+}
+.elgato-icons-window-check--filled-l::before {
+	content: "\f03e";
+}
+.elgato-icons-window-check-l::before {
+	content: "\f03f";
+}
+.elgato-icons-window-foreground--filled-l::before {
+	content: "\f040";
+}
+.elgato-icons-window-foreground--filled-m::before {
+	content: "\f041";
+}
+.elgato-icons-window-foreground--filled-s::before {
+	content: "\f042";
+}
+.elgato-icons-window-foreground-l::before {
+	content: "\f043";
+}
+.elgato-icons-window-foreground-m::before {
+	content: "\f044";
+}
+.elgato-icons-window-foreground-s::before {
+	content: "\f045";
+}
+.elgato-icons-window-l::before {
+	content: "\f046";
+}
+.elgato-icons-window-m::before {
+	content: "\f047";
+}
+.elgato-icons-window-s::before {
+	content: "\f048";
+}
+.elgato-icons-window-to-prompter--filled-l::before {
+	content: "\f049";
+}
+.elgato-icons-window-to-prompter-l::before {
+	content: "\f04a";
+}
+.elgato-icons-wrench--filled-l::before {
+	content: "\f04b";
+}
+.elgato-icons-wrench-l::before {
+	content: "\f04c";
+}
+.elgato-icons-xlr--filled-l::before {
+	content: "\f04d";
+}
+.elgato-icons-xlr--filled-m::before {
+	content: "\f04e";
+}
+.elgato-icons-xlr-l::before {
+	content: "\f04f";
+}
+.elgato-icons-xlr-m::before {
+	content: "\f050";
+}
+.elgato-icons-zoom-in--filled-l::before {
+	content: "\f051";
+}
+.elgato-icons-zoom-in-l::before {
+	content: "\f052";
+}
+.elgato-icons-zoom-out--filled-l::before {
+	content: "\f053";
+}
+.elgato-icons-zoom-out-l::before {
+	content: "\f054";
 }
