@@ -65,9 +65,10 @@ export class FontTransformer implements Transformer {
 				svgicons2svgfont: {
 					fontHeight: 1024,
 					descent: 64,
-					normalize: true,
 					centerHorizontally: true,
 					centerVertically: true,
+					normalize: true,
+					preserveAspectRatio: true,
 				},
 				website: undefined,
 			});
