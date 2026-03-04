@@ -100,4 +100,4 @@ Or reference it directly in HTML via a CDN:
 <i class="elgato-icons-settings-l"></i>
 ```
 
-Class names follow the pattern `elgato-icons-{icon-name}-{size}`, where `{size}` is one of `l`, `m`, or `s`. A full mapping of icon names to unicode code points can be found in `font/info.json`.
+Class names follow the patterns `elgato-icons-{icon-name}-{size}` for regular icons and `elgato-icons-{icon-name}--filled-{size}` for filled variants, where `{size}` is one of `l`, `m`, or `s`. A full mapping of icon names (including filled variants) to unicode code points can be found in `font/info.json`.
