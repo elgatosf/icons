@@ -7,6 +7,9 @@ import svgtofont from "svgtofont";
 
 import type { SvgIcon, Transformer } from "../transformer.ts";
 import * as utils from "../utils.ts";
+import { generateCSharpConstants } from "./font-csharp.ts";
+import { parseIconInfo } from "./font-parser.ts";
+import { generateXamlResourceDictionary } from "./font-xaml.ts";
 
 const fontName = "elgato-icons";
 
@@ -72,6 +75,11 @@ export class FontTransformer implements Transformer {
 				},
 				website: undefined,
 			});
+
+			// Generate XAML ResourceDictionary and C# constants from the info.json
+			const parsedEntries = await parseIconInfo();
+			await generateXamlResourceDictionary(parsedEntries);
+			await generateCSharpConstants(parsedEntries);
 		} finally {
 			await fs.rm(svgDir, { recursive: true, force: true });
 			await fs.rm(fixedDir, { recursive: true, force: true });
