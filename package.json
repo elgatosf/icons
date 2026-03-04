@@ -5,7 +5,10 @@
     "type": "module",
     "exports": {
         "./font": "./font/elgato-icons.css",
-        "./font/*": "./font/*",
+        "./font/elgato-icons.css": "./font/elgato-icons.css",
+        "./font/elgato-icons.ttf": "./font/elgato-icons.ttf",
+        "./font/elgato-icons.woff": "./font/elgato-icons.woff",
+        "./font/elgato-icons.woff2": "./font/elgato-icons.woff2",
         "./s": {
             "types": "./dist/strings/s/index.g.d.ts",
             "default": "./dist/strings/s/index.g.js"
