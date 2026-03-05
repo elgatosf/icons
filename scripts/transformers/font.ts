@@ -2,6 +2,8 @@ import fs from "node:fs/promises";
 import { createRequire } from "node:module";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
+// @ts-ignore - No types available for opentype.js
+import opentype from "opentype.js";
 // @ts-ignore - No types available for oslllo-svg-fixer
 import SVGFixer from "oslllo-svg-fixer";
 import svgtofont, { type InfoData } from "svgtofont";
@@ -83,6 +85,9 @@ export class FontTransformer implements Transformer {
 				website: undefined,
 			});
 
+			// Fix font vertical metrics for proper Windows rendering
+			await this.fixFontMetrics();
+
 			await Promise.all([this.generateCSharpConstants(info), this.generateXamlResourceDictionary(info)]);
 		} finally {
 			await fs.rm(svgDir, { recursive: true, force: true });
@@ -118,7 +123,7 @@ ${csharpFields.join("\n")}
 
 	/**
 	 * Generates a XAML ResourceDictionary file from the parsed icon entries.
-* @param info The icon info data from svgtofont
+	 * @param info The icon info data from svgtofont
 	 * @param useLegacySyntax If true, uses legacy keys with l/m duplication; if false, uses CSS-style keys
 	 */
 	private async generateXamlResourceDictionary(info: InfoData, useLegacySyntax = false): Promise<void> {
@@ -130,7 +135,7 @@ ${csharpFields.join("\n")}
 		for (const [name, entry] of Object.entries(info)) {
 			const { legacyXamlKey, cssXamlKey } = this.convertIconName(name);
 			const hexCode = this.getHexCode(entry, name);
-const key = useLegacySyntax ? legacyXamlKey : cssXamlKey;
+			const key = useLegacySyntax ? legacyXamlKey : cssXamlKey;
 
 			entriesMap.set(key, `\t<x:String x:Key="${key}">&#x${hexCode};</x:String>`);
 
@@ -162,7 +167,7 @@ const key = useLegacySyntax ? legacyXamlKey : cssXamlKey;
 					const { legacyXamlKey } = this.convertIconName(`${baseName}-l`);
 					if (!entriesMap.has(legacyXamlKey)) {
 						entriesMap.set(legacyXamlKey, `\t<x:String x:Key="${legacyXamlKey}">&#x${group.m};</x:String>`);
-		}
+					}
 				}
 			}
 		}
@@ -251,5 +256,51 @@ ${xamlEntries.join("\n")}
 		}
 
 		return entry.encodedCode.replace("\\", "").toUpperCase();
+	}
+
+	/**
+	 * Fixes font vertical metrics for proper rendering on Windows.
+	 * Uses binary patching to avoid opentype.js rewriting the entire font (which doubles file size).
+	 */
+	private async fixFontMetrics(): Promise<void> {
+		const ttfPath = utils.resolve("font", `${fontName}.ttf`);
+		const buffer = await fs.readFile(ttfPath);
+
+		// Parse font to get table locations and current values
+		const font = opentype.parse(buffer.buffer);
+		const ascender = font.ascender; // 960
+		const descender = Math.abs(font.descender); // 64 - positive for usWinDescent
+
+		// Find OS/2 table offset in the font file
+		const os2Table = this.findTableOffset(buffer, "OS/2");
+		if (os2Table) {
+			// OS/2 table structure offsets (from spec):
+			// usWinAscent: offset 74 (UInt16)
+			// usWinDescent: offset 76 (UInt16)
+			buffer.writeUInt16BE(ascender, os2Table.offset + 74);
+			buffer.writeUInt16BE(descender, os2Table.offset + 76);
+		}
+
+		await fs.writeFile(ttfPath, buffer);
+	}
+
+	/**
+	 * Finds the offset and length of a table in a TTF file.
+	 */
+	private findTableOffset(buffer: Buffer, tag: string): { offset: number; length: number } | null {
+		// TTF header: sfntVersion (4) + numTables (2) + searchRange (2) + entrySelector (2) + rangeShift (2) = 12 bytes
+		const numTables = buffer.readUInt16BE(4);
+
+		// Table directory starts at offset 12, each entry is 16 bytes
+		for (let i = 0; i < numTables; i++) {
+			const entryOffset = 12 + i * 16;
+			const tableTag = buffer.toString("ascii", entryOffset, entryOffset + 4);
+			if (tableTag === tag) {
+				const offset = buffer.readUInt32BE(entryOffset + 8);
+				const length = buffer.readUInt32BE(entryOffset + 12);
+				return { offset, length };
+			}
+		}
+		return null;
 	}
 }
