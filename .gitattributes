@@ -1,0 +1,22 @@
+# Ensure consistent line endings across all platforms
+* text=auto eol=lf
+
+# Explicitly mark generated files
+*.g.ts text eol=lf
+*.g.tsx text eol=lf
+
+# Windows-specific files (CRLF for better compatibility)
+*.cs text eol=crlf
+*.xaml text eol=crlf
+
+# Binary files
+*.ttf binary
+*.woff binary
+*.woff2 binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg text eol=lf
+
