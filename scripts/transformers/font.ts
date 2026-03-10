@@ -97,6 +97,9 @@ export class FontTransformer implements Transformer {
 
 	/**
 	 * Generates a C# file with const string fields for all icons.
+	 * @param info The icon info data from svgtofont
+	 * @returns A promise that resolves when the C# file has been written.
+	 * @throws {Error} If any icon entry is missing required data or if there are issues writing the file.
 	 */
 	private async generateCSharpConstants(info: InfoData): Promise<void> {
 		const csharpFields = Object.entries(info)
@@ -128,6 +131,8 @@ ${csharpFields.join("\n")}
 	 * Generates a XAML ResourceDictionary file from the parsed icon entries.
 	 * @param info The icon info data from svgtofont
 	 * @param useLegacySyntax If true, uses legacy keys with l/m duplication; if false, uses CSS-style keys
+	 * @returns A promise that resolves when the XAML file has been written.
+	 * @throws {Error} If any icon entry is missing required data or if there are issues writing the file.
 	 */
 	private async generateXamlResourceDictionary(info: InfoData, useLegacySyntax = false): Promise<void> {
 		const entriesMap = new Map<string, string>();
@@ -194,6 +199,9 @@ ${xamlEntries.join("\n")}
 	/**
 	 * Converts a CSS-style icon name from info.json to C#, legacy XAML, and CSS XAML keys.
 	 * E.g., "accessibility--filled-l" -> { csharpName: "Accessibility_Filled_L", legacyXamlKey: "icon-accessibility-l-filled", cssXamlKey: "accessibility--filled-l" }
+	 * @param name The original icon name from info.json
+	 * @returns An object containing the converted C# name, legacy XAML key, and CSS XAML key
+	 * @throws {Error} If the name is missing or malformed
 	 */
 	private convertIconName(name: string): { csharpName: string; legacyXamlKey: string; cssXamlKey: string } {
 		const sizeMatch = name.match(/-([lms])$/);
@@ -241,6 +249,9 @@ ${xamlEntries.join("\n")}
 	/**
 	 * Converts a kebab-case string to PascalCase.
 	 * E.g., "adjust-horizontal" -> "AdjustHorizontal"
+	 * @param str The kebab-case string to convert
+	 * @returns The converted PascalCase string
+	 * @throws {Error} If the input string is empty or not a valid kebab-case format
 	 */
 	private toPascalCase(str: string): string {
 		return str
@@ -251,6 +262,9 @@ ${xamlEntries.join("\n")}
 
 	/**
 	 * Extracts the hex code from the info entry, ensuring it's present and properly formatted.
+	 * @param entry The icon info entry from svgtofont
+	 * @param iconName The original icon name (for error messages)
+	 * @returns The hex code as a string (e.g. "E001")
 	 * @throws {Error} If the encodedCode is missing or not a string.
 	 */
 	private getHexCode(entry: InfoData[string], iconName: string): string {
@@ -264,6 +278,7 @@ ${xamlEntries.join("\n")}
 	/**
 	 * Fixes font vertical metrics for proper rendering on Windows.
 	 * Uses binary patching to avoid opentype.js rewriting the entire font (which doubles file size).
+	 * @returns A promise that resolves when the font metrics have been fixed.
 	 */
 	private async fixFontMetrics(): Promise<void> {
 		const ttfPath = utils.resolve("font", `${fontName}.ttf`);
@@ -289,6 +304,10 @@ ${xamlEntries.join("\n")}
 
 	/**
 	 * Finds the offset and length of a table in a TTF file.
+	 * @param buffer The font file buffer
+	 * @param tag The 4-character table tag to find (e.g. "OS/2")
+	 * @returns The offset and length of the table, or null if not found
+	 * @throws {Error} If the font file is malformed (e.g. missing header or invalid number of tables)
 	 */
 	private findTableOffset(buffer: Buffer, tag: string): { offset: number; length: number } | null {
 		// TTF header: sfntVersion (4) + numTables (2) + searchRange (2) + entrySelector (2) + rangeShift (2) = 12 bytes
