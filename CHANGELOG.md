@@ -12,6 +12,37 @@
 
 # Change Log
 
+## 2.3.0
+
+### ✨ New
+
+-   arrow-horizontal (m)
+-   arrow-vertical (m)
+-   block-quote (m)
+-   clear-formatting (m)
+-   code (m)
+-   compose (m)
+-   compose--filled (m)
+-   heading1 (m)
+-   heading2 (m)
+-   heading3 (m)
+-   heading4 (m)
+-   heading5 (m)
+-   heading6 (m)
+-   logo-mcp (m,l)
+-   subscript (m)
+-   superscript (m)
+-   text-normal (m)
+
+### ♻️ Modified
+
+-   code (l)
+-   logo-google-maps (l)
+-   logo-google-maps--color (l)
+-   logo-steam (l)
+-   logo-steam--color (l)
+-   logo-webstorm--color (l)
+
 ## 2.2.0
 
 ### ✨ New

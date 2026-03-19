@@ -1,0 +1,28 @@
+import type { SVGProps } from "react";
+import { sizeMap } from "../../metadata/sizing.js";
+import type { IconProps } from "../types.js";
+
+const IconHeading1 = (props: IconProps & SVGProps<SVGSVGElement>) => {
+	const size = sizeMap[props?.size ?? "m"];
+	const label = props?.label ?? "Icon";
+
+	return (
+		<svg
+			viewBox="0 0 20 20"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
+			width={size}
+			height={size}
+			aria-label={label}
+			role="img"
+			{...props}
+		>
+			<path d="M16.5 12C16.7761 12 17 12.2239 17 12.5V17H18C18.2761 17 18.5 17.2239 18.5 17.5C18.5 17.7761 18.2761 18 18 18H15C14.7239 18 14.5 17.7761 14.5 17.5C14.5 17.2239 14.7239 17 15 17H16V13H15C14.7239 13 14.5 12.7761 14.5 12.5C14.5 12.2239 14.7239 12 15 12H16.5Z" />
+			<path d="M11.5 3C11.7761 3 12 3.22386 12 3.5V14.5C12 14.7761 11.7761 15 11.5 15C11.2239 15 11 14.7761 11 14.5V9H4V14.5C4 14.7761 3.77614 15 3.5 15C3.22386 15 3 14.7761 3 14.5V3.5C3 3.22386 3.22386 3 3.5 3C3.77614 3 4 3.22386 4 3.5V8H11V3.5C11 3.22386 11.2239 3 11.5 3Z" />
+		</svg>
+	);
+};
+
+IconHeading1.iconName = "heading1";
+
+export default IconHeading1;
