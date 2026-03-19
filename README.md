@@ -68,3 +68,36 @@ All original SVG files are distributed with this package, and can be found withi
 |   │   └── window.svg
 └── ...
 ```
+
+### Font
+
+An icon font is distributed in the `font/` directory, in TTF, WOFF, and WOFF2 formats, with a ready-to-use CSS stylesheet.
+
+```
+.
+├── font/
+│   ├── elgato-icons.css
+│   ├── elgato-icons.ttf
+│   ├── elgato-icons.woff
+│   ├── elgato-icons.woff2
+│   └── info.json
+└── ...
+```
+
+Import the stylesheet from the package and use icon class names directly:
+
+```ts
+import "@elgato/icons/font";
+```
+
+Or reference it directly in HTML via a CDN:
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@elgato/icons/font/elgato-icons.css" />
+
+<i class="elgato-icons-accessories-l"></i>
+<i class="elgato-icons-camera-l"></i>
+<i class="elgato-icons-settings-l"></i>
+```
+
+Class names follow the patterns `elgato-icons-{icon-name}-{size}` for regular icons and `elgato-icons-{icon-name}--filled-{size}` for filled variants, where `{size}` is one of `l`, `m`, or `s`. A full mapping of icon names (including filled variants) to unicode code points can be found in `font/info.json`.

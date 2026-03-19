@@ -12,6 +12,16 @@
 
 # Change Log
 
+## 2.2.0
+
+### ✨ New
+
+-   Add font output.
+    -   `@elgato/icons/font/elgato-icons.css`
+    -   `@elgato/icons/font/elgato-icons.ttf`
+    -   `@elgato/icons/font/elgato-icons.woff`
+    -   `@elgato/icons/font/elgato-icons.woff2`
+
 ## 2.1.0
 
 ### ✨ New

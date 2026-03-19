@@ -5,6 +5,7 @@ import ora from "ora";
 import { isValidSize } from "../src/metadata/sizing.ts";
 import { metadata } from "./metadata/metadata.ts";
 import type { SvgIcon, Transformer } from "./transformer.ts";
+import { FontTransformer } from "./transformers/font.ts";
 import { ReactTransformer } from "./transformers/react.ts";
 import { StringsTransformer } from "./transformers/strings.ts";
 
@@ -76,6 +77,7 @@ status.succeed("Reading icons");
 const transformers: Transformer[] = [
 	new ReactTransformer(),
 	new StringsTransformer(),
+	new FontTransformer(),
 ];
 
 for (const transformer of transformers) {
