@@ -1,0 +1,28 @@
+import type { SVGProps } from "react";
+import { sizeMap } from "../../metadata/sizing.js";
+import type { IconProps } from "../types.js";
+
+const IconSuperscript = (props: IconProps & SVGProps<SVGSVGElement>) => {
+	const size = sizeMap[props?.size ?? "m"];
+	const label = props?.label ?? "Icon";
+
+	return (
+		<svg
+			viewBox="0 0 20 20"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
+			width={size}
+			height={size}
+			aria-label={label}
+			role="img"
+			{...props}
+		>
+			<path d="M11.0956 4.20605C11.258 3.98278 11.5705 3.93334 11.7939 4.0957C12.0171 4.25811 12.0665 4.57064 11.9042 4.79395L8.1171 10L11.9042 15.2061C12.0665 15.4294 12.0171 15.7419 11.7939 15.9043C11.5705 16.0667 11.258 16.0172 11.0956 15.7939L7.49991 10.8496L3.90421 15.7939C3.74182 16.0172 3.42929 16.0666 3.20597 15.9043C2.98266 15.7419 2.93325 15.4294 3.09562 15.2061L6.88175 10L3.09562 4.79395C2.93325 4.57062 2.98266 4.25811 3.20597 4.0957C3.42929 3.93338 3.74182 3.98277 3.90421 4.20605L7.49991 9.14941L11.0956 4.20605Z" />
+			<path d="M16.4999 2C16.776 2.00005 16.9999 2.22389 16.9999 2.5V7H17.9999C18.276 7.00005 18.4999 7.22389 18.4999 7.5C18.4999 7.77611 18.276 7.99995 17.9999 8H14.9999C14.7238 8 14.4999 7.77614 14.4999 7.5C14.4999 7.22386 14.7238 7 14.9999 7H15.9999V3H14.9999C14.7238 3 14.4999 2.77614 14.4999 2.5C14.4999 2.22386 14.7238 2 14.9999 2H16.4999Z" />
+		</svg>
+	);
+};
+
+IconSuperscript.iconName = "superscript";
+
+export default IconSuperscript;

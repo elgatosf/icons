@@ -580,6 +580,7 @@ export { default as iconLogoMarkdown } from "./icons/logo-markdown.g.js";
 export { default as iconLogoMarketplace } from "./icons/logo-marketplace.g.js";
 export { default as iconLogoMarketplaceColor } from "./icons/logo-marketplace--color.g.js";
 export { default as iconLogoMatter } from "./icons/logo-matter.g.js";
+export { default as iconLogoMcp } from "./icons/logo-mcp.g.js";
 export { default as iconLogoMedium } from "./icons/logo-medium.g.js";
 export { default as iconLogoMeldStudio } from "./icons/logo-meld-studio.g.js";
 export { default as iconLogoMeta } from "./icons/logo-meta.g.js";
