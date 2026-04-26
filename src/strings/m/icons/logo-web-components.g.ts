@@ -1,0 +1,3 @@
+const icon: string =
+	'<svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.484 6.30329L18.6199 10.0051L14.6386 17H5.41612L1.38086 10.0051L5.41612 3.01114H9.80109L14.6172 3L16.484 6.30329ZM12.1033 13.7181H7.90259L5.74954 10.0051L7.91973 6.30329H12.081L14.2512 10.0051L12.1033 13.7181Z"/></svg>';
+export default icon;
