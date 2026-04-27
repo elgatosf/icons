@@ -27,7 +27,7 @@ const IconTime = (props: IconProps & SVGProps<SVGSVGElement>) => {
 					/>
 				</svg>
 			);
-		default:
+		case "s":
 			return (
 				<svg
 					viewBox="0 0 16 16"
@@ -44,6 +44,26 @@ const IconTime = (props: IconProps & SVGProps<SVGSVGElement>) => {
 						fillRule="evenodd"
 						clipRule="evenodd"
 						d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15ZM14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8Z"
+					/>
+				</svg>
+			);
+		default:
+			return (
+				<svg
+					viewBox="0 0 20 20"
+					fill="currentColor"
+					xmlns="http://www.w3.org/2000/svg"
+					width={size}
+					height={size}
+					aria-label={label}
+					role="img"
+					{...props}
+				>
+					<path d="M10 4C10.2761 4 10.5 4.22386 10.5 4.5V9.79297L13.3535 12.6465C13.5488 12.8417 13.5488 13.1583 13.3535 13.3535C13.1583 13.5488 12.8417 13.5488 12.6465 13.3535L9.64648 10.3535C9.55272 10.2597 9.5 10.1326 9.5 10V4.5C9.5 4.22386 9.72386 4 10 4Z" />
+					<path
+						fillRule="evenodd"
+						clipRule="evenodd"
+						d="M10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2ZM10 3C6.13401 3 3 6.13401 3 10C3 13.866 6.13401 17 10 17C13.866 17 17 13.866 17 10C17 6.13401 13.866 3 10 3Z"
 					/>
 				</svg>
 			);

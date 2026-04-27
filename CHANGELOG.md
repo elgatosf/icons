@@ -12,6 +12,24 @@
 
 # Change Log
 
+## 2.4.0
+
+### ✨ New
+
+-   ai (m)
+-   ai--filled (m)
+-   grid-ai (m)
+-   grid-ai--filled (m)
+-   logo-icue (m)
+-   logo-icue--color (m)
+-   logo-swift (m,l)
+-   logo-web-components (m,l)
+-   logo-web-components--color (m,l)
+-   logo-winui (m,l)
+-   logo-winui--color (m,l)
+-   time (m)
+-   time--filled (m)
+
 ## 2.3.0
 
 ### ✨ New
