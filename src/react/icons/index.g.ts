@@ -402,6 +402,7 @@ export { default as IconImage } from "./Image.g.js";
 export { default as IconImageCheck } from "./ImageCheck.g.js";
 export { default as IconImageCheckFilled } from "./ImageCheckFilled.g.js";
 export { default as IconImageFilled } from "./ImageFilled.g.js";
+export { default as IconImport } from "./Import.g.js";
 export { default as IconInbox } from "./Inbox.g.js";
 export { default as IconInboxFilled } from "./InboxFilled.g.js";
 export { default as IconInfo } from "./Info.g.js";
@@ -1014,6 +1015,7 @@ export { default as IconScreenRotationFilled } from "./ScreenRotationFilled.g.js
 export { default as IconScreenshot } from "./Screenshot.g.js";
 export { default as IconScroll } from "./Scroll.g.js";
 export { default as IconSearch } from "./Search.g.js";
+export { default as IconSearchAi } from "./SearchAi.g.js";
 export { default as IconSearchFilled } from "./SearchFilled.g.js";
 export { default as IconSecurity } from "./Security.g.js";
 export { default as IconSecurityCamera } from "./SecurityCamera.g.js";

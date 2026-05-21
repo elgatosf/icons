@@ -1,4 +1,4 @@
-// Last synchronized: Sun, 26 Apr 2026 12:23:26 GMT
+// Last synchronized: Thu, 21 May 2026 17:37:32 GMT
 
 /**
  * Collection of available icons, and their associated metadata.
@@ -393,8 +393,8 @@ export const icons = {
 	"headphones-off--filled": { name: "HeadphonesOffFilled", sizes: ["l"] },
 	"headphones-switch-to": { name: "HeadphonesSwitchTo", sizes: ["l"] },
 	"headphones-switch-to--filled": { name: "HeadphonesSwitchToFilled", sizes: ["l"] },
-	heart: { name: "Heart", sizes: ["l"] },
-	"heart--filled": { name: "HeartFilled", sizes: ["l"] },
+	heart: { name: "Heart", sizes: ["m", "l"] },
+	"heart--filled": { name: "HeartFilled", sizes: ["m", "l"] },
 	"heat-sink": { name: "HeatSink", sizes: ["l"] },
 	help: { name: "Help", sizes: ["m", "l"] },
 	"help--filled": { name: "HelpFilled", sizes: ["m", "l"] },
@@ -408,6 +408,7 @@ export const icons = {
 	"image--filled": { name: "ImageFilled", sizes: ["m", "l"] },
 	"image-check": { name: "ImageCheck", sizes: ["l"] },
 	"image-check--filled": { name: "ImageCheckFilled", sizes: ["l"] },
+	import: { name: "Import", sizes: ["m"] },
 	inbox: { name: "Inbox", sizes: ["l"] },
 	"inbox--filled": { name: "InboxFilled", sizes: ["l"] },
 	info: { name: "Info", sizes: ["s", "m", "l"] },
@@ -1021,6 +1022,7 @@ export const icons = {
 	scroll: { name: "Scroll", sizes: ["l"] },
 	search: { name: "Search", sizes: ["s", "m", "l"] },
 	"search--filled": { name: "SearchFilled", sizes: ["s", "m", "l"] },
+	"search-ai": { name: "SearchAi", sizes: ["m"] },
 	security: { name: "Security", sizes: ["m", "l"] },
 	"security--filled": { name: "SecurityFilled", sizes: ["m", "l"] },
 	"security-camera": { name: "SecurityCamera", sizes: ["l"] },
@@ -1074,8 +1076,8 @@ export const icons = {
 	"square-dashed": { name: "SquareDashed", sizes: ["s", "m", "l"] },
 	star: { name: "Star", sizes: ["m", "l"] },
 	"star--filled": { name: "StarFilled", sizes: ["m", "l"] },
-	starbursts: { name: "Starbursts", sizes: ["l"] },
-	"starbursts--filled": { name: "StarburstsFilled", sizes: ["l"] },
+	starbursts: { name: "Starbursts", sizes: ["m", "l"] },
+	"starbursts--filled": { name: "StarburstsFilled", sizes: ["m", "l"] },
 	stop: { name: "Stop", sizes: ["m", "l"] },
 	"stop--filled": { name: "StopFilled", sizes: ["m", "l"] },
 	store: { name: "Store", sizes: ["m", "l"] },
@@ -1148,10 +1150,10 @@ export const icons = {
 	"text-size-increase": { name: "TextSizeIncrease", sizes: ["l"] },
 	"text-size-set": { name: "TextSizeSet", sizes: ["l"] },
 	"text-up-to-top": { name: "TextUpToTop", sizes: ["l"] },
-	"thumb-down": { name: "ThumbDown", sizes: ["l"] },
-	"thumb-down--filled": { name: "ThumbDownFilled", sizes: ["l"] },
-	"thumb-up": { name: "ThumbUp", sizes: ["l"] },
-	"thumb-up--filled": { name: "ThumbUpFilled", sizes: ["l"] },
+	"thumb-down": { name: "ThumbDown", sizes: ["m", "l"] },
+	"thumb-down--filled": { name: "ThumbDownFilled", sizes: ["m", "l"] },
+	"thumb-up": { name: "ThumbUp", sizes: ["m", "l"] },
+	"thumb-up--filled": { name: "ThumbUpFilled", sizes: ["m", "l"] },
 	time: { name: "Time", sizes: ["s", "m", "l"] },
 	"time--filled": { name: "TimeFilled", sizes: ["s", "m", "l"] },
 	"time-delay": { name: "TimeDelay", sizes: ["l"] },

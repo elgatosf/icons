@@ -12,6 +12,38 @@
 
 # Change Log
 
+## 2.5.0
+
+### ✨ New
+
+-   heart (m)
+-   heart--filled (m)
+-   import (m)
+-   search-ai (m)
+-   starbursts (m)
+-   starbursts--filled (m)
+-   thumb-down (m)
+-   thumb-down--filled (m)
+-   thumb-up (m)
+-   thumb-up--filled (m)
+
+### ♻️ Modified
+
+-   logo-gmail--color (l)
+-   logo-google-calendar--color (l)
+-   logo-google-chat--color (l)
+-   logo-google-docs--color (l)
+-   logo-google-drive--color (l)
+-   logo-google-forms--color (l)
+-   logo-google-maps--color (l)
+-   logo-google-meet--color (l)
+-   logo-google-photos--color (l)
+-   logo-google-sheets--color (l)
+-   logo-google-sites--color (l)
+-   logo-google-slides--color (l)
+-   logo-threads (l)
+-   send (m)
+
 ## 2.4.0
 
 ### ✨ New

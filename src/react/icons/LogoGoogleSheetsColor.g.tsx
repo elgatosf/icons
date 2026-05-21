@@ -18,14 +18,61 @@ const IconLogoGoogleSheetsColor = (props: IconProps & SVGProps<SVGSVGElement>) =
 			{...props}
 		>
 			<path
-				d="M18.5 23H5.5C4.67125 23 4 22.3288 4 21.5V2.5C4 1.67125 4.67125 1 5.5 1H14.5L20 6.5V21.5C20 22.3288 19.3287 23 18.5 23Z"
-				fill="#00AC47"
+				d="M1 9.325C1 8.20712 1 7.64813 1.1755 7.20475C1.30124 6.8872 1.49071 6.59877 1.73223 6.35728C1.97375 6.11578 2.26218 5.92633 2.57975 5.80062C3.02313 5.625 3.582 5.625 4.7 5.625H12.3C13.4179 5.625 13.9769 5.625 14.4202 5.8005C14.7378 5.92622 15.0263 6.11569 15.2678 6.35721C15.5093 6.59873 15.6988 6.88717 15.8245 7.20475C16 7.64813 16 8.207 16 9.325V14.675C16 15.7929 16 16.3519 15.8245 16.7952C15.6988 17.1128 15.5093 17.4013 15.2678 17.6428C15.0263 17.8843 14.7378 18.0738 14.4202 18.1995C13.9769 18.375 13.4179 18.375 12.3 18.375H4.7C3.58212 18.375 3.02312 18.375 2.57962 18.1995C2.26207 18.0738 1.97365 17.8843 1.73215 17.6428C1.49066 17.4013 1.30121 17.1128 1.1755 16.7952C1 16.3519 1 15.7929 1 14.675V9.325Z"
+				fill="#009954"
 			/>
-			<path d="M14.5 1L20 6.5H14.5V1Z" fill="#00832D" />
-			<path
-				d="M15.75 9.5H12.625H11.375H8.25H7V10.75V12.5V13.75V15.5V16.75H8.25H11.375H12.625H15.75H17V15.5V13.75V12.5V10.75V9.5H15.75ZM8.25 10.75H11.375V12.5H8.25V10.75ZM8.25 15.5V13.75H11.375V15.5H8.25ZM15.75 15.5H12.625V13.75H15.75V15.5ZM15.75 12.5H12.625V10.75H15.75V12.5Z"
-				fill="white"
-			/>
+			<mask
+				id="mask0_3602_649"
+				style={{
+					maskType: "alpha",
+				}}
+				maskUnits="userSpaceOnUse"
+				x={3}
+				y={4}
+				width={20}
+				height={16}
+			>
+				<path
+					d="M20.5 4H5.5C4.11929 4 3 5.11929 3 6.5V17.5C3 18.8807 4.11929 20 5.5 20H20.5C21.8807 20 23 18.8807 23 17.5V6.5C23 5.11929 21.8807 4 20.5 4Z"
+					fill="#0EBC5F"
+				/>
+			</mask>
+			<g mask="url(#mask0_3602_649)">
+				<path d="M3 4H23V20H3V4Z" fill="#0EBC5F" />
+				<g filter="url(#filter0_f_3602_649)">
+					<path
+						d="M15.8 18.375H4.2C2.43269 18.375 1 16.9423 1 15.175V8.825C1 7.05769 2.43269 5.625 4.2 5.625H15.8C17.5673 5.625 19 7.05769 19 8.825V15.175C19 16.9423 17.5673 18.375 15.8 18.375Z"
+						fill="url(#paint0_linear_3602_649)"
+					/>
+				</g>
+			</g>
+			<path d="M10 15.125H20.5M18 17.5V9.5" stroke="white" strokeWidth={1.5} strokeLinecap="round" />
+			<defs>
+				<filter
+					id="filter0_f_3602_649"
+					x={-0.5}
+					y={4.125}
+					width={21}
+					height={15.75}
+					filterUnits="userSpaceOnUse"
+					colorInterpolationFilters="sRGB"
+				>
+					<feFlood floodOpacity={0} result="BackgroundImageFix" />
+					<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+					<feGaussianBlur stdDeviation={0.75} result="effect1_foregroundBlur_3602_649" />
+				</filter>
+				<linearGradient
+					id="paint0_linear_3602_649"
+					x1={16.28}
+					y1={12.9613}
+					x2={3.595}
+					y2={12.9613}
+					gradientUnits="userSpaceOnUse"
+				>
+					<stop stopColor="#0EBC5F" />
+					<stop offset={0.95} stopColor="#78C9FF" />
+				</linearGradient>
+			</defs>
 		</svg>
 	);
 };
