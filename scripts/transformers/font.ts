@@ -72,7 +72,10 @@ export class FontTransformer implements Transformer {
 					fontHeight: 1024,
 					descent: 64,
 					centerHorizontally: true,
-					centerVertically: true,
+					// centerVertically must stay false: it would recenter each glyph on the em-center,
+					// shifting partial-grid icons (e.g. signal/wifi bars) upward. Keeping it false
+					// preserves each icon's natural position within its viewBox.
+					centerVertically: false,
 					normalize: true,
 					preserveAspectRatio: true,
 				},
@@ -293,10 +296,20 @@ ${xamlEntries.join("\n")}
 		const os2Table = this.findTableOffset(buffer, "OS/2");
 		if (os2Table) {
 			// OS/2 table structure offsets (from spec):
-			// usWinAscent: offset 74 (UInt16)
-			// usWinDescent: offset 76 (UInt16)
+			// fsSelection:   offset 62 (UInt16)
+			// sTypoLineGap:  offset 72 (Int16)
+			// usWinAscent:   offset 74 (UInt16)
+			// usWinDescent:  offset 76 (UInt16)
 			buffer.writeUInt16BE(ascender, os2Table.offset + 74);
 			buffer.writeUInt16BE(descender, os2Table.offset + 76);
+
+			// Fix the vertical positioning on Windows.
+			// Clear the USE_TYPO_METRICS flag (bit 7) so Windows uses usWinAscent/usWinDescent for line layout,
+			// and align sTypoLineGap with the legacy font (64) instead of svg2ttf's computed value.
+			const legacyTypoLineGap = 64;
+			const fsSelection = buffer.readUInt16BE(os2Table.offset + 62);
+			buffer.writeUInt16BE(fsSelection & ~0x80, os2Table.offset + 62);
+			buffer.writeInt16BE(legacyTypoLineGap, os2Table.offset + 72);
 		}
 
 		await fs.writeFile(ttfPath, buffer);
