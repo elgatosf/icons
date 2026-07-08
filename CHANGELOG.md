@@ -12,6 +12,12 @@
 
 # Change Log
 
+## 2.5.1
+
+### 🐞 Fix
+
+-   Fixed vertical alignment of font rendering on Windows.
+
 ## 2.5.0
 
 ### ✨ New
